@@ -508,4 +508,24 @@ marquee {
     }
 }
 
+/* Mostra otafoot solo su desktop */
+@media (min-width: 1024px) {
+    .otafoot {
+        display: block;
+    }
+    .otamobile {
+        display: none;
+    }
+}
+
+/* Mostra otamobile solo su smartphone */
+@media (max-width: 1023px) {
+    .otafoot {
+        display: none;
+    }
+    .otamobile {
+        display: block;
+    }
+}
+
 
