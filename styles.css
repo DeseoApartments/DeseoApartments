@@ -429,3 +429,83 @@ marquee {
     }
 }
 
+.promo-bar {
+    background-color: #ffffff; /* Colore di sfondo bianco */
+    text-align: center; /* Centratura del testo */
+    padding: 10px; /* Spaziatura interna */
+    border-bottom: 1px solid #ddd; /* Bordo inferiore simile alla barra di Facebook */
+    font-size: 18px; /* Dimensione del testo */
+    font-family: 'Montserrat', sans-serif; /* Stile del font */
+    margin-top: 0px; /* Margine di tolleranza dall'alto */
+}
+
+@keyframes zoomInOut {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.promo-text {
+    display: inline-block;
+    animation: zoomInOut 3s infinite;
+}
+
+/* Nascondi testo per desktop su mobile e viceversa */
+.desktop-text {
+    display: none;
+}
+
+.mobile-text {
+    display: none;
+}
+
+/* Stili per desktop */
+@media (min-width: 601px) {
+    .desktop-text {
+        display: inline-block;
+    }
+}
+
+/* Stili per smartphone */
+@media (max-width: 600px) {
+    .promo-bar {
+        padding: 8px; /* Riduce la spaziatura interna */
+        font-size: 16px; /* Riduce la dimensione del testo */
+    }
+
+    .desktop-text {
+        display: none;
+    }
+
+    .mobile-text {
+        display: inline-block;
+    }
+}
+
+/* Bottone desktop visibile solo su schermi più grandi */
+.desktop-button {
+    display: inline-block;
+}
+
+/* Bottone mobile nascosto su schermi più grandi */
+.mobile-button {
+    display: none;
+}
+
+/* Stili per smartphone */
+@media (max-width: 600px) {
+    /* Bottone desktop nascosto su schermi piccoli */
+    .desktop-button {
+        display: none;
+    }
+
+    /* Bottone mobile visibile su schermi piccoli */
+    .mobile-button {
+        display: inline-block;
+    }
+}
+
+
