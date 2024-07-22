@@ -73,57 +73,38 @@
             <div class="hero-images mobile">
                 <img src="images/heromobile1.png" alt="Mobile Hero Image 1" class="active"></div>
            
-               <!-- Menu Desktop -->
-<nav class="desktop-menu">
-    <ul id="desktop-menu">
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#services-section">SERVIZI</a></li>
-        <li><a href="#chi-siamo-section">CHI SIAMO</a></li>
-        <li><a href="#contact">CONTATTI</a></li>
-        <li><a href="FAQ.html" target="_blank">FAQ</a></li>
-        <!-- Menu a tendina per le bandiere della traduzione -->
-        <li class="navbar-right">
-            <a href="javascript:void(0)" class="dropbtn"><img src="images/flag-ukdown.png" alt="Languages" width="60" height="25"></a>
-            <div class="dropdown-content">
-                <a href="index-en.html"><img src="images/flag-uk.png" alt="English" width="40" height="25"></a>
-                <a href="index-es.html"><img src="images/flag-spain.png" alt="Spanish" width="40" height="25"></a>
-                <a href="index-fr.html"><img src="images/flag-france.png" alt="French" width="40" height="25"></a>
-            </div>
-        </li>
-    </ul>
-</nav>
-
-<!-- Menu Mobile -->
-<div class="mobile-nav-bar">
-    <div class="menu-icon" id="mobile-menu-icon">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-</div>
-<nav class="mobile-menu">
-    <ul id="mobile-menu-list" class="mobile-menu-content">
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#services-section">SERVIZI</a></li>
-        <li><a href="#chi-siamo-section">CHI SIAMO</a></li>
-        <li><a href="#contact">CONTATTI</a></li>
-        <li><a href="FAQ.html" target="_blank">FAQ</a></li>
-        <li><a href="index-en.html"><img src="images/flag-uk.png" alt="English" width="40" height="25"></a></li>
-        <li><a href="index-es.html"><img src="images/flag-spain.png" alt="Spanish" width="40" height="25"></a></li>
-        <li><a href="index-fr.html"><img src="images/flag-france.png" alt="French" width="40" height="25"></a></li>
-    </ul>
-</nav>
-
-
-            
-        </div>
-                
+                <div>
+                    
+                </center>
             </div>
         </div>
     
     </header>
 
-    
+    <div class="container">
+        <nav>
+            <div class="menu-icon" id="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="menu">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#services-section">SERVIZI</a></li>
+                <li><a href="#chi-siamo-section">CHI SIAMO</a></li>
+                <li><a href="FAQ.html" target="_blank">FAQ</a></li>
+                <li><a href="#contact">CONTATTI</a></li>
+                <!-- Menu a tendina per le bandiere della traduzione -->
+                <li class="navbar-right">
+                    <a href="javascript:void(0)" class="dropbtn"><img src="images/flag-ukdown.png" alt="Languages" width="60" height="25"></a>
+                    <div class="dropdown-content">
+                        <a href="https://deseoapartments-com.translate.goog/?_x_tr_sl=it&_x_tr_tl=en&_x_tr_hl=it&_x_tr_pto=wapp"><img src="images/flag-uk.png" alt="English" width="40" height="25"></a>
+                        <a href="https://deseoapartments-com.translate.goog/?_x_tr_sl=it&_x_tr_tl=es&_x_tr_hl=it&_x_tr_pto=wapp"><img src="images/flag-spain.png" alt="Spanish" width="40" height="25"></a>
+                        <a href="https://deseoapartments-com.translate.goog/?_x_tr_sl=it&_x_tr_tl=fr&_x_tr_hl=it&_x_tr_pto=wapp"><img src="images/flag-france.png" alt="French" width="40" height="25"></a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
     </div>
     <div><center><img src="images/toll.png"></center></div>
     <div></div><center><a href="https://deseoapartments.kross.travel/" class="google-button">PRENOTA ORA LA TUA CASA VACANZA!</a></center>
@@ -786,15 +767,6 @@ document.getElementById('review-text').addEventListener('mouseout', startInterva
         </section></center>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const mobileMenuIcon = document.getElementById('mobile-menu-icon');
-            const mobileMenuContent = document.getElementById('mobile-menu-list');
-    
-            mobileMenuIcon.addEventListener('click', () => {
-                mobileMenuContent.classList.toggle('show');
-            });
-        });
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
