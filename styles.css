@@ -69,7 +69,7 @@ section {
 }
 
 #table-section {
-    padding: 20px;
+    padding: 0px;
     background-color: #dfd8d0;
     display: flex;
     justify-content: center;
