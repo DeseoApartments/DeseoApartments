@@ -509,7 +509,7 @@ marquee {
 }
 
 /* Mostra otafoot solo su desktop */
-@media (min-width: 1024px) {
+@media (min-width: 800px) {
     .otafoot {
         display: block;
     }
@@ -519,7 +519,7 @@ marquee {
 }
 
 /* Mostra otamobile solo su smartphone */
-@media (max-width: 1023px) {
+@media (max-width: 800px) {
     .otafoot {
         display: none;
     }
