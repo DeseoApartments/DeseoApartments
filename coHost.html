@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deseo Apartments - Gestione Affitti Brevi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        .highlight {
+            color: #333;
+            font-weight: bold;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        .highlight-black {
+            color: #4f4848;
+            font-weight: bold;
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        .custom-row {
+            background-color: white;
+            border-radius: 10px;
+            
+        }
+
+        .customdark-row {
+            background-color: rgb(242, 245, 245);
+            border-radius: 10px;
+           
+        }
+
+        table {
+            border-collapse: separate; /* Ensure border-radius works on table */
+            border-spacing: 20px; /* Ensure no extra space between table cells */
+        }
+
+        tr {
+            border-radius: 10px;
+            overflow: hidden; /* Ensure the border-radius works for rows */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        td, th {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="https://wa.me/+393880599971" target="_blank">
+            <img src="images/WA.png" width="100" height="100" alt="Chatta con noi" class="whatsapp-icon"/>
+        </a>
+
+        <div class="hero-images desktop">
+            <img src="images/hero1.png" alt="Hero Image 1" class="active">
+        </div>
+        <div class="hero-images mobile">
+            <img src="images/heromobile1.png" alt="Mobile Hero Image 1" class="active"></div>
+        </div>
+    </div>
+    </header>
+    <div class="hero">
+        <div class="container">
+            <nav>
+                <div class="menu-icon" id="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul id="menu">
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#services-section">SERVIZI</a></li>
+                    <li><a href="#chi-siamo-section">CHI SIAMO</a></li>
+                    <li><a href="faq.html" target="_blank">FAQ</a></li>
+                    <li><a href="#contact">CONTATTI</a></li>
+                    <!-- Menu a tendina per le bandiere della traduzione -->
+                <li class="navbar-right">
+                    <a href="javascript:void(0)" class="dropbtn"><img src="images/flag-ukdown.png" alt="Languages" width="60" height="25"></a>
+                    <div class="dropdown-content">
+                        <a href="index-en.html"><img src="images/flag-uk.png" alt="English" width="40" height="25"></a>
+                        <a href="index-es.html"><img src="images/flag-spain.png" alt="Spanish" width="40" height="25"></a>
+                        <a href="index-fr.html"><img src="images/flag-france.png" alt="French" width="40" height="25"></a>
+                    </div>
+                </li>
+                </ul>
+            </nav>
+        </div>           
+
+        <div><center><img src="images/toll.png"></center></div>
+        <div></div><center><a href="https://deseoapartments.kross.travel/" class="google-button">PRENOTA ORA LA TUA CASA VACANZA!</a></center>
+
+    <section id="table-section">
+        <div class="table-container">
+            <table class="desktop-table">
+                              
+    <tr class="customdark-row">
+        <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
+            <BR>
+                <center><span style="font-size: 30px; color: #208786;">SERVIZIO DI CO-HOSTING</span></center>
+                <br>
+        
+                <center><span style="font-size: 25px; color: #0c2d2c;"><i>Ci occupiamo delle mansioni più impegnative, offrendo un pacchetto personalizzato per la gestione a lungo termine del tuo appartamento, dove l'host può scegliere quali compiti gestire personalmente e quali delegare al nostro team. Contattaci per una consulenza!</i></span></center>
+                <br>
+                        <center><div class="form-container">
+                            <center><h2>Contact Us</h2></center>
+                            <br>
+                            <form action="https://api.web3forms.com/submit" method="POST">
+                                <input type="hidden" name="access_key" value="7433205f-e93a-46c1-a284-4a7839010a8a">
+                                <div class="form-group">
+                                    <input type="text" name="name" placeholder="Nome" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="Cognome" placeholder="Cognome" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="Telefono" placeholder="Telefono" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" placeholder="Email" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="numero.immobili" placeholder="Quanti immobili possiedi?" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="City" placeholder="In quale città?" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="message" placeholder="Messaggio" required></textarea>
+                                </div>
+                                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                                <button type="submit">Invia</button>
+                                <br>
+                            </form>
+                        </div></center>
+                    </div>
+    <br>
+    </td>
+    </tr> 
+            </table></section>
+
+            <table class="mobile-table">
+                    <tr class="customdark-row">
+                    <td> <BR>
+                <center><span style="font-size: 30px; color: #208786;">SERVIZIO DI CO-HOSTING</span></center>
+                <br>
+        
+                <center><span style="font-size: 25px; color: #0c2d2c;"><i>Ci occupiamo delle mansioni più impegnative, offrendo un pacchetto personalizzato per la gestione a lungo termine del tuo appartamento, dove l'host può scegliere quali compiti gestire personalmente e quali delegare al nostro team. Contattaci per una consulenza!</i></span></center>
+                <br>
+                        <center><div class="form-container">
+                            <center><h2>Contact Us</h2></center>
+                            <br>
+                            <form action="https://api.web3forms.com/submit" method="POST">
+                                <input type="hidden" name="access_key" value="7433205f-e93a-46c1-a284-4a7839010a8a">
+                                <div class="form-group">
+                                    <input type="text" name="name" placeholder="Nome" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="Cognome" placeholder="Cognome" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="Telefono" placeholder="Telefono" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" placeholder="Email" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="numero.immobili" placeholder="Quanti immobili possiedi?" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="City" placeholder="In quale città?" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="message" placeholder="Messaggio" required></textarea>
+                                </div>
+                                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                                <button type="submit">Invia</button>
+                                <br>
+                            </form>
+                        </div></center> </div>
+    <br></td>
+                </tr>
+                
+                
+            </table>
+        </div>
+    
+
+    <footer>
+        <center><section id="contact">
+            <div><img src="images/toll.png" width="40" height="40"></div>
+            <div><img src="images/logoa.png" width="80" height="47"></div>
+            <div><img src="images/toll.png" width="20" height="20"></div>
+            <span style="font-size: 30px;"><b>Contattaci</b></span>
+            <div class="contact-info">
+                <p><a href="tel:+393880599971">+39 388 059 99 71</a> - <a href="tel:+393271975673">+39 327 197 56 73</a></p>
+                <p><a href="mailto:info@deseoapartments.com">info@deseoapartments.com</a></p>
+                <p><b>Sede legale: Via Ugo Bassi 10, Bologna 40121</b></p>
+                <p><b>Lun - Ven</b></p>
+                <p><b>09:00 - 18:00</b></p>
+                <p>P.IVA: 04119991208</p>
+            </div>
+            <div class="social-media">
+                <a href="https://www.instagram.com/deseoapartments/" target="_blank"><img src="images/insta.png" alt="Instagram" class="social-icon"></a>
+                <a href="https://www.facebook.com/profile.php?id=61562461786178" target="_blank"><img src="images/face.png" alt="Facebook" class="social-icon"></a>
+                <div><img src="images/tolleranza.png" alt="Tolleranza"></div>
+            </div>
+        </section></center>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
