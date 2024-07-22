@@ -433,7 +433,7 @@ marquee {
     background-color: #ffffff; /* Colore di sfondo bianco */
     text-align: center; /* Centratura del testo */
     padding: 10px; /* Spaziatura interna */
-    border-bottom: 1px solid #ddd; /* Bordo inferiore simile alla barra di Facebook */
+    border-bottom: none; /* Bordo inferiore simile alla barra di Facebook */
     font-size: 18px; /* Dimensione del testo */
     font-family: 'Montserrat', sans-serif; /* Stile del font */
     margin-top: 0px; /* Margine di tolleranza dall'alto */
