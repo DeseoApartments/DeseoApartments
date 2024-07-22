@@ -786,6 +786,15 @@ document.getElementById('review-text').addEventListener('mouseout', startInterva
         </section></center>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuIcon = document.getElementById('mobile-menu-icon');
+            const mobileMenuContent = document.getElementById('mobile-menu-list');
+    
+            mobileMenuIcon.addEventListener('click', () => {
+                mobileMenuContent.classList.toggle('show');
+            });
+        });
+    </script>
 </body>
 </html>
