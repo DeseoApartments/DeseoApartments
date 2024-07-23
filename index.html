@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <style>
+html {
+    scroll-behavior: smooth;
+}
+
         .highlight {
             color: #333;
             font-weight: bold;
@@ -55,11 +59,6 @@
     <header>
      
 
-        <div class="promo-bar">
-            <span style="font-size: 20px; color: #ae243f;"><p class="promo-text desktop-text"><b>Offriamo il 10% di sconto per il primo mese di collaborazione!</b></p></span>
-            <span style="font-size: 15px; color: #ae243f;"><p class="promo-text mobile-text"><b>10% di sconto il primo mese di collaborazione!</b></p></span>
-        </div>
-
 
         <div class="hero">
 
@@ -68,7 +67,7 @@
             </a>
     
             <div class="hero-images desktop">
-                <img src="images/hero1.png" alt="Hero Image 1" class="active">
+                <img src="images/HEROdesktop.png" alt="Hero Image 1" class="active">
             </div>
             <div class="hero-images mobile">
                 <img src="images/heromobile1.png" alt="Mobile Hero Image 1" class="active"></div>
@@ -78,42 +77,59 @@
                 </center>
             </div>
         </div>
+        <nav class="desktop-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#services-section">Servizi</a></li>
+                <li><a href="#chi-siamo-section">Chi Siamo</a></li>
+                <li><a href="#contact">Contatti</a></li>
+                <li><a href="FAQ.html">Faq</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile menu -->
+        <nav class="mobile-menu">
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <ul class="menu-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="servizi.html">Servizi</a></li>
+                <li><a href="chisiamo.html">Chi Siamo</a></li>
+                <li><a href="#contact">Contatti</a></li>
+                <li><a href="FAQ.html">Faq</a></li>
+            </ul>
+        </nav>
+</div>
+</div>
     
     </header>
 
-    <div class="container">
-        <nav>
-            <div class="menu-icon" id="menu-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul id="menu">
-                <li><a href="#home">HOME</a></li>
-                <li><a href="servizi.html">SERVIZI</a></li>
-                <li><a href="chisiamo.html">CHI SIAMO</a></li>
-                <li><a href="FAQ.html" target="_blank">FAQ</a></li>
-                <li><a href="#contact">CONTATTI</a></li>
-                        </ul>
-        </nav>
-    </div>
+    
+
+
+
     <div><center><img src="images/toll.png"></center></div>
-    <div></div><center><a href="https://deseoapartments.kross.travel/" class="google-button">PRENOTA ORA LA TUA CASA VACANZE!</a></center>
+    <div></div><center><a href="https://deseoapartments.kross.travel/" class="google-button">PRENOTA ORA LA TUA CASA VACANZA!</a></center>
       
     
     <section id="table-section">
                 <div class="table-container">
-            <table class="desktop-table">
-                <tr>
-                    <th class="highlight"><center><span style="font-size: 30px; color: #208786;">GESTIONE COMPLETA</span></center><br><span style="font-size: 20px;"><center><i>Meno stress, più guadagni</i></center></span><div><center><br><img src="images/ota.png" width="80" height="80"></center></div><br>
-                    <center>Affidaci il tuo appartamento e lo posizioneremo sui principali portali OTA come <b>AirBnB, Booking.com, Expedia, Homeaway e House Trip.</b> Il nostro team di esperti si occuperà di gestire e ottimizzare prezzi e annunci online, assicurandoti guadagni mensili sempre al top.</center></th>
-                    <th class="highlight-black"><center><span style="font-size: 30px; color: #208786;">CO-HOSTING</span></center><br><span style="font-size: 20PX;"><center><i>Gestione su Misura</i></center></span><br><center><img src="images/cohost.png" width="90" height="90"></center></div>
-                        <center>Ci occupiamo delle mansioni più impegnative, offrendo un pacchetto personalizzato per la gestione del tuo appartamento.</center>
-                                <br>        
-                    </th>
-                    <th class="highlight"><center><span style="font-size: 30px; color: #208786;">SERVIZI SINGOLI</span></center><br><span style="font-size: 20px;"><center><i>Garantiamo continuità e comfort</i></center></span><br><center><img src="images/servisingoli.png" width="70" height="70"></center></div><br>
-                        <center>Affidati a noi per la gestione completa del tuo appartamento. Dall'allestimento con un servizio fotografico professionale, alla gestione delle prenotazioni, dall'accoglienza degli ospiti fino alle pulizie finali, ci occupiamo di tutto per garantire un'esperienza impeccabile e senza stress.</center></th>
-                    </table>
+                    <table class="desktop-table">
+                        <tr>
+                            <th class="highlight"><center><span style="font-size: 30px; color: #208786;">GESTIONE COMPLETA</span></center><span style="font-size: 20px;"><center>Meno stress, più guadagni</center></span><div><center><br><img src="images/gestio.png" width="90" height="90"></center></div>
+                                <br>
+                            <center>Affidaci il tuo appartamento e lo posizioneremo sui principali portali OTA come Air B&B, Booking... Il nostro team di esperti si occuperà di gestire e ottimizzare prezzi e annunci online, assicurandoti guadagni mensili sempre al top.</center></th>
+                            
+                            <th class="highlight-black"><center><br><span style="font-size: 30px; color: #208786;">CO-HOSTING</span></center><span style="font-size: 20px;"><center>Gestione su misura</center></span><div><center><br><img src="images/hand.png" width="90" height="90"></center></div>
+                               <br>
+                                <center>Offriamo un pacchetto personalizzato per la gestione del tuo appartamento. Dalla pubblicazione degli annunci alla comunicazione con gli ospiti, fino alla manutenzione e pulizia, gestiamo ogni aspetto con competenza e affidabilità. Adattiamo i nostri servizi alle tue esigenze specifiche, garantendoti tranquillità e un servizio impeccabile.</center>
+                                      
+                            </th>
+                            <th class="highlight"><center><br><span style="font-size: 30px; color: #208786;">SERVIZI SINGOLI</span></center><span style="font-size: 20px;"><center>Garantiamo continuità e comfort</center></span><div><center><br><img src="images/singoli.png" width="90" height="90"></center></div>
+                                <br>
+                                <center>Affidati a noi per la gestione completa del tuo appartamento. Dall'allestimento con un servizio fotografico professionale, alla gestione delle prenotazioni, dall'accoglienza degli ospiti fino alle pulizie finali, ci occupiamo di tutto per garantire un'esperienza impeccabile e senza stress.</center>
+                            </th>
+                            </table>
+        
                     <br>
                     <div>
                         <center>
@@ -425,19 +441,21 @@ document.getElementById('review-text').addEventListener('mouseout', startInterva
         
             <table class="mobile-table">
                 <tr class="highlight">
-                    <td><center><span style="font-size: 30px; color: #208786;">GESTIONE COMPLETA</span></center><br><span style="font-size: 20px;"><center><i>Meno stress, più guadagni</i></center></span><div><center><br><img src="images/ota.png" width="80" height="80"></center></div><br>
+                    <td><center><span style="font-size: 30px; color: #208786;">GESTIONE COMPLETA</span></center><br><span style="font-size: 20px;"><center>Meno stress, più guadagni</center></span><div><center><br><img src="images/gestio.png" width="90" height="90"></center></div><br>
                     <center>Affidaci il tuo appartamento e lo posizioneremo sui principali portali OTA come <b>AirBnB, Booking.com, Expedia, Homeaway e House Trip.</b> Il nostro team di esperti si occuperà di gestire e ottimizzare prezzi e annunci online, assicurandoti guadagni mensili sempre al top.</center></td>
+                <br>
                 </tr>
                 <tr class="highlight-black">
-                    <td><center><span style="font-size: 30px; color: #208786;">CO-HOSTING</span></center><br><span style="font-size: 20PX;"><center><i>Gestione su Misura</i></center></span><br><center><img src="images/cohost.png" width="90" height="90"></center></div>
-                        <center>Ci occupiamo delle mansioni più impegnative, offrendo un pacchetto personalizzato per la gestione del tuo appartamento.</center>
+                    <td><center><span style="font-size: 30px; color: #208786;">CO-HOSTING</span></center><br><span style="font-size: 20PX;"><center>Gestione su Misura</center></span><br><center><img src="images/hand.png" width="90" height="90"><br><br></center></div>
+                        <center>Offriamo un pacchetto personalizzato per la gestione del tuo appartamento. Dalla pubblicazione degli annunci alla comunicazione con gli ospiti, fino alla manutenzione e pulizia, gestiamo ogni aspetto con competenza e affidabilità. Adattiamo i nostri servizi alle tue esigenze specifiche, garantendoti tranquillità e un servizio impeccabile.</center>
                           <br>              
                                    </td>
                 </tr>
               
                 <tr class="highlight">
-                    <td><center><span style="font-size: 30px; color: #208786;">SERVIZI SINGOLI</span></center><br><span style="font-size: 20px;"><center><i>Garantiamo continuità e comfort</i></center></span><br><center><img src="images/servisingoli.png" width="70" height="70"></center></div><br>
-                        <center>Affidati a noi per la gestione completa del tuo appartamento. Dall'allestimento con un servizio fotografico professionale, alla gestione delle prenotazioni, dall'accoglienza degli ospiti fino alle pulizie finali, ci occupiamo di tutto per garantire un'esperienza impeccabile e senza stress.</center></td>
+                    <td><center><span style="font-size: 30px; color: #208786;">SERVIZI SINGOLI</span></center><br><span style="font-size: 20px;"><center>Garantiamo continuità e comfort</center></span><br><center><img src="images/singoli.png" width="90" height="90"></center></div><br>
+                        <center>Affidati a noi per la gestione completa del tuo appartamento. Dall'allestimento con un servizio fotografico professionale, alla gestione delle prenotazioni, dall'accoglienza degli ospiti fino alle pulizie finali, ci occupiamo di tutto per garantire un'esperienza impeccabile e senza stress.</center>
+                    <br></td>
                 </tr>
 
             </table>
@@ -467,7 +485,7 @@ document.getElementById('review-text').addEventListener('mouseout', startInterva
                         <br>
                         <center><span style="font-size: 30px; color: #208786;">REVENUE MANAGEMENT</span></center>
                         <br>
-                        <center><span style="font-size: 2opx; color: #0c2d2c;">
+                        <center><span style="font-size: 20px; color: #0c2d2c;">
                             Il nostro team analizza attentamente il mercato per determinare il prezzo di vendita ottimale, garantendoti guadagni massimi. La gestione della tua casa rimane sempre sotto il tuo controllo. Adeguiamo i prezzi in base alle stagioni e agli eventi più importanti dell'anno, assicurando che il tuo immobile sia sempre competitivo.                        </span></center>
                             <br></td>
                 </tr>
@@ -655,68 +673,7 @@ document.getElementById('review-text').addEventListener('mouseout', startInterva
             <center><span style="font-size: 25px;">Fondata nel 2023, Deseo è una società di property management con la missione di massimizzare il valore dei vostri immobili. Ci dedichiamo a fornire una gestione impeccabile delle proprietà, assicurando che ogni dettaglio sia curato con la massima attenzione. Siamo consapevoli dell'importanza di mantenere i vostri immobili in condizioni eccellenti, ottimizzando al contempo i rendimenti economici. Il nostro team, altamente qualificato, è sempre disponibile per rispondere a qualsiasi esigenza, garantendo una gestione senza preoccupazioni e la massima soddisfazione per i proprietari. La nostra dedizione alla cura del dettaglio e alla rapidità nell'assistenza ci distingue nel settore, rendendo Deseo il partner ideale per chi desidera affidare i propri immobili a mani esperte e fidate.</span></center>
             <br></td>
                 </tr>
-                <tr class="customdark-row">
-                    <td>
-                        <br>
-                        <div class="review-container1">
-                            <center><span style="font-size: 30px; color: #208786;">REFERENZE</span></center>
-                            <BR>
-                    
-                                <i>" Un servizio davvero superiore."</i><br>
-                                <b style='float:center;'>Maurizio N.</b>
-                                <hr>
-                                <br>
-                                <br>
-                                
-                                <i>"Hanno semplificato tutto, permettendomi di godermi il mio tempo libero senza preoccupazioni."</i><br>
-                                <b style='float:center;'>Elena T.</b>
-                                <hr>
-                                <br>
-                                <br>
-                                
-                                <i>"Assolutamente raccomandata."</i><br>
-                                <b style='float:center;'>Giovanni C.</b>
-                                <hr>
-                                <br>
-                                <br>
-                                
-                                <i>"Sono molto soddisfatta della gestione della mia casa. Continuate così!"</i><br>
-                                <b style='float:center;'>Christelle B.</b>
-                                <hr>
-                                <br>
-                                <br>
-                                
-                                <i>"Affido la mia proprietà a questa agenzia da quasi un anno e non ho mai avuto un problema. Consiglio vivamente a tutti."</i><br>
-                                <b style='float:center;'>Giuseppe P.</b>
-                                <hr>
-                                <br>
-                                <br>
-
-                                <i>"Sono davvero molto contento della scelta fatta."</i><br>
-                                <b style='float:center;'>Emanuele S.</b>
-                                <hr>
-                                <br>
-                                <br>
-
-                                <i>"Hanno gestito tutto in modo eccellente, dalla manutenzione alle emergenze. Un servizio senza pensieri!"</i><br>
-                                <b style='float:center;'>Luca D. P.</b>
-                                <hr>
-                                <br>
-                                <br>
-
-                                <i>"Sono molto soddisfatto e li consiglio caldamente."</i><br>
-                                <b style='float:center;'>Paolo A.</b>
-                                <hr>
-                                <br>
-                                <br>
-
-                                <i>"Finalmente un'agenzia che capisce le mie esigenze! Hanno reso la gestione della mia proprietà un'esperienza serena. Ogni problema è stato risolto rapidamente. Consiglio questa agenzia senza riserve."</i><br>
-                                <b style='float:center;'>Federica B.</b>
-                                <hr>
-                                <br>
-                                <br>
-                    </td>
-                </tr>
+                                      
                 
             </table>
         </div>
@@ -726,15 +683,7 @@ document.getElementById('review-text').addEventListener('mouseout', startInterva
     
 
     <footer>
-        <br>
-        <div><center><span style="font-size: 30px; color: #206564;">CI PUOI TROVARE ANCHE QUI</span></center></div>
-        <BR>
-            <center><img src="/images/otafoot.png" width="800" height="121" class="otafoot"></center>
-
-            <center><img src="/images/otamobile1.png" class="otamobile" width="50%" height="50%"></center>
-            <center><img src="/images/otamobile2.png" class="otamobile" width="50%" height="50%"></center>
-            <center><img src="/images/otamobile3.png" class="otamobile" width="70%" height="70%"></center>
-            <center><img src="/images/otamobile4.png" class="otamobile" width="50%" height="50%"></center>
+        
             
 
         <center><section id="contact">
@@ -758,6 +707,11 @@ document.getElementById('review-text').addEventListener('mouseout', startInterva
         </section></center>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script>function toggleMenu() {
+        const menuList = document.querySelector('.menu-list');
+        menuList.classList.toggle('active');
+
+        
+    }</script>
 </body>
 </html>

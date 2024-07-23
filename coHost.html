@@ -57,39 +57,37 @@
         </a>
 
         <div class="hero-images desktop">
-            <img src="images/hero1.png" alt="Hero Image 1" class="active">
+            <img src="images/HEROdesktop.png" alt="Hero Image 1" class="active">
         </div>
         <div class="hero-images mobile">
             <img src="images/heromobile1.png" alt="Mobile Hero Image 1" class="active"></div>
         </div>
     </div>
+    <nav class="desktop-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="servizi.html">Servizi</a></li>
+            <li><a href="chisiamo.html">Chi Siamo</a></li>
+            <li><a href="#contact">Contatti</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile menu -->
+    <nav class="mobile-menu">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <ul class="menu-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="servizi.html">Servizi</a></li>
+            <li><a href="chisiamo.html">Chi Siamo</a></li>
+            <li><a href="#contact">Contatti</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+        </ul>
+    </nav>
+</div>
+</div>
     </header>
-    <div class="hero">
-        <div class="container">
-            <nav>
-                <div class="menu-icon" id="menu-icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <ul id="menu">
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="servizi.html">SERVIZI</a></li>
-                    <li><a href="chisiamo.html">CHI SIAMO</a></li>
-                    <li><a href="FAQ.html" target="_blank">FAQ</a></li>
-                    <li><a href="#contact">CONTATTI</a></li>
-                    <!-- Menu a tendina per le bandiere della traduzione -->
-                <li class="navbar-right">
-                    <a href="javascript:void(0)" class="dropbtn"><img src="images/flag-ukdown.png" alt="Languages" width="60" height="25"></a>
-                    <div class="dropdown-content">
-                        <a href="https://deseoapartments-com.translate.goog/coHost.html?_x_tr_sl=it&_x_tr_tl=en&_x_tr_hl=it&_x_tr_pto=wapp"><img src="images/flag-uk.png" alt="English" width="40" height="25"></a>
-                        <a href="https://deseoapartments-com.translate.goog/coHost.html?_x_tr_sl=it&_x_tr_tl=es&_x_tr_hl=it&_x_tr_pto=wapp"><img src="images/flag-spain.png" alt="Spanish" width="40" height="25"></a>
-                        <a href="https://deseoapartments-com.translate.goog/coHost.html?_x_tr_sl=it&_x_tr_tl=fr&_x_tr_hl=it&_x_tr_pto=wapp"><img src="images/flag-france.png" alt="French" width="40" height="25"></a>
-                    </div>
-                </li>
-                </ul>
-            </nav>
-        </div>           
+             
 
     <section id="table-section">
         <div class="table-container">
@@ -209,6 +207,11 @@
         </section></center>
     </footer>
 
-    <script src="scripts.js"></script>
+    <script>function toggleMenu() {
+        const menuList = document.querySelector('.menu-list');
+        menuList.classList.toggle('active');
+
+        
+    }</script>
 </body>
 </html>

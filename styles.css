@@ -16,7 +16,7 @@ a {
     align-items: center;
     padding: 10px 20px;
     background-color: white;
-} 
+}
 
 nav {
     position: relative;
@@ -150,12 +150,10 @@ th, td {
     }
     .hero-images.desktop {
         display: none;
-    
     }
 }
 
 .profile-card {
-     
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -302,22 +300,30 @@ th, td {
     margin: 0 auto;
     padding: 20px;
     background-color: transparent;
-   
     text-align: center;
     font-size: 24px;
     color: #333;
 }
 
 .review-container1 {
-    width: 50%;
-    height: auto;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: transparent;
-   
-    text-align: center;
-    font-size: 24px;
-    color: #333;
+    position: relative;
+}
+
+.review-item {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.review-item.active {
+    display: block;
+    opacity: 1;
+}
+
+@media (max-width: 767px) {
+    .review-container1 {
+        height: auto;
+    }
 }
 
 .review-text {
@@ -350,139 +356,97 @@ th, td {
     background-color: #357ae8;
 }
 
-ul#menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/* CODICE CSS MENU DESKTOP E SMARTPHONE */
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
 }
 
+/* Desktop menu styles */
+.desktop-menu {
+    background-color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Aggiunta l'ombra */
+}
 
-ul#menu li {
+.desktop-menu ul {
     list-style: none;
-    margin: 0 10px;
-}
-
-ul#menu li a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.marquee-container {
-    flex-grow: 1;
-    text-align: center;
-}
-
-marquee {
-    display: inline-block;
-    width: 100%;
-    text-align: center;
-}
-
-.mobile-flags {
-    display: none;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.mobile-flags a {
-    margin: 0 10px;
-}
-
-/* CSS per il menu a tendina delle bandiere */
-.navbar-right {
-    position: absolute;
-    left: 1400px; /* Margine dall'estrema destra */
-    top: 0px; /* Margine dall'alto */
+    margin: 0;
+    padding: 0;
     display: inline-block;
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+.desktop-menu ul li {
+    display: inline;
+    margin: 0 20px;
 }
 
-.dropdown-content a {
+.desktop-menu ul li a {
+    color: #000;
+    font-size: 18px;
+    padding: 10px 15px; /* Aggiunto padding per hover sullo sfondo */
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.desktop-menu ul li a:hover {
+    color: rgb(158, 33, 33);
+    background-color: rgba(158, 33, 33, 0.1); /* Aggiunto hover sullo sfondo */
+}
+
+/* Mobile menu styles */
+.mobile-menu {
+    display: none;
+    background-color: white;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Aggiunta l'ombra */
+}
+
+.menu-icon {
+    font-size: 20px;
+    cursor: pointer;
     color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-.navbar-right:hover .dropdown-content {
-    display: block;
-}
-
-.navbar-right:hover .dropbtn {
-    background-color: transparent;
-}
-
-/* Nascondi il menu delle bandiere su dispositivi mobili */
-@media screen and (max-width: 768px) {
-    .navbar-right {
-        display: none;
-    }
-}
-
-.promo-bar {
-    background-color: #ffffff; /* Colore di sfondo bianco */
-    text-align: center; /* Centratura del testo */
-    padding: 10px; /* Spaziatura interna */
-    border-bottom: none; /* Bordo inferiore simile alla barra di Facebook */
-    font-size: 18px; /* Dimensione del testo */
-    font-family: 'Montserrat', sans-serif; /* Stile del font */
-    margin-top: 0px; /* Margine di tolleranza dall'alto */
-}
-
-@keyframes zoomInOut {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-}
-
-.promo-text {
+    background-color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
     display: inline-block;
-    animation: zoomInOut 3s infinite;
 }
 
-/* Nascondi testo per desktop su mobile e viceversa */
-.desktop-text {
+.menu-list {
     display: none;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    text-align: center;
 }
 
-.mobile-text {
-    display: none;
+.menu-list li {
+    margin: 10px 0;
 }
 
-/* Stili per desktop */
-@media (min-width: 601px) {
-    .desktop-text {
-        display: inline-block;
+.menu-list li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+/* Show menu on mobile */
+@media (max-width: 767px) {
+    .mobile-menu {
+        display: block;
     }
-}
-
-/* Stili per smartphone */
-@media (max-width: 600px) {
-    .promo-bar {
-        padding: 8px; /* Riduce la spaziatura interna */
-        font-size: 16px; /* Riduce la dimensione del testo */
-    }
-
-    .desktop-text {
+    .desktop-menu {
         display: none;
     }
+}
 
-    .mobile-text {
-        display: inline-block;
-    }
+/* Active class for menu */
+.menu-list.active {
+    display: block;
 }
 
 /* Bottone desktop visibile solo su schermi più grandi */
@@ -527,5 +491,4 @@ marquee {
         display: block;
     }
 }
-
 
