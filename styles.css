@@ -492,11 +492,4 @@ a {
     }
 }
 
-footer {
-    background-image: url('images/herofoot.png'); /* Sostituisci con il percorso della tua immagine */
-    background-size: cover;
-    background-position: center;
-    color: white;
-    padding: 20px 0;
-}
 
