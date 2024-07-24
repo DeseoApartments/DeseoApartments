@@ -74,7 +74,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 0; /* Modifica per rimuovere lo spazio */
+    margin-top: 0px; /* Imposta la distanza superiore a 0 */
 }
 
 .table-container {
@@ -130,20 +130,23 @@ th, td {
     .mobile-table {
         display: table;
         width: auto;
+        margin-top: 0px;
     }
     #table-section {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin-top: 0; /* Assicura che la tabella mobile sia attaccata al mobile menu */
     }
     .table-container {
         width: auto;
         max-width: 500px;
         margin: 0 auto; /* Centra la tabella */
+        margin-top: 0px;
     }
     .mobile-table {
         margin: 0 auto; /* Centra la tabella */
-        
+        margin-top: 0px;
     }
     .hero-images.mobile {
         display: block;
@@ -529,4 +532,3 @@ a {
 footer .contact-info, footer .social-media, footer span {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombra per il testo */
 }
-
