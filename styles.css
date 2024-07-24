@@ -356,6 +356,18 @@ th, td {
     background-color: #357ae8;
 }
 
+/* CSS to show the button by default and hide it only on smartphones */
+.google-button {
+    display: inline-block; /* Show by default */
+}
+
+@media (max-width: 767px) {
+    /* Hide the button on devices with a max-width of 767px (smartphones) */
+    .google-button {
+        display: none;
+    }
+}
+
 /* CODICE CSS MENU DESKTOP E SMARTPHONE */
 
 a {
@@ -517,27 +529,28 @@ footer .contact-info, footer .social-media, footer span {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombra per il testo */
 }
 
-.transparent-line {
-    background-color: transparent;
-    border: none;
-    box-shadow: none; /* Rimuove l'ombra esterna */
-}
-
-.transparent-line td {
-    background-color: transparent;
-    border: none;
-    box-shadow: none; /* Rimuove l'ombra esterna */
-}
-
-/* CSS to hide the button by default and show it only on smartphones */
+/* CSS to hide the smartphone-only button by default and show it only on smartphones */
 .smartphone-only-button {
     display: none; /* Hide by default */
+    background-color: #4285f4;
+    color: white;
+    font-size: 14px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+}
+
+.smartphone-only-button:hover {
+    background-color: #357ae8;
 }
 
 @media (max-width: 767px) {
-    /* Show the button only on devices with a max-width of 767px (smartphones) */
+    /* Show the smartphone-only button only on devices with a max-width of 767px (smartphones) */
     .smartphone-only-button {
         display: inline-block;
     }
-}
 
