@@ -74,7 +74,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 0px; /* Imposta la distanza superiore a 0 */
+    margin-top: 20px; /* Imposta la distanza superiore a 0 */
 }
 
 .table-container {
@@ -136,7 +136,7 @@ th, td {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 0; /* Assicura che la tabella mobile sia attaccata al mobile menu */
+        margin-top: 0px; /* Assicura che la tabella mobile sia attaccata al mobile menu */
     }
     .table-container {
         width: auto;
