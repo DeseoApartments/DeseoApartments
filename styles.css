@@ -532,3 +532,18 @@ a {
 footer .contact-info, footer .social-media, footer span {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombra per il testo */
 }
+
+.language-icons {
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    right: 30px; /* Adjust as needed */
+    z-index: 1;
+    display: flex;
+    gap: 10px;
+}
+
+.language-icon {
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    cursor: pointer;
+}
