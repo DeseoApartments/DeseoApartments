@@ -517,3 +517,16 @@ footer .contact-info, footer .social-media, footer span {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombra per il testo */
 }
 
+.transparent-line {
+    background-color: transparent;
+    border: none;
+    box-shadow: none; /* Rimuove l'ombra esterna */
+}
+
+.transparent-line td {
+    background-color: transparent;
+    border: none;
+    box-shadow: none; /* Rimuove l'ombra esterna */
+}
+
+
