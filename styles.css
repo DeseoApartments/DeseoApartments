@@ -509,7 +509,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Ombra scura per migliorare leggibilità */
+    background: rgba(0, 0, 0, 0.284); /* Ombra scura per migliorare leggibilità */
     z-index: -1;
 }
 
