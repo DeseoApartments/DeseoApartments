@@ -536,7 +536,7 @@ footer .contact-info, footer .social-media, footer span {
 .language-icons {
     position: absolute;
     top: 20px; /* Adjust as needed */
-    right: 30px; /* Adjust as needed */
+    right: 35px; /* Adjust as needed */
     z-index: 1;
     display: flex;
     gap: 10px;
@@ -546,4 +546,18 @@ footer .contact-info, footer .social-media, footer span {
     width: 40px; /* Adjust size as needed */
     height: 40px; /* Adjust size as needed */
     cursor: pointer;
+}
+
+/* Media query for smartphones */
+@media (max-width: 600px) {
+    .language-icons {
+        top: 10px; /* Adjust as needed for smartphones */
+        right: 8px; /* Adjust as needed for smartphones */
+        gap: 10px; /* Adjust as needed for smartphones */
+    }
+
+    .language-icon {
+        width: 27px; /* Adjust size as needed for smartphones */
+        height: 27px; /* Adjust size as needed for smartphones */
+    }
 }
