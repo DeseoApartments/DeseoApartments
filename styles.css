@@ -492,4 +492,28 @@ a {
     }
 }
 
+.footer-background {
+    background-size: cover;
+    background-position: center;
+    padding: 20px 0;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Aggiungi ombra */
+    position: relative;
+    z-index: 1;
+}
+
+.footer-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Ombra scura per migliorare leggibilità */
+    z-index: -1;
+}
+
+footer .contact-info, footer .social-media, footer span {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombra per il testo */
+}
 
