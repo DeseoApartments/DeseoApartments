@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deseo Apartments - Gestión de Alquileres Temporales</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+    <style>
+        .highlight {
+            color: #333;
+            font-weight: bold;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        .highlight-black {
+            color: #4f4848;
+            font-weight: bold;
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        .custom-row {
+            background-color: white;
+            border-radius: 10px;
+            
+        }
+
+        .customdark-row {
+            background-color: rgb(242, 245, 245);
+            border-radius: 10px;
+           
+        }
+
+        table {
+            border-collapse: separate; /* Ensure border-radius works on table */
+            border-spacing: 20px; /* Ensure no extra space between table cells */
+        }
+
+        tr {
+            border-radius: 10px;
+            overflow: hidden; /* Ensure the border-radius works for rows */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        td, th {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="hero">
+
+            <div class="language-icons">
+                <a href="index-en.html"><img src="images/english.png" alt="English" class="language-icon"></a>
+                <a href="index.html"><img src="images/italian.png" alt="Spanish" class="language-icon"></a>
+                <a href="index-fr.html"><img src="images/french.png" alt="French" class="language-icon"></a>
+            </div>
+
+
+
+            <a href="https://wa.me/+393880599971" target="_blank">
+                <img src="images/WA.png" width="100" height="100" alt="Chatea con nosotros" class="whatsapp-icon"/>
+            </a>
+            <div class="hero-images desktop">
+                <img src="images/HERODESKES.png" alt="Imagen Hero 1" class="active">
+            </div>
+            <div class="hero-images mobile">
+                <img src="images/heromobilees.png" alt="Imagen Hero Móvil 1" class="active">
+            </div>
+        </div>
+        <nav class="desktop-menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#services-section">Servicios</a></li>
+                <li><a href="#chi-siamo-section">Quiénes Somos</a></li>
+                <li><a href="#contact">Contactos</a></li>
+                <li><a href="FAQ.html">Faq</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile menu -->
+        <nav class="mobile-menu">
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <ul class="menu-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servizi.html">Servicios</a></li>
+                <li><a href="chisiamo.html">Quiénes Somos</a></li>
+                <li><a href="#contact">Contactos</a></li>
+                <li><a href="FAQ.html">Faq</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="table-section">
+        <div class="table-container">
+            <table class="desktop-table">
+                
+    <tr class="custom-row" id="chi-siamo-section">
+                    <td style="padding-left: 65px; padding-right: 65px;" colspan="3">
+                        <center><span style="font-size: 30px; color: #208786;">QUIÉNES SOMOS</span></center>
+                        <div style="display: flex; justify-content: space-around;">
+                            <div class="profile-card">
+                                <h2>
+                                    <img src="images/Aleph.png" alt="Foto de Alexandre" class="profile-photo">
+                                    <center><span style="font-size: 25px; color: #173e3d;">Alexandre C. Pinto</span></center>
+                                </h2>
+                                <p class="reviews"><i>Fundador</i></p>
+                            </div>
+                            <div class="profile-card">
+                                <h2>
+                                    <img src="images/Fraph.png" alt="Foto de Alexandre" class="profile-photo">
+                                    <center><span style="font-size: 25px; color: #173e3d;">Francesco G. Pinto</span></center>
+                                </h2>
+                                <p class="reviews"><i>Responsable Operativo</i></p>
+                            </div>
+                        </div>
+                        <center><span style="font-size: 29px;">Deseo es una empresa de gestión de propiedades con la misión de maximizar el valor de tus inmuebles. Nos dedicamos a proporcionar una gestión impecable de las propiedades, asegurando que cada detalle sea cuidado con la máxima atención. Somos conscientes de la importancia de mantener tus inmuebles en condiciones excelentes, optimizando al mismo tiempo los rendimientos económicos. Nuestro equipo está siempre disponible para responder a cualquier necesidad, garantizando una gestión sin preocupaciones y la máxima satisfacción para los propietarios. Nuestra dedicación al cuidado del detalle y a la rapidez en la asistencia nos distingue en el sector, haciendo de Deseo el socio ideal para quienes desean confiar sus inmuebles a manos expertas y de confianza.</span></center>
+                    </td>
+                </tr>
+                <tr class="customdark-row">
+                    <td style="padding-left: 65px; padding-right: 65px;" colspan="3">
+                        <div class="review-container">
+                            <center><span style="font-size: 30px; color: #208786;">REFERENCIAS</span></center>
+                            <br>
+                            <div id="review-text" class="review-text"></div>
+                        </div>
+                        <script>
+                            const reviews = [
+                                "<i> Un servicio realmente superior. ¡Gracias Alexandre!</i><div><b style='float:right;'>Maurizio N.</b></div>",
+                                "<i>Han simplificado todo, permitiéndome disfrutar de mi tiempo libre sin preocupaciones.</i><div><b style='float:right;'>Elena T.</b></div>",
+                                "<i>Absolutamente recomendada.</i>zdiv><b style='float:right;'>Giovanni C.</b></div>",
+                                "<i>La atención y la cortesía del personal me impresionaron mucho. La comunicación siempre ha sido clara y oportuna. Estoy muy satisfecha con la gestión de mi casa. ¡Sigan así! ¡Gracias Francesco!</i><div><b style='float:right;'>Christelle B.</b></div>",
+                                "<i>La puntualidad en los pagos y el cuidado en el mantenimiento son impecables. Lo recomiendo encarecidamente a todos.</i><div><b style='float:right;'>Giuseppe P.</b></div>",
+                                "<i>Cada una de mis necesidades fue satisfecha con competencia y cortesía. Estoy realmente muy contento con la elección hecha.</i><div><b style='float:right;'>Emanuele S.</b></div>",
+                                "<i>Gracias a esta agencia, ¡puedo finalmente estar tranquilo!</i><div><b style='float:right;'>Luca D. P.</b></div>",
+                                "<i>¡Excelente servicio! ¡Gracias Alexandre!</i><div><b style='float:right;'>Paolo A.</b></div>",
+                                "<i>Finalmente una agencia que entiende mis necesidades! Han hecho que la gestión de mi propiedad sea una experiencia serena. Cada problema fue resuelto rápidamente. Recomiendo esta agencia sin reservas. ¡Gracias Francesco!</i><div><b style='float:right;'>Federica B.</b></div>"
+                            ];
+
+                            let currentReviewIndex = 0;
+                            let interval;
+
+                            function showNextReview() {
+                                const reviewText = document.getElementById('review-text');
+                                reviewText.classList.remove('fade-in');
+                                reviewText.classList.add('fade-out');
+
+                                setTimeout(() => {
+                                    reviewText.innerHTML = reviews[currentReviewIndex];
+                                    reviewText.classList.remove('fade-out');
+                                    reviewText.classList.add('fade-in');
+                                    currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
+                                }, 2000); // Tiempo de desvanecimiento en milisegundos (debe coincidir con el CSS)
+                            }
+
+                            function startInterval() {
+                                interval = setInterval(showNextReview, 5000); // Cambia la reseña cada 5 segundos
+                            }
+
+                            function stopInterval() {
+                                clearInterval(interval);
+                            }
+
+                            // Muestra la primera reseña inmediatamente
+                            showNextReview();
+                            startInterval();
+
+                            // Añade el evento de pausa cuando el ratón está sobre la reseña
+                            document.getElementById('review-text').addEventListener('mouseover', stopInterval);
+                            document.getElementById('review-text').addEventListener('mouseout', startInterval);
+                        </script>      
+                    </td>
+                </tr>
+    
+            </table></section>
+
+            <table class="mobile-table">
+                
+                <tr class="custom-row">
+                    <td>
+                        <center><span style="font-size: 30px; color: #208786;">QUIÉNES SOMOS</span></center>
+                        <div style="display: flex; justify-content: space-around;">
+                            <div class="profile-card">
+                                <h2>
+                                    <img src="images/Aleph.png" alt="Foto de Alexandre" class="profile-photo">
+                                    <center><span style="font-size: 20px; color: #173e3d;">Alexandre C. Pinto</span></center>
+                                </h2>
+                                <p class="reviews"><i>Fundador</i></p>
+                                <h2>
+                                    <img src="images/Fraph.png" alt="Foto de Alexandre" class="profile-photo">
+                                    <center><span style="font-size: 25px; color: #173e3d;">Francesco G. Pinto</span></center>
+                                </h2>
+                                <p class="reviews"><i>Responsable Operativo</i></p>
+                            </div>
+                        </div>
+                        <center><span style="font-size: 25px;">Deseo es una empresa de gestión de propiedades con la misión de maximizar el valor de tus inmuebles. Nos dedicamos a proporcionar una gestión impecable de las propiedades, asegurando que cada detalle sea cuidado con la máxima atención. Somos conscientes de la importancia de mantener tus inmuebles en condiciones excelentes, optimizando al mismo tiempo los rendimientos económicos. Nuestro equipo está siempre disponible para responder a cualquier necesidad, garantizando una gestión sin preocupaciones y la máxima satisfacción para los propietarios. Nuestra dedicación al cuidado del detalle y a la rapidez en la asistencia nos distingue en el sector, haciendo de Deseo el socio ideal para quienes desean confiar sus inmuebles a manos expertas y de confianza.</span></center>
+                    </td>
+                </tr>
+                
+            </table>
+        </div>
+    
+
+        <footer>
+            <div class="footer-background" style="background-image: url('images/herofoot.png');">
+                <center>
+                    <section id="contact">
+                        <div><img src="images/toll.png" width="40" height="40"></div>
+                        <div><img src="images/logoa.png" width="80" height="47"></div>
+                        <div><img src="images/toll.png" width="20" height="20"></div>
+                        <span style="font-size: 30px; color: white;"><b>Contáctanos</b></span>
+                        <div class="contact-info">
+                            <p><a href="tel:+393880599971" style="color: white;">+39 388 059 99 71</a> - <a href="tel:+393271975673" style="color: white;">+39 327 197 56 73</a></p>
+                            <p><a href="mailto:info@deseoapartments.com" style="color: white;">info@deseoapartments.com</a></p>
+                            <p><b style="color: white;">Sede legal: Via Ugo Bassi 10, Bolonia 40121</b></p>
+                            <p><b style="color: white;">Lun - Vie</b></p>
+                            <p><b style="color: white;">09:00 - 18:00</b></p>
+                            <p style="color: white;">P.IVA: 04119991208</p>
+                        </div>
+                        <div class="social-media">
+                            <a href="https://www.instagram.com/deseoapartments/" target="_blank"><img src="images/insta.png" alt="Instagram" class="social-icon"></a>
+                            <a href="https://www.facebook.com/profile.php?id=61562461786178" target="_blank"><img src="images/face.png" alt="Facebook" class="social-icon"></a>
+                            <div><img src="images/tolleranza.png" alt="Tolerancia"></div>
+                        </div>
+                    </section>
+                </center>
+            </div>
+        </footer>
+        
+    <script>function toggleMenu() {
+        const menuList = document.querySelector('.menu-list');
+        menuList.classList.toggle('active');
+
+        
+    }</script>
+</body>
+</html>
