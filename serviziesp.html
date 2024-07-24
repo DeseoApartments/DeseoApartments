@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deseo Apartments - Gestione Affitti Brevi</title>
+    <title>Deseo Apartments - Gestión de Alquileres Temporales</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <style>
@@ -52,41 +52,48 @@
 </head>
 <body>
     <header>
-        <a href="https://wa.me/+393880599971" target="_blank">
-            <img src="images/WA.png" width="100" height="100" alt="Chatta con noi" class="whatsapp-icon"/>
-        </a>
+        <div class="hero">
 
-        <div class="hero-images desktop">
-            <img src="images/HEROdesktop.png" alt="Hero Image 1" class="active">
-        </div>
-        <div class="hero-images mobile">
-            <img src="images/heromobile1.png" alt="Mobile Hero Image 1" class="active"></div>
-        </div>
-    </div>
-    <nav class="desktop-menu">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="coHost.html">Co-Hosting</a></li>
-            <li><a href="chisiamo.html">Chi Siamo</a></li>
-            <li><a href="#contact">Contatti</a></li>
-            <li><a href="FAQ.html">FAQ</a></li>
-        </ul>
-    </nav>
+            <div class="language-icons">
+                <a href="index-en.html"><img src="images/english.png" alt="English" class="language-icon"></a>
+                <a href="index.html"><img src="images/italian.png" alt="Spanish" class="language-icon"></a>
+                <a href="index-fr.html"><img src="images/french.png" alt="French" class="language-icon"></a>
+            </div>
 
-    <!-- Mobile menu -->
-    <nav class="mobile-menu">
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
-        <ul class="menu-list">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="coHost.html">Co-Hosting</a></li>
-            <li><a href="chisiamo.html">Chi Siamo</a></li>
-            <li><a href="#contact">Contatti</a></li>
-            <li><a href="FAQ.html">FAQ</a></li>
-        </ul>
-    </nav>
-</div>
-</div>
-    </header>         
+
+
+            <a href="https://wa.me/+393880599971" target="_blank">
+                <img src="images/WA.png" width="100" height="100" alt="Chatea con nosotros" class="whatsapp-icon"/>
+            </a>
+            <div class="hero-images desktop">
+                <img src="images/HERODESKES.png" alt="Imagen Hero 1" class="active">
+            </div>
+            <div class="hero-images mobile">
+                <img src="images/heromobilees.png" alt="Imagen Hero Móvil 1" class="active">
+            </div>
+        </div>
+        <nav class="desktop-menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#services-section">Servicios</a></li>
+                <li><a href="#chi-siamo-section">Quiénes Somos</a></li>
+                <li><a href="#contact">Contactos</a></li>
+                <li><a href="FAQ.html">Faq</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile menu -->
+        <nav class="mobile-menu">
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <ul class="menu-list">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servizi.html">Servicios</a></li>
+                <li><a href="chisiamo.html">Quiénes Somos</a></li>
+                <li><a href="#contact">Contactos</a></li>
+                <li><a href="FAQ.html">Faq</a></li>
+            </ul>
+        </nav>
+    </header>        
 
 <div><br><BR>
     <center><span style="font-size: 38px; color: #208786;">I NOSTRI SERVIZI</span></center>
@@ -100,272 +107,124 @@
                 <tr class="customdark-row" id="services-section">
                     <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
                         <center><img src="images/pratiche.png" width="160" height="160"></center>
-                        <br>
-                        <center><span style="font-size: 30px; color: #208786;">PRATICHE BUROCRATICHE</span></center>
-                        <br>
-                        <center><span style="font-size: 25px; color: #0c2d2c;">
-                            Ci occupiamo di tutte le pratiche burocratiche necessarie per mettere il tuo immobile in regola, permettendoti di affittare senza preoccupazioni.
-                        </span></center>
-                        <br>
-                   </td>
+                        <center><span style="font-size: 30px; color: #208786;">TRÁMITES BUROCRÁTICOS</span></center>
+                        <center><span style="font-size: 25px; color: #0c2d2c;">Nos ocupamos de todos los trámites burocráticos necesarios para poner tu propiedad en regla, permitiéndote alquilar sin preocupaciones.</span></center>
+                    </td>
                 </tr>
                 <tr class="custom-row">
                     <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
                         <center><img src="images/revenue.png" width="160" height="160"></center>
-                        <br>
-                        <center><span style="font-size: 30px; color: #208786;">REVENUE MANAGEMENT</span></center>
-                        <br>
-                        <center><span style="font-size: 25px; color: #0c2d2c;">
-                            Il nostro team analizza attentamente il mercato per determinare il prezzo di vendita ottimale, garantendoti guadagni massimi. La gestione della tua casa rimane sempre sotto il tuo controllo. Adeguiamo i prezzi in base alle stagioni e agli eventi più importanti dell'anno, assicurando che il tuo immobile sia sempre competitivo.                        </span></center>
-                            <br>
-                        </td>
+                        <center><span style="font-size: 30px; color: #208786;">GESTIÓN DE INGRESOS</span></center>
+                        <center><span style="font-size: 25px; color: #0c2d2c;">Nuestro equipo analiza cuidadosamente el mercado para determinar el precio de venta óptimo, garantizándote ingresos máximos. La gestión de tu casa siempre permanece bajo tu control. Ajustamos los precios según las temporadas y los eventos más importantes del año, asegurando que tu propiedad sea siempre competitiva.</span></center>
+                    </td>
                 </tr>
                 <tr class="customdark-row">
                     <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
                         <center><img src="images/report.png" width="160" height="160"></center>
-                        <br>
-                        <center><span style="font-size: 30px; color: #208786;">REPORT MENSILI</span></center>
-                        <br>
-                        <center><span style="font-size: 25px; color: #0c2d2c;">
-                            Forniamo report mensili dettagliati ai nostri clienti, offrendo una panoramica chiara e trasparente delle performance del loro immobile.                        </span></center>
-                            <br>
-                        </td>
+                        <center><span style="font-size: 30px; color: #208786;">INFORMES MENSUALES</span></center>
+                        <center><span style="font-size: 25px; color: #0c2d2c;">Proporcionamos informes mensuales detallados a nuestros clientes, ofreciendo una visión clara y transparente del rendimiento de su propiedad.</span></center>
+                    </td>
                 </tr>
                 <tr class="custom-row">
                     <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
                         <center><img src="images/welcomepiccolo.png" width="160" height="160"></center>
-                        <br>
-                        <center><span style="font-size: 30px; color: #208786;">ACCOGLIENZA OSPITI</span></center>
-                        <br>
-                        <center><span style="font-size: 25px; color: #0c2d2c;">
-                            Il check-in è un momento cruciale nell'esperienza di un affitto breve. Durante questo incontro, l'ospite conosce per la prima volta il suo host e può chiedere consigli e assistenza. Ogni dettaglio deve essere curato con attenzione, poiché può influenzare l'intera esperienza del soggiorno. Se non puoi occupartene personalmente, permettici di farlo per te. Accoglieremo i tuoi ospiti con la stessa cura e dedizione che riserviamo ai nostri e per garantire che tutto sia perfetto.
-                        </span></center>
-                        <br>
-                   </td>
+                        <center><span style="font-size: 30px; color: #208786;">BIENVENIDA A LOS HUÉSPEDES</span></center>
+                        <center><span style="font-size: 25px; color: #0c2d2c;">El check-in es un momento crucial en la experiencia de un alquiler temporal. Durante este encuentro, el huésped conoce por primera vez a su anfitrión y puede pedir consejos y asistencia. Cada detalle debe ser cuidado con atención, ya que puede influir en toda la experiencia de la estancia. Si no puedes encargarte personalmente, permítenos hacerlo por ti. Daremos la bienvenida a tus huéspedes con el mismo cuidado y dedicación que reservamos a los nuestros para garantizar que todo sea perfecto.</span></center>
+                    </td>
                 </tr>
                 <tr class="customdark-row">
                     <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
                         <center><img src="images/arredamento.png" width="160" height="160"></center>
-                        <br>
-                        <center><span style="font-size: 30px; color: #208786;">ARREDAMENTO</span></center>
-                        <br>
-                        <center><span style="font-size: 25px; color: #0c2d2c;">
-                            Arredare un appartamento
-                            richiede un tocco speciale.
-                            Conosciamo le esigenze
-                            dei viaggiatori
-                            e sappiamo come
-                            soddisfarle.
-                            Ti consigliamo sull'arredo
-                            più adatto e ci occupiamo
-                            di tutto, dall'acquisto
-                            al montaggio, per creare
-                            uno spazio accogliente
-                            e funzionale.
-                                                    </span></center>
-                                                    <br>
-                                                </td>
-                   
+                        <center><span style="font-size: 30px; color: #208786;">MOBILIARIO</span></center>
+                        <center><span style="font-size: 25px; color: #0c2d2c;">Amueblar un apartamento requiere un toque especial. Conocemos las necesidades de los viajeros y sabemos cómo satisfacerlas. Te aconsejamos sobre el mobiliario más adecuado y nos encargamos de todo, desde la compra hasta el montaje, para crear un espacio acogedor y funcional.</span></center>
+                    </td>
                 </tr>
-               
                 <tr class="custom-row">
                     <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
                         <center><img src="images/wifi.png" width="160" height="160"></center>
-                        <br>
-                        <center><span style="font-size: 30px; color: #208786;">ATTIVAZIONE UTENZE</span></center>
-                        <br>
-                        <center><span style="font-size: 25px; color: #0c2d2c;">
-                            Gestiamo l'intero processo
-                            di attivazione di internet e utenze
-                            per il tuo appartamento.
-                            Dalla scelta delle tariffe migliori
-                            alla gestione delle telefonate
-                            e dei contratti, fino all'invio
-                            della documentazione necessaria
-                            e agli incontri con i tecnici,
-                            ci occupiamo di tutto per te.
-                            Inoltre, siamo a disposizione
-                            per qualsiasi intervento successivo.
-                                                    </span></center>
-                                                    <br>
-                   </td>
+                        <center><span style="font-size: 30px; color: #208786;">ACTIVACIÓN DE SERVICIOS</span></center>
+                        <center><span style="font-size: 25px; color: #0c2d2c;">Gestionamos todo el proceso de activación de internet y servicios para tu apartamento. Desde la elección de las mejores tarifas hasta la gestión de llamadas y contratos, pasando por el envío de la documentación necesaria y las reuniones con los técnicos, nos encargamos de todo por ti. Además, estamos disponibles para cualquier intervención posterior.</span></center>
+                    </td>
                 </tr>
                 <tr class="customdark-row">
                     <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
                         <center><img src="images/pulipiccolo.png" width="160" height="160"></center>
-                        <br>
-                        <center><span style="font-size: 30px; color: #208786;">PULIZIE</span></center>
-                        <br>
-                        <center><span style="font-size: 25px; color: #0c2d2c;">
-                            Per un luogo frequentato da persone di tutto il mondo, la pulizia deve essere impeccabile. Una casa pulita e ordinata è il primo passo verso una recensione a 5 stelle. Le nostre pulizie sono pensate per garantire la massima soddisfazione degli ospiti.
-                        </span></center>
-                        <br>
-                   </td>
+                        <center><span style="font-size: 30px; color: #208786;">LIMPIEZA</span></center>
+                        <center><span style="font-size: 25px; color: #0c2d2c;">Para un lugar frecuentado por personas de todo el mundo, la limpieza debe ser impecable. Una casa limpia y ordenada es el primer paso hacia una reseña de 5 estrellas. Nuestras limpiezas están pensadas para garantizar la máxima satisfacción de los huéspedes.</span></center>
+                    </td>
                 </tr>
                 <tr class="custom-row">
                     <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
                         <center><img src="images/biancheriapicco.png" width="160" height="160"></center>
-                        <br>
-                        <center><span style="font-size: 30px; color: #208786;">SERVIZIO BIANCHERIA</span></center>
-                        <br>
-                        <center><span style="font-size: 25px; color: #0c2d2c;">
-                            Stanco di lavare e stirare lenzuola e asciugamani dopo ogni ospite? Lascia fare a noi! Offriamo biancheria di qualità alberghiera, lavata e igienizzata industrialmente. La consegniamo direttamente al tuo appartamento, con cadenza fissa o ad ogni arrivo di ospiti.
-                        </span></center>
-                        <br>
-                   </td>
+                        <center><span style="font-size: 30px; color: #208786;">SERVICIO DE ROPA DE CAMA</span></center>
+                        <center><span style="font-size: 25px; color: #0c2d2c;">¿Cansado de lavar y planchar sábanas y toallas después de cada huésped? ¡Déjalo en nuestras manos! Ofrecemos ropa de cama de calidad hotelera, lavada e higienizada industrialmente. La entregamos directamente a tu apartamento, con una frecuencia fija o en cada llegada de huéspedes.</span></center>
+                    </td>
                 </tr>
                 <tr class="customdark-row">
                     <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
                         <center><img src="images/foto.png" width="160" height="160"></center>
-                        <br>
-                        <center><span style="font-size: 30px; color: #208786;">SERVIZIO FOTOGRAFICO PROFESSIONALE</span></center>
-                        <br>
-                        <center><span style="font-size: 25px; color: #0c2d2c;">
-                            Le immagini del tuo appartamento sono cruciali per la decisione dei potenziali ospiti. Offriamo un servizio fotografico professionale per assicurarti che le foto siano di alta qualità e rappresentino al meglio il tuo spazio, rendendolo irresistibile per i visitatori.
-                        </span></center>
-                        <br>
-                   </td>
+                        <center><span style="font-size: 30px; color: #208786;">SERVICIO FOTOGRÁFICO PROFESIONAL</span></center>
+                        <center><span style="font-size: 25px; color: #0c2d2c;">Las imágenes de tu apartamento son cruciales para la decisión de los posibles huéspedes. Ofrecemos un servicio fotográfico profesional para asegurarte que las fotos sean de alta calidad y representen al máximo tu espacio, haciéndolo irresistible para los visitantes.</span></center>
+                    </td>
                 </tr>
                 <tr class="custom-row">
                     <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
                         <center><img src="images/pubblicita.png" width="160" height="160"></center>
-                        <br>
-                        <center><span style="font-size: 30px; color: #208786;">PUBBLICITA'</span></center>
-                        <br>
-                        <center><span style="font-size: 25px; color: #0c2d2c;">
-                            L'annuncio del tuo appartamento è fondamentale per attirare ospiti. Creiamo annunci completi e accattivanti sulle principali piattaforme di affitti con foto professionali e descrizioni dettagliate in italiano e inglese, garantendo la massima visibilità.
-                        </span></center>
-                        <br>
-                   </td>
+                        <center><span style="font-size: 30px; color: #208786;">PUBLICIDAD</span></center>
+                        <center><span style="font-size: 25px; color: #0c2d2c;">El anuncio de tu apartamento es fundamental para atraer huéspedes. Creamos anuncios completos y atractivos en las principales plataformas de alquileres con fotos profesionales y descripciones detalladas en italiano e inglés, garantizando la máxima visibilidad.</span></center>
+                    </td>
                 </tr>
                 <tr class="customdark-row">
                     <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
                         <center><img src="images/guida.png" width="160" height="160"></center>
-                        <br>
-                        <center><span style="font-size: 30px; color: #208786;">GUIDE TURISTICHE</span></center>
-                        <br>
-                        <center><span style="font-size: 25px; color: #0c2d2c;">
-                            Gli ospiti apprezzano sempre trovare informazioni utili sulla casa e sulla città. Creiamo guide dettagliate e personalizzate, con consigli pratici e informazioni sulla zona, per rendere il soggiorno dei tuoi ospiti ancora più piacevole e informativo.
-                        </span></center>
-                        <br>
-                   </td>
+                        <center><span style="font-size: 30px; color: #208786;">GUÍAS TURÍSTICAS</span></center>
+                        <center><span style="font-size: 25px; color: #0c2d2c;">Los huéspedes siempre aprecian encontrar información útil sobre la casa y la ciudad. Creamos guías detalladas y personalizadas, con consejos prácticos e información sobre la zona, para hacer que la estancia de tus huéspedes sea aún más agradable e informativa.</span></center>
+                    </td>
                 </tr>
                 <tr class="custom-row">
                     <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
                         <center><img src="images/sitipicco.png" width="160" height="160"></center>
-<br>
-                        <center><span style="font-size: 30px; color: #208786;">CREAZIONE SITO WEB</span></center>
-                        <br>
-                        <center><span style="font-size: 25px; color: #0c2d2c;">
-                            Se vuoi aumentare la tua visibilità, la creazione di un sito web è l’ideale! Ti aiuteremo nello sviluppo del sito e dei social ad esso collegati!                        </span></center>
-                            <br>
-                        </td>
+                        <center><span style="font-size: 30px; color: #208786;">CREACIÓN DE SITIO WEB</span></center>
+                        <center><span style="font-size: 25px; color: #0c2d2c;">Si quieres aumentar tu visibilidad, ¡la creación de un sitio web es ideal! Te ayudaremos en el desarrollo del sitio y de las redes sociales asociadas.</span></center>
+                    </td>
                 </tr>
-
                 <tr class="customdark-row">
                     <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
-                        <BR>
-                            <center><span style="font-size: 30px; color: #208786;">CONTATTACI PER UNA CONSULENZA GRATUITA</span></center>
-                            <br>
-                    
-                            <center><span style="font-size: 25px; color: #0c2d2c;"><i>Ci occupiamo delle mansioni più impegnative, offrendo un pacchetto personalizzato per la gestione a lungo termine del tuo appartamento, dove l'host può scegliere quali compiti gestire personalmente e quali delegare al nostro team. Contattaci per una consulenza!</i></span></center>
-                            <br>
-                                    <center><div class="form-container">
-                                        <center><h2>Contact Us</h2></center>
-                                        <br>
-                                        <form action="https://api.web3forms.com/submit" method="POST">
-                                            <input type="hidden" name="access_key" value="7433205f-e93a-46c1-a284-4a7839010a8a">
-                                            <div class="form-group">
-                                                <input type="text" name="name" placeholder="Nome" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="text" name="Cognome" placeholder="Cognome" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="text" name="Telefono" placeholder="Telefono" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="email" name="email" placeholder="Email" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="text" name="numero.immobili" placeholder="Quanti immobili possiedi?" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="text" name="City" placeholder="In quale città?" required>
-                                            </div>
-                                            <div class="form-group">
-                                                <textarea name="message" placeholder="Messaggio" required></textarea>
-                                            </div>
-                                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-                                            <button type="submit">Invia</button>
-                                            <br>
-                                        </form>
-                                    </div></center>
-                                </div>
-                <br>
-                </td>
+                        <center><span style="font-size: 30px; color: #208786;">SERVICIO DE CO-HOSTING</span></center>
+                        <center><span style="font-size: 25px; color: #0c2d2c;"><i>Nos encargamos de las tareas más exigentes, ofreciendo un paquete personalizado para la gestión a largo plazo de tu apartamento, donde el anfitrión puede elegir qué tareas gestionar personalmente y cuáles delegar a nuestro equipo. ¡Contáctanos para una consulta!</i></span></center>
+                        <center>
+                            <div class="form-container">
+                                <center><h2>Contacta con nosotros</h2></center>
+                                <form action="https://api.web3forms.com/submit" method="POST">
+                                    <input type="hidden" name="access_key" value="7433205f-e93a-46c1-a284-4a7839010a8a">
+                                    <div class="form-group">
+                                        <input type="text" name="name" placeholder="Nombre" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="Cognome" placeholder="Apellido" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="Telefono" placeholder="Teléfono" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" name="email" placeholder="Correo electrónico" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="numero.immobili" placeholder="¿Cuántas propiedades posees?" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="City" placeholder="¿En qué ciudad?" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea name="message" placeholder="Mensaje" required></textarea>
+                                    </div>
+                                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                                    <button type="submit">Enviar</button>
+                                </form>
+                            </div>
+                        </center>
+                    </td>
                 </tr>
-            
-    <tr class="customdark-row">
-        <td style="padding-left: 65px; padding-right: 65px;" colspan="3">
-            <br>
-            <div class="review-container">
-                <center><span style="font-size: 30px; color: #208786;">REFERENZE</span></center>
-                <BR>
-            
-                <div id="review-text" class="review-text"></div>
-            </div>
-            
-            <script>
-               const reviews = [
-    "<i> Un servizio davvero superiore. Grazie Alexandre!</i><br><b style='float:right;'>Maurizio N.</b>",
-    "<i>Hanno semplificato tutto, permettendomi di godermi il mio tempo libero senza preoccupazioni.</i><br><b style='float:right;'>Elena T.</b>",
-    "<i>Assolutamente raccomandata.</i><br><b style='float:right;'>Giovanni C.</b>",
-    "<i>L'attenzione e la cortesia del personale mi hanno colpito molto. La comunicazione è sempre stata chiara e tempestiva. Sono molto soddisfatta della gestione della mia casa. Continuate così! Grazie Francesco!</i><br><b style='float:right;'>Christelle B.</b>",
-    "<i>La puntualità nei pagamenti e la cura nella manutenzione sono impeccabili. Consiglio vivamente a tutti.</i><br><b style='float:right;'>Giuseppe P.</b>",
-    "<i>Ogni mia esigenza è stata soddisfatta con competenza e cortesia. Sono davvero molto contento della scelta fatta.</i><br><b style='float:right;'>Emanuele S.</b>",
-    "<i>Grazie a questa agenzia, posso finalmente stare tranquillo!</i><br><b style='float:right;'>Luca D. P.</b>",
-    "<i>Ottimo servizio! Grazie Alexandre!</i><br><b style='float:right;'>Paolo A.</b>",
-    "<i>Non potrei essere più soddisfatta del loro lavoro.</i><br><b style='float:right;'>Sandra M.</b>",
-    "<i>Finalmente un'agenzia che capisce le mie esigenze! Hanno reso la gestione della mia proprietà un'esperienza serena. Ogni problema è stato risolto rapidamente. Consiglio questa agenzia senza riserve. Grazie Francesco!</i><br><b style='float:right;'>Federica B.</b>"
-];
-
-let currentReviewIndex = 0;
-let interval;
-
-function showNextReview() {
-    const reviewText = document.getElementById('review-text');
-    reviewText.classList.remove('fade-in');
-    reviewText.classList.add('fade-out');
-
-    setTimeout(() => {
-        reviewText.innerHTML = reviews[currentReviewIndex];
-        reviewText.classList.remove('fade-out');
-        reviewText.classList.add('fade-in');
-        currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
-    }, 2000); // Tempo di dissolvenza in millisecondi (deve corrispondere al CSS)
-}
-
-function startInterval() {
-    interval = setInterval(showNextReview, 5000); // Cambia recensione ogni 5 secondi
-}
-
-function stopInterval() {
-    clearInterval(interval);
-}
-
-// Mostra la prima recensione subito
-showNextReview();
-startInterval();
-
-// Aggiungi l'evento di pausa quando il mouse è sopra la recensione
-document.getElementById('review-text').addEventListener('mouseover', stopInterval);
-document.getElementById('review-text').addEventListener('mouseout', startInterval);
-
-</script>      
-            <br>
-        </td>
-    </tr>
     
             </table>
 
@@ -373,184 +232,113 @@ document.getElementById('review-text').addEventListener('mouseout', startInterva
                 
                 <tr class="customdark-row" id="services-section-mobile">
                     <td> <center><img src="images/pratiche.png" width="160" height="160"></center>
-                        <br>
-                        <center><span style="font-size: 30px; color: #208786;">PRATICHE BUROCRATICHE</span></center>
-                        <br>
-                        <center><span style="font-size: 25px; color: #0c2d2c;">
-                            Ci occupiamo di tutte le pratiche burocratiche necessarie per mettere il tuo immobile in regola, permettendoti di affittare senza preoccupazioni.
-                        </span></center>
-                        <br></td>
+                    <center><span style="font-size: 30px; color: #208786;">TRÁMITES BUROCRÁTICOS</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">Nos ocupamos de todos los trámites burocráticos necesarios para poner tu propiedad en regla, permitiéndote alquilar sin preocupaciones.</span></center>
+                    </td>
                 </tr>
                 <tr class="custom-row">
                     <td> <center><img src="images/revenue.png" width="160" height="160"></center>
-                        <br>
-                        <center><span style="font-size: 30px; color: #208786;">REVENUE MANAGEMENT</span></center>
-                        <br>
-                        <center><span style="font-size: 25px; color: #0c2d2c;">
-                            Il nostro team analizza attentamente il mercato per determinare il prezzo di vendita ottimale, garantendoti guadagni massimi. La gestione della tua casa rimane sempre sotto il tuo controllo. Adeguiamo i prezzi in base alle stagioni e agli eventi più importanti dell'anno, assicurando che il tuo immobile sia sempre competitivo.                        </span></center>
-                            <br></td>
+                    <center><span style="font-size: 30px; color: #208786;">GESTIÓN DE INGRESOS</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">Nuestro equipo analiza cuidadosamente el mercado para determinar el precio de venta óptimo, garantizándote ingresos máximos. La gestión de tu casa siempre permanece bajo tu control. Ajustamos los precios según las temporadas y los eventos más importantes del año, asegurando que tu propiedad sea siempre competitiva.</span></center>
+                    </td>
                 </tr>
                 <tr class="customdark-row">
                     <td>   <center><img src="images/report.png" width="160" height="160"></center>
-                        <br>
-                        <center><span style="font-size: 30px; color: #208786;">REPORT MENSILI</span></center>
-                        <br>
-                        <center><span style="font-size: 25px; color: #0c2d2c;">
-                            Forniamo report mensili dettagliati ai nostri clienti, offrendo una panoramica chiara e trasparente delle performance del loro immobile.                        </span></center>
-                            <br></td>
+                    <center><span style="font-size: 30px; color: #208786;">INFORMES MENSUALES</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">Proporcionamos informes mensuales detallados a nuestros clientes, ofreciendo una visión clara y transparente del rendimiento de su propiedad.</span></center>
+                    </td>
                 </tr>
                 <tr class="custom-row">
                     <td> <center><img src="images/welcomepiccolo.png" width="160" height="160"></center>
-                        <br>
-                        <center><span style="font-size: 30px; color: #208786;">ACCOGLIENZA OSPITI</span></center>
-                        <br>
-                        <center><span style="font-size: 25px; color: #0c2d2c;">
-                            Il check-in è un momento cruciale nell'esperienza di un affitto breve. Durante questo incontro, l'ospite conosce per la prima volta il suo host e può chiedere consigli e assistenza. Ogni dettaglio deve essere curato con attenzione, poiché può influenzare l'intera esperienza del soggiorno. Se non puoi occupartene personalmente, permettici di farlo per te. Accoglieremo i tuoi ospiti con la stessa cura e dedizione che riserviamo ai nostri e per garantire che tutto sia perfetto.
-                        </span></center>
-                        <br></td>
+                    <center><span style="font-size: 30px; color: #208786;">BIENVENIDA A LOS HUÉSPEDES</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">El check-in es un momento crucial en la experiencia de un alquiler temporal. Durante este encuentro, el huésped conoce por primera vez a su anfitrión y puede pedir consejos y asistencia. Cada detalle debe ser cuidado con atención, ya que puede influir en toda la experiencia de la estancia. Si no puedes encargarte personalmente, permítenos hacerlo por ti. Daremos la bienvenida a tus huéspedes con el mismo cuidado y dedicación que reservamos a los nuestros para garantizar que todo sea perfecto.</span></center>
+                    </td>
                 </tr>
                 <tr class="customdark-row">
                     <td> <center><img src="images/arredamento.png" width="160" height="160"></center>
-                        <br>
-                        <center><span style="font-size: 30px; color: #208786;">ARREDAMENTO</span></center>
-                        <br>
-                        <center><span style="font-size: 25px; color: #0c2d2c;">
-                            Arredare un appartamento
-                            richiede un tocco speciale.
-                            Conosciamo le esigenze
-                            dei viaggiatori
-                            e sappiamo come
-                            soddisfarle.
-                            Ti consigliamo sull'arredo
-                            più adatto e ci occupiamo
-                            di tutto, dall'acquisto
-                            al montaggio, per creare
-                            uno spazio accogliente
-                            e funzionale.
-                                                    </span></center>
-                                                    <br></td>
+                    <center><span style="font-size: 30px; color: #208786;">MOBILIARIO</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">Amueblar un apartamento requiere un toque especial. Conocemos las necesidades de los viajeros y sabemos cómo satisfacerlas. Te aconsejamos sobre el mobiliario más adecuado y nos encargamos de todo, desde la compra hasta el montaje, para crear un espacio acogedor y funcional.</span></center>
+                    </td>
                 </tr>
                 <tr class="custom-row">
                     <td>  <center><img src="images/wifi.png" width="160" height="160"></center>
-                        <br>
-                        <center><span style="font-size: 30px; color: #208786;">ATTIVAZIONE UTENZE</span></center>
-                        <br>
-                        <center><span style="font-size: 25px; color: #0c2d2c;">
-                            Gestiamo l'intero processo
-                            di attivazione di internet e utenze
-                            per il tuo appartamento.
-                            Dalla scelta delle tariffe migliori
-                            alla gestione delle telefonate
-                            e dei contratti, fino all'invio
-                            della documentazione necessaria
-                            e agli incontri con i tecnici,
-                            ci occupiamo di tutto per te.
-                            Inoltre, siamo a disposizione
-                            per qualsiasi intervento successivo.
-                                                    </span></center>
-                                                    <br></td>
+                    <center><span style="font-size: 30px; color: #208786;">ACTIVACIÓN DE SERVICIOS</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">Gestionamos todo el proceso de activación de internet y servicios para tu apartamento. Desde la elección de las mejores tarifas hasta la gestión de llamadas y contratos, pasando por el envío de la documentación necesaria y las reuniones con los técnicos, nos encargamos de todo por ti. Además, estamos disponibles para cualquier intervención posterior.</span></center>
+                    </td>
                 </tr>
                 <tr  class="customdark-row">
                     <td> <center><img src="images/pulipiccolo.png" width="160" height="160"></center>
-                        <br>
-                        <center><span style="font-size: 30px; color: #208786;">PULIZIE</span></center>
-                        <br>
-                        <center><span style="font-size: 25px; color: #0c2d2c;">
-                            Per un luogo frequentato da persone di tutto il mondo, la pulizia deve essere impeccabile. Una casa pulita e ordinata è il primo passo verso una recensione a 5 stelle. Le nostre pulizie sono pensate per garantire la massima soddisfazione degli ospiti.
-                        </span></center>
-                        <br></td>
+                    <center><span style="font-size: 30px; color: #208786;">LIMPIEZA</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">Para un lugar frecuentado por personas de todo el mundo, la limpieza debe ser impecable. Una casa limpia y ordenada es el primer paso hacia una reseña de 5 estrellas. Nuestras limpiezas están pensadas para garantizar la máxima satisfacción de los huéspedes.</span></center>
+                    </td>
                 </tr>
                 <tr class="custom-row">
                     <td> <center><img src="images/biancheriapicco.png" width="160" height="160"></center>
-                        <br>
-                        <center><span style="font-size: 30px; color: #208786;">SERVIZIO BIANCHERIA</span></center>
-                        <br>
-                        <center><span style="font-size: 25px; color: #0c2d2c;">
-                            Stanco di lavare e stirare lenzuola e asciugamani dopo ogni ospite? Lascia fare a noi! Offriamo biancheria di qualità alberghiera, lavata e igienizzata industrialmente. La consegniamo direttamente al tuo appartamento, con cadenza fissa o ad ogni arrivo di ospiti.
-                        </span></center>
-                        <br></td>
+                    <center><span style="font-size: 30px; color: #208786;">SERVICIO DE ROPA DE CAMA</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">¿Cansado de lavar y planchar sábanas y toallas después de cada huésped? ¡Déjalo en nuestras manos! Ofrecemos ropa de cama de calidad hotelera, lavada e higienizada industrialmente. La entregamos directamente a tu apartamento, con una frecuencia fija o en cada llegada de huéspedes.</span></center>
+                    </td>
                 </tr>
                 <tr class="customdark-row">
                     <td> <center><img src="images/foto.png" width="160" height="160"></center>
-                        <br>
-                        <center><span style="font-size: 30px; color: #208786;">SERVIZIO FOTOGRAFICO PROFESSIONALE</span></center>
-                        <br>
-                        <center><span style="font-size: 25px; color: #0c2d2c;">
-                            Le immagini del tuo appartamento sono cruciali per la decisione dei potenziali ospiti. Offriamo un servizio fotografico professionale per assicurarti che le foto siano di alta qualità e rappresentino al meglio il tuo spazio, rendendolo irresistibile per i visitatori.
-                        </span></center>
-                        <br></td>
+                    <center><span style="font-size: 30px; color: #208786;">SERVICIO FOTOGRÁFICO PROFESIONAL</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">Las imágenes de tu apartamento son cruciales para la decisión de los posibles huéspedes. Ofrecemos un servicio fotográfico profesional para asegurarte que las fotos sean de alta calidad y representen al máximo tu espacio, haciéndolo irresistible para los visitantes.</span></center>
+                    </td>
                 </tr>
                 <tr class="custom-row">
                     <td>  <center><img src="images/pubblicita.png" width="160" height="160"></center>
-                        <br>
-                        <center><span style="font-size: 30px; color: #208786;">PUBBLICITA'</span></center>
-                        <br>
-                        <center><span style="font-size: 25px; color: #0c2d2c;">
-                            L'annuncio del tuo appartamento è fondamentale per attirare ospiti. Creiamo annunci completi e accattivanti sulle principali piattaforme di affitti con foto professionali e descrizioni dettagliate in italiano e inglese, garantendo la massima visibilità.
-                        </span></center>
-                        <br></td>
-                </tr>
-                 <tr class="customdark-row">
-                    <td> <center><img src="images/guida.png" width="160" height="160"></center>
-                        <br>
-                        <center><span style="font-size: 30px; color: #208786;">GUIDE TURISTICHE</span></center>
-                        <br>
-                        <center><span style="font-size: 25px; color: #0c2d2c;">
-                            Gli ospiti apprezzano sempre trovare informazioni utili sulla casa e sulla città. Creiamo guide dettagliate e personalizzate, con consigli pratici e informazioni sulla zona, per rendere il soggiorno dei tuoi ospiti ancora più piacevole e informativo.
-                        </span></center>
-                        <br></td>
-                </tr>
-                 <tr class="custom-row">
-                    <td> <center><img src="images/sitipicco.png" width="160" height="160"></center>
-<br>
-                        <center><span style="font-size: 30px; color: #208786;">CREAZIONE SITO WEB</span></center>
-                        <br>
-                        <center><span style="font-size: 25px; color: #0c2d2c;">
-                            Se vuoi aumentare la tua visibilità, la creazione di un sito web è l’ideale! Ti aiuteremo nello sviluppo del sito e dei social ad esso collegati!                        </span></center>
-                            <br></td>
+                    <center><span style="font-size: 30px; color: #208786;">PUBLICIDAD</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">El anuncio de tu apartamento es fundamental para atraer huéspedes. Creamos anuncios completos y atractivos en las principales plataformas de alquileres con fotos profesionales y descripciones detalladas en italiano e inglés, garantizando la máxima visibilidad.</span></center>
+                    </td>
                 </tr>
                 <tr class="customdark-row">
-                    <td> <BR>
-                <center><span style="font-size: 30px; color: #208786;">CONTATTACI PER UNA CONSULENZA GRATUITA</span></center>
-                <br>
-        
-                <center><span style="font-size: 25px; color: #0c2d2c;"><i>Ci occupiamo delle mansioni più impegnative, offrendo un pacchetto personalizzato per la gestione a lungo termine del tuo appartamento, dove l'host può scegliere quali compiti gestire personalmente e quali delegare al nostro team. Contattaci per una consulenza!</i></span></center>
-                <br>
-                        <center><div class="form-container">
-                            <center><h2>Contact Us</h2></center>
-                            <br>
+                    <td> <center><img src="images/guida.png" width="160" height="160"></center>
+                    <center><span style="font-size: 30px; color: #208786;">GUÍAS TURÍSTICAS</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">Los huéspedes siempre aprecian encontrar información útil sobre la casa y la ciudad. Creamos guías detalladas y personalizadas, con consejos prácticos e información sobre la zona, para hacer que la estancia de tus huéspedes sea aún más agradable e informativa.</span></center>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td> <center><img src="images/sitipicco.png" width="160" height="160"></center>
+                    <center><span style="font-size: 30px; color: #208786;">CREACIÓN DE SITIO WEB</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">Si quieres aumentar tu visibilidad, ¡la creación de un sitio web es ideal! Te ayudaremos en el desarrollo del sitio y de las redes sociales asociadas.</span></center>
+                    </td>
+                </tr>
+                <tr class="customdark-row">
+                    <td>
+                    <center><span style="font-size: 30px; color: #208786;">SERVICIO DE CO-HOSTING</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;"><i>Nos encargamos de las tareas más exigentes, ofreciendo un paquete personalizado para la gestión a largo plazo de tu apartamento, donde el anfitrión puede elegir qué tareas gestionar personalmente y cuáles delegar a nuestro equipo. ¡Contáctanos para una consulta!</i></span></center>
+                    <center>
+                        <div class="form-container">
+                            <center><h2>Contacta con nosotros</h2></center>
                             <form action="https://api.web3forms.com/submit" method="POST">
                                 <input type="hidden" name="access_key" value="7433205f-e93a-46c1-a284-4a7839010a8a">
                                 <div class="form-group">
-                                    <input type="text" name="name" placeholder="Nome" required>
+                                    <input type="text" name="name" placeholder="Nombre" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="Cognome" placeholder="Cognome" required>
+                                    <input type="text" name="Cognome" placeholder="Apellido" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="Telefono" placeholder="Telefono" required>
+                                    <input type="text" name="Telefono" placeholder="Teléfono" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" name="email" placeholder="Email" required>
+                                    <input type="email" name="email" placeholder="Correo electrónico" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="numero.immobili" placeholder="Quanti immobili possiedi?" required>
+                                    <input type="text" name="numero.immobili" placeholder="¿Cuántas propiedades posees?" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="City" placeholder="In quale città?" required>
+                                    <input type="text" name="City" placeholder="¿En qué ciudad?" required>
                                 </div>
                                 <div class="form-group">
-                                    <textarea name="message" placeholder="Messaggio" required></textarea>
+                                    <textarea name="message" placeholder="Mensaje" required></textarea>
                                 </div>
                                 <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-                                <button type="submit">Invia</button>
-                                <br>
+                                <button type="submit">Enviar</button>
                             </form>
-                        </div></center> </div>
-    <br></td>
-                </tr>
-                 
-                
+                        </div>
+                    </center> </div>
+                </td>
+            </tr>
 
                 
             </table>
@@ -564,19 +352,19 @@ document.getElementById('review-text').addEventListener('mouseout', startInterva
                         <div><img src="images/toll.png" width="40" height="40"></div>
                         <div><img src="images/logoa.png" width="80" height="47"></div>
                         <div><img src="images/toll.png" width="20" height="20"></div>
-                        <span style="font-size: 30px; color: white;"><b>Contattaci</b></span>
+                        <span style="font-size: 30px; color: white;"><b>Contáctanos</b></span>
                         <div class="contact-info">
                             <p><a href="tel:+393880599971" style="color: white;">+39 388 059 99 71</a> - <a href="tel:+393271975673" style="color: white;">+39 327 197 56 73</a></p>
                             <p><a href="mailto:info@deseoapartments.com" style="color: white;">info@deseoapartments.com</a></p>
-                            <p><b style="color: white;">Sede legale: Via Ugo Bassi 10, Bologna 40121</b></p>
-                            <p><b style="color: white;">Lun - Ven</b></p>
+                            <p><b style="color: white;">Sede legal: Via Ugo Bassi 10, Bolonia 40121</b></p>
+                            <p><b style="color: white;">Lun - Vie</b></p>
                             <p><b style="color: white;">09:00 - 18:00</b></p>
                             <p style="color: white;">P.IVA: 04119991208</p>
                         </div>
                         <div class="social-media">
                             <a href="https://www.instagram.com/deseoapartments/" target="_blank"><img src="images/insta.png" alt="Instagram" class="social-icon"></a>
                             <a href="https://www.facebook.com/profile.php?id=61562461786178" target="_blank"><img src="images/face.png" alt="Facebook" class="social-icon"></a>
-                            <div><img src="images/tolleranza.png" alt="Tolleranza"></div>
+                            <div><img src="images/tolleranza.png" alt="Tolerancia"></div>
                         </div>
                     </section>
                 </center>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deseo Apartments - Short-term Rental Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="hero">
+
+        <div class="language-icons">
+            <a href="index.html"><img src="images/italian.png" alt="English" class="language-icon"></a>
+            <a href="index-es.html"><img src="images/spanish.png" alt="Spanish" class="language-icon"></a>
+            <a href="index-fr.html"><img src="images/french.png" alt="French" class="language-icon"></a>
+        </div>
+
+        <a href="https://wa.me/+393880599971" target="_blank">
+            <img src="images/WA.png" width="100" height="100" alt="Chat with us" class="whatsapp-icon"/>
+        </a>
+        <div class="hero-images desktop">
+            <img src="images/HERODESKEN.png" alt="Hero Image 1" class="active">
+        </div>
+        <div class="hero-images mobile">
+            <img src="images/heromobileeng.png" alt="Mobile Hero Image 1" class="active">
+        </div>
+    </div>
+    <nav class="desktop-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#services-section">Services</a></li>
+            <li><a href="#chi-siamo-section">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <!-- Mobile menu -->
+    <nav class="mobile-menu">
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <ul class="menu-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="servizi.html">Services</a></li>
+            <li><a href="chisiamo.html">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+        </ul>
+    </nav>
+</header>
+       
+    <div class="content">
+        <center>
+            <table id="table">
+                <tr>
+                    <td>
+                        <center>
+                            <div class="faq-section">
+                                <h2>FAQ</h2>
+                                <div class="faq-item">
+                                    <button class="faq-question" onclick="toggleAnswer('answer1')">What is a short-term rental?</button>
+                                    <div class="faq-answer" id="answer1">
+                                        <p>A short-term rental is a property rented for a limited period of time, usually from a few days to a few weeks. It is ideal for travelers, tourists, or anyone needing temporary accommodation.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <button class="faq-question" onclick="toggleAnswer('answer2')">What are the advantages of short-term rentals?</button>
+                                    <div class="faq-answer" id="answer2">
+                                       <p>Short-term rentals offer numerous advantages, including:</p>
+                                        <div><h2><p>Additional income</p></h2></div></p>
+                                        <div><h2><p>Flexibility</p></h2></div>
+                                        <div><h2><p>Better care</p></h2></div>
+                                        <div><h2><p>Market adaptability</p></h2></div>
+                                        <div><h2><p>Diverse experiences</p></h2></div>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <button class="faq-question" onclick="toggleAnswer('answer3')">What services do you offer for short-term rental management?</button>
+                                    <div class="faq-answer" id="answer3">
+                                        <p>We offer a comprehensive range of services, including:</p> 
+                                        <div><h2><p>Professional photography</p></h2></div>
+                                        <div><h2><p>Listing creation and optimization</p></h2></div>
+                                        <div><h2><p>Booking and communication management</p></h2></div>
+                                        <div><h2><p>Cleaning and maintenance</p></h2></div>
+                                        <div><h2><p>Check-in and check-out</p></h2></div>
+                                        <div><h2><p>Payment and deposit management</p></h2></div>
+                                        
+                                    
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <button class="faq-question" onclick="toggleAnswer('answer4')">How can I start working with you?</button>
+                                    <div class="faq-answer" id="answer4">
+                                        <p>You can start by contacting us through our website's contact form. One of our consultants will reach out to you for an initial assessment of your property and to discuss the details of the collaboration.</p>
+                                        <DIV><a href="" target="_blank"><h1><p>CLICK HERE!</p></h1></a></DIV>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <button class="faq-question" onclick="toggleAnswer('answer5')">How much does the short-term rental management service cost?</button>
+                                    <div class="faq-answer" id="answer5">
+                                        <p>Our fees vary based on the services required and the type of property. We typically charge a percentage commission on the monthly rentals. Contact us for a personalized quote.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <button class="faq-question" onclick="toggleAnswer('answer6')">How do you ensure the security of my property?</button>
+                                    <div class="faq-answer" id="answer6">
+                                        <p>We take several measures to ensure the security of your property, including:</p>
+                                        <div><h2><p>Guest identity verification</p></h2></div>
+                                        <div><h2><p>Use of secure locking systems</p></h2></div>
+                                        <div><h2><p>Accidental damage insurance</p></h2></div>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <button class="faq-question" onclick="toggleAnswer('answer7')">Which platforms do you use to promote properties?</button>
+                                    <div class="faq-answer" id="answer7">
+                                        <p>We advertise properties on leading platforms such as <h2>Airbnb, Booking.com, Vrbo</h2> and many others to ensure maximum visibility and occupancy.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <button class="faq-question" onclick="toggleAnswer('answer8')">How do you handle negative reviews?</button>
+                                    <div class="faq-answer" id="answer8">
+                                        <p>We proactively manage reviews, responding promptly and working to resolve any issues. We also work with guests to continuously improve the quality of their stay.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <button class="faq-question" onclick="toggleAnswer('answer9')">Can I use my property whenever I want?</button>
+                                    <div class="faq-answer" id="answer9">
+                                        <p>Yes, you can block the dates when you want to use your property through our management system. We just ask that you give us reasonable notice to avoid booking conflicts.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <button class="faq-question" onclick="toggleAnswer('answer10')">How are payments handled?</button>
+                                    <div class="faq-answer" id="answer10">
+                                        <p>We manage payments directly with guests and transfer your earnings, minus our commission, via bank transfer or other agreed-upon methods.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <button class="faq-question" onclick="toggleAnswer('answer11')">Do you offer maintenance services?</button>
+                                    <div class="faq-answer" id="answer11">
+                                        <p>Yes, we offer both regular and extraordinary maintenance services to ensure your property is always in excellent condition. We work with qualified technicians for all types of repairs.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <button class="faq-question" onclick="toggleAnswer('answer12')">What happens in case of property damage?</button>
+                                    <div class="faq-answer" id="answer12">
+                                        <p>In the event of damage, we assess the situation and manage the necessary repairs. We also require a security deposit from guests and work with insurance to cover significant damages.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <button class="faq-question" onclick="toggleAnswer('answer13')">How is the check-in and check-out process handled?</button>
+                                    <div class="faq-answer" id="answer13">
+                                        <p>Check-in and check-out are managed professionally, with options for in-person welcome or self-check-in systems for greater flexibility.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </center>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </div>
+    
+    <script>
+        function toggleAnswer(id) {
+            var answer = document.getElementById(id);
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+            } else {
+                answer.style.display = "block";
+            }
+        }
+    </script>
+    
+    
+
+    <footer>
+        <div class="footer-background" style="background-image: url('images/herofoot.png');">
+            <center>
+                <section id="contact">
+                    <div><img src="images/toll.png" width="40" height="40"></div>
+                    <div><img src="images/logoa.png" width="80" height="47"></div>
+                    <div><img src="images/toll.png" width="20" height="20"></div>
+                    <span style="font-size: 30px; color: white;"><b>Contact Us</b></span>
+                    <div class="contact-info">
+                        <p><a href="tel:+393880599971" style="color: white;">+39 388 059 99 71</a> - <a href="tel:+393271975673" style="color: white;">+39 327 197 56 73</a></p>
+                        <p><a href="mailto:info@deseoapartments.com" style="color: white;">info@deseoapartments.com</a></p>
+                        <p><b style="color: white;">Registered office: Via Ugo Bassi 10, Bologna 40121</b></p>
+                        <p><b style="color: white;">Mon - Fri</b></p>
+                        <p><b style="color: white;">09:00 - 18:00</b></p>
+                        <p style="color: white;">VAT: 04119991208</p>
+                    </div>
+                    <div class="social-media">
+                        <a href="https://www.instagram.com/deseoapartments/" target="_blank"><img src="images/insta.png" alt="Instagram" class="social-icon"></a>
+                        <a href="https://www.facebook.com/profile.php?id=61562461786178" target="_blank"><img src="images/face.png" alt="Facebook" class="social-icon"></a>
+                        <div><img src="images/tolleranza.png" alt="Tolerance"></div>
+                    </div>
+                </section>
+            </center>
+        </div>
+    </footer>
+    
+
+    <script>function toggleMenu() {
+        const menuList = document.querySelector('.menu-list');
+        menuList.classList.toggle('active');
+
+        
+    }</script>
+</body>
+</html>
