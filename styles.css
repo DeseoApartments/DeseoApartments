@@ -529,4 +529,15 @@ footer .contact-info, footer .social-media, footer span {
     box-shadow: none; /* Rimuove l'ombra esterna */
 }
 
+/* CSS to hide the button by default and show it only on smartphones */
+.smartphone-only-button {
+    display: none; /* Hide by default */
+}
+
+@media (max-width: 767px) {
+    /* Show the button only on devices with a max-width of 767px (smartphones) */
+    .smartphone-only-button {
+        display: inline-block;
+    }
+}
 
