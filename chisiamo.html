@@ -132,66 +132,7 @@
             <br>
         </td>
     </tr>
-    <tr class="customdark-row">
-        <td style="padding-left: 65px; padding-right: 65px;" colspan="3">
-            <br>
-            <div class="review-container">
-                <center><span style="font-size: 30px; color: #208786;">REFERENZE</span></center>
-                <BR>
-            
-                <div id="review-text" class="review-text"></div>
-            </div>
-            
-            <script>
-               const reviews = [
-    "<i> Un servizio davvero superiore. Grazie Alexandre!</i><br><b style='float:right;'>Maurizio N.</b>",
-    "<i>Hanno semplificato tutto, permettendomi di godermi il mio tempo libero senza preoccupazioni.</i><br><b style='float:right;'>Elena T.</b>",
-    "<i>Assolutamente raccomandata.</i><br><b style='float:right;'>Giovanni C.</b>",
-    "<i>L'attenzione e la cortesia del personale mi hanno colpito molto. La comunicazione è sempre stata chiara e tempestiva. Sono molto soddisfatta della gestione della mia casa. Continuate così! Grazie Francesco!</i><br><b style='float:right;'>Christelle B.</b>",
-    "<i>La puntualità nei pagamenti e la cura nella manutenzione sono impeccabili. Consiglio vivamente a tutti.</i><br><b style='float:right;'>Giuseppe P.</b>",
-    "<i>Ogni mia esigenza è stata soddisfatta con competenza e cortesia. Sono davvero molto contento della scelta fatta.</i><br><b style='float:right;'>Emanuele S.</b>",
-    "<i>Grazie a questa agenzia, posso finalmente stare tranquillo!</i><br><b style='float:right;'>Luca D. P.</b>",
-    "<i>Ottimo servizio! Grazie Alexandre!</i><br><b style='float:right;'>Paolo A.</b>",
-    "<i>Non potrei essere più soddisfatta del loro lavoro.</i><br><b style='float:right;'>Sandra M.</b>",
-    "<i>Finalmente un'agenzia che capisce le mie esigenze! Hanno reso la gestione della mia proprietà un'esperienza serena. Ogni problema è stato risolto rapidamente. Consiglio questa agenzia senza riserve. Grazie Francesco!</i><br><b style='float:right;'>Federica B.</b>"
-];
-
-let currentReviewIndex = 0;
-let interval;
-
-function showNextReview() {
-    const reviewText = document.getElementById('review-text');
-    reviewText.classList.remove('fade-in');
-    reviewText.classList.add('fade-out');
-
-    setTimeout(() => {
-        reviewText.innerHTML = reviews[currentReviewIndex];
-        reviewText.classList.remove('fade-out');
-        reviewText.classList.add('fade-in');
-        currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
-    }, 2000); // Tempo di dissolvenza in millisecondi (deve corrispondere al CSS)
-}
-
-function startInterval() {
-    interval = setInterval(showNextReview, 5000); // Cambia recensione ogni 5 secondi
-}
-
-function stopInterval() {
-    clearInterval(interval);
-}
-
-// Mostra la prima recensione subito
-showNextReview();
-startInterval();
-
-// Aggiungi l'evento di pausa quando il mouse è sopra la recensione
-document.getElementById('review-text').addEventListener('mouseover', stopInterval);
-document.getElementById('review-text').addEventListener('mouseout', startInterval);
-
-</script>      
-            <br>
-        </td>
-    </tr>
+    
     
             </table></section>
 
@@ -222,74 +163,7 @@ document.getElementById('review-text').addEventListener('mouseout', startInterva
             <center><span style="font-size: 29px;">Fondata nel 2023, Deseo è una società di property management con la missione di trasformare ogni soggiorno in un'esperienza memorabile. Il nostro impegno è rivolto alla cura del cliente, comprendendo l'importanza di sentirsi a proprio agio lontano da casa. Il nostro team è sempre disponibile per qualsiasi necessità o evenienza durante il soggiorno, assicurando un servizio impeccabile per proprietari e ospiti. La nostra dedizione alla cura del dettaglio e alla rapidità nell'assistenza ci distingue nel settore, garantendo esperienze straordinarie e soddisfazione per tutti i nostri clienti.</span></center>
             <br></td>
                 </tr>
-                <tr class="customdark-row">
-                    <td>
-                        <br>
-                        <div class="review-container1">
-                            <center><span style="font-size: 30px; color: #208786;">REFERENZE</span></center>
-                            <BR>
-                    
-                                <i>" Un servizio davvero superiore."</i><br>
-                                <b style='float:center;'>Maurizio N.</b>
-                                <hr>
-                                <br>
-                                <br>
-                                
-                                <i>"Hanno semplificato tutto, permettendomi di godermi il mio tempo libero senza preoccupazioni."</i><br>
-                                <b style='float:center;'>Elena T.</b>
-                                <hr>
-                                <br>
-                                <br>
-                                
-                                <i>"Assolutamente raccomandata."</i><br>
-                                <b style='float:center;'>Giovanni C.</b>
-                                <hr>
-                                <br>
-                                <br>
-                                
-                                <i>"Sono molto soddisfatta della gestione della mia casa. Continuate così!"</i><br>
-                                <b style='float:center;'>Christelle B.</b>
-                                <hr>
-                                <br>
-                                <br>
-                                
-                                <i>"Affido la mia proprietà a questa agenzia da quasi un anno e non ho mai avuto un problema. Consiglio vivamente a tutti."</i><br>
-                                <b style='float:center;'>Giuseppe P.</b>
-                                <hr>
-                                <br>
-                                <br>
-
-                                <i>"Sono davvero molto contento della scelta fatta."</i><br>
-                                <b style='float:center;'>Emanuele S.</b>
-                                <hr>
-                                <br>
-                                <br>
-
-                                <i>"Hanno gestito tutto in modo eccellente, dalla manutenzione alle emergenze. Un servizio senza pensieri!"</i><br>
-                                <b style='float:center;'>Luca D. P.</b>
-                                <hr>
-                                <br>
-                                <br>
-
-                                <i>"Sono molto soddisfatto e li consiglio caldamente."</i><br>
-                                <b style='float:center;'>Paolo A.</b>
-                                <hr>
-                                <br>
-                                <br>
-
-                                <i>"Il team è sempre disponibile e pronto ad aiutare. Non potrei essere più soddisfatta del loro lavoro."</i><br>
-                                <b style='float:center;'>Sandra M.</b>
-                                <hr>
-                                <br>                        
-                                <br>
-
-                                <i>"Finalmente un'agenzia che capisce le mie esigenze! Hanno reso la gestione della mia proprietà un'esperienza serena. Ogni problema è stato risolto rapidamente. Consiglio questa agenzia senza riserve."</i><br>
-                                <b style='float:center;'>Federica B.</b>
-                                <hr>
-                                <br>
-                                <br>
-                    </td>
-                </tr>
+                
                 
             </table>
         </div>

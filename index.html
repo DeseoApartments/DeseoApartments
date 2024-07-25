@@ -97,7 +97,7 @@
     </header>
     
     <center>
-        <div class="table-container">
+        <div style="padding-top: 20px;" class="table-container">
             <table class="desktop-table">
                 <div><center><a href="https://deseoapartments.kross.travel/" class="google-button">PRENOTA ORA LA TUA CASA VACANZE!</a></center></div>
                 <tr>
@@ -261,60 +261,7 @@
                         <center><span style="font-size: 20px;">Deseo è una società di property management con la missione di massimizzare il valore dei vostri immobili. Ci dedichiamo a fornire una gestione impeccabile delle proprietà, assicurando che ogni dettaglio sia curato con la massima attenzione. Siamo consapevoli dell'importanza di mantenere i vostri immobili in condizioni eccellenti, ottimizzando al contempo i rendimenti economici. Il nostro team è sempre disponibile per rispondere a qualsiasi esigenza, garantendo una gestione senza preoccupazioni e la massima soddisfazione per i proprietari. La nostra dedizione alla cura del dettaglio e alla rapidità nell'assistenza ci distingue nel settore, rendendo Deseo il partner ideale per chi desidera affidare i propri immobili a mani esperte e fidate.</span></center>
                     </td>
                 </tr>
-                <tr class="customdark-row">
-                    <td style="padding-left: 65px; padding-right: 65px;" colspan="3">
-                        <div class="review-container">
-                            <center><span style="font-size: 30px; color: #208786;">REFERENZE</span></center>
-                            <br>
-                            <div id="review-text" class="review-text"></div>
-                        </div>
-                        <script>
-                            const reviews = [
-                                "<i> Un servizio davvero superiore. Grazie Alexandre!</i><div><b style='float:right;'>Maurizio N.</b></div>",
-                                "<i>Hanno semplificato tutto, permettendomi di godermi il mio tempo libero senza preoccupazioni.</i><div><b style='float:right;'>Elena T.</b></div>",
-                                "<i>Assolutamente raccomandata.</i><div><b style='float:right;'>Giovanni C.</b></div>",
-                                "<i>L'attenzione e la cortesia del personale mi hanno colpito molto. La comunicazione è sempre stata chiara e tempestiva. Sono molto soddisfatta della gestione della mia casa. Continuate così! Grazie Francesco!</i><div><b style='float:right;'>Christelle B.</b></div>",
-                                "<i>La puntualità nei pagamenti e la cura nella manutenzione sono impeccabili. Consiglio vivamente a tutti.</i><div><b style='float:right;'>Giuseppe P.</b></div>",
-                                "<i>Ogni mia esigenza è stata soddisfatta con competenza e cortesia. Sono davvero molto contento della scelta fatta.</i><div><b style='float:right;'>Emanuele S.</b></div>",
-                                "<i>Grazie a questa agenzia, posso finalmente stare tranquillo!</i><div><b style='float:right;'>Luca D. P.</b></div>",
-                                "<i>Ottimo servizio! Grazie Alexandre!</i><div><b style='float:right;'>Paolo A.</b></div>",
-                                "<i>Finalmente un'agenzia che capisce le mie esigenze! Hanno reso la gestione della mia proprietà un'esperienza serena. Ogni problema è stato risolto rapidamente. Consiglio questa agenzia senza riserve. Grazie Francesco!</i><div><b style='float:right;'>Federica B.</b></div>"
-                            ];
-
-                            let currentReviewIndex = 0;
-                            let interval;
-
-                            function showNextReview() {
-                                const reviewText = document.getElementById('review-text');
-                                reviewText.classList.remove('fade-in');
-                                reviewText.classList.add('fade-out');
-
-                                setTimeout(() => {
-                                    reviewText.innerHTML = reviews[currentReviewIndex];
-                                    reviewText.classList.remove('fade-out');
-                                    reviewText.classList.add('fade-in');
-                                    currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
-                                }, 2000); // Tempo di dissolvenza in millisecondi (deve corrispondere al CSS)
-                            }
-
-                            function startInterval() {
-                                interval = setInterval(showNextReview, 5000); // Cambia recensione ogni 5 secondi
-                            }
-
-                            function stopInterval() {
-                                clearInterval(interval);
-                            }
-
-                            // Mostra la prima recensione subito
-                            showNextReview();
-                            startInterval();
-
-                            // Aggiungi l'evento di pausa quando il mouse è sopra la recensione
-                            document.getElementById('review-text').addEventListener('mouseover', stopInterval);
-                            document.getElementById('review-text').addEventListener('mouseout', startInterval);
-                        </script>      
-                    </td>
-                </tr>
+                
             </table>
             <div>
                 <br>
