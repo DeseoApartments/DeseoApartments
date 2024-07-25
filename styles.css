@@ -564,10 +564,10 @@ footer .contact-info, footer .social-media, footer span {
 
 table td * {
     display: block; /* Ensures that all elements behave like block-level elements */
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
   }
   
   table td *:not(:first-child) {
-    margin-top: 10px; /* Adds space between successive elements */
+    margin-top: 6px; /* Adds space between successive elements */
   }
