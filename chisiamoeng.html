@@ -120,61 +120,7 @@
                         <center><span style="font-size: 20px;">Deseo is a property management company with the mission to maximize the value of your properties. We are dedicated to providing impeccable property management, ensuring every detail is handled with utmost care. We understand the importance of maintaining your properties in excellent condition while optimizing economic returns. Our team is always available to meet any need, ensuring worry-free management and maximum satisfaction for property owners. Our dedication to attention to detail and prompt assistance sets us apart in the industry, making Deseo the ideal partner for those who wish to entrust their properties to expert and trustworthy hands.</span></center>
                     </td>
                 </tr>
-                <tr class="customdark-row">
-                    <td style="padding-left: 65px; padding-right: 65px;" colspan="3">
-                        <div class="review-container">
-                            <center><span style="font-size: 30px; color: #208786;">REFERENCES</span></center>
-                            <br>
-                           
-                            <div id="review-text" class="review-text"></div>
-                        </div>
-                        <script>
-                            const reviews = [
-                                "<i> Truly superior service. Thanks Alexandre!</i><div><b style='float:right;'>Maurizio N.</b></div>",
-                                "<i>They simplified everything, allowing me to enjoy my free time without worries.</i><div><b style='float:right;'>Elena T.</b></div>",
-                                "<i>Highly recommended.</i><div><b style='float:right;'>Giovanni C.</b></div>",
-                                "<i>The attention and courtesy of the staff impressed me a lot. Communication was always clear and timely. I am very satisfied with the management of my home. Keep it up! Thanks Francesco!</i><div><b style='float:right;'>Christelle B.</b></div>",
-                                "<i>Punctuality in payments and maintenance care are impeccable. Highly recommended to everyone.</i><div><b style='float:right;'>Giuseppe P.</b></div>",
-                                "<i>Every need of mine has been met with competence and courtesy. I am really happy with the choice I made.</i><div><b style='float:right;'>Emanuele S.</b></div>",
-                                "<i>Thanks to this agency, I can finally relax!</i><div><b style='float:right;'>Luca D. P.</b></div>",
-                                "<i>Excellent service! Thanks Alexandre!</i><div><b style='float:right;'>Paolo A.</b></div>",
-                                "<i>Finally, an agency that understands my needs! They made managing my property a serene experience. Every problem was solved quickly. I highly recommend this agency without reservations. Thanks Francesco!</i><div><b style='float:right;'>Federica B.</b></div>"
-                            ];
-
-                            let currentReviewIndex = 0;
-                            let interval;
-
-                            function showNextReview() {
-                                const reviewText = document.getElementById('review-text');
-                                reviewText.classList.remove('fade-in');
-                                reviewText.classList.add('fade-out');
-
-                                setTimeout(() => {
-                                    reviewText.innerHTML = reviews[currentReviewIndex];
-                                    reviewText.classList.remove('fade-out');
-                                    reviewText.classList.add('fade-in');
-                                    currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
-                                }, 2000); // Fade time in milliseconds (should match CSS)
-                            }
-
-                            function startInterval() {
-                                interval = setInterval(showNextReview, 5000); // Change review every 5 seconds
-                            }
-
-                            function stopInterval() {
-                                clearInterval(interval);
-                            }
-
-                            // Show the first review immediately
-                            showNextReview();
-                            startInterval();
-
-                            // Add pause event when the mouse is over the review
-                            document.getElementById('review-text').addEventListener('mouseover', stopInterval);
-                            document.getElementById('review-text').addEventListener('mouseout', startInterval);
-                        </script>      
-                    </td>
-                </tr>
+                
     
             </table></section>
 

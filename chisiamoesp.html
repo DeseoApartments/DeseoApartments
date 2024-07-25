@@ -122,60 +122,7 @@
                         <center><span style="font-size: 20px;">Deseo es una empresa de gestión de propiedades con la misión de maximizar el valor de tus inmuebles. Nos dedicamos a proporcionar una gestión impecable de las propiedades, asegurando que cada detalle sea cuidado con la máxima atención. Somos conscientes de la importancia de mantener tus inmuebles en condiciones excelentes, optimizando al mismo tiempo los rendimientos económicos. Nuestro equipo está siempre disponible para responder a cualquier necesidad, garantizando una gestión sin preocupaciones y la máxima satisfacción para los propietarios. Nuestra dedicación al cuidado del detalle y a la rapidez en la asistencia nos distingue en el sector, haciendo de Deseo el socio ideal para quienes desean confiar sus inmuebles a manos expertas y de confianza.</span></center>
                     </td>
                 </tr>
-                <tr class="customdark-row">
-                    <td style="padding-left: 65px; padding-right: 65px;" colspan="3">
-                        <div class="review-container">
-                            <center><span style="font-size: 30px; color: #208786;">REFERENCIAS</span></center>
-                            <br>
-                            <div id="review-text" class="review-text"></div>
-                        </div>
-                        <script>
-                            const reviews = [
-                                "<i> Un servicio realmente superior. ¡Gracias Alexandre!</i><div><b style='float:right;'>Maurizio N.</b></div>",
-                                "<i>Han simplificado todo, permitiéndome disfrutar de mi tiempo libre sin preocupaciones.</i><div><b style='float:right;'>Elena T.</b></div>",
-                                "<i>Absolutamente recomendada.</i>zdiv><b style='float:right;'>Giovanni C.</b></div>",
-                                "<i>La atención y la cortesía del personal me impresionaron mucho. La comunicación siempre ha sido clara y oportuna. Estoy muy satisfecha con la gestión de mi casa. ¡Sigan así! ¡Gracias Francesco!</i><div><b style='float:right;'>Christelle B.</b></div>",
-                                "<i>La puntualidad en los pagos y el cuidado en el mantenimiento son impecables. Lo recomiendo encarecidamente a todos.</i><div><b style='float:right;'>Giuseppe P.</b></div>",
-                                "<i>Cada una de mis necesidades fue satisfecha con competencia y cortesía. Estoy realmente muy contento con la elección hecha.</i><div><b style='float:right;'>Emanuele S.</b></div>",
-                                "<i>Gracias a esta agencia, ¡puedo finalmente estar tranquilo!</i><div><b style='float:right;'>Luca D. P.</b></div>",
-                                "<i>¡Excelente servicio! ¡Gracias Alexandre!</i><div><b style='float:right;'>Paolo A.</b></div>",
-                                "<i>Finalmente una agencia que entiende mis necesidades! Han hecho que la gestión de mi propiedad sea una experiencia serena. Cada problema fue resuelto rápidamente. Recomiendo esta agencia sin reservas. ¡Gracias Francesco!</i><div><b style='float:right;'>Federica B.</b></div>"
-                            ];
-
-                            let currentReviewIndex = 0;
-                            let interval;
-
-                            function showNextReview() {
-                                const reviewText = document.getElementById('review-text');
-                                reviewText.classList.remove('fade-in');
-                                reviewText.classList.add('fade-out');
-
-                                setTimeout(() => {
-                                    reviewText.innerHTML = reviews[currentReviewIndex];
-                                    reviewText.classList.remove('fade-out');
-                                    reviewText.classList.add('fade-in');
-                                    currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
-                                }, 2000); // Tiempo de desvanecimiento en milisegundos (debe coincidir con el CSS)
-                            }
-
-                            function startInterval() {
-                                interval = setInterval(showNextReview, 5000); // Cambia la reseña cada 5 segundos
-                            }
-
-                            function stopInterval() {
-                                clearInterval(interval);
-                            }
-
-                            // Muestra la primera reseña inmediatamente
-                            showNextReview();
-                            startInterval();
-
-                            // Añade el evento de pausa cuando el ratón está sobre la reseña
-                            document.getElementById('review-text').addEventListener('mouseover', stopInterval);
-                            document.getElementById('review-text').addEventListener('mouseout', startInterval);
-                        </script>      
-                    </td>
-                </tr>
+                
     
             </table></section>
 
