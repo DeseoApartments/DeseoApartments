@@ -561,3 +561,13 @@ footer .contact-info, footer .social-media, footer span {
         height: 27px; /* Adjust size as needed for smartphones */
     }
 }
+
+table td * {
+    display: block; /* Ensures that all elements behave like block-level elements */
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  table td *:not(:first-child) {
+    margin-top: 10px; /* Adds space between successive elements */
+  }
