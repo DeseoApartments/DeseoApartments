@@ -242,60 +242,7 @@
                         </center>
                     </td>
                 </tr>
-                <tr class="customdark-row">
-                    <td style="padding-left: 65px; padding-right: 65px;" colspan="3">
-                        <div class="review-container">
-                            <center><span style="font-size: 30px; color: #208786;">REFERENZE</span></center>
-                            <div id="review-text" class="review-text"></div>
-                        </div>
-                        <script>
-                            const reviews = [
-                                "<i> Un servizio davvero superiore. Grazie Alexandre!</i><br><b style='float:right;'>Maurizio N.</b>",
-                                "<i>Hanno semplificato tutto, permettendomi di godermi il mio tempo libero senza preoccupazioni.</i><br><b style='float:right;'>Elena T.</b>",
-                                "<i>Assolutamente raccomandata.</i><br><b style='float:right;'>Giovanni C.</b>",
-                                "<i>L'attenzione e la cortesia del personale mi hanno colpito molto. La comunicazione è sempre stata chiara e tempestiva. Sono molto soddisfatta della gestione della mia casa. Continuate così! Grazie Francesco!</i><br><b style='float:right;'>Christelle B.</b>",
-                                "<i>La puntualità nei pagamenti e la cura nella manutenzione sono impeccabili. Consiglio vivamente a tutti.</i><br><b style='float:right;'>Giuseppe P.</b>",
-                                "<i>Ogni mia esigenza è stata soddisfatta con competenza e cortesia. Sono davvero molto contento della scelta fatta.</i><br><b style='float:right;'>Emanuele S.</b>",
-                                "<i>Grazie a questa agenzia, posso finalmente stare tranquillo!</i><br><b style='float:right;'>Luca D. P.</b>",
-                                "<i>Ottimo servizio! Grazie Alexandre!</i><br><b style='float:right;'>Paolo A.</b>",
-                                "<i>Non potrei essere più soddisfatta del loro lavoro.</i><br><b style='float:right;'>Sandra M.</b>",
-                                "<i>Finalmente un'agenzia che capisce le mie esigenze! Hanno reso la gestione della mia proprietà un'esperienza serena. Ogni problema è stato risolto rapidamente. Consiglio questa agenzia senza riserve. Grazie Francesco!</i><br><b style='float:right;'>Federica B.</b>"
-                            ];
-
-                            let currentReviewIndex = 0;
-                            let interval;
-
-                            function showNextReview() {
-                                const reviewText = document.getElementById('review-text');
-                                reviewText.classList.remove('fade-in');
-                                reviewText.classList.add('fade-out');
-
-                                setTimeout(() => {
-                                    reviewText.innerHTML = reviews[currentReviewIndex];
-                                    reviewText.classList.remove('fade-out');
-                                    reviewText.classList.add('fade-in');
-                                    currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
-                                }, 2000); // Tempo di dissolvenza in millisecondi (deve corrispondere al CSS)
-                            }
-
-                            function startInterval() {
-                                interval = setInterval(showNextReview, 5000); // Cambia recensione ogni 5 secondi
-                            }
-
-                            function stopInterval() {
-                                clearInterval(interval);
-                            }
-
-                            // Mostra la prima recensione subito
-                            showNextReview();
-                            startInterval();
-
-                            // Aggiungi l'evento di pausa quando il mouse è sopra la recensione
-                            document.getElementById('review-text').addEventListener('mouseover', stopInterval);
-                            document.getElementById('review-text').addEventListener('mouseout', startInterval);
-                        </script>
-                    </td>
-                </tr>
+                
             </table>
 
             <table class="mobile-table">
