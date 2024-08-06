@@ -615,10 +615,10 @@ table td * {
     max-width: 100%;
     margin: auto;
     overflow: hidden;
-    border: transparent #ddd;
+    border: transparent #ffffff;
     border-radius: 29px;
     background-color: transparent;
-    box-shadow: transparent; /* Aggiungi ombra al container */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Aggiungi ombra al container */
 }
 
 .gallery {
