@@ -596,12 +596,13 @@ table td * {
     /* Modifica del margine dall'alto per smartphone */
     .location {
         top: 25%; /* Regola il valore secondo le tue necessità */
-        font-size: 12px; /* Font size per smartphone */
+        font-size: 9px; /* Font size per smartphone */
     }
 
     .overlay {
-        width: 100%; /* Rimpicciolisce l'overlay della descrizione per smartphone */
-        padding: 4px 0; /* Riduce il padding per smartphone */
+        width: 100%;
+        height: 50%; /* Rimpicciolisce l'overlay della descrizione per smartphone */
+        padding: 0px 0; /* Riduce il padding per smartphone */
     }
 }
 
