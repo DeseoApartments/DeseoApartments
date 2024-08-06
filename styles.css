@@ -705,33 +705,6 @@ table td * {
 }
 
 
-@media only screen and (max-width: 768px) {
-    .gallery-container {
-        width: 100%; /* Adatta il contenitore alla larghezza del dispositivo mobile */
-        max-width: 100%;
-    }
 
-    .gallery {
-        width: 100%;
-    }
-
-    .slide {
-        min-width: 100%; /* Assicura che ogni slide prenda il 100% della larghezza del contenitore */
-    }
-
-    .slide img {
-        width: 100%; /* Adatta l'immagine alla larghezza del dispositivo mobile */
-        
-    }
-
-    .overlay {
-        width: 100%; /* Si adatta alla larghezza dell'immagine */
-    }
-
-    .prev, .next {
-        font-size: 18px;
-        padding: 12px;
-    }
-}
 
 
