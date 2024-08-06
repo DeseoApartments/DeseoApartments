@@ -701,7 +701,7 @@ table td * {
 
     .slide img {
         width: 100%; /* Adatta l'immagine alla larghezza del dispositivo mobile */
-        height: 300px; /* Imposta un'altezza fissa per le immagini su dispositivi mobili */
+        height: 200px; /* Imposta un'altezza fissa per le immagini su dispositivi mobili */
     }
 
     .overlay {
