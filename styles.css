@@ -574,8 +574,7 @@ table td * {
 
   /*CSS GALLERIA IMMAGINI*/
 
-  /* Galleria visibile solo su desktop */
-  
+/* Galleria visibile solo su desktop */
 .desktop-only {
     display: block;
 }
@@ -594,7 +593,6 @@ table td * {
         display: block;
     }
 }
-
 
 .gallery-container {
     position: relative;
@@ -705,6 +703,8 @@ table td * {
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
 }
+
+
 
 
 
