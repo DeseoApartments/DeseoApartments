@@ -594,7 +594,7 @@ table td * {
     }
 
     /* Modifica del margine dall'alto per smartphone */
-    .location {
+    .location1 {
         top: 27%; /* Regola il valore secondo le tue necessità */
         font-size: 9px; /* Font size per smartphone */
     }
@@ -603,8 +603,7 @@ table td * {
         display: none; /* Nasconde la descrizione per smartphone */
     }
 
-    .overlay {
-        width: auto;
+    .overlay1 {
         padding: 5px 0; /* Riduce il padding per smartphone */
         background: none; /* Rimuove il background per l'overlay su smartphone */
     }
