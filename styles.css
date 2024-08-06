@@ -596,7 +596,7 @@ table td * {
     /* Modifica del margine dall'alto per smartphone */
     .location1 {
         top: 27%; /* Regola il valore secondo le tue necessità */
-        font-size: 9px; /* Font size per smartphone */
+        font-size: 14px; /* Font size per smartphone */
     }
 
     .overlay .description {
@@ -615,10 +615,10 @@ table td * {
     max-width: 100%;
     margin: auto;
     overflow: hidden;
-    border: transparent #ffffff;
+    border: none;
     border-radius: 29px;
     background-color: transparent;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Aggiungi ombra al container */
+    box-shadow: none; /* Aggiungi ombra al container */
 }
 
 .gallery {
@@ -682,7 +682,7 @@ table td * {
     border-radius: 5px;
     cursor: pointer;
     font-size: 15px;
-    box-shadow: 0 4px 8px rgba(3, 2, 2, 0.5); /* Aggiungi ombra al bottone */
+    box-shadow: none; /* Aggiungi ombra al bottone */
 }
 
 .book-button:hover {
