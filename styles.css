@@ -598,6 +598,7 @@ table td * {
     position: relative;
     width: 70%;
     max-width: 90%;
+    height: auto;
     margin: auto;
     overflow: hidden;
     border: transparent #ddd;
