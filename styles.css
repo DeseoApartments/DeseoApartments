@@ -574,6 +574,28 @@ table td * {
 
   /*CSS GALLERIA IMMAGINI*/
 
+  /* Galleria visibile solo su desktop */
+  
+.desktop-only {
+    display: block;
+}
+
+.smartphone-only {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    /* Galleria visibile solo su smartphone */
+    .desktop-only {
+        display: none;
+    }
+
+    .smartphone-only {
+        display: block;
+    }
+}
+
+
 .gallery-container {
     position: relative;
     width: 70%;
@@ -684,25 +706,6 @@ table td * {
     background-color: rgba(0,0,0,0.8);
 }
 
-/* Galleria visibile solo su desktop */
-.desktop-only {
-    display: block;
-}
-
-.smartphone-only {
-    display: none;
-}
-
-@media (max-width: 768px) {
-    /* Galleria visibile solo su smartphone */
-    .desktop-only {
-        display: none;
-    }
-
-    .smartphone-only {
-        display: block;
-    }
-}
 
 
 
