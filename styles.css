@@ -599,9 +599,14 @@ table td * {
         font-size: 9px; /* Font size per smartphone */
     }
 
+    .overlay .description {
+        display: none; /* Nasconde la descrizione per smartphone */
+    }
+
     .overlay {
-        width: 0%;
-        padding: 0px 0; /* Riduce il padding per smartphone */
+        width: auto;
+        padding: 5px 0; /* Riduce il padding per smartphone */
+        background: none; /* Rimuove il background per l'overlay su smartphone */
     }
 }
 
@@ -714,6 +719,7 @@ table td * {
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
 }
+ 
 
 
 
