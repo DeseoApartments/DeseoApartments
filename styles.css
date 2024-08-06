@@ -592,6 +592,11 @@ table td * {
     .smartphone-only {
         display: block;
     }
+
+    /* Modifica del margine dall'alto per smartphone */
+    .location {
+        top: 15%; /* Regola il valore secondo le tue necessità */
+    }
 }
 
 .gallery-container {
@@ -630,7 +635,7 @@ table td * {
 
 .location {
     position: absolute;
-    top: 10%;
+    top: 10%; /* Margine dall'alto per desktop */
     left: 50%;
     transform: translate(-50%, -50%);
     background: rgba(255, 255, 255, 0.8); /* Aumenta opacità dello sfondo */
@@ -703,6 +708,7 @@ table td * {
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
 }
+
 
 
 
