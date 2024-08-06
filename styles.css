@@ -600,8 +600,7 @@ table td * {
     }
 
     .overlay {
-        width: 100%;
-        height: 50%; /* Rimpicciolisce l'overlay della descrizione per smartphone */
+        width: 0%;
         padding: 0px 0; /* Riduce il padding per smartphone */
     }
 }
