@@ -669,6 +669,11 @@ table td * {
     user-select: none;
 }
 
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
@@ -677,6 +682,7 @@ table td * {
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
 }
+
 
 @media only screen and (max-width: 768px) {
     .gallery-container {
