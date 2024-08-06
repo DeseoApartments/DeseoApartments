@@ -618,7 +618,7 @@ table td * {
     border: transparent #ddd;
     border-radius: 29px;
     background-color: transparent;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiungi ombra al container */
+    box-shadow: transparent; /* Aggiungi ombra al container */
 }
 
 .gallery {
