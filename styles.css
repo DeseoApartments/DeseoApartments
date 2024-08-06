@@ -596,8 +596,8 @@ table td * {
 
 .gallery-container {
     position: relative;
-    width: 70%;
-    max-width: 90%;
+    width: 100%;
+    max-width: 100%;
     height: auto;
     margin: auto;
     overflow: hidden;
