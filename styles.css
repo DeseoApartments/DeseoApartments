@@ -595,7 +595,7 @@ table td * {
 
     /* Modifica del margine dall'alto per smartphone */
     .location {
-        top: 25%; /* Regola il valore secondo le tue necessità */
+        top: 27%; /* Regola il valore secondo le tue necessità */
         font-size: 9px; /* Font size per smartphone */
     }
 
@@ -646,7 +646,7 @@ table td * {
 
 .location {
     position: absolute;
-    top: 10%; /* Margine dall'alto per desktop */
+    top: 7%; /* Margine dall'alto per desktop */
     left: 50%;
     transform: translate(-50%, -50%);
     background: rgba(255, 255, 255, 0.8); /* Aumenta opacità dello sfondo */
