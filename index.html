@@ -99,7 +99,37 @@
     <center>
         <div style="padding-top: 20px;" class="table-container">
             <table class="desktop-table">
-                <div><center><a href="https://deseoapartments.kross.travel/it/appartamenti" class="google-button">PRENOTA ORA LA TUA CASA VACANZE!</a></center></div>
+                <div class="gallery-container">
+                    <div class="gallery">
+                        <div class="slide">
+                            <center><div class="location">Bologna, Centro Storico</div></center>
+                            <img src="images/casa1.jpg" alt="Casa 1">
+                            <div class="overlay">
+                                <p class="description">Delizioso appartamento nel centro storico di Bologna.</p>
+                                <button class="book-button" onclick="window.location.href='https://deseoapartments.kross.travel/corte-battisti'">Prenota ora</button>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="location">Bologna, Murri</div>
+                            <img src="images/casa2.jpg" alt="Casa 2">
+                            <div class="overlay">
+                                <p class="description">Ottimo appartamento in zona residenziale.</p>
+                                <button class="book-button" onclick="window.location.href='https://deseoapartments.kross.travel/cavazza'">Prenota ora</button>
+                            </div>
+                        </div>
+                        <div class="slide">
+                            <div class="location">Bologna, Massarenti</div>
+                            <img src="images/casa3.jpg" alt="Casa 3">
+                            <div class="overlay">
+                                <p class="description">Monolocale comodo anche per lunghi periodi.</p>
+                                <button class="book-button" onclick="window.location.href='https://deseoapartments.kross.travel/merlo'">Prenota ora</button>
+                            </div>
+                        </div>
+                        <!-- Aggiungi altre immagini come desideri -->
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
                 <tr>
                     <th class="highlight"><center><span style="font-size: 30px; color: #208786;">GESTIONE COMPLETA</span></center><span style="font-size: 20px;"><center>Meno stress, più guadagni</center></span><div><center><img src="images/gestio.png" width="90" height="90"></center></div>
                         <center>Affidaci il tuo appartamento e lo posizioneremo sui principali portali OTA come AirBnB, Booking... Il nostro team di esperti si occuperà di gestire e ottimizzare prezzi e annunci online, assicurandoti guadagni mensili sempre al top.</center>
@@ -456,6 +486,31 @@
             const menuList = document.querySelector('.menu-list');
             menuList.classList.toggle('active');
         }
+
+        let slideIndex = 0;
+const slides = document.getElementsByClassName("slide");
+const gallery = document.querySelector('.gallery');
+
+function showSlides(n) {
+    if (n >= slides.length) {
+        slideIndex = 0;
+    } else if (n < 0) {
+        slideIndex = slides.length - 1;
+    } else {
+        slideIndex = n;
+    }
+    
+    const offset = -slideIndex * 100;
+    gallery.style.transform = `translateX(${offset}%)`;
+}
+
+function plusSlides(n) {
+    showSlides(slideIndex + n);
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    showSlides(slideIndex);
+});
     </script>
 </body>
 </html>
