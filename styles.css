@@ -647,7 +647,7 @@ table td * {
     border-radius: 5px;
     cursor: pointer;
     font-size: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Aggiungi ombra al bottone */
+    box-shadow: 0 4px 8px rgba(3, 2, 2, 0.5); /* Aggiungi ombra al bottone */
 }
 
 .book-button:hover {
