@@ -714,48 +714,4 @@ table td * {
     }
 }
 
-/*stile tabelle*/
 
-html {
-    scroll-behavior: smooth;
-}
-
-.highlight {
-    color: #333;
-    font-weight: bold;
-    background-color: #dde6f1;
-    border-radius: 20px;
-}
-
-.highlight-black {
-    color: #4f4848;
-    font-weight: bold;
-    background-color: #ffffff;
-    border-radius: 20px;
-}
-
-.custom-row {
-    background-color: white;
-    border-radius: 10px;
-}
-
-.customdark-row {
-    background-color: #dde6f1;
-    border-radius: 10px;
-}
-
-table {
-    border-collapse: separate;
-    border-spacing: 20px;
-}
-
-tr {
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-td, th {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
