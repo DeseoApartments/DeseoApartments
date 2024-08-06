@@ -596,7 +596,7 @@ table td * {
     /* Modifica del margine dall'alto per smartphone */
     .location1 {
         top: 27%; /* Regola il valore secondo le tue necessità */
-        font-size: 14px; /* Font size per smartphone */
+        font-size: 18px; /* Font size per smartphone */
     }
 
     .overlay .description {
