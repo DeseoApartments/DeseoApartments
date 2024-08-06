@@ -595,7 +595,7 @@ table td * {
 
     /* Modifica del margine dall'alto per smartphone */
     .location {
-        top: 15%; /* Regola il valore secondo le tue necessità */
+        top: 25%; /* Regola il valore secondo le tue necessità */
     }
 }
 
