@@ -330,7 +330,6 @@ html {
         min-height: 100vh;
         width: 100%;
         padding: 10px;
-
     }
 
     .container {
@@ -359,12 +358,12 @@ html {
     input[type="text"], select, button {
         width: 80%; /* Ridotto al 80% per centrare meglio all'interno del container */
         max-width: 80%;
-        margin-bottom: 10px; /* Spazio tra gli elementi */
+        margin: 10px auto; /* Centratura orizzontale */
     }
 
     .slider-container {
-        max-width: 80%; /* Imposta la larghezza per lo slider */
-        margin-bottom: 10px; /* Spazio tra lo slider e gli altri elementi */
+        width: 80%; /* Imposta la larghezza per lo slider */
+        margin: 10px auto; /* Assicura la centratura dello slider */
         display: flex;
         flex-direction: column;
         align-items: center; /* Assicura la centratura orizzontale */
