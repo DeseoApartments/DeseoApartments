@@ -5,14 +5,15 @@ body {
     background-color: #f8f9fa;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh; /* Permette lo scroll se necessario */
+    width: 100%;
     background-image: url('images/sfland1transparent.png');
     background-size: cover;
     background-position: center;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .header {
@@ -23,12 +24,10 @@ body {
     width: 100vw;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.0); /* Sfondo semitrasparente */
-   
 }
 
 .logo {
     max-height: 10vh;
-    
 }
 
 .header-button {
@@ -53,15 +52,16 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
     border-radius: 12px;
     overflow: hidden;
-    max-width: 50vw; /* Ridotto del 15% da 1200px */
+    max-width: 50vw;
     width: 50vw;
-    height: 50.22vh; /* Ridotto del 15% da 60vh */
-    
-    
+    min-height: 50vh;
+    height: auto; /* Altezza dinamica */
+    margin: 20px 0;
+    transition: height 0.3s ease; /* Transizione per altezza fluida */
 }
 
 .form-container {
-    padding: 17px; /* Ridotto del 15% da 20px */
+    padding: 17px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -69,32 +69,30 @@ body {
     align-items: center;
     background-color: #ffffff;
     color: #000000;
-    height: 100%;
     width: 50vw;
 }
 
 .form-container h2 {
-    margin-bottom: 17px; /* Ridotto del 15% da 20px */
-    font-size: 20.4px; /* Ridotto del 15% da 24px */
+    margin-bottom: 17px;
+    font-size: 20.4px;
     text-align: center;
     width: 100%;
 }
 
 input[type="text"], select, button {
-    padding: 8.5px; /* Ridotto del 15% da 10px */
-    margin-bottom: 17px; /* Ridotto del 15% da 20px */
+    padding: 8.5px;
+    margin-bottom: 17px;
     border: none;
     border-radius: 4px;
-    font-size: 13.6px; /* Ridotto del 15% da 16px */
+    font-size: 13.6px;
     width: 100%;
-    max-width: 340px; /* Ridotto del 15% da 400px */
+    max-width: 340px;
     box-sizing: border-box;
-    border: 1px solid;
-    border-color: black;
+    border: 1px solid black;
 }
 
 button {
-    padding: 10.2px; /* Ridotto del 15% da 12px */
+    padding: 10.2px;
     background-color: #10c9cf;
     color: white;
     border-radius: 4px;
@@ -111,9 +109,9 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 17px; /* Ridotto del 15% da 20px */
+    margin-bottom: 17px;
     width: 100%;
-    max-width: 24vw; /* Ridotto del 15% da 400px */
+    max-width: 24vw;
 }
 
 input[type="range"] {
@@ -121,7 +119,7 @@ input[type="range"] {
     border: 1px solid;
     border-color: black;
     background: red;
-    height: 6.8px; /* Ridotto del 15% da 8px */
+    height: 6.8px;
     border-radius: 5px;
     text-align: center;
 }
@@ -129,8 +127,8 @@ input[type="range"] {
 input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 12.75px; /* Ridotto del 15% da 15px */
-    height: 12.75px; /* Ridotto del 15% da 15px */
+    width: 12.75px;
+    height: 12.75px;
     background: white;
     cursor: pointer;
     border-radius: 50%;
@@ -138,34 +136,35 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 #nights-label {
-    margin-top: 8.5px; /* Ridotto del 15% da 10px */
-    font-size: 13.6px; /* Ridotto del 15% da 16px */
+    margin-top: 8.5px;
+    font-size: 13.6px;
     text-align: center;
     width: 100%;
 }
 
 #result {
-    margin-top: 8.5px; /* Ridotto del 15% da 10px */
-    margin-bottom: 25.5px; /* Ridotto del 15% da 30px */
+    margin-top: 8.5px;
+    margin-bottom: 25.5px;
     font-weight: bold;
-    font-size: 15.3px; /* Ridotto del 15% da 18px */
+    font-size: 15.3px;
     text-align: center;
     color: #000000;
+    display: block; /* Assicurati che sia visibile */
 }
 
 #price-result {
-    font-size: 20.4px; /* Ridotto del 15% da 24px */
+    font-size: 20.4px;
     font-weight: bold;
     text-align: center;
-    margin-top: 17px; /* Ridotto del 15% da 20px */
-    padding-left: 0.85vw; /* Ridotto del 15% da 1vw */
-    padding-right: 0.85vw; /* Ridotto del 15% da 1vw */
+    margin-top: 17px;
+    padding-left: 0.85vw;
+    padding-right: 0.85vw;
 }
 
 #more-info {
-    margin-top: 8.5px; /* Ridotto del 15% da 10px */
+    margin-top: 8.5px;
     text-align: center;
-    font-size: 11.9px; /* Ridotto del 15% da 14px */
+    font-size: 11.9px;
     cursor: pointer;
     color: #007bff;
     text-decoration: underline;
@@ -185,22 +184,13 @@ input[type="range"]::-webkit-slider-thumb {
     width: 100%;
 }
 
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-    .map-container {
-        height: 255px; /* Ridotto del 15% da 300px */
-    }
-}
-
 /* Modal Overlay */
 #modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
-    width: 65%;
-    height: auto;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
     display: none;
@@ -213,7 +203,7 @@ input[type="range"]::-webkit-slider-thumb {
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    padding: 17px; /* Ridotto del 15% da 20px */
+    padding: 17px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     z-index: 1000;
@@ -228,11 +218,11 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 #info-modal p {
-    margin-bottom: 17px; /* Ridotto del 15% da 20px */
+    margin-bottom: 17px;
 }
 
 #info-modal button {
-    padding: 8.5px 17px; /* Ridotto del 15% da 10px 20px */
+    padding: 8.5px 17px;
     background-color: #10c9cf;
     color: white;
     border: none;
@@ -244,14 +234,14 @@ input[type="range"]::-webkit-slider-thumb {
     background-color: #0d9ba0;
 }
 
-
+/* Footer */
 .footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 20px 0; /* Aumentato per fare spazio ai nuovi elementi */
+    padding: 20px 0;
     background-color: none;
     margin-top: auto;
     text-align: center;
@@ -294,7 +284,6 @@ input[type="range"]::-webkit-slider-thumb {
     transform: scale(1.1);
 }
 
-
 #more-info {
     text-align: center;
     font-size: 14px;
@@ -313,5 +302,68 @@ input[type="range"]::-webkit-slider-thumb {
     font-weight: bold;
     text-align: center;
     margin: 0;
+}
+
+/* Forza lo scroll verticale */
+html {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+/* Media queries per smartphone */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        min-height: 100vh;
+        padding: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+        max-width: 90vw;
+        width: 100%; /* Larghezza al 100% del viewport */
+        min-height: auto;
+        height: auto; /* L'altezza si adatta al contenuto */
+        margin: 10px 0;
+    }
+
+    .form-container, #map-container {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centratura verticale */
+        align-items: center; /* Centratura orizzontale */
+        text-align: center; /* Assicura che il testo sia centrato */
+    }
+
+    #map {
+        height: 300px; /* Imposta un'altezza fissa per la mappa sugli smartphone */
+    }
+
+    input[type="text"], select, button {
+        width: 80%; /* Ridotto al 80% per centrare meglio all'interno del container */
+        max-width: 80%;
+        margin-bottom: 10px; /* Spazio tra gli elementi */
+    }
+
+    .slider-container {
+        max-width: 80%; /* Imposta la larghezza per lo slider */
+        margin-bottom: 10px; /* Spazio tra lo slider e gli altri elementi */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Assicura la centratura orizzontale */
+    }
+
+    #nights-label {
+        text-align: center; /* Assicura che l'etichetta sia centrata */
+        margin-bottom: 10px; /* Spazio sotto l'etichetta */
+    }
+
+    #price-result {
+        margin-top: 15px;
+    }
 }
 
