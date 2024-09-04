@@ -356,13 +356,13 @@ html {
     }
 
     input[type="text"], select, button {
-        width: 80%; /* Ridotto al 80% per centrare meglio all'interno del container */
-        max-width: 80%;
+        width: 90%; /* Ridotto al 80% per centrare meglio all'interno del container */
+        max-width: 100%;
         margin: 10px auto; /* Centratura orizzontale */
     }
 
     .slider-container {
-        width: 80%; /* Imposta la larghezza per lo slider */
+        width: 100%; /* Imposta la larghezza per lo slider */
         margin: 10px auto; /* Assicura la centratura dello slider */
         display: flex;
         flex-direction: column;
