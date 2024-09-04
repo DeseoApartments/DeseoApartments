@@ -1,0 +1,316 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('images/sfland1transparent.png');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.0); /* Sfondo semitrasparente */
+   
+}
+
+.logo {
+    max-height: 200px;
+    
+}
+
+.header-button {
+    padding: 10px 20px;
+    background-color: #10c9cf;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+    font-size: 14px;
+}
+
+.header-button:hover {
+    background-color: #0d9ba0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 1020px; /* Ridotto del 15% da 1200px */
+    width: 100%;
+    height: 50.22vh; /* Ridotto del 15% da 60vh */
+    
+    
+}
+
+.form-container {
+    padding: 17px; /* Ridotto del 15% da 20px */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    color: #000000;
+    height: 90%;
+}
+
+.form-container h2 {
+    margin-bottom: 17px; /* Ridotto del 15% da 20px */
+    font-size: 20.4px; /* Ridotto del 15% da 24px */
+    text-align: center;
+    width: 100%;
+}
+
+input[type="text"], select, button {
+    padding: 8.5px; /* Ridotto del 15% da 10px */
+    margin-bottom: 17px; /* Ridotto del 15% da 20px */
+    border: none;
+    border-radius: 4px;
+    font-size: 13.6px; /* Ridotto del 15% da 16px */
+    width: 100%;
+    max-width: 340px; /* Ridotto del 15% da 400px */
+    box-sizing: border-box;
+    border: 1px solid;
+    border-color: black;
+}
+
+button {
+    padding: 10.2px; /* Ridotto del 15% da 12px */
+    background-color: #10c9cf;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+}
+
+button:hover {
+    background-color: #0d9ba0;
+}
+
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 17px; /* Ridotto del 15% da 20px */
+    width: 100%;
+    max-width: 340px; /* Ridotto del 15% da 400px */
+}
+
+input[type="range"] {
+    width: 100%;
+    border: 1px solid;
+    border-color: black;
+    background: red;
+    height: 6.8px; /* Ridotto del 15% da 8px */
+    border-radius: 5px;
+    text-align: center;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12.75px; /* Ridotto del 15% da 15px */
+    height: 12.75px; /* Ridotto del 15% da 15px */
+    background: white;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+}
+
+#nights-label {
+    margin-top: 8.5px; /* Ridotto del 15% da 10px */
+    font-size: 13.6px; /* Ridotto del 15% da 16px */
+    text-align: center;
+    width: 100%;
+}
+
+#result {
+    margin-top: 8.5px; /* Ridotto del 15% da 10px */
+    margin-bottom: 25.5px; /* Ridotto del 15% da 30px */
+    font-weight: bold;
+    font-size: 15.3px; /* Ridotto del 15% da 18px */
+    text-align: center;
+    color: #000000;
+}
+
+#price-result {
+    font-size: 20.4px; /* Ridotto del 15% da 24px */
+    font-weight: bold;
+    text-align: center;
+    margin-top: 17px; /* Ridotto del 15% da 20px */
+    padding-left: 0.85vw; /* Ridotto del 15% da 1vw */
+    padding-right: 0.85vw; /* Ridotto del 15% da 1vw */
+}
+
+#more-info {
+    margin-top: 8.5px; /* Ridotto del 15% da 10px */
+    text-align: center;
+    font-size: 11.9px; /* Ridotto del 15% da 14px */
+    cursor: pointer;
+    color: #007bff;
+    text-decoration: underline;
+}
+
+#more-info:hover {
+    color: #0056b3;
+}
+
+#map-container {
+    flex: 2;
+    position: relative;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .map-container {
+        height: 255px; /* Ridotto del 15% da 300px */
+    }
+}
+
+/* Modal Overlay */
+#modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 65%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+/* Modal Content */
+#info-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 17px; /* Ridotto del 15% da 20px */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+    max-width: 90%;
+    max-height: 80%;
+    overflow-y: auto;
+}
+
+#info-modal h3 {
+    margin-top: 0;
+}
+
+#info-modal p {
+    margin-bottom: 17px; /* Ridotto del 15% da 20px */
+}
+
+#info-modal button {
+    padding: 8.5px 17px; /* Ridotto del 15% da 10px 20px */
+    background-color: #10c9cf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#info-modal button:hover {
+    background-color: #0d9ba0;
+}
+
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0; /* Aumentato per fare spazio ai nuovi elementi */
+    background-color: none;
+    margin-top: auto;
+    text-align: center;
+}
+
+.footer-button {
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #0d9ba0;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: none;
+    font-size: 14px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.footer-button:hover {
+    background-color: #10c9cf;
+}
+
+.footer-images {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.footer-images a {
+    margin: 0 10px;
+}
+
+.footer-images img {
+    max-width: 35px;
+    max-height: 35px;
+    transition: transform 0.3s ease;
+}
+
+.footer-images img:hover {
+    transform: scale(1.1);
+}
+
+
+#more-info {
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    color: #2c33ff;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+#more-info:hover {
+    color: #00ccff;
+}
+
+.tariff-note {
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
