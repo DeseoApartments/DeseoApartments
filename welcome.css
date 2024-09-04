@@ -8,7 +8,7 @@ body {
     justify-content: flex-start; /* Cambiato da space-between a flex-start */
     align-items: center;
     min-height: 100vh; /* Cambiato da height: 100vh a min-height per permettere lo scroll verticale */
-    width: 100vw;
+    width: 100%;
     background-image: url('images/sfland1transparent.png');
     background-size: cover;
     background-position: center;
@@ -184,6 +184,17 @@ input[type="range"]::-webkit-slider-thumb {
     width: 100%;
 }
 
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        max-width: 90vw; /* Migliore gestione su schermi più piccoli */
+    }
+
+    .map-container {
+        height: 255px;
+    }
+}
+
 /* Modal Overlay */
 #modal-overlay {
     position: fixed;
@@ -307,7 +318,7 @@ input[type="range"]::-webkit-slider-thumb {
 /* Forza lo scroll verticale */
 html {
     height: 100%;
-    overflow-y: scroll;
+    overflow-y: scroll; /* Forza sempre la barra di scorrimento */
 }
 
 /* Media queries per smartphone */
