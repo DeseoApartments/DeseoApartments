@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Deseo Apartments - Gestionamos Alquileres Temporales en Toda Italia</title>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=API_KEY&libraries=places,geometry"></script>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poly&display=swap" rel="stylesheet">
+  <link href="mobile.css" rel="stylesheet">
+
+  <style>
+    /* Limita el sitio solo a teléfonos inteligentes */
+    @media only screen and (max-width: 767px) {
+      html, body {
+        height: 100%;
+        width: 100%;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        font-family: 'Poly', serif;
+      }
+
+      /* Barra fija en la parte superior */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        padding: 0;
+        height: 70px;
+        z-index: 1000;
+        box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
+      }
+
+      /* Estilo para las flechas */
+      .swiper-button-prev-custom, .swiper-button-next-custom {
+        color: rgb(0, 0, 0);
+        font-size: 24px;
+        cursor: pointer;
+        margin: 0 100px; 
+      }
+
+      .menu-toggle {
+        cursor: pointer;
+        font-size: 24px;
+        margin: 0; 
+        line-height: 50px; 
+      }
+
+      /* Menú oculto */
+      .menu {
+        display: none;
+        background-color: #ffffff;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 999;
+      }
+
+      .menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .menu ul li {
+        padding: 10px;
+        border-bottom: 1px solid #000000;
+      }
+
+      .menu ul li a {
+        color: black;
+        text-decoration: none;
+        display: block;
+        font-size: 20px;
+      }
+
+      .menu.show {
+        display: block; 
+      }
+
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra fija en la parte superior con botón de hamburguesa centrado -->
+  <div class="navbar">
+    <div class="swiper-button-prev-custom" id="swiper-button-prev-custom"></div> 
+    <div class="menu-toggle" id="menu-toggle">☰</div> 
+    <div class="swiper-button-next-custom" id="swiper-button-next-custom"></div> 
+  </div>
+
+  <!-- Menú oculto -->
+  <div class="menu" id="menu">
+    <ul>
+      <li><a href="m.indexes.html">Inicio</a></li>
+      <li style="color:rgb(0, 26, 255);font-size: 20px;"><b>TRADUCIR</b></li>
+      <li><a href="m.termini.html">ITALIANO</a></li>
+      <li><a href="m.termsen.html">INGLÉS</a></li>
+      <li><a href="m.termsfr.html">FRANCÉS</a></li>
+      <li><a href="m.termses.html">ESPAÑOL</a></li>
+    </ul>
+  </div>
+
+  <!-- Contenedor Swiper con 5 diapositivas -->
+  <div class="swiper-container" style="margin-top: -2%;">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image: url('images/heromobile1.jpg'); display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; text-align: center; background-size: cover; background-position: center;">
+        
+        <div style="
+        width: 80vw;
+        margin: 40px auto;
+        padding: 30px;
+        margin-top: 120vh;
+        border: 1px solid #ddd;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 0px;
+        background-color: #fff;
+        opacity: 0.9;">
+        <div><center><img class="deseo-title" src="images/loguo.png" width="25%" style="padding-right:10px;"></center></div>
+        <div class="deseo-title" style="margin-top:10px;font-size: 5vw;margin-bottom:-5%;">TÉRMINOS Y CONDICIONES DE USO</div>
+<br>
+<br>
+<div class="deseo-privacy">
+    <p style="font-size: 22px; line-height: 1.6; color: #555;padding-left:50px;padding-right:50px;">
+        Bienvenido al sitio web de Deseo Apartments. El uso de nuestro sitio está sujeto a los siguientes términos y condiciones de uso. Por favor, lea cuidadosamente estos términos antes de acceder o usar nuestro sitio.
+    </p>
+
+    <h3 style="color: #333;padding-left:50px;padding-right:50px;">1. Aceptación de los Términos</h3>
+    <p style="font-size: 22px; line-height: 1.6; color: #555;padding-left:50px;padding-right:50px;">
+        Al utilizar este sitio, aceptas expresamente estos Términos y Condiciones. Si no estás de acuerdo con alguna parte de estos términos, por favor, no utilices nuestro sitio.
+    </p>
+
+    <h3 style="color: #333;padding-left:50px;padding-right:50px;">2. Modificaciones de los Términos</h3>
+    <p style="font-size: 22px; line-height: 1.6; color: #555;padding-left:50px;padding-right:50px;">
+        Nos reservamos el derecho de modificar estos Términos y Condiciones en cualquier momento. Cualquier modificación será efectiva inmediatamente después de su publicación en el sitio. Es tu responsabilidad revisar estos términos periódicamente para ver si hay actualizaciones.
+    </p>
+
+    <h3 style="color: #333;padding-left:50px;padding-right:50px;">3. Uso Permitido</h3>
+    <p style="font-size: 22px; line-height: 1.6; color: #555;padding-left:50px;padding-right:50px;">
+        El contenido del sitio se proporciona solo para uso personal y no comercial. No se permite modificar, distribuir, transmitir, mostrar, ejecutar, reproducir, publicar, licenciar, crear trabajos derivados de, transferir o vender cualquier información, software, productos o servicios obtenidos del sitio.
+    </p>
+
+    <h3 style="color: #333;padding-left:50px;padding-right:50px;">4. Limitación de Responsabilidad</h3>
+    <p style="font-size: 22px; line-height: 1.6; color: #555;padding-left:50px;padding-right:50px;">
+        No seremos responsables de ningún daño directo, indirecto, incidental, especial o consecuente derivado del uso o la incapacidad de usar nuestro sitio o los servicios contenidos en él.
+    </p>
+
+    <h3 style="color: #333;padding-left:50px;padding-right:50px;">5. Propiedad Intelectual</h3>
+    <p style="font-size: 22px; line-height: 1.6; color: #555;padding-left:50px;padding-right:50px;">
+        Todo el contenido presente en este sitio, incluidos textos, gráficos, logotipos, imágenes y software, es de nuestra propiedad o de nuestros proveedores de contenido y está protegido por leyes de derechos de autor y propiedad intelectual.
+    </p>
+
+    <h3 style="color: #333;padding-left:50px;padding-right:50px;">6. Ley Aplicable</h3>
+    <p style="font-size: 22px; line-height: 1.6; color: #555;padding-left:50px;padding-right:50px;">
+        Estos Términos y Condiciones se rigen e interpretan de acuerdo con las leyes italianas. Cualquier disputa derivada de o relacionada con estos términos se resolverá exclusivamente en los tribunales competentes donde se encuentra nuestra empresa.
+    </p>
+
+    <h3 style="color: #333;padding-left:50px;padding-right:50px;">7. Contacto</h3>
+    <p style="font-size: 22px; line-height: 1.6; color: #555;padding-left:50px;padding-right:50px;">
+        Si tienes alguna pregunta sobre estos Términos y Condiciones, contáctanos por correo electrónico en: <a href="info@deseoapartments.com" style="color: #3498db;">info@deseoapartments.com</a>.
+    </p>
+        
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+        <script src="welcome.js"></script>
+        <script src="mobile.js"></script>
+</body>
+</html>

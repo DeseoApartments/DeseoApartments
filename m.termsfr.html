@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Swiper con Menù e 5 Slide</title>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOrxkYsKLOHKETgg8PPLG1sqk1VgTi5Oo&libraries=places,geometry"></script>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poly&display=swap" rel="stylesheet">
+  <link href="mobile.css" rel="stylesheet">
+  
+
+  <style>
+    /* Limita il sito ai soli smartphone */
+    @media only screen and (max-width: 767px) {
+      html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poly', serif;
+}
+
+
+      /* Barra fissa in alto */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        display: flex;
+        justify-content: center; /* Centra il pulsante orizzontalmente */
+        align-items: center; /* Centra il pulsante verticalmente */
+        padding: 0; /* Elimina eventuali padding extra */
+        height: 70px; /* Altezza fissa per la barra */
+        z-index: 1000;
+        box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
+      }
+
+      /* Stile per le frecce */
+      .swiper-button-prev-custom, .swiper-button-next-custom {
+        color: rgb(0, 0, 0);
+        font-size: 24px;
+        cursor: pointer;
+        margin: 0 100px; /* Spazio tra le frecce e il pulsante hamburger */
+      }
+
+      .menu-toggle {
+        cursor: pointer;
+        font-size: 24px;
+        margin: 0; /* Assicurati che non ci sia margine */
+        line-height: 50px; /* Allinea verticalmente il testo all'interno del pulsante */
+      }
+
+      /* Menù a scomparsa */
+      .menu {
+        display: none;
+        background-color: #ffffff;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 999;
+      }
+
+      .menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .menu ul li {
+        padding: 10px;
+        border-bottom: 1px solid #000000;
+      }
+
+      .menu ul li a {
+        color: black;
+        text-decoration: none;
+        display: block;
+        font-size: 20px;
+      }
+
+      .menu.show {
+        display: block; /* Mostra il menù quando attivo */
+      }
+
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra fissa in alto con pulsante hamburger centrato -->
+  <div class="navbar">
+    <div class="swiper-button-prev-custom" id="swiper-button-prev-custom"></div> <!-- Freccia sinistra -->
+    <div class="menu-toggle" id="menu-toggle">☰</div> <!-- Pulsante hamburger -->
+    <div class="swiper-button-next-custom" id="swiper-button-next-custom"></div> <!-- Freccia destra -->
+  </div>
+
+  <!-- Menù a scomparsa -->
+  <div class="menu" id="menu">
+    <ul>
+      <li><a href="m.index.html">Home</a></li>
+      <li style="color:rgb(0, 26, 255);font-size: 20px;"><b>TRADUCI</b></li>
+      <li><a href="m.termini.html">ITALIANO</a></li>
+      <li><a href="m.termsen.html">INGLESE</a></li>
+      <li><a href="m.termsfr.html">FRANCESE</a></li>
+      <li><a href="m.termses.html">SPAGNOLO</a></li>
+    </ul>
+  </div>
+
+  <!-- Swiper container con 5 slide -->
+  <div class="swiper-container" style="margin-top: -2%;">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image: url('images/heromobile1.jpg'); display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; text-align: center; background-size: cover; background-position: center;">
+        
+        <div style="
+        width: 80vw;
+            max-width: auto;
+            margin: 40px auto;
+            padding: 30px;
+            margin-top: 120vh;
+            border: 1px solid #ddd;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 0px;
+            background-color: #fff;
+            opacity: 0.9;
+        ">
+        <div><center><img class="deseo-title" src="images/loguo.png" width="25%" style="padding-right:10px;"></center></div>
+        <div class="deseo-title" style="margin-top:10px;font-size: 5vw;margin-bottom:-5%;">TERMINI E CONDIZIONI DI UTILIZZO</div>
+<br>
+<br>
+<div class="deseo-privacy">
+    <p style="font-size: 22px; line-height: 1.6; color: #555;padding-left:50px;padding-right:50px;">
+        Benvenuto nel sito web di Deseo Apartments. L'utilizzo del nostro sito è soggetto ai seguenti termini e condizioni di utilizzo. Si prega di leggere attentamente queste condizioni prima di accedere o utilizzare il nostro sito.
+    </p>
+
+    <h3 style="color: #333;padding-left:50px;padding-right:50px;">1. Accettazione dei Termini</h3>
+    <p style="font-size: 22px; line-height: 1.6; color: #555;padding-left:50px;padding-right:50px;">
+        Utilizzando questo sito, accetti espressamente i presenti Termini e Condizioni. Se non sei d'accordo con una qualsiasi parte di questi termini, ti preghiamo di non utilizzare il nostro sito.
+    </p>
+
+    <h3 style="color: #333;padding-left:50px;padding-right:50px;">2. Modifiche ai Termini</h3>
+    <p style="font-size: 22px; line-height: 1.6; color: #555;padding-left:50px;padding-right:50px;">
+        Ci riserviamo il diritto di modificare questi Termini e Condizioni in qualsiasi momento. Eventuali modifiche saranno efficaci immediatamente dopo la loro pubblicazione sul sito. È tua responsabilità controllare periodicamente questi termini per eventuali aggiornamenti.
+    </p>
+
+    <h3 style="color: #333;padding-left:50px;padding-right:50px;">3. Uso Consentito</h3>
+    <p style="font-size: 22px; line-height: 1.6; color: #555;padding-left:50px;padding-right:50px;">
+        Il contenuto del sito è fornito solo per uso personale e non commerciale. Non è consentito modificare, distribuire, trasmettere, mostrare, eseguire, riprodurre, pubblicare, concedere in licenza, creare lavori derivati da, trasferire o vendere qualsiasi informazione, software, prodotti o servizi ottenuti dal sito.
+    </p>
+
+    <h3 style="color: #333;padding-left:50px;padding-right:50px;">4. Limitazione di Responsabilità</h3>
+    <p style="font-size: 22px; line-height: 1.6; color: #555;padding-left:50px;padding-right:50px;">
+        Non saremo responsabili per eventuali danni diretti, indiretti, incidentali, speciali o consequenziali derivanti dall'uso o dall'incapacità di utilizzare il nostro sito o i servizi in esso contenuti.
+    </p>
+
+    <h3 style="color: #333;padding-left:50px;padding-right:50px;">5. Proprietà Intellettuale</h3>
+    <p style="font-size: 22px; line-height: 1.6; color: #555;padding-left:50px;padding-right:50px;">
+        Tutti i contenuti presenti su questo sito, inclusi testi, grafici, loghi, immagini e software, sono di nostra proprietà o dei nostri fornitori di contenuti e sono protetti dalle leggi sul diritto d'autore e sulla proprietà intellettuale.
+    </p>
+
+    <h3 style="color: #333;padding-left:50px;padding-right:50px;">6. Legge Applicabile</h3>
+    <p style="font-size: 22px; line-height: 1.6; color: #555;padding-left:50px;padding-right:50px;">
+        Questi Termini e Condizioni sono regolati e interpretati in conformità con le leggi italiane. Eventuali controversie derivanti da o relative a questi termini saranno risolte esclusivamente nei tribunali competenti del luogo in cui ha sede la nostra società.
+    </p>
+
+    <h3 style="color: #333;padding-left:50px;padding-right:50px;">7. Contatti</h3>
+    <p style="font-size: 22px; line-height: 1.6; color: #555;padding-left:50px;padding-right:50px;">
+        Se hai domande riguardanti i presenti Termini e Condizioni, ti preghiamo di contattarci via email all'indirizzo: <a href="info@deseoapartments.com" style="color: #3498db;">info@deseoapartments.com</a>.
+    </p>
+        
+        </div>
+        
+        
+        
+        <script>
+            function toggleAnswer(id) {
+  // Chiude tutte le risposte aperte
+  var answers = document.querySelectorAll('.faq-answer');
+  var questions = document.querySelectorAll('.faq-question');
+
+  answers.forEach(function(answer) {
+      if (answer.id !== id) {
+          answer.style.display = 'none';  // Nasconde tutte le risposte tranne quella cliccata
+      }
+  });
+
+  questions.forEach(function(question) {
+      if (question.getAttribute("onclick").includes(id)) {
+          // Cambia lo stato 'active' solo sulla domanda cliccata
+          question.classList.toggle('active');
+      } else {
+          question.classList.remove('active');
+      }
+  });
+
+  // Alterna la visibilità della risposta corrispondente
+  var answer = document.getElementById(id);
+  if (answer.style.display === "block") {
+      answer.style.display = "none";
+  } else {
+      answer.style.display = "block";
+  }
+}
+
+        
+        </script>
+      
+  </div>
+      </div>
+      </div>
+
+      
+    
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="welcome.js"></script>
+  <script src="mobile.js"></script>
+
+  
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deseo Apartments - Price Calculator</title>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOrxkYsKLOHKETgg8PPLG1sqk1VgTi5Oo&libraries=places,geometry"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poly&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="welcomeindex.css">
+</head>
+<body>
+    <!-- Logo and Button Section -->
+    <div class="header">
+      
+    </div>
+    <h2 style=" margin-top: 10px; text-align: left;" class="non-clickable-label">DISCOVER THE POTENTIAL OF YOUR APARTMENT</h2>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <div class="form-container">
+            <div><p style="font-family: 'Poly', serif;font-size:20px;color:#ca2a2a;text-align: center; margin-top: 0%;"><b>TRUST DESEO.</b></p></div>
+            <p style="font-size: 15px;margin-bottom:20px;margin-top:-20px">Enter your city</p>
+            <input type="text" id="address" placeholder="Enter the address of your apartment">
+            <div id="result"></div>
+
+            <select id="beds" onchange="calculatePrice();">
+                <option value="1">1 Bed</option>
+                <option value="2">2 Beds</option>
+                <option value="3">3 Beds</option>
+                <option value="4">4 Beds</option>
+                <option value="5">5 Beds</option>
+                <option value="6">6 Beds</option>
+                <option value="7">7 Beds</option>
+                <option value="8">8+ Beds</option>
+            </select>
+
+            <div id="price-form" class="hidden">
+                <div class="slider-container">
+                    <p style="font-size: 10px; font-style: bold;text-align: center;">Average Monthly Occupancy</p>
+                    <input type="range" id="nights" min="1" max="30" value="1" oninput="updateNightsLabel(); calculatePrice();">
+                    <span id="nights-label">1 night</span>
+                </div>
+                
+                <div id="price-result"></div>
+            </div>
+        </div>
+        <div id="map-container">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <script src="welcome.js"></script>
+</body>
+</html>

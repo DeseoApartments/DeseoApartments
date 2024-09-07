@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Deseo Apartments - We Manage Short-Term Rentals Across Italy</title>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOrxkYsKLOHKETgg8PPLG1sqk1VgTi5Oo&libraries=places,geometry"></script>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poly&display=swap" rel="stylesheet">
+  <link href="mobile.css" rel="stylesheet">
+  
+
+  <style>
+    /* Restrict the site to smartphones only */
+    @media only screen and (max-width: 767px) {
+      html, body {
+        height: 100%;
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        margin: 0;
+        padding: 0;
+        font-family: 'Poly', serif;
+      }
+
+      /* Fixed top bar */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        display: flex;
+        justify-content: center; /* Center the button horizontally */
+        align-items: center; /* Center the button vertically */
+        padding: 0; /* Remove any extra padding */
+        height: 70px; /* Fixed height for the bar */
+        z-index: 1000;
+        box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
+      }
+
+      /* Style for the arrows */
+      .swiper-button-prev-custom, .swiper-button-next-custom {
+        color: rgb(0, 0, 0);
+        font-size: 24px;
+        cursor: pointer;
+        margin: 0 100px; /* Space between the arrows and the hamburger button */
+      }
+
+      .menu-toggle {
+        cursor: pointer;
+        font-size: 24px;
+        margin: 0; /* Ensure no margin */
+        line-height: 50px; /* Vertically align the text inside the button */
+      }
+
+      /* Hidden menu */
+      .menu {
+        display: none;
+        background-color: #ffffff;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 999;
+      }
+
+      .menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .menu ul li {
+        padding: 10px;
+        border-bottom: 1px solid #000000;
+      }
+
+      .menu ul li a {
+        color: black;
+        text-decoration: none;
+        display: block;
+        font-size: 20px;
+      }
+
+      .menu.show {
+        display: block; /* Show the menu when active */
+      }
+
+      /* Swiper container */
+      .swiper-container {
+        width: 100vw;
+        height: 100vh;
+        margin-top: 50px; /* Space for the navbar */
+      }
+
+      /* Each slide takes the full width and height of the viewport */
+      .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        width: 100vw;
+        height: calc(100vh); /* Adjust height minus the navbar */
+        background-size: cover;
+        background-position: center;
+      }
+
+      /* Pagination dots in black and red */
+      .swiper-pagination {
+        bottom: 20px;
+        z-index: 1000; /* Ensure the dots are above the content */
+        margin-bottom: 3%;
+      }
+
+      .swiper-pagination-bullet {
+        width: 15px;
+        height: 15px;
+        background-color: rgb(0, 0, 0); /* Black dots */
+        border-radius: 50%;
+        margin: 0 5px;
+        box-shadow: 0 4px 8px rgb(0, 0, 0, 0.5);
+      }
+
+      .swiper-pagination-bullet-active {
+        background-color: red; /* Red dot when active */
+        transform: scale(1.4);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fixed top bar with centered hamburger button -->
+  <div class="navbar">
+    <div class="swiper-button-prev-custom" id="swiper-button-prev-custom">&#9664;</div> <!-- Left arrow -->
+    <div class="menu-toggle" id="menu-toggle">☰</div> <!-- Hamburger button -->
+    <div class="swiper-button-next-custom" id="swiper-button-next-custom">&#9654;</div> <!-- Right arrow -->
+  </div>
+
+  <!-- Hidden menu -->
+  <div class="menu" id="menu">
+    <ul>
+      <li><a href="m.indexen.html">Home</a></li>
+      <li><a href="#" data-slide="#servizi-slide">What We Offer</a></li>
+      <li><a href="m.contact-usen.html">Free Consultation</a></li>
+      <li><a href="#" data-slide="#contacts-slide">Contact</a></li>
+      <li><a href="#" data-slide="#chi-siamo-slide">About Us</a></li>
+      <li><a href="m.faqen.html">FAQ</a></li>
+      <li style="color:rgb(255, 0, 0);font-size: 20px;">TRANSLATE</li>
+      <li><a href="m.index.html">ITALIAN</a></li>
+      <li><a href="m.indexen.html">ENGLISH</a></li>
+      <li><a href="m.indexfr.html">FRENCH</a></li>
+      <li><a href="m.indexes.html">SPANISH</a></li>
+    </ul>
+  </div>
+
+  <!-- Swiper container with 5 slides -->
+  <div class="swiper-container" style="margin-top: -2%;">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image: url('images/heromobile1.jpg'); display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; text-align: center; background-size: cover; background-position: center;">
+        <!-- Logo image -->
+        <img src="images/loguo.png" style="width: 18%; max-width: 200px; height: auto; margin-bottom: 20px;padding-right: 3px;">
+        <!-- Title -->
+        <div>
+            <h1 style="font-size: 5.2vw; color: rgb(0, 0, 0); margin: 0;letter-spacing: 3px;">DESEO APARTMENTS</h1>
+        </div>
+        <!-- Paragraph text -->
+        <div>
+            <p style="font-size: 2.5vw; color: rgb(0, 0, 0); margin: 0;letter-spacing: 3px;">SHORT-TERM RENTAL MANAGEMENT</p>
+          </div>
+        <!-- Decorative image -->
+        <div>
+            <img src="images/ghirigoro.png" style="width: 40%; max-width: 550px; height: auto; margin-top: 20px;padding-left: 10px;">
+            <p style="font-size: 3vw; color: rgb(0, 0, 0); margin-top: 3%;letter-spacing: 3px;">DISCOVER THE POTENTIAL OF YOUR APARTMENT</p>
+        </div>
+
+        
+        <!--Map-->
+        <div>
+          <!-- Main Container -->
+    <div class="container" style="margin-bottom: -6%;">
+      <div class="form-container" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+          <div><p style="font-family: 'Poly', serif;font-size:30px;color:#10c9cf;text-align: center; margin-top: 6%;"><b>TRUST DESEO.</b></p></div>
+          <p style="font-size: 25px;margin-bottom:20px;margin-top:-25px;">Enter your city</p>
+          <input style="padding-right: 35px;" type="text" id="address" placeholder="Enter the address of your apartment">
+          <div id="result"></div>
+<section id="home"></section>
+          <select style="padding-right: 5px;" id="beds" onchange="calculatePrice();">
+              <option value="1">1 Bed</option>
+              <option value="2">2 Beds</option>
+              <option value="3">3 Beds</option>
+              <option value="4">4 Beds</option>
+              <option value="5">5 Beds</option>
+              <option value="6">6 Beds</option>
+              <option value="7">7 Beds</option>
+              <option value="8">8+ Beds</option>
+          </select>
+
+          <div style="padding-right: 15px;" id="price-form" class="hidden">
+              <div class="slider-container">
+                  <p style="font-size: 20px; font-style: bold;">Average Monthly Occupancy</p>
+                  <input type="range" id="nights" min="1" max="30" value="1" oninput="updateNightsLabel(); calculatePrice();">
+                  <span id="nights-label">1 night</span>
+              </div>
+              
+              <div style="padding-right: 25px;margin-bottom: 10%;" id="price-result"></div>
+          </div>
+      </div>
+      <div id="map-container">
+          <div id="map"></div>
+      </div>
+      
+  </div>
+      </div>
+      </div>
+
+      <div class="swiper-slide" style="background-image: url('images/sfland2.png');display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; text-align: center; background-size: cover; background-position: center;"">
+   
+        <div class="offerta1">
+          <div>
+            
+            <center>
+              <h1 style="font-size:7vw; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;margin-top:0vw;margin-bottom:6vw;" class="titles-text">
+                OUR PROPERTIES
+              </h1>
+            </center>
+          </div>
+          
+          <!-- First property -->
+          <div class="row">
+            <a href="battisti.html">
+              <img src="images/casa1.jpg" alt="Item 1 Image" style="width: 100%; height: auto; border-radius: 8px;">
+            </a>
+            <h2 style="padding:10px;margin-top: 15px;; text-align: center;font-size: 5vw;">BOLOGNA, HISTORIC CENTER</h2>
+            <p style="font-size: 3.7vw;padding:10px;margin-bottom: 10px; margin-top: -7%; text-align: center;">
+              Elegant apartment in the historic center of Bologna. Surrounded by places of historical and cultural interest.
+            </p>
+            <center>
+              <button class="reservebutton" onclick="window.location.href='battisti.html'">Book now</button>
+            </center>
+          </div>
+          
+          <!-- Second property -->
+          <div class="row">
+            <a href="cavazza.html">
+              <img src="images/casa2.jpg" alt="Item 2 Image" style="width: 100%; height: auto; border-radius: 8px;">
+            </a>
+            <h2 style="padding:10px;margin-top: 15px;; text-align: center;font-size: 5vw;">BOLOGNA, MURRI AREA</h2>
+            <p style="font-size: 3.7vw;padding:10px;margin-bottom: 10px; margin-top: -7%; text-align: center;">
+              Bright apartment with terrace, close to the center of Bologna and Giardini Margherita. Ideal for families, couples, or friends.
+            </p>
+            <center>
+              <button class="reservebutton" onclick="window.location.href='cavazza.html'">Book now</button>
+            </center>
+          </div>
+          
+          <!-- Third property -->
+          <div class="row">
+            <a href="castelmerlo.html">
+              <img src="images/casa3.jpg" alt="Item 3 Image" style="width: 100%; height: auto; border-radius: 8px;">
+            </a>
+            <h2 style="padding:10px;margin-top: 15px;; text-align: center;font-size: 5vw;">BOLOGNA, NAVILE AREA</h2>
+            <p style="font-size: 3.7vw;padding:10px;margin-bottom: 10px; margin-top: -7%; text-align: center;">
+              Cozy studio apartment in Bologna on the ground floor, ideal for singles or couples. Perfect for professionals.
+            </p>
+            <center>
+              <button class="reservebutton" onclick="window.location.href='castelmerlo.html'">Book now</button>
+            </center>
+          </div>
+          
+
+            Work in progress...
+          
+          
+      </div>
+      </div>
+     
+      <div id="servizi-slide" class="swiper-slide" style="background-image: url('images/heromobile1.jpg');">
+        
+        <div class="offerta">
+          <div><center><h1 style="font-size:7vw; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;margin-top:0vw;margin-bottom:6vw;" class="titles-text">WHY CHOOSE DESEO</h1></center></div>
+          <div class="row"><img src="images/portale.jpg" alt="Item 1 Image" style="width: 100%; height: auto; border-radius: 8px;">
+            <h2 style="padding:10px;margin-top: 15px;; text-align: center;font-size: 5vw;">OWNER PORTAL</h2>
+            <p style="font-size: 3.7vw;padding:10px;margin-bottom: 10px; margin-top: -7%; text-align: justify;">
+                Monitor bookings, earnings, and reviews of your property in real-time. Easily manage every aspect of your investment with instant and simple access to all key information.
+            </p></div>
+          <div class="row">
+            <img src="images/assistenza.jpg" alt="Item 1 Image" style="width: 100%; height: auto; border-radius: 8px;">
+            <h2 style="padding:10px;margin-top: 15px;; text-align: center;font-size: 5vw;">24/7 SUPPORT</h2>
+            <p style="font-size: 3.7vw;padding:10px;margin-bottom: 10px; margin-top: -7%; text-align: justify;">
+              Our team guarantees continuous support, 24 hours a day, 7 days a week. We promptly respond to every guest request, ensuring fast responses and immediate solutions for every need.
+            </p>
+          </div>
+          <div class="row"><img src="images/pulizia.jpg" alt="Item 1 Image" style="width: 100%; height: auto; border-radius: 8px;">
+            <h2 style="padding:10px;margin-top: 15px;; text-align: center;font-size: 5vw;">CLEANING</h2>
+            <p style="font-size: 3.7vw;padding:10px;margin-bottom: 10px; margin-top: -7%; text-align: justify;">
+              We guarantee high standards of cleanliness and hygiene. We take care of everything, from cleaning to providing high-quality linens.
+            </p></div>
+          <div class="row"><img src="images/pubblicazione.jpg" alt="Item 1 Image" style="width: 100%; height: auto; border-radius: 8px;">
+            <h2 style="padding:10px;margin-top: 15px;; text-align: center;font-size: 5vw;">ONLINE LISTINGS</h2>
+            <p style="font-size: 3.7vw;padding:10px;margin-bottom: 10px; margin-top: -7%; text-align: justify;">
+              We advertise your property on major platforms such as Airbnb and Booking. We optimize the visibility of your listing to maximize occupancy rates in your apartment.
+            </p></div>
+          <div class="row"><img src="images/checkin.jpg" alt="Item 1 Image" style="width: 100%; height: auto; border-radius: 8px;">
+            <h2 style="padding:10px;margin-top: 15px;; text-align: center;font-size: 5vw;">CHECK-IN / CHECK-OUT</h2>
+            <p style="font-size: 3.7vw;padding:10px;margin-bottom: 10px; margin-top: -7%; text-align: justify;">
+              We handle every phase of the check-in and check-out process for guests, making it simple and pleasant.
+            </p></div>
+          <div class="row"> <img src="images/manutenzioni.png" alt="Item 1 Image" style="width: 100%; height: auto; border-radius: 8px;">
+            <h2 style="padding:10px;margin-top: 15px;; text-align: center;font-size: 5vw;">MAINTENANCE</h2>
+            <p style="font-size: 3.7vw;padding:10px;margin-bottom: 10px; margin-top: -7%; text-align: justify;">
+              We take care of all necessary maintenance, handling both ordinary and extraordinary interventions to ensure your property is always in perfect condition.
+            </p></div>
+      </div>
+      
+      </div>
+
+      <div class="swiper-slide" style="background-image: url('images/sfland2.png');overflow: hidden;">
+        <div class="offerta">
+          <div><center><h1 style="font-size:7vw; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;margin-top:0vw;margin-bottom:6vw;" class="titles-text">OWNER PORTAL</h1></center></div>
+          <div class="row"><img src="images/kroos1.jpg" alt="Item 1 Image" style="width: 70%; height: auto; border-radius: 8px;margin-bottom: -5vw;margin-top: 0vw;">
+            <button class="non-clickable-label" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;margin-bottom: 7vw;">FULL CONTROL
+            </button>
+            <p style="font-size: 3.7vw;padding:10px;margin-bottom: 10px; margin-top: -7%; text-align: justify;">
+              Use a simple and <b>user-friendly</b> interface to quickly view essential data such as booking calendars and future availability, optimizing planning for availability.
+            </p></div>
+          <div class="row">
+            <img src="images/kroos2.jpg" alt="Item 1 Image" style="width: 70%; height: auto; border-radius: 8px;margin-bottom: -5vw;margin-top: -0vw;">
+            <button class="non-clickable-label" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;margin-bottom: 7vw;">INTUITIVE MANAGEMENT
+            </button>
+            <p style="font-size: 3.7vw;padding:10px;margin-bottom: 10px; margin-top: -7%; text-align: justify;">
+              Access a system that allows you to monitor booking trends in <b>real-time,</b> quickly visualizing the current state of your apartment and its performance.
+            </p>
+          </div> 
+            <div class="row" style="background-color: none;"><img src="images/kroos3.jpg" alt="Item 1 Image" style="width: 70%; height: auto; border-radius: 8px;margin-bottom: -5vw;margin-top: -0vw;">
+              <button class="non-clickable-label" style="font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;margin-bottom: 7vw;">DETAILED REPORTS
+              </button>
+              <p style="font-size: 3.7vw;padding:10px;margin-bottom: 10px; margin-top: -7%; text-align: justify;">
+              Receive monthly reports with <b>detailed information on revenues,</b> market trends, and guest feedback, providing you with an effective tool for making long-term strategic decisions.
+              </p></div> 
+            
+
+      </div>
+      </div>
+
+      
+      <div id="chi-siamo-slide" class="swiper-slide" style="background-image: url('images/sfland2.png');">
+        <div class="offerta">
+          
+          <center><img src="images/loguo.png" alt="Item 1 Image" style="width: 30%; height: auto; border-radius: 8px;margin-bottom: 0vw;margin-top: -0vw;"></center>
+          <div><center><h1 style="font-size:7vw; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;margin-top:0vwvw;margin-bottom:4vw;" class="titles-text">ABOUT US</h1></center></div>
+          <center><a href="m.contact-usen.html" target="_blank">
+            <button class="non-clickable-label" style="font-size:3vw; font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;margin-bottom: 2vw;">
+                CLICK HERE FOR A FREE CONSULTATION
+            </button>
+            
+        </a>
+          <p style="font-size: 4.3vw; line-height: 1.6; text-align: justify;">
+            <b>Deseo</b> is the trusted partner for <b>Short-Term Rental Management</b> for apartment owners throughout Italy. We specialize in maximizing the value of your property, offering you a complete and worry-free management service. From maintenance to booking management, our goal is to ensure an excellent experience for your guests while you achieve the maximum economic return.
+        </p>
+        
+        <p style="font-size: 4.3vw; line-height: 1.6; text-align: justify;">
+            With <b>Deseo</b>, you no longer have to worry about operational details: our team is always ready to manage every aspect, ensuring you <b>peace of mind</b> and <b>optimized returns</b>. We create tailored solutions for every need, with a particular focus on quality and efficiency.
+        </p>
+       
+        <p style="font-size: 4.3vw; line-height: 1.6; text-align: justify;">
+            By partnering with us, you join a network of owners who have chosen to elevate their properties to new levels of success. Let <b>Deseo</b> handle everything and discover how simple it can be to turn your apartment into a reliable and well-managed source of income.
+        </p></div>
+        
+      </div>
+      <div id="contacts-slide" class="swiper-slide" style="background-image: url('images/sfland2.png');display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; text-align: center; background-size: cover; background-position: center;">
+        
+        <center><img src="images/loguo.png" width="150vw" height="auto" style="margin-top:3vw;padding-right: 1vw;"></center>
+                    <center><img src="images/ghirigoro.png" width="160vw" height="auto" style="margin-bottom: 2vw;"></center>
+                    <center>
+                        <div style="font-family: 'Poly', serif; font-size: 5vw; letter-spacing: 12px; color: #000000;">DESEO APARTMENTS</div>
+                    </center>
+                    <center><h1 style="font-size:5vw;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;margin-top:3.5vw;margin-bottom:-1vw;" class="titles-text">CONTACT US</h1></center>
+        
+        <div style="text-align: center;">
+            <p><a href="tel:+393880599971" style="color: #3f86b3;text-decoration: none;">+39 388 059 99 71</a> <a style="color:#c4d4db;"></a> </p>
+                <p><a href="tel:+393271975673" style="color:#3f86b3;text-decoration: none;">+39 327 197 56 73</a></p>
+            <p><a href="mailto:info@deseoapartments.com" style="color: #3f86b3;text-decoration: none;">info@deseoapartments.com</a></p>
+            <p><b style="color: rgb(0, 0, 0);">Registered Office: Via Ugo Bassi 10</b></p>
+            <p><b style="color: rgb(0, 0, 0);">Bologna 40121</b></p>
+            <p><b style="color: rgb(31, 19, 19);">Mon - Fri</b></p>
+            <p><b style="color: black;">09:00 - 18:00</b></p>
+            <p style="color: black;">VAT: 04119991208</p>
+
+            <a href="https://www.instagram.com/deseoapartments/" target="_blank"><img src="images/insta1.png" alt="Instagram" width="45px" height="45px" style="padding-right: 10px;"></a>
+                            
+                            <a href="https://www.facebook.com/profile.php?id=61562461786178" target="_blank"><img src="images/face1.png" alt="Facebook" width="45px" height="45px" style="padding-right: 10px;"></a>
+                            <a href="https://www.facebook.com/profile.php?id=61562461786178" target="_blank"><img src="images/whatsapp1.png" alt="WhatsApp" width="45px" height="45px"></a>
+                            <center><div style="color:black;margin-top:13px;font-size: 3vw;"><a> &copy; 2024 Deseo Apartments v.1.2 | All rights reserved | </a><a href="m.termsen.html" style="color: #3f86b3; text-decoration: none;">Terms and Conditions</a> | <a></a><a href="m.privacyen.html" style="color: #3f86b3; text-decoration: none;">Privacy Policy</a></div></center>
+                          </div>
+                          </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="welcome.js"></script>
+  <script src="mobile.js"></script>
+
+  
+</body>
+</html>

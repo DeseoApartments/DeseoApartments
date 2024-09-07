@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Deseo Apartments - We Manage Short-Term Rentals Across Italy</title>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=API_KEY&libraries=places,geometry"></script>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poly&display=swap" rel="stylesheet">
+  <link href="mobile.css" rel="stylesheet">
+
+  <style>
+    /* Limit the site to smartphones only */
+    @media only screen and (max-width: 767px) {
+      html, body {
+        height: 100%;
+        width: 100%;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        font-family: 'Poly', serif;
+      }
+
+      /* Fixed top bar */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        display: flex;
+        justify-content: center; /* Horizontally center the button */
+        align-items: center; /* Vertically center the button */
+        padding: 0;
+        height: 70px; /* Fixed height for the bar */
+        z-index: 1000;
+        box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
+      }
+
+      /* Style for the arrows */
+      .swiper-button-prev-custom, .swiper-button-next-custom {
+        color: rgb(0, 0, 0);
+        font-size: 24px;
+        cursor: pointer;
+        margin: 0 100px; /* Space between the arrows and the hamburger button */
+      }
+
+      .menu-toggle {
+        cursor: pointer;
+        font-size: 24px;
+        margin: 0;
+        line-height: 50px; /* Vertically align the text inside the button */
+      }
+
+      /* Dropdown menu */
+      .menu {
+        display: none;
+        background-color: #ffffff;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 999;
+      }
+
+      .menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .menu ul li {
+        padding: 10px;
+        border-bottom: 1px solid #000000;
+      }
+
+      .menu ul li a {
+        color: black;
+        text-decoration: none;
+        display: block;
+        font-size: 20px;
+      }
+
+      .menu.show {
+        display: block; /* Show the menu when active */
+      }
+
+      .faq-section {
+    width: auto;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq-section h2 {
+    text-align: center;
+    font-size: 24px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    width: 100vw;
+    background-color: #10c9cf;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    font-size: 4vw;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15); 
+}
+
+.faq-question:hover,
+.faq-question.active {
+    background-color: #97f8ff;
+    color: #000000;
+}
+
+
+.faq-answer {
+  display: none;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.707);
+  border-radius: 5px;
+  margin-top: 10px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 1;
+}
+
+
+.faq-answer p {
+    margin: 0;
+    color: #000000;
+    font-size: 3.7vw;
+}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fixed top bar with centered hamburger button -->
+  <div class="navbar">
+    <div class="swiper-button-prev-custom" id="swiper-button-prev-custom"></div> <!-- Left arrow -->
+    <div class="menu-toggle" id="menu-toggle">☰</div> <!-- Hamburger button -->
+    <div class="swiper-button-next-custom" id="swiper-button-next-custom"></div> <!-- Right arrow -->
+  </div>
+
+  <!-- Dropdown menu -->
+  <div class="menu" id="menu">
+    <ul>
+      <li><a href="m.indexen.html">Home</a></li>
+      <li style="color:rgb(255, 0, 0);font-size: 20px;">TRANSLATE</li>
+      <li><a href="m.faq.html">ITALIAN</a></li>
+      <li><a href="m.faqen.html">ENGLISH</a></li>
+      <li><a href="m.faqfr.html">FRENCH</a></li>
+      <li><a href="m.faqes.html">SPANISH</a></li>
+    </ul>
+  </div>
+
+  <!-- Swiper container with 5 slides -->
+  <div class="swiper-container" style="margin-top: -2%;">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image: url('images/heromobile1.jpg'); display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; text-align: center; background-size: cover; background-position: center;">
+        
+        <div style="
+        width: 80vw;
+        max-width: auto;
+        margin: 40px auto;
+        padding: 30px;
+        margin-top: 80vh;
+        border: 1px solid #ddd;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 0px;
+        background-color: #fff;
+        opacity: 0.8;
+        ">
+        <div><center><img class="deseo-title" src="images/loguo.png" width="25%" style="padding-right:10px;"></center></div>
+        <div class="deseo-title" style="font-size:3vw;text-align: center; margin-top:10px;">FAQ</div>
+        
+        <center><div class="deseo-privacy" style="width: 100%;">
+            <center>
+                <table>
+                    <tr>
+                        <td>
+                            <center>
+                                <div class="faq-section">
+                                    <div class="faq-item">
+                                        <button class="faq-question" onclick="toggleAnswer('answer1')">What is a short-term rental?</button>
+                                        <div class="faq-answer" id="answer1">
+                                            <p>A short-term rental is the leasing of a property for a limited period, typically from a few days to a few weeks. It is ideal for travelers, tourists, or anyone in need of temporary accommodation.</p>
+                                        </div>
+                                    </div>
+                                    <div class="faq-item">
+                                        <button class="faq-question" onclick="toggleAnswer('answer2')">What are the advantages of short-term rentals?</button>
+                                        <div class="faq-answer" id="answer2">
+                                           <p>Short-term rentals offer numerous advantages, including:</p>
+                                            <div><h2><p>Additional income</p></h2></div></p>
+                                            <div><h2><p>Flexibility</p></h2></div>
+                                            <div><h2><p> Greater care</p></h2></div>
+                                            <div><h2><p>Adaptability to markets</p></h2></div>
+                                            <div><h2><p>Diverse experience</p></h2></div>
+                                        </div>
+                                    </div>
+                                    <div class="faq-item">
+                                        <button class="faq-question" onclick="toggleAnswer('answer3')">What services do you offer for managing short-term rentals?</button>
+                                        <div class="faq-answer" id="answer3">
+                                            <p>We offer a full range of services, including:</p> 
+                                            <div><h2><p>Professional photography</p></h2></div>
+                                            <div><h2><p>Creation and optimization of listings</p></h2></div>
+                                            <div><h2><p>Management of bookings and communications</p></h2></div>
+                                            <div><h2><p>Cleaning and maintenance</p></h2></div>
+                                            <div><h2><p>Check-in and check-out</p></h2></div>
+                                            <div><h2><p>Management of payments and deposits</p></h2></div>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="faq-item">
+                                        <button class="faq-question" onclick="toggleAnswer('answer4')">How can I start working with you?</button>
+                                        <div class="faq-answer" id="answer4">
+                                            <p>You can start by contacting us through our website form. One of our consultants will get in touch for an initial evaluation of your property and to discuss collaboration details.</p>
+                                            <DIV><a href="m.contact-usen.html" target="_blank"><h1><p>CLICK HERE!</p></h1></a></DIV>
+                                        </div>
+                                    </div>
+                                    <div class="faq-item">
+                                        <button class="faq-question" onclick="toggleAnswer('answer5')">How much does the short-term rental management service cost?</button>
+                                        <div class="faq-answer" id="answer5">
+                                            <p>Our fees vary depending on the services requested and the type of property. We usually charge a percentage commission on monthly rentals. Contact us for a personalized quote.</p>
+                                        </div>
+                                    </div>
+                                    <div class="faq-item">
+                                        <button class="faq-question" onclick="toggleAnswer('answer6')">How do you ensure the safety of my property?</button>
+                                        <div class="faq-answer" id="answer6">
+                                            <p>We take several measures to ensure the safety of your property, including:</p>
+                                            <div><h2><p>Guest identity verification</p></h2></div>
+                                            <div><h2><p>Use of secure locking systems</p></h2></div>
+                                            <div><h2><p>Accidental damage insurance</p></h2></div>
+                                        </div>
+                                    </div>
+                                    <div class="faq-item">
+                                        <button class="faq-question" onclick="toggleAnswer('answer7')">Which platforms do you use to promote properties?</button>
+                                        <div class="faq-answer" id="answer7">
+                                            <p>We advertise properties on leading platforms such as <h2>Airbnb, Booking.com, Vrbo</h2> and many others to ensure maximum visibility and occupancy.</p>
+                                        </div>
+                                    </div>
+                                    <div class="faq-item">
+                                        <button class="faq-question" onclick="toggleAnswer('answer8')">How do you handle negative reviews?</button>
+                                        <div class="faq-answer" id="answer8">
+                                            <p>We proactively manage reviews, responding promptly and trying to resolve any issues. We also work with guests to continually improve the quality of their stay.</p>
+                                        </div>
+                                    </div>
+                                    <div class="faq-item">
+                                        <button class="faq-question" onclick="toggleAnswer('answer9')">Can I use my property whenever I want?</button>
+                                        <div class="faq-answer" id="answer9">
+                                            <p>Yes, you can block the dates you wish to use your property through our management system. We just ask for reasonable advance notice to avoid booking conflicts.</p>
+                                        </div>
+                                    </div>
+                                    <div class="faq-item">
+                                        <button class="faq-question" onclick="toggleAnswer('answer10')">How are payments managed?</button>
+                                        <div class="faq-answer" id="answer10">
+                                            <p>We handle payments directly with guests and transfer the earnings to you, net of our commission, via bank transfer or other agreed method.</p>
+                                        </div>
+                                    </div>
+                                    <div class="faq-item">
+                                        <button class="faq-question" onclick="toggleAnswer('answer11')">Do you offer maintenance services?</button>
+                                        <div class="faq-answer" id="answer11">
+                                            <p>Yes, we offer both regular and extraordinary maintenance services to ensure your property is always in top condition. We work with qualified technicians for any type of intervention.</p>
+                                        </div>
+                                    </div>
+                                    <div class="faq-item">
+                                        <button class="faq-question" onclick="toggleAnswer('answer12')">What happens if my property is damaged?</button>
+                                        <div class="faq-answer" id="answer12">
+                                            <p>In the event of damage, we assess the situation and manage the necessary repairs. We also require a deposit from guests and work with insurance to cover any significant damages.</p>
+                                        </div>
+                                    </div>
+                                    <div class="faq-item">
+                                        <button class="faq-question" onclick="toggleAnswer('answer13')">How is check-in and check-out handled?</button>
+                                        <div class="faq-answer" id="answer13">
+                                            <p>Check-in and check-out are handled professionally, with the option of in-person reception or self-check-in systems for greater flexibility.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </center>
+                        </td>
+                    </tr>
+                </table>
+            </center>
+        </div></center>
+        
+        </div>
+        
+        
+        
+        <script>
+            function toggleAnswer(id) {
+  // Close all open answers
+  var answers = document.querySelectorAll('.faq-answer');
+  var questions = document.querySelectorAll('.faq-question');
+
+  answers.forEach(function(answer) {
+      if (answer.id !== id) {
+          answer.style.display = 'none';  // Hide all answers except the clicked one
+      }
+  });
+
+  questions.forEach(function(question) {
+      if (question.getAttribute("onclick").includes(id)) {
+          // Change the 'active' state only on the clicked question
+          question.classList.toggle('active');
+      } else {
+          question.classList.remove('active');
+      }
+  });
+
+  // Toggle the visibility of the corresponding answer
+  var answer = document.getElementById(id);
+  if (answer.style.display === "block") {
+      answer.style.display = "none";
+  } else {
+      answer.style.display = "block";
+  }
+}
+
+        
+        </script>
+      
+  </div>
+      </div>
+      </div>
+
+      
+    
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="welcome.js"></script>
+  <script src="mobile.js"></script>
+
+  
+</body>
+</html>
