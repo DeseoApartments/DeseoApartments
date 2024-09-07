@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deseo Apartments - Calcolo Prezzo</title>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOrxkYsKLOHKETgg8PPLG1sqk1VgTi5Oo&libraries=places,geometry"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poly&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="welcomeindex.css">
+   
+   
+</head>
+<body>
+    <!-- Logo and Button Section -->
+    <div class="header">
+      
+    
+    </div>
+    <h2 style=" margin-top: 10px; text-align: left;" class="non-clickable-label">Scopri il potenziale del tuo appartamento</h2>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <div class="form-container">
+            <div><p style="font-family: 'Poly', serif;font-size:20px;color:#ca2a2a;text-align: center; margin-top: 0%;"><b>AFFIDATI A DESEO.</b></p></div>
+            <p style="font-size: 15px;margin-bottom:20px;margin-top:-20px">Inserisci la tua città</p>
+            <input type="text" id="address" placeholder="Inserisci l'indirizzo del tuo appartamento">
+            <div id="result"></div>
+
+            <select id="beds" onchange="calculatePrice();">
+                <option value="1">1 Posto letto</option>
+                <option value="2">2 Posti letto</option>
+                <option value="3">3 Posti letto</option>
+                <option value="4">4 Posti letto</option>
+                <option value="5">5 Posti letto</option>
+                <option value="6">6 Posti letto</option>
+                <option value="7">7 Posti letto</option>
+                <option value="8">8+ Posti letto</option>
+            </select>
+
+            <div id="price-form" class="hidden">
+                <div class="slider-container">
+                    <p style="font-size: 10px; font-style: bold;text-align: center;">Occupazione Media Mensile</p>
+                    <input type="range" id="nights" min="1" max="30" value="1" oninput="updateNightsLabel(); calculatePrice();">
+                    <span id="nights-label">1 notte</span>
+                </div>
+                
+                <div id="price-result"></div>
+            </div>
+        </div>
+        <div id="map-container">
+            <div id="map"></div>
+        </div>
+        
+    </div>
+    
+
+    
+    
+
+    
+
+    <script src="welcome.js"></script>
+</body>
+
+

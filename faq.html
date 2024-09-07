@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deseo Apartments - Gestiamo Affitti Brevi in Tutta Italia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poly&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+.faq-section {
+    width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq-section h2 {
+    text-align: center;
+    font-size: 24px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin-bottom: 10px;
+}
+
+.faq-question {
+    width: 100%;
+    background-color: #10c9cf;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    text-align: left;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15); 
+}
+
+.faq-question:hover,
+.faq-question.active {
+    background-color: #97f8ff;
+    color: #000000;
+}
+
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.707);
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.15);
+}
+
+.faq-answer p {
+    margin: 0;
+    color: #000000;
+    font-size: 20px;
+}
+
+</style>
+
+<body>
+    <!-- Barra di navigazione -->
+    <div class="navbar">
+        <div class="navbar-menu">
+            <a href="index.html">Home</a>
+            <a href="index.html#offerta">Cosa Offriamo</a>
+            <a href="contact-us.html">Consulenza Gratuita</a>
+            <a href="index.html#chi-siamo">Chi Siamo</a>
+            <a href="#contacts">Contatti</a>
+            <a href="faq.html">Faq</a>
+        </div>
+    </div>
+
+<div style="
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    margin-top: 5%;
+    border: 1px solid #ddd;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0px;
+    background-color: #fff;
+">
+<div><center><img class="deseo-title" src="images/loguo.png" width="25%" style="padding-right:10px;"></center></div>
+<div class="deseo-title" style="margin-top:10px;">FAQ</div>
+
+<center><div class="deseo-privacy" style="width: 100%;">
+    <center>
+        <table>
+            <tr>
+                <td>
+                    <center>
+                        <div class="faq-section">
+                            <div class="faq-item">
+                                <button class="faq-question" onclick="toggleAnswer('answer1')">Che cos'è un affitto breve?</button>
+                                <div class="faq-answer" id="answer1">
+                                    <p>Un affitto breve è una locazione di una proprietà per un periodo di tempo limitato, generalmente da pochi giorni a qualche settimana. È ideale per viaggiatori, turisti o chiunque abbia bisogno di un alloggio temporaneo.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" onclick="toggleAnswer('answer2')">Quali sono i vantaggi degli affitti brevi?</button>
+                                <div class="faq-answer" id="answer2">
+                                   <p>Gli affitti brevi offrono numerosi vantaggi, tra cui:</p>
+                                    <div><h2><p>Reddito aggiuntivo</p></h2></div></p>
+                                    <div><h2><p>Flessibilità</p></h2></div>
+                                    <div><h2><p> Maggiore cura</p></h2></div>
+                                    <div><h2><p>Adattabilità ai mercati</p></h2></div>
+                                    <div><h2><p>Esperienza diversificata</p></h2></div>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" onclick="toggleAnswer('answer3')">Quali servizi offrite per la gestione degli affitti brevi?</button>
+                                <div class="faq-answer" id="answer3">
+                                    <p>Offriamo una gamma completa di servizi, tra cui:</p> 
+                                    <div><h2><p></Fotografia professionalep></h2></div>
+                                    <div><h2><p>Creazione e ottimizzazione degli annunci</p></h2></div>
+                                    <div><h2><p>Gestione delle prenotazioni e delle comunicazioni</p></h2></div>
+                                    <div><h2><p>Pulizia e manutenzione</p></h2></div>
+                                    <div><h2><p>Check-in e check-out</p></h2></div>
+                                    <div><h2><p>Gestione dei pagamenti e della cauzione</p></h2></div>
+                                    
+                                
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" onclick="toggleAnswer('answer4')">Come posso iniziare a collaborare con voi?</button>
+                                <div class="faq-answer" id="answer4">
+                                    <p>Puoi iniziare contattandoci attraverso il nostro modulo di contatto sul sito. Un nostro consulente ti contatterà per una valutazione iniziale della tua proprietà e per discutere i dettagli della collaborazione.</p>
+                                    <DIV><a href="contact-us.html" target="_blank"><h1><p>CLICCA QUI!</p></h1></a></DIV>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" onclick="toggleAnswer('answer5')">Quanto costa il servizio di gestione degli affitti brevi?</button>
+                                <div class="faq-answer" id="answer5">
+                                    <p>Le nostre tariffe variano in base ai servizi richiesti e alla tipologia di proprietà. Solitamente applichiamo una commissione percentuale sugli affitti mensili. Contattaci per un preventivo personalizzato.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" onclick="toggleAnswer('answer6')">Come garantite la sicurezza della mia proprietà?</button>
+                                <div class="faq-answer" id="answer6">
+                                    <p>Adottiamo diverse misure per garantire la sicurezza della tua proprietà, tra cui:</p>
+                                    <div><h2><p>Verifica dell'identità degli ospiti</p></h2></div>
+                                    <div><h2><p>Utilizzo di sistemi di chiusura sicuri</p></h2></div>
+                                    <div><h2><p>Assicurazione per danni accidentali</p></h2></div>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" onclick="toggleAnswer('answer7')">Quali piattaforme utilizzate per promuovere le proprietà?</button>
+                                <div class="faq-answer" id="answer7">
+                                    <p>Pubblicizziamo le proprietà su piattaforme leader come <h2>Airbnb, Booking.com, Vrbo</h2> e molte altre per garantire la massima visibilità e occupazione.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" onclick="toggleAnswer('answer8')">Come gestite le recensioni negative?</button>
+                                <div class="faq-answer" id="answer8">
+                                    <p>Gestiamo proattivamente le recensioni, rispondendo tempestivamente e cercando di risolvere eventuali problemi. Lavoriamo anche con gli ospiti per migliorare continuamente la qualità del soggiorno.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" onclick="toggleAnswer('answer9')">Posso utilizzare la mia proprietà quando voglio?</button>
+                                <div class="faq-answer" id="answer9">
+                                    <p>Sì, puoi bloccare le date in cui desideri utilizzare la tua proprietà attraverso il nostro sistema di gestione. Ti chiediamo solo di avvisarci con un preavviso ragionevole per evitare sovrapposizioni di prenotazioni.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" onclick="toggleAnswer('answer10')">Come vengono gestiti i pagamenti?</button>
+                                <div class="faq-answer" id="answer10">
+                                    <p>Gestiamo i pagamenti direttamente con gli ospiti e ti trasferiamo i guadagni, al netto della nostra commissione, tramite bonifico bancario o altro metodo concordato.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" onclick="toggleAnswer('answer11')">Offrite servizi di manutenzione?</button>
+                                <div class="faq-answer" id="answer11">
+                                    <p>Sì, offriamo servizi di manutenzione ordinaria e straordinaria per assicurare che la tua proprietà sia sempre in ottime condizioni. Collaboriamo con tecnici qualificati per ogni tipo di intervento.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" onclick="toggleAnswer('answer12')">Cosa succede in caso di danni alla proprietà?</button>
+                                <div class="faq-answer" id="answer12">
+                                    <p>In caso di danni, valutiamo la situazione e gestiamo le riparazioni necessarie. Inoltre, richiediamo una cauzione agli ospiti e collaboriamo con le assicurazioni per coprire eventuali danni significativi.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question" onclick="toggleAnswer('answer13')">Come viene effettuato il check-in e il check-out?</button>
+                                <div class="faq-answer" id="answer13">
+                                    <p>Il check-in e il check-out vengono gestiti in modo professionale, con possibilità di accoglienza in persona o attraverso sistemi di self-check-in per maggiore flessibilità.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </center>
+                </td>
+            </tr>
+        </table>
+    </center>
+</div></center>
+
+</div>
+
+
+
+<script>
+   function toggleAnswer(id) {
+  // Chiude tutte le risposte aperte
+  var answers = document.querySelectorAll('.faq-answer');
+  var questions = document.querySelectorAll('.faq-question');
+
+  answers.forEach(function(answer) {
+      if (answer.id !== id) {
+          answer.style.display = 'none';  // Nasconde tutte le risposte tranne quella cliccata
+      }
+  });
+
+  questions.forEach(function(question) {
+      if (question.getAttribute("onclick").includes(id)) {
+          // Cambia lo stato 'active' solo sulla domanda cliccata
+          question.classList.toggle('active');
+      } else {
+          question.classList.remove('active');
+      }
+  });
+
+  // Alterna la visibilità della risposta corrispondente
+  var answer = document.getElementById(id);
+  if (answer.style.display === "block") {
+      answer.style.display = "none";
+  } else {
+      answer.style.display = "block";
+  }
+}
+
+
+</script>
+
+<!-- Footer -->
+<section id="contacts"></section>
+<footer style="
+font-family: 'Poly', serif;
+    background-image: url('images/footer.png');
+    width: 100vw;
+    background-position: relative;
+    color: #ecf0f1;
+    padding: 0px 0;
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.05);
+    opacity: 1;
+    margin-top: 90px;
+    padding-bottom: 40px;
+    font-size: 0.9vw;
+">
+    <div style="line-height: 1.6; background-color: transparent; padding: 20px;">
+        <table style="margin:0 auto;width:65vw;">
+            <tr>
+                <td style="padding-left: 0%;">
+                    <section id="contact">
+                        <p style="font-size: 1.6vw; color: rgb(0, 0, 0); text-align: left;"><b>Contattaci</b></p>
+                        <div style="text-align: left;">
+                            <p><a href="tel:+393880599971" style="color: #3f86b3;text-decoration: none;">+39 388 059 99 71</a> <a style="color:#c4d4db;"></a> </p>
+                                <p><a href="tel:+393271975673" style="color:#3f86b3;text-decoration: none;">+39 327 197 56 73</a></p>
+                            <p><a href="mailto:info@deseoapartments.com" style="color: #3f86b3;text-decoration: none;">info@deseoapartments.com</a></p>
+                            <p><b style="color: rgb(0, 0, 0);">Sede legale: Via Ugo Bassi 10</b></p>
+                            <p><b style="color: rgb(0, 0, 0);">Bologna 40121</b></p>
+                            <p><b style="color: rgb(31, 19, 19);">Lun - Ven</b></p>
+                            <p><b style="color: black;">09:00 - 18:00</b></p>
+                            <p style="color: black;">P.IVA: 04119991208</p>
+                        </div>
+                        <div style="text-align: left;">
+                            <a href="https://www.instagram.com/deseoapartments/" target="_blank"><img src="images/insta1.png" alt="Instagram" width="45px" height="45px" style="padding-right: 10px;"></a>
+                            
+                            <a href="https://www.facebook.com/profile.php?id=61562461786178" target="_blank"><img src="images/face1.png" alt="Facebook" width="45px" height="45px" style="padding-right: 10px;"></a>
+                            <a href="https://www.facebook.com/profile.php?id=61562461786178" target="_blank"><img src="images/whatsapp1.png" alt="WhatsApp" width="45px" height="45px"></a>
+                        </div>
+                    </section>
+                </td>
+                <td >
+                    <center><img src="images/loguo.png" width="250px" height="250px" style="padding-bottom: 5px;padding-left:33%;"></center>
+                    <center><img src="images/ghirigoro.png" width="50%" height="30%" style="padding-left:36%;"></center>
+                    <center>
+                        <div style="font-family: 'Poly', serif; font-size: 1.5vw; letter-spacing: 12px; color: #000000; padding-top: 10px;padding-left:36%;">DESEO APARTMENTS</div>
+                    </center>
+                </td>
+            </tr>
+        </table>
+        
+        <center><div style="color:black;margin-top:100px;"><a> &copy; 2024 Deseo Apartments v.1.2 | Tutti i diritti riservati | </a><a href="termini.html" style="color: #3f86b3; text-decoration: none;">Termini e Condizioni</a> | <a></a><a href="privacy.html" style="color: #3f86b3; text-decoration: none;">Informativa sulla Privacy</a></div></center>
+    
+    </div>
+</footer>
+
+
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
