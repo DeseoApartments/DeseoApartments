@@ -26,7 +26,9 @@ body {
     background-color: rgba(255, 255, 255, 0.0); /* Sfondo semitrasparente */
 }
 
-
+.logo {
+    max-height: 10vh;
+}
 
 .header-button {
     padding: 10px 20px;
@@ -53,7 +55,6 @@ body {
     max-width: 50vw;
     width: 50vw;
     height: auto; /* Altezza dinamica per adattarsi ai contenuti */
-    min-height: 45vh;
     margin: 20px 0;
     transition: height 0.3s ease; /* Transizione per adattare l'altezza in modo fluido */
 }
@@ -329,12 +330,11 @@ html {
         min-height: 100vh;
         width: 100%;
         padding: 10px;
-
     }
 
     .container {
         flex-direction: column;
-        max-width: 90vw;
+        max-width: 100%;
         width: 100%; /* Larghezza al 100% del viewport */
         min-height: auto;
         height: auto; /* L'altezza si adatta al contenuto */
@@ -356,14 +356,14 @@ html {
     }
 
     input[type="text"], select, button {
-        width: 80%; /* Ridotto al 80% per centrare meglio all'interno del container */
-        max-width: 80%;
-        margin-bottom: 10px; /* Spazio tra gli elementi */
+        width: 100%; /* Ridotto al 80% per centrare meglio all'interno del container */
+        max-width: 100%;
+        margin: 10px auto; /* Centratura orizzontale */
     }
 
     .slider-container {
-        max-width: 80%; /* Imposta la larghezza per lo slider */
-        margin-bottom: 10px; /* Spazio tra lo slider e gli altri elementi */
+        width: 100%; /* Imposta la larghezza per lo slider */
+        margin: 10px auto; /* Assicura la centratura dello slider */
         display: flex;
         flex-direction: column;
         align-items: center; /* Assicura la centratura orizzontale */

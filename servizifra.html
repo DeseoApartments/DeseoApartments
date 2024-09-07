@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deseo Apartments - Gestion des Locations Courtes Durées</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+    <style>
+        .highlight {
+            color: #333;
+            font-weight: bold;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        .highlight-black {
+            color: #4f4848;
+            font-weight: bold;
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        .custom-row {
+            background-color: white;
+            border-radius: 10px;
+            
+        }
+
+        .customdark-row {
+            background-color: rgb(242, 245, 245);
+            border-radius: 10px;
+           
+        }
+
+        table {
+            border-collapse: separate; /* Ensure border-radius works on table */
+            border-spacing: 20px; /* Ensure no extra space between table cells */
+        }
+
+        tr {
+            border-radius: 10px;
+            overflow: hidden; /* Ensure the border-radius works for rows */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        td, th {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="hero">
+
+            <div class="language-icons">
+                <a href="servizieng.html"><img src="images/english.png" alt="English" class="language-icon"></a>
+                <a href="serviziesp.html"><img src="images/spanish.png" alt="Spanish" class="language-icon"></a>
+                <a href="servizi.html"><img src="images/italian.png" alt="French" class="language-icon"></a>
+            </div>
+
+            <a href="https://wa.me/+393880599971" target="_blank">
+                <img src="images/WA.png" width="100" height="100" alt="Discutez avec nous" class="whatsapp-icon"/>
+            </a>
+            <div class="hero-images desktop">
+                <img src="images/HERODESKFR.png" alt="Image Hero 1" class="active">
+            </div>
+            <div class="hero-images mobile">
+                <img src="images/heromobilefr.png" alt="Image Hero Mobile 1" class="active">
+            </div>
+        </div>
+        <nav class="desktop-menu">
+            <ul>
+                <li><a href="index-fr.html">Accueil</a></li>
+                <li><a href="coHostfra.html">Consultation Gratuite</a></li>
+                <li><a href="chisiamofra.html">Qui sommes-nous</a></li>
+                <li><a href="#contact">Contacts</a></li>
+                <li><a href="FAQfra.html">Faq</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile menu -->
+        <nav class="mobile-menu">
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <ul class="menu-list">
+                <li><a href="index-fr.html">Accueil</a></li>
+                <li><a href="coHostfra.html">Consultation Gratuite</a></li>
+                <li><a href="chisiamofra.html">Qui sommes-nous</a></li>
+                <li><a href="#contact">Contacts</a></li>
+                <li><a href="FAQfra.html">Faq</a></li>
+            </ul>
+        </nav>
+    </header>      
+
+<div><br><BR>
+    <center><span style="font-size: 38px; color: #208786;">NOS SERVICES</span></center>
+    </div>
+
+           <section id="table-section">
+        <div class="table-container">
+            <table class="desktop-table">
+                
+    
+                <tr class="customdark-row" id="services-section">
+                    <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
+                        <center><img src="images/pratiche.png" width="160" height="160"></center>
+                        <center><span style="font-size: 30px; color: #208786;">PROCÉDURES ADMINISTRATIVES</span></center>
+                        <center><span style="font-size: 25px; color: #0c2d2c;">Nous nous occupons de toutes les démarches administratives nécessaires pour mettre votre bien en conformité, vous permettant de louer sans soucis.</span></center>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
+                        <center><img src="images/revenue.png" width="160" height="160"></center>
+                        <center><span style="font-size: 30px; color: #208786;">GESTION DES REVENUS</span></center>
+                        <center><span style="font-size: 25px; color: #0c2d2c;">Notre équipe analyse attentivement le marché pour déterminer le prix de vente optimal, vous garantissant des revenus maximums. La gestion de votre maison reste toujours sous votre contrôle. Nous ajustons les prix en fonction des saisons et des événements les plus importants de l'année, garantissant que votre bien soit toujours compétitif.</span></center>
+                    </td>
+                </tr>
+                <tr class="customdark-row">
+                    <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
+                        <center><img src="images/report.png" width="160" height="160"></center>
+                        <center><span style="font-size: 30px; color: #208786;">RAPPORTS MENSUELS</span></center>
+                        <center><span style="font-size: 25px; color: #0c2d2c;">Nous fournissons des rapports mensuels détaillés à nos clients, offrant une vue d'ensemble claire et transparente des performances de leur bien.</span></center>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
+                        <center><img src="images/welcomepiccolo.png" width="160" height="160"></center>
+                        <center><span style="font-size: 30px; color: #208786;">ACCUEIL DES INVITÉS</span></center>
+                        <center><span style="font-size: 25px; color: #0c2d2c;">Le check-in est un moment crucial dans l'expérience d'une location courte durée. Pendant cette rencontre, l'invité rencontre pour la première fois son hôte et peut demander des conseils et de l'assistance. Chaque détail doit être soigné avec attention, car il peut influencer l'ensemble de l'expérience de séjour. Si vous ne pouvez pas vous en occuper personnellement, permettez-nous de le faire pour vous. Nous accueillerons vos invités avec le même soin et dévouement que nous réservons aux nôtres pour garantir que tout soit parfait.</span></center>
+                    </td>
+                </tr>
+                <tr class="customdark-row">
+                    <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
+                        <center><img src="images/arredamento.png" width="160" height="160"></center>
+                        <center><span style="font-size: 30px; color: #208786;">AMEUBLEMENT</span></center>
+                        <center><span style="font-size: 25px; color: #0c2d2c;">Meubler un appartement nécessite une touche spéciale. Nous connaissons les besoins des voyageurs et savons comment les satisfaire. Nous vous conseillons sur le mobilier le plus adapté et nous nous occupons de tout, de l'achat au montage, pour créer un espace accueillant et fonctionnel.</span></center>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
+                        <center><img src="images/wifi.png" width="160" height="160"></center>
+                        <center><span style="font-size: 30px; color: #208786;">ACTIVATION DES SERVICES</span></center>
+                        <center><span style="font-size: 25px; color: #0c2d2c;">Nous gérons l'ensemble du processus d'activation d'internet et des services pour votre appartement. De la sélection des meilleures offres à la gestion des appels et des contrats, en passant par l'envoi de la documentation nécessaire et les rendez-vous avec les techniciens, nous nous occupons de tout pour vous. De plus, nous sommes disponibles pour toute intervention ultérieure.</span></center>
+                    </td>
+                </tr>
+                <tr class="customdark-row">
+                    <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
+                        <center><img src="images/pulipiccolo.png" width="160" height="160"></center>
+                        <center><span style="font-size: 30px; color: #208786;">NETTOYAGE</span></center>
+                        <center><span style="font-size: 25px; color: #0c2d2c;">Pour un lieu fréquenté par des personnes du monde entier, la propreté doit être impeccable. Une maison propre et bien rangée est le premier pas vers une évaluation 5 étoiles. Nos services de nettoyage sont conçus pour garantir la satisfaction maximale des invités.</span></center>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
+                        <center><img src="images/biancheriapicco.png" width="160" height="160"></center>
+                        <center><span style="font-size: 30px; color: #208786;">SERVICE DE LINGE</span></center>
+                        <center><span style="font-size: 25px; color: #0c2d2c;">Fatigué de laver et repasser les draps et serviettes après chaque invité ? Laissez-nous faire ! Nous offrons du linge de qualité hôtelière, lavé et désinfecté industriellement. Nous le livrons directement à votre appartement, à une fréquence fixe ou à chaque arrivée d'invités.</span></center>
+                    </td>
+                </tr>
+                <tr class="customdark-row">
+                    <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
+                        <center><img src="images/foto.png" width="160" height="160"></center>
+                        <center><span style="font-size: 30px; color: #208786;">SERVICE DE PHOTOGRAPHIE PROFESSIONNELLE</span></center>
+                        <center><span style="font-size: 25px; color: #0c2d2c;">Les images de votre appartement sont cruciales pour la décision des invités potentiels. Nous offrons un service de photographie professionnelle pour vous assurer que les photos soient de haute qualité et représentent au mieux votre espace, le rendant irrésistible pour les visiteurs.</span></center>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
+                        <center><img src="images/pubblicity.png" width="160" height="160"></center>
+                        <center><span style="font-size: 30px; color: #208786;">PUBLICITÉ</span></center>
+                        <center><span style="font-size: 25px; color: #0c2d2c;">L'annonce de votre appartement est fondamentale pour attirer les invités. Nous créons des annonces complètes et attrayantes sur les principales plateformes de locations avec des photos professionnelles et des descriptions détaillées en italien et en anglais, garantissant une visibilité maximale.</span></center>
+                    </td>
+                </tr>
+                <tr class="customdark-row">
+                    <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
+                        <center><img src="images/guida.png" width="160" height="160"></center>
+                        <center><span style="font-size: 30px; color: #208786;">GUIDES TOURISTIQUES</span></center>
+                        <center><span style="font-size: 25px; color: #0c2d2c;">Les invités apprécient toujours de trouver des informations utiles sur la maison et la ville. Nous créons des guides détaillés et personnalisés, avec des conseils pratiques et des informations sur la région, pour rendre le séjour de vos invités encore plus agréable et informatif.</span></center>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
+                        <center><img src="images/sitipicco.png" width="160" height="160"></center>
+                        <center><span style="font-size: 30px; color: #208786;">CRÉATION DE SITE WEB</span></center>
+                        <center><span style="font-size: 25px; color: #0c2d2c;">Si vous souhaitez augmenter votre visibilité, la création d'un site web est idéale ! Nous vous aiderons dans le développement du site et des réseaux sociaux associés !</span></center>
+                    </td>
+                </tr>
+                <tr class="customdark-row">
+                    <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
+                        <center><span style="font-size: 30px; color: #208786;">SERVICE DE CO-HÔTE</span></center>
+                        <center><span style="font-size: 25px; color: #0c2d2c;"><i>Nous nous occupons des tâches les plus exigeantes, offrant un package personnalisé pour la gestion à long terme de votre appartement, où l'hôte peut choisir quelles tâches gérer personnellement et lesquelles déléguer à notre équipe. Contactez-nous pour une consultation !</i></span></center>
+                        <center>
+                            <div class="form-container">
+                                <center><h2>Contactez-nous</h2></center>
+                                <form action="https://api.web3forms.com/submit" method="POST">
+                                    <input type="hidden" name="access_key" value="7433205f-e93a-46c1-a284-4a7839010a8a">
+                                    <div class="form-group">
+                                        <input type="text" name="name" placeholder="Nom" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="Cognome" placeholder="Nom de famille" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="Telefono" placeholder="Téléphone" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" name="email" placeholder="Email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="numero.immobili" placeholder="Combien de propriétés possédez-vous ?" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="City" placeholder="Dans quelle ville ?" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea name="message" placeholder="Message" required></textarea>
+                                    </div>
+                                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                                    <button type="submit">Envoyer</button>
+                                </form>
+                            </div>
+                        </center>
+                    </td>
+                </tr>
+    
+            </table>
+
+            <table class="mobile-table">
+                
+                <tr class="customdark-row" id="services-section-mobile">
+                    <td> <center><img src="images/pratiche.png" width="160" height="160"></center>
+                    <center><span style="font-size: 30px; color: #208786;">PROCÉDURES ADMINISTRATIVES</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">Nous nous occupons de toutes les démarches administratives nécessaires pour mettre votre bien en conformité, vous permettant de louer sans soucis.</span></center>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td> <center><img src="images/revenue.png" width="160" height="160"></center>
+                    <center><span style="font-size: 30px; color: #208786;">GESTION DES REVENUS</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">Notre équipe analyse attentivement le marché pour déterminer le prix de vente optimal, vous garantissant des revenus maximums. La gestion de votre maison reste toujours sous votre contrôle. Nous ajustons les prix en fonction des saisons et des événements les plus importants de l'année, garantissant que votre bien soit toujours compétitif.</span></center>
+                    </td>
+                </tr>
+                <tr class="customdark-row">
+                    <td>   <center><img src="images/report.png" width="160" height="160"></center>
+                    <center><span style="font-size: 30px; color: #208786;">RAPPORTS MENSUELS</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">Nous fournissons des rapports mensuels détaillés à nos clients, offrant une vue d'ensemble claire et transparente des performances de leur bien.</span></center>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td> <center><img src="images/welcomepiccolo.png" width="160" height="160"></center>
+                    <center><span style="font-size: 30px; color: #208786;">ACCUEIL DES INVITÉS</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">Le check-in est un moment crucial dans l'expérience d'une location courte durée. Pendant cette rencontre, l'invité rencontre pour la première fois son hôte et peut demander des conseils et de l'assistance. Chaque détail doit être soigné avec attention, car il peut influencer l'ensemble de l'expérience de séjour. Si vous ne pouvez pas vous en occuper personnellement, permettez-nous de le faire pour vous. Nous accueillerons vos invités avec le même soin et dévouement que nous réservons aux nôtres pour garantir que tout soit parfait.</span></center>
+                    </td>
+                </tr>
+                <tr class="customdark-row">
+                    <td> <center><img src="images/arredamento.png" width="160" height="160"></center>
+                    <center><span style="font-size: 30px; color: #208786;">AMEUBLEMENT</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">Meubler un appartement nécessite une touche spéciale. Nous connaissons les besoins des voyageurs et savons comment les satisfaire. Nous vous conseillons sur le mobilier le plus adapté et nous nous occupons de tout, de l'achat au montage, pour créer un espace accueillant et fonctionnel.</span></center>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td>  <center><img src="images/wifi.png" width="160" height="160"></center>
+                    <center><span style="font-size: 30px; color: #208786;">ACTIVATION DES SERVICES</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">Nous gérons l'ensemble du processus d'activation d'internet et des services pour votre appartement. De la sélection des meilleures offres à la gestion des appels et des contrats, en passant par l'envoi de la documentation nécessaire et les rendez-vous avec les techniciens, nous nous occupons de tout pour vous. De plus, nous sommes disponibles pour toute intervention ultérieure.</span></center>
+                    </td>
+                </tr>
+                <tr  class="customdark-row">
+                    <td> <center><img src="images/pulipiccolo.png" width="160" height="160"></center>
+                    <center><span style="font-size: 30px; color: #208786;">NETTOYAGE</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">Pour un lieu fréquenté par des personnes du monde entier, la propreté doit être impeccable. Une maison propre et bien rangée est le premier pas vers une évaluation 5 étoiles. Nos services de nettoyage sont conçus pour garantir la satisfaction maximale des invités.</span></center>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td> <center><img src="images/biancheriapicco.png" width="160" height="160"></center>
+                    <center><span style="font-size: 30px; color: #208786;">SERVICE DE LINGE</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">Fatigué de laver et repasser les draps et serviettes après chaque invité ? Laissez-nous faire ! Nous offrons du linge de qualité hôtelière, lavé et désinfecté industriellement. Nous le livrons directement à votre appartement, à une fréquence fixe ou à chaque arrivée d'invités.</span></center>
+                    </td>
+                </tr>
+                <tr class="customdark-row">
+                    <td> <center><img src="images/foto.png" width="160" height="160"></center>
+                    <center><span style="font-size: 30px; color: #208786;">SERVICE DE PHOTOGRAPHIE PROFESSIONNELLE</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">Les images de votre appartement sont cruciales pour la décision des invités potentiels. Nous offrons un service de photographie professionnelle pour vous assurer que les photos soient de haute qualité et représentent au mieux votre espace, le rendant irrésistible pour les visiteurs.</span></center>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td>  <center><img src="images/pubblicity.png" width="160" height="160"></center>
+                    <center><span style="font-size: 30px; color: #208786;">PUBLICITÉ</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">L'annonce de votre appartement est fondamentale pour attirer les invités. Nous créons des annonces complètes et attrayantes sur les principales plateformes de locations avec des photos professionnelles et des descriptions détaillées en italien et en anglais, garantissant une visibilité maximale.</span></center>
+                    </td>
+                </tr>
+                <tr class="customdark-row">
+                    <td> <center><img src="images/guida.png" width="160" height="160"></center>
+                    <center><span style="font-size: 30px; color: #208786;">GUIDES TOURISTIQUES</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">Les invités apprécient toujours de trouver des informations utiles sur la maison et la ville. Nous créons des guides détaillés et personnalisés, avec des conseils pratiques et des informations sur la région, pour rendre le séjour de vos invités encore plus agréable et informatif.</span></center>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td> <center><img src="images/sitipicco.png" width="160" height="160"></center>
+                    <center><span style="font-size: 30px; color: #208786;">CRÉATION DE SITE WEB</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">Si vous souhaitez augmenter votre visibilité, la création d'un site web est idéale ! Nous vous aiderons dans le développement du site et des réseaux sociaux associés !</span></center>
+                    </td>
+                </tr>
+                <tr class="customdark-row">
+                    <td>
+                    <center><span style="font-size: 30px; color: #208786;">SERVICE DE CO-HÔTE</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;"><i>Nous nous occupons des tâches les plus exigeantes, offrant un package personnalisé pour la gestion à long terme de votre appartement, où l'hôte peut choisir quelles tâches gérer personnellement et lesquelles déléguer à notre équipe. Contactez-nous pour une consultation !</i></span></center>
+                    <center>
+                        <div class="form-container">
+                            <center><h2>Contactez-nous</h2></center>
+                            <form action="https://api.web3forms.com/submit" method="POST">
+                                <input type="hidden" name="access_key" value="7433205f-e93a-46c1-a284-4a7839010a8a">
+                                <div class="form-group">
+                                    <input type="text" name="name" placeholder="Nom" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="Cognome" placeholder="Nom de famille" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="Telefono" placeholder="Téléphone" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" placeholder="Email" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="numero.immobili" placeholder="Combien de propriétés possédez-vous ?" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="City" placeholder="Dans quelle ville ?" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="message" placeholder="Message" required></textarea>
+                                </div>
+                                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                                <button type="submit">Envoyer</button>
+                            </form>
+                        </div>
+                    </center> </div>
+                </td>
+            </tr>                 
+                
+
+                
+            </table>
+        </section>
+    
+
+        <footer>
+            <div class="footer-background" style="background-image: url('images/herofoot.png');">
+                <center>
+                    <section id="contact">
+                        <div><img src="images/toll.png" width="40" height="40"></div>
+                        <div><img src="images/logoa.png" width="80" height="47"></div>
+                        <div><img src="images/toll.png" width="20" height="20"></div>
+                        <span style="font-size: 30px; color: white;"><b>Contactez-nous</b></span>
+                        <div class="contact-info">
+                            <p><a href="tel:+393880599971" style="color: white;">+39 388 059 99 71</a> - <a href="tel:+393271975673" style="color: white;">+39 327 197 56 73</a></p>
+                            <p><a href="mailto:info@deseoapartments.com" style="color: white;">info@deseoapartments.com</a></p>
+                            <p><b style="color: white;">Siège social : Via Ugo Bassi 10, Bologne 40121</b></p>
+                            <p><b style="color: white;">Lun - Ven</b></p>
+                            <p><b style="color: white;">09:00 - 18:00</b></p>
+                            <p style="color: white;">P.IVA: 04119991208</p>
+                        </div>
+                        <div class="social-media">
+                            <a href="https://www.instagram.com/deseoapartments/" target="_blank"><img src="images/insta.png" alt="Instagram" class="social-icon"></a>
+                            <a href="https://www.facebook.com/profile.php?id=61562461786178" target="_blank"><img src="images/face.png" alt="Facebook" class="social-icon"></a>
+                            <div><img src="images/tolleranza.png" alt="Tolérance"></div>
+                        </div>
+                    </section>
+                </center>
+            </div>
+        </footer>
+        
+    <script>function toggleMenu() {
+        const menuList = document.querySelector('.menu-list');
+        menuList.classList.toggle('active');
+
+        
+    }</script>
+</body>
+</html>

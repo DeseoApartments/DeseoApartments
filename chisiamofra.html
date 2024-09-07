@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deseo Apartments - Gestion des Locations Courtes Durées</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+    <style>
+        .highlight {
+            color: #333;
+            font-weight: bold;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        .highlight-black {
+            color: #4f4848;
+            font-weight: bold;
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        .custom-row {
+            background-color: white;
+            border-radius: 10px;
+            
+        }
+
+        .customdark-row {
+            background-color: rgb(242, 245, 245);
+            border-radius: 10px;
+           
+        }
+
+        table {
+            border-collapse: separate; /* Ensure border-radius works on table */
+            border-spacing: 20px; /* Ensure no extra space between table cells */
+        }
+
+        tr {
+            border-radius: 10px;
+            overflow: hidden; /* Ensure the border-radius works for rows */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        td, th {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="hero">
+
+            <div class="language-icons">
+                <a href="chisiamoeng.html"><img src="images/english.png" alt="English" class="language-icon"></a>
+                <a href="chisiamoesp.html"><img src="images/spanish.png" alt="Spanish" class="language-icon"></a>
+                <a href="chisiamo.html"><img src="images/italian.png" alt="French" class="language-icon"></a>
+            </div>
+
+            <a href="https://wa.me/+393880599971" target="_blank">
+                <img src="images/WA.png" width="100" height="100" alt="Discutez avec nous" class="whatsapp-icon"/>
+            </a>
+            <div class="hero-images desktop">
+                <img src="images/HERODESKFR.png" alt="Image Hero 1" class="active">
+            </div>
+            <div class="hero-images mobile">
+                <img src="images/heromobilefr.png" alt="Image Hero Mobile 1" class="active">
+            </div>
+        </div>
+        <nav class="desktop-menu">
+            <ul>
+                <li><a href="index-fr.html">Accueil</a></li>
+                <li><a href="servizifra.html">Services</a></li>
+                <li><a href="coHostfra.html">Consultation Gratuite</a></li>
+                <li><a href="#contact">Contacts</a></li>
+                <li><a href="FAQfra.html">Faq</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile menu -->
+        <nav class="mobile-menu">
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <ul class="menu-list">
+                <li><a href="index-fr.html">Accueil</a></li>
+                <li><a href="servizifra.html">Services</a></li>
+                <li><a href="coHostfra.html">Consultation Gratuite</a></li>
+                <li><a href="#contact">Contacts</a></li>
+                <li><a href="FAQfra.html">Faq</a></li>
+            </ul>
+        </nav>
+    </header>      
+
+    <section id="table-section">
+        <div class="table-container">
+            <table class="desktop-table">
+                
+                <tr class="custom-row" id="chi-siamo-section">
+                    <td style="padding-left: 65px; padding-right: 65px;" colspan="3">
+                        <center><span style="font-size: 30px; color: #208786;">QUI SOMMES-NOUS</span></center>
+                        <div style="display: flex; justify-content: space-around;">
+                            <div class="profile-card">
+                                <h2>
+                                    <img src="images/Aleph.png" alt="Photo de Alexandre" class="profile-photo">
+                                    <center><span style="font-size: 25px; color: #173e3d;">Alexandre C. Pinto</span></center>
+                                </h2>
+                                <p class="reviews"><i>Fondateur</i></p>
+                            </div>
+                            <div class="profile-card">
+                                <h2>
+                                    <img src="images/Fraph.png" alt="Photo de Alexandre" class="profile-photo">
+                                    <center><span style="font-size: 25px; color: #173e3d;">Francesco G. Pinto</span></center>
+                                </h2>
+                                <p class="reviews"><i>Responsable Opérationnel</i></p>
+                            </div>
+                        </div>
+                        <center><span style="font-size: 20px;">Deseo est une société de gestion de propriétés dont la mission est de maximiser la valeur de vos biens. Nous nous consacrons à fournir une gestion impeccable des propriétés, en veillant à ce que chaque détail soit soigné avec la plus grande attention. Nous sommes conscients de l'importance de maintenir vos biens en excellent état tout en optimisant les rendements économiques. Notre équipe est toujours disponible pour répondre à toutes vos exigences, garantissant une gestion sans soucis et la satisfaction maximale des propriétaires. Notre dévouement au souci du détail et à la rapidité de l'assistance nous distingue dans le secteur, faisant de Deseo le partenaire idéal pour ceux qui souhaitent confier leurs biens à des mains expertes et fiables.</span></center>
+                    </td>
+                </tr>
+                
+    
+            </table></section>
+
+            <table class="mobile-table">
+                
+                <tr class="custom-row">
+                    <td>
+                        <center><span style="font-size: 30px; color: #208786;">QUI SOMMES-NOUS</span></center>
+                        <div style="display: flex; justify-content: space-around;">
+                            <div class="profile-card">
+                                <h2>
+                                    <img src="images/Aleph.png" alt="Photo de Alexandre" class="profile-photo">
+                                    <center><span style="font-size: 20px; color: #173e3d;">Alexandre C. Pinto</span></center>
+                                </h2>
+                                <p class="reviews"><i>Fondateur</i></p>
+                                <h2>
+                                    <img src="images/Fraph.png" alt="Photo de Alexandre" class="profile-photo">
+                                    <center><span style="font-size: 25px; color: #173e3d;">Francesco G. Pinto</span></center>
+                                </h2>
+                                <p class="reviews"><i>Responsable Opérationnel</i></p>
+                            </div>
+                        </div>
+                        <center><span style="font-size: 25px;">Deseo est une société de gestion de propriétés dont la mission est de maximiser la valeur de vos biens. Nous nous consacrons à fournir une gestion impeccable des propriétés, en veillant à ce que chaque détail soit soigné avec la plus grande attention. Nous sommes conscients de l'importance de maintenir vos biens en excellent état tout en optimisant les rendements économiques. Notre équipe est toujours disponible pour répondre à toutes vos exigences, garantissant une gestion sans soucis et la satisfaction maximale des propriétaires. Notre dévouement au souci du détail et à la rapidité de l'assistance nous distingue dans le secteur, faisant de Deseo le partenaire idéal pour ceux qui souhaitent confier leurs biens à des mains expertes et fiables.</span></center>
+                    </td>
+                </tr>
+                
+            </table>
+        </div>
+    
+
+        <footer>
+            <div class="footer-background" style="background-image: url('images/herofoot.png');">
+                <center>
+                    <section id="contact">
+                        <div><img src="images/toll.png" width="40" height="40"></div>
+                        <div><img src="images/logoa.png" width="80" height="47"></div>
+                        <div><img src="images/toll.png" width="20" height="20"></div>
+                        <span style="font-size: 30px; color: white;"><b>Contactez-nous</b></span>
+                        <div class="contact-info">
+                            <p><a href="tel:+393880599971" style="color: white;">+39 388 059 99 71</a> - <a href="tel:+393271975673" style="color: white;">+39 327 197 56 73</a></p>
+                            <p><a href="mailto:info@deseoapartments.com" style="color: white;">info@deseoapartments.com</a></p>
+                            <p><b style="color: white;">Siège social : Via Ugo Bassi 10, Bologne 40121</b></p>
+                            <p><b style="color: white;">Lun - Ven</b></p>
+                            <p><b style="color: white;">09:00 - 18:00</b></p>
+                            <p style="color: white;">P.IVA: 04119991208</p>
+                        </div>
+                        <div class="social-media">
+                            <a href="https://www.instagram.com/deseoapartments/" target="_blank"><img src="images/insta.png" alt="Instagram" class="social-icon"></a>
+                            <a href="https://www.facebook.com/profile.php?id=61562461786178" target="_blank"><img src="images/face.png" alt="Facebook" class="social-icon"></a>
+                            <div><img src="images/tolleranza.png" alt="Tolérance"></div>
+                        </div>
+                    </section>
+                </center>
+            </div>
+        </footer>
+        
+    <script>function toggleMenu() {
+        const menuList = document.querySelector('.menu-list');
+        menuList.classList.toggle('active');
+
+        
+    }</script>
+</body>
+</html>

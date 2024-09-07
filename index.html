@@ -1,407 +1,515 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deseo Apartments - Gestiamo Affitti Brevi in Tutta Italia</title>
-    <script>
-        (function() {
-          // Rileva la larghezza dello schermo
-          const screenWidth = window.innerWidth;
-  
-          // Verifica se l'utente sta utilizzando un dispositivo mobile
-          const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || screenWidth <= 767;
-  
-          // Ottieni l'URL corrente
-          const currentUrl = window.location.href;
-  
-          if (isMobile && !currentUrl.includes('m.index.html')) {
-            // Redirige alla versione mobile se non è già su di essa
-            window.location.href = 'm.index.html';
-          } else if (!isMobile && !currentUrl.includes('index.html')) {
-            // Redirige alla versione desktop se non è già su di essa
-            window.location.href = 'index.html';
-          }
-        })();
-      </script>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOrxkYsKLOHKETgg8PPLG1sqk1VgTi5Oo&libraries=places,geometry"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poly&display=swap" rel="stylesheet">
+    <title>Deseo Apartments - Gestione Affitti Brevi In Tutta Italia</title>
     <link rel="stylesheet" href="styles.css">
-   
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
 
-    <style>.social-icons {
-        display: flex;
-        justify-content: center;
-        gap: 10px; /* Spazio tra le icone */
-        margin-top: 20px; /* Spazio sopra le icone */
-    }
-    
-    .social-icons img {
-        width: 2vw;
-        height: 2vw;
-        padding: 6px;
-    }
-    
-    .arrow-down {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-    }</style>
+        .highlight {
+            color: #333;
+            font-weight: bold;
+            background-color: #dde6f1;
+            border-radius: 20px;
+        }
+
+        .highlight-black {
+            color: #4f4848;
+            font-weight: bold;
+            background-color: #ffffff;
+            border-radius: 20px;
+        }
+
+        .custom-row {
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .customdark-row {
+            background-color: #dde6f1;
+            border-radius: 10px;
+        }
+
+        table {
+            border-collapse: separate;
+            border-spacing: 20px;
+        }
+
+        tr {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        td, th {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
-
 <body>
-    <!-- Barra di navigazione -->
-    <div class="navbar">
-        <div class="navbar-menu">
-            <a href="index.html" >Home</a>
-            <a href="#offerta">Cosa Offriamo</a>
-            <a href="contact-us.html">Consulenza Gratuita</a>
-            <a href="#chi-siamo">Chi Siamo</a>
-            <a href="#contacts">Contatti</a>
-            <a href="faq.html">Faq</a>
-        </div>
-    </div>
-
-    <!-- Hero Section -->
-    <div class="hero">
-        <div class="hero-section" style="background-image: url('images/herosinistra1.jpg');">
-            <div class="hero-content">
-                <img src="images/loguo.png" class="logo">
-                <div><h1 class="deseo-title">DESEO APARTMENTS</h1></div>
-                <div><p class="deseo-title1">GESTIONE AFFITTI BREVI</p></div>
-                <div><img src="images/ghirigoro.png" class="ghirigoro"></div>
-            
-                <p class="deseo-title2"><b>Trasforma la tua proprietà in un'opportunità di guadagno</b></p>
-                
-                <a href="contact-us.html" class="button" id="open-modal-btn">Contattaci per una consulenza gratuita</a> 
-                
-                <!-- Sezione delle icone social -->
-              
-                    <div class="social-icons">
-                        <center><a href="https://www.facebook.com/profile.php?id=61562461786178" target="_blank"><img src="images/face.png" alt="Facebook"></a>
-                        <a href="https://www.instagram.com/deseoapartments/" target="_blank"><img src="images/insta.png" alt="Instagram"></a>
-                        <a href="https://wa.me/393880599971" target="_blank"><img src="images/whatsapp.png" alt="WhatsApp"></a></center>
-                    </div> 
-                    <center><div><a href="#case"><img style="margin-top: -10px;" src="images/arrow.png" width="60" height="45" class="social-icons"></a></div></center>
-               
+    <header>
+        <div class="hero">
+            <a href="https://wa.me/+393880599971" target="_blank">
+                <img src="images/WA.png" width="100" height="100" alt="Chatta con noi" class="whatsapp-icon"/>
+            </a>
+            <div class="hero-images desktop">
+                <img src="images/HEROdesktop.png" alt="Hero Image 1" class="active">
+            </div>
+            <div class="hero-images mobile">
+                <img src="images/heromobile1.png" alt="Mobile Hero Image 1" class="active">
+            </div>
+            <div class="language-icons">
+                <a href="index-en.html"><img src="images/english.png" alt="English" class="language-icon"></a>
+                <a href="index-es.html"><img src="images/spanish.png" alt="Spanish" class="language-icon"></a>
+                <a href="index-fr.html"><img src="images/french.png" alt="French" class="language-icon"></a>
             </div>
         </div>
-        <div class="hero-section" style="background-image: url('images/herodestra1.jpg'); background-size: cover; background-position: center;">
-            <!-- Menu a tendina per le lingue -->
-            <div class="language-menu">
-                <button class="language-btn">
-                    <span id="selected-lang">ITALIANO</span> &#9660;
-                </button>
-                <div class="language-content">
-                    <a href="index.html" onclick="changeLanguage('ITA')">ITALIANO</a>
-                    <a href="indexen.html" onclick="changeLanguage('ENG')">ENGLISH</a>
-                    <a href="indexes.html" onclick="changeLanguage('SPA')">ESPAÑOL</a>
-                    <a href="indexfr.html" onclick="changeLanguage('FRA')">FRANÇAIS</a>
-                </div>
-                
+        <nav class="desktop-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#services-section">Servizi</a></li>
+                <li><a href="#consulenza">Consulenza Gratuita</a></li>
+                <li><a href="#chi-siamo-section">Chi Siamo</a></li>
+                <li><a href="#contact">Contatti</a></li>
+                <li><a href="FAQ.html">Faq</a></li>
+            </ul>
+        </nav>
 
-
-            </div>
-           
-            <div><iframe src="welcomehero.html" class="centered-iframe"></iframe></div>
-
-        
-    </div>
-        </div>
-    </div>
-
-    
-
-<section id="case"></section>
-<!-- Titolo sezione proprietà -->
-<center><h1 style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;margin-top:6vw;margin-bottom:2vw;" class="titles-text">LE NOSTRE PROPRIETÀ</h1></center>
-
-<div id="scroll-case" class="scroll-case">
-    <div id="left-arrow">&#9664;</div>
-    <div id="image-container">
-        <div id="image-wrapper">
-            <a href="battisti.html"><img src="images/casa1.jpg" alt="Casa 1"></a>
-            <a href="cavazza.html"><img src="images/casa2.jpg" alt="Casa 2"></a>
-            <a href="castelmerlo.html"><img src="images/casa3.jpg" alt="Casa 3"></a>
-        </div>
-    </div>
-    <div id="right-arrow">&#9654;</div>
-</div>
-
-<div id="description-box" style="margin-top: 50px;">
-    <p id="description-text">
-        Elegante appartamento nel centro storico di Bologna. Circondato da luoghi di interesse storico-culturale.
-    </p>
-    <a href="battisti.html" target="_blank" class="description-button">PRENOTA ORA</a>
-</div>
-
-<section id="offerta"></section>
-<center>
-    <center><h1 style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;margin-top:4vw;margin-bottom:6vw;" class="titles-text">PERCHÉ SCEGLIERE DESEO?</h1></center>
-<div class="flow-container">
-    <div class="cover-flow">
-        <div class="cover-flow-item">
-            <div class="img-container">
-                <img src="images/pulizia.jpg" alt="Item 3 Image" style="width: 100%; height: auto; border-radius: 8px;">
-                <h2 style=" margin-top: 10px; text-align: left;" class="non-clickable-label1">PULIZIE</h2>
-                <p style="font-size: 0.8vw;padding:10px; margin-top: 10px; text-align: justify;">
-                    Garantiamo elevati standard di pulizia e igiene. Ci occupiamo di tutto, dalla pulizia alla fornitura di biancheria di alta qualità.
-                </p>
-            </div>
-        </div>
-        <div class="cover-flow-item">
-            <div class="img-container">
-                <img src="images/assistenza.jpg" alt="Item 2 Image" style="width: 100%; height: auto; border-radius: 8px;">
-                <h2 style=" margin-top: 10px; text-align: left;" class="non-clickable-label1">ASSISTENZA 24/7</h2>
-                <p style="font-size: 0.8vw;padding:10px; margin-top: 10px; text-align: justify;">
-                    Il nostro team ti garantisce supporto continuo, 24 ore su 24 e 7 giorni su 7. Rispondiamo prontamente a ogni richiesta degli ospiti, assicurando risposte rapide e soluzioni immediate per ogni esigenza.
-                </p>
-            </div>
-        </div>
-        <div class="cover-flow-item active">
-            <div class="img-container">
-                <img src="images/portale.jpg" alt="Item 1 Image" style="width: 100%; height: auto; border-radius: 8px;">
-                
-                <h2 style="margin-top: 15px; margin-top: 10px; text-align: left;" class="non-clickable-label1">PORTALE PROPRIETARI</h2>
-                <p style="font-size: 0.8vw;padding:10px;margin-bottom: 10px; margin-top: 10px; text-align: justify;">
-                    Monitora in tempo reale le prenotazioni, i guadagni e le recensioni della tua proprietà. Gestisci facilmente ogni aspetto del tuo investimento con accesso immediato e semplice a tutte le informazioni chiave.
-                </p>
-            </div>
-        </div>
-        <div class="cover-flow-item">
-            <div class="img-container">
-                <img src="images/pubblicazione.jpg" alt="Item 4 Image" style="width: 100%; height: auto; border-radius: 8px;">
-                <h2 style=" margin-top: 10px; text-align: left;" class="non-clickable-label1">ANNUNCI ONLINE</h2>
-                <p style="font-size: 0-8vw;padding:10px; margin-top: 10px; text-align: justify;">
-                    Pubblicizziamo la tua proprietà sui maggiori portali, come Airbnb e Booking. Ottimizziamo la visibilità dell' annuncio per massimizzare la percentuale di occupazione nel tuo appartamento.
-                </p>
-            </div>
-        </div>
-        <div class="cover-flow-item">
-            <div class="img-container">
-                <img src="images/checkin.jpg" alt="Item 5 Image" style="width: 100%; height: auto; border-radius: 8px;">
-                <h2 style=" margin-top: 10px; text-align: left;" class="non-clickable-label1">CHECK-IN / OUT</h2>
-                <p style="font-size: 0.8vw;padding:10px; margin-top: 10px; text-align: justify;">
-                    Gestiamo ogni fase del check-in e del check-out degli ospiti, rendendo il processo semplice e piacevole. 
-                </p>
-            </div>
-        </div>
-        <div class="cover-flow-item">
-            <div class="img-container">
-                <img src="images/manutenzioni.png" alt="Item 5 Image" style="width: 100%; height: auto; border-radius: 8px;">
-                <h2 style=" margin-top: 10px; text-align: left;" class="non-clickable-label1">MANUTENZIONI</h2>
-                <p style="font-size: 0.8vw;padding:10px; margin-top: 10px; text-align: justify;">
-                    
-Ci occupiamo di tutte le manutenzioni necessarie, gestendo interventi ordinari e straordinari per garantire che la tua proprietà sia sempre in perfette condizioni.
-                </p>
-            </div>
-        </div>
-        <!-- Aggiungi altre immagini qui -->
-    </div>
-    <button class="cover-flow-button prev">⟨</button>
-    <button class="cover-flow-button next">⟩</button>
-</div>
-</center>
-
-
- <!-- Titolo sezione kroos e competitor -->
-     <center><h1 style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;margin-top:6vw;margin-bottom:2vw;" class="titles-text">AREA PROPRIETARI</h1></center>
-    
-     <!-- Kroos Service -->
-<div>
+        <!-- Mobile menu -->
+        <nav class="mobile-menu">
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <ul class="menu-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="servizi.html">Servizi</a></li>
+                <li><a href="coHost.html">Consulenza Gratuita</a></li>
+                <li><a href="chisiamo.html">Chi Siamo</a></li>
+                <li><a href="#contact">Contatti</a></li>
+                <li><a href="FAQ.html">Faq</a></li>
+            </ul>
+        </nav>
+    </header>
+     
     <center>
-        <table class="centered-table">
-            <tr>
-                <td>
-                    <center>
-                        <div><img src="images/kroos1.jpg" width="60%" height="60%"></div>
+        <div style="padding-top: 20px;" class="table-container">
+            <table class="desktop-table">
+                <center><span style="font-size: 30px; color: #515f70;">LE NOSTRE PROPRIETA'</span></center><span style="font-size: 20px;"></center>
+                <center><div><img src="images/tollino.png"></div></center>
+                    <!-- Galleria per Desktop -->
+<div class="gallery-container desktop-only">
+    <div class="gallery">
+        <div class="slide">
+            <center><div class="location">Bologna, Centro Storico</div></center>
+            <img src="images/casa1.jpg" alt="Casa 1">
+            <div class="overlay">
+                <p class="description">Elegante appartamento di 120 mq con terrazza nel centro storico di Bologna, vicino alle Due Torri e Piazza Maggiore. Pavimenti in parquet anni '20. Circondato da bar, ristoranti e negozi.</p>
+                <button class="book-button" onclick="window.location.href='https://deseoapartments.kross.travel/corte-battisti'">Prenota ora</button>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="location">Bologna, Murri</div>
+            <img src="images/casa2.jpg" alt="Casa 2">
+            <div class="overlay">
+                <p class="description">Luminoso appartamento di 80 mq con terrazza, vicino al centro e ai Giardini Margherita. Ideale per famiglie, coppie o amici.</p>
+                <button class="book-button" onclick="window.location.href='https://deseoapartments.kross.travel/cavazza'">Prenota ora</button>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="location">Bologna, Massarenti</div>
+            <img src="images/casa3.jpg" alt="Casa 3">
+            <div class="overlay">
+                <p class="description">Accogliente monolocale di 40 mq al piano terra, ideale per singoli o coppie. A 200 metri dalla fermata "PARCO", bus n. 14 per il centro in 5 minuti. Vicino all'Ospedale Sant'Orsola.</p>
+                <button class="book-button" onclick="window.location.href='https://deseoapartments.kross.travel/merlo'">Prenota ora</button>
+            </div>
+        </div>
+        <!-- Aggiungi altre immagini come desideri -->
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<!-- Galleria per Smartphone -->
+<div class="gallery-container smartphone-only">
+    <div class="gallery">
+        <div class="slide">
+            <center><div class="location1">Bologna, Centro Storico</div></center>
+            <img src="images/casa1.jpg" alt="Casa 1">
+            <div class="overlay1">
+                <button class="book-button" onclick="window.location.href='https://deseoapartments.kross.travel/corte-battisti'">Prenota ora</button>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="location1">Bologna, Murri</div>
+            <img src="images/casa2.jpg" alt="Casa 2">
+            <div class="overlay1">
+                <button class="book-button" onclick="window.location.href='https://deseoapartments.kross.travel/cavazza'">Prenota ora</button>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="location1">Bologna, Massarenti</div>
+            <img src="images/casa3.jpg" alt="Casa 3">
+            <div class="overlay1">
+               <button class="book-button" onclick="window.location.href='https://deseoapartments.kross.travel/merlo'">Prenota ora</button>
+            </div>
+        </div>
+        <!-- Aggiungi altre immagini come desideri -->
+    </div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+                <center><div><img src="images/toll.png"></div></center>
+
+                <tr>
+                    <th class="highlight"><center><span style="font-size: 30px; color: #338382;">GESTIONE COMPLETA</span></center><span style="font-size: 20px;"><center>Meno stress, più guadagni</center></span><div><center><img src="images/gestio.png" width="90" height="90"></center></div>
+                        <center>Affidaci il tuo appartamento e lo posizioneremo sui principali portali OTA come AirBnB, Booking... Il nostro team di esperti si occuperà di gestire e ottimizzare prezzi e annunci online, assicurandoti guadagni mensili sempre al top.</center>
+                    </th>
+                    <th class="highlight-black"><center><span style="font-size: 30px; color: #338382;">CO-HOSTING</span></center><span style="font-size: 20px;"><center>Gestione su misura</center></span><div><center><img src="images/hand.png" width="90" height="90"></center></div>
+                        <center>Offriamo un pacchetto personalizzato per la gestione del tuo appartamento. Dalla pubblicazione degli annunci alla comunicazione con gli ospiti, fino alla manutenzione e pulizia, gestiamo ogni aspetto con competenza e affidabilità. Adattiamo i nostri servizi alle tue esigenze specifiche, garantendoti tranquillità e un servizio impeccabile.</center>
+                    </th>
+                    <th class="highlight"><center><span style="font-size: 30px; color: #338382;">SERVIZI SINGOLI</span></center><span style="font-size: 20px;"><center>Garantiamo continuità e comfort</center></span><div><center><img src="images/singoli.png" width="90" height="90"></center></div>
+                        <center>Affidati a noi per la gestione completa del tuo appartamento. Dall'allestimento con un servizio fotografico professionale, alla gestione delle prenotazioni, dall'accoglienza degli ospiti fino alle pulizie finali, ci occupiamo di tutto per garantire un'esperienza impeccabile e senza stress.</center>
+                    </th>
+                </tr>
+            </table>
+            <div>
+                <center>
+                    <a href="#consulenza" class="google-button desktop-button">CONTATTACI ORA!</a>
                     </center>
-                </td>
-                <td style="text-align: left;">
+            </div>
+            <table class="desktop-table">
+                <tr class="customdark-row" id="services-section">
+                    <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
+                        <center><img src="images/pratiche.png" width="160" height="160"></center>
+                        <center><span style="font-size: 30px; color: #338382;">PRATICHE BUROCRATICHE</span></center>
+                        <center><span style="font-size: 20px; color: #0c2d2c;">Ci occupiamo di tutte le pratiche burocratiche necessarie per mettere il tuo immobile in regola, permettendoti di affittare senza preoccupazioni.</span></center>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
+                        <center><img src="images/revenue.png" width="160" height="160"></center>
+                        <center><span style="font-size: 30px; color: #338382;">REVENUE MANAGEMENT</span></center>
+                        <center><span style="font-size: 20px; color: #0c2d2c;">Il nostro team analizza attentamente il mercato per determinare il prezzo di vendita ottimale, garantendoti guadagni massimi. La gestione della tua casa rimane sempre sotto il tuo controllo. Adeguiamo i prezzi in base alle stagioni e agli eventi più importanti dell'anno, assicurando che il tuo immobile sia sempre competitivo.</span></center>
+                    </td>
+                </tr>
+                <tr class="customdark-row">
+                    <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
+                        <center><img src="images/report.png" width="160" height="160"></center>
+                        <center><span style="font-size: 30px; color: #338382;">REPORT MENSILI</span></center>
+                        <center><span style="font-size: 20px; color: #0c2d2c;">Forniamo report mensili dettagliati ai nostri clienti, offrendo una panoramica chiara e trasparente delle performance del loro immobile.</span></center>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
+                        <center><img src="images/welcomepiccolo.png" width="160" height="160"></center>
+                        <center><span style="font-size: 30px; color: #338382;">ACCOGLIENZA OSPITI</span></center>
+                        <center><span style="font-size: 20px; color: #0c2d2c;">Il check-in è un momento cruciale nell'esperienza di un affitto breve. Durante questo incontro, l'ospite conosce per la prima volta il suo host e può chiedere consigli e assistenza. Ogni dettaglio deve essere curato con attenzione, poiché può influenzare l'intera esperienza del soggiorno. Se non puoi occupartene personalmente, permettici di farlo per te. Accoglieremo i tuoi ospiti con la stessa cura e dedizione che riserviamo ai nostri e per garantire che tutto sia perfetto.</span></center>
+                    </td>
+                </tr>
+                <tr class="customdark-row">
+                    <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
+                        <center><img src="images/arredamento.png" width="160" height="160"></center>
+                        <center><span style="font-size: 30px; color: #338382;">ARREDAMENTO</span></center>
+                        <center><span style="font-size: 20px; color: #0c2d2c;">Arredare un appartamento richiede un tocco speciale. Conosciamo le esigenze dei viaggiatori e sappiamo come soddisfarle. Ti consigliamo sull'arredo più adatto e ci occupiamo di tutto, dall'acquisto al montaggio, per creare uno spazio accogliente e funzionale.</span></center>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
+                        <center><img src="images/wifi.png" width="160" height="160"></center>
+                        <center><span style="font-size: 30px; color: #338382;">ATTIVAZIONE UTENZE</span></center>
+                        <center><span style="font-size: 20px; color: #0c2d2c;">Gestiamo l'intero processo di attivazione di internet e utenze per il tuo appartamento. Dalla scelta delle tariffe migliori alla gestione delle telefonate e dei contratti, fino all'invio della documentazione necessaria e agli incontri con i tecnici, ci occupiamo di tutto per te. Inoltre, siamo a disposizione per qualsiasi intervento successivo.</span></center>
+                    </td>
+                </tr>
+                <tr class="customdark-row">
+                    <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
+                        <center><img src="images/pulipiccolo.png" width="160" height="160"></center>
+                        <center><span style="font-size: 30px; color: #338382;">PULIZIE</span></center>
+                        <center><span style="font-size: 20px; color: #0c2d2c;">Per un luogo frequentato da persone di tutto il mondo, la pulizia deve essere impeccabile. Una casa pulita e ordinata è il primo passo verso una recensione a 5 stelle. Le nostre pulizie sono pensate per garantire la massima soddisfazione degli ospiti.</span></center>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
+                        <center><img src="images/biancheriapicco.png" width="160" height="160"></center>
+                        <center><span style="font-size: 30px; color: #338382;">SERVIZIO BIANCHERIA</span></center>
+                        <center><span style="font-size: 20px; color: #0c2d2c;">Stanco di lavare e stirare lenzuola e asciugamani dopo ogni ospite? Lascia fare a noi! Offriamo biancheria di qualità alberghiera, lavata e igienizzata industrialmente. La consegniamo direttamente al tuo appartamento, con cadenza fissa o ad ogni arrivo di ospiti.</span></center>
+                    </td>
+                </tr>
+                <tr class="customdark-row">
+                    <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
+                        <center><img src="images/foto.png" width="160" height="160"></center>
+                        <center><span style="font-size: 30px; color: #338382;">SERVIZIO FOTOGRAFICO PROFESSIONALE</span></center>
+                        <center><span style="font-size: 20px; color: #0c2d2c;">Le immagini del tuo appartamento sono cruciali per la decisione dei potenziali ospiti. Offriamo un servizio fotografico professionale per assicurarti che le foto siano di alta qualità e rappresentino al meglio il tuo spazio, rendendolo irresistibile per i visitatori.</span></center>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
+                        <center><img src="images/pubblicity.png" width="160" height="160"></center>
+                        <center><span style="font-size: 30px; color: #338382;">PUBBLICITA'</span></center>
+                        <center><span style="font-size: 20px; color: #0c2d2c;">L'annuncio del tuo appartamento è fondamentale per attirare ospiti. Creiamo annunci completi e accattivanti sulle principali piattaforme di affitti con foto professionali e descrizioni dettagliate in italiano e inglese, garantendo la massima visibilità.</span></center>
+                    </td>
+                </tr>
+                <tr class="customdark-row">
+                    <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
+                        <center><img src="images/guida.png" width="160" height="160"></center>
+                        <center><span style="font-size: 30px; color: #338382;">GUIDE TURISTICHE</span></center>
+                        <center><span style="font-size: 20px; color: #0c2d2c;">Gli ospiti apprezzano sempre trovare informazioni utili sulla casa e sulla città. Creiamo guide dettagliate e personalizzate, con consigli pratici e informazioni sulla zona, per rendere il soggiorno dei tuoi ospiti ancora più piacevole e informativo.</span></center>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
+                        <center><img src="images/sitipicco.png" width="160" height="160"></center>
+                        <center><span style="font-size: 30px; color: #338382;">CREAZIONE SITO WEB</span></center>
+                        <center><span style="font-size: 20px; color: #0c2d2c;">Se vuoi aumentare la tua visibilità, la creazione di un sito web è l’ideale! Ti aiuteremo nello sviluppo del sito e dei social ad esso collegati!</span></center>
+                    </td>
+                </tr>
+                <tr class="customdark-row" id="consulenza">
+                    <td style="padding-left: 150px; padding-right: 150px;" colspan="3">
+                        <center><span style="font-size: 30px; color: #338382;">CONSULENZA GRATUITA</span></center>
+                        <center><span style="font-size: 20px; color: #0c2d2c;"><i>Ci occupiamo delle mansioni più impegnative, offrendo un pacchetto personalizzato per la gestione a lungo termine del tuo appartamento, dove l'host può scegliere quali compiti gestire personalmente e quali delegare al nostro team. Contattaci per una consulenza!</i></span></center>
+                        <center>
+                            <div class="form-container">
+                                <center><h2>Contact Us</h2></center>
+                                <form action="https://api.web3forms.com/submit" method="POST">
+                                    <input type="hidden" name="access_key" value="7433205f-e93a-46c1-a284-4a7839010a8a">
+                                    <div class="form-group">
+                                        <input type="text" name="name" placeholder="Nome" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="Cognome" placeholder="Cognome" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="Telefono" placeholder="Telefono" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" name="email" placeholder="Email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="numero.immobili" placeholder="Quanti immobili possiedi?" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="City" placeholder="In quale città?" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea name="message" placeholder="Messaggio" required></textarea>
+                                    </div>
+                                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                                    <button type="submit">Invia</button>
+                                </form>
+                            </div>
+                        </center>
+                    </td>
+                </tr>
+                <tr class="custom-row" id="chi-siamo-section">
+                    <td style="padding-left: 65px; padding-right: 65px;" colspan="3">
+                        <center><span style="font-size: 30px; color: #338382;">CHI SIAMO</span></center>
+                        <div style="display: flex; justify-content: space-around;">
+                            <div class="profile-card">
+                                <h2>
+                                    <img src="images/Aleph.png" alt="Foto di Alexandre" class="profile-photo">
+                                    <center><span style="font-size: 25px; color: #173e3d;">Alexandre C. Pinto</span></center>
+                                </h2>
+                                <p class="reviews"><i>Founder</i></p>
+                            </div>
+                            <div class="profile-card">
+                                <h2>
+                                    <img src="images/Fraph.png" alt="Foto di Alexandre" class="profile-photo">
+                                    <center><span style="font-size: 25px; color: #173e3d;">Francesco G. Pinto</span></center>
+                                </h2>
+                                <p class="reviews"><i>Responsabile Operativo</i></p>
+                            </div>
+                        </div>
+                        <center><span style="font-size: 20px;">Deseo è una società di property management con la missione di massimizzare il valore dei vostri immobili. Ci dedichiamo a fornire una gestione impeccabile delle proprietà, assicurando che ogni dettaglio sia curato con la massima attenzione. Siamo consapevoli dell'importanza di mantenere i vostri immobili in condizioni eccellenti, ottimizzando al contempo i rendimenti economici. Il nostro team è sempre disponibile per rispondere a qualsiasi esigenza, garantendo una gestione senza preoccupazioni e la massima soddisfazione per i proprietari. La nostra dedizione alla cura del dettaglio e alla rapidità nell'assistenza ci distingue nel settore, rendendo Deseo il partner ideale per chi desidera affidare i propri immobili a mani esperte e fidate.</span></center>
+                    </td>
+                </tr>
+                
+            </table>
+                        <table class="mobile-table">
+                                          <tr class="highlight">
+                    <td><center><span style="font-size: 30px; color: #338382;">GESTIONE COMPLETA</span></center><span style="font-size: 20px;"><center>Meno stress, più guadagni</center></span><div><center><img src="images/gestio.png" width="90" height="90"></center></div>
+                    <center>Affidaci il tuo appartamento e lo posizioneremo sui principali portali OTA come <b>AirBnB, Booking.com, Expedia, Homeaway e House Trip.</b> Il nostro team di esperti si occuperà di gestire e ottimizzare prezzi e annunci online, assicurandoti guadagni mensili sempre al top.</center>
+                    </td>
+                </tr>
+                <tr class="highlight-black">
+                    <td><center><span style="font-size: 30px; color: #338382;">CO-HOSTING</span></center><span style="font-size: 20px;"><center>Gestione su Misura</center></span><center><img src="images/hand.png" width="90" height="90"></center>
+                    <center>Offriamo un pacchetto personalizzato per la gestione del tuo appartamento. Dalla pubblicazione degli annunci alla comunicazione con gli ospiti, fino alla manutenzione e pulizia, gestiamo ogni aspetto con competenza e affidabilità. Adattiamo i nostri servizi alle tue esigenze specifiche, garantendoti tranquillità e un servizio impeccabile.</center>
+                    </td>
+                </tr>
+                <tr class="highlight">
+                    <td><center><span style="font-size: 30px; color: #338382;">SERVIZI SINGOLI</span></center><span style="font-size: 20px;"><center>Garantiamo continuità e comfort</center></span><center><img src="images/singoli.png" width="90" height="90"></center>
+                    <center>Affidati a noi per la gestione completa del tuo appartamento. Dall'allestimento con un servizio fotografico professionale, alla gestione delle prenotazioni, dall'accoglienza degli ospiti fino alle pulizie finali, ci occupiamo di tutto per garantire un'esperienza impeccabile e senza stress.</center>
+                    </td>
+                </tr>
+            </table>
+            <div>
+                <center>
+                    <a href="https://deseoapartments.com/coHost.html" class="google-button mobile-button">CONTATTACI ORA!</a>
+                </center>
+            </div>
+            <table class="mobile-table">
+                <tr class="customdark-row" id="services-section-mobile">
+                    <td> <center><img src="images/pratiche.png" width="160" height="160"></center>
+                    <center><span style="font-size: 30px; color: #338382;">PRATICHE BUROCRATICHE</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">Ci occupiamo di tutte le pratiche burocratiche necessarie per mettere il tuo immobile in regola, permettendoti di affittare senza preoccupazioni.</span></center>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td> <center><img src="images/revenue.png" width="160" height="160"></center>
+                    <center><span style="font-size: 30px; color: #338382;">REVENUE MANAGEMENT</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">Il nostro team analizza attentamente il mercato per determinare il prezzo di vendita ottimale, garantendoti guadagni massimi. La gestione della tua casa rimane sempre sotto il tuo controllo. Adeguiamo i prezzi in base alle stagioni e agli eventi più importanti dell'anno, assicurando che il tuo immobile sia sempre competitivo.</span></center>
+                    </td>
+                </tr>
+                <tr class="customdark-row">
+                    <td>   <center><img src="images/report.png" width="160" height="160"></center>
+                    <center><span style="font-size: 30px; color: #338382;">REPORT MENSILI</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">Forniamo report mensili dettagliati ai nostri clienti, offrendo una panoramica chiara e trasparente delle performance del loro immobile.</span></center>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td> <center><img src="images/welcomepiccolo.png" width="160" height="160"></center>
+                    <center><span style="font-size: 30px; color: #338382;">ACCOGLIENZA OSPITI</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">Il check-in è un momento cruciale nell'esperienza di un affitto breve. Durante questo incontro, l'ospite conosce per la prima volta il suo host e può chiedere consigli e assistenza. Ogni dettaglio deve essere curato con attenzione, poiché può influenzare l'intera esperienza del soggiorno. Se non puoi occupartene personalmente, permettici di farlo per te. Accoglieremo i tuoi ospiti con la stessa cura e dedizione che riserviamo ai nostri e per garantire che tutto sia perfetto.</span></center>
+                    </td>
+                </tr>
+                <tr class="customdark-row">
+                    <td> <center><img src="images/arredamento.png" width="160" height="160"></center>
+                    <center><span style="font-size: 30px; color: #338382;">ARREDAMENTO</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">Arredare un appartamento richiede un tocco speciale. Conosciamo le esigenze dei viaggiatori e sappiamo come soddisfarle. Ti consigliamo sull'arredo più adatto e ci occupiamo di tutto, dall'acquisto al montaggio, per creare uno spazio accogliente e funzionale.</span></center>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td>  <center><img src="images/wifi.png" width="160" height="160"></center>
+                    <center><span style="font-size: 30px; color: #338382;">ATTIVAZIONE UTENZE</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">Gestiamo l'intero processo di attivazione di internet e utenze per il tuo appartamento. Dalla scelta delle tariffe migliori alla gestione delle telefonate e dei contratti, fino all'invio della documentazione necessaria e agli incontri con i tecnici, ci occupiamo di tutto per te. Inoltre, siamo a disposizione per qualsiasi intervento successivo.</span></center>
+                    </td>
+                </tr>
+                <tr  class="customdark-row">
+                    <td> <center><img src="images/pulipiccolo.png" width="160" height="160"></center>
+                    <center><span style="font-size: 30px; color: #338382;">PULIZIE</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">Per un luogo frequentato da persone di tutto il mondo, la pulizia deve essere impeccabile. Una casa pulita e ordinata è il primo passo verso una recensione a 5 stelle. Le nostre pulizie sono pensate per garantire la massima soddisfazione degli ospiti.</span></center>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td> <center><img src="images/biancheriapicco.png" width="160" height="160"></center>
+                    <center><span style="font-size: 30px; color: #338382;">SERVIZIO BIANCHERIA</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">Stanco di lavare e stirare lenzuola e asciugamani dopo ogni ospite? Lascia fare a noi! Offriamo biancheria di qualità alberghiera, lavata e igienizzata industrialmente. La consegniamo direttamente al tuo appartamento, con cadenza fissa o ad ogni arrivo di ospiti.</span></center>
+                    </td>
+                </tr>
+                <tr class="customdark-row">
+                    <td> <center><img src="images/foto.png" width="160" height="160"></center>
+                    <center><span style="font-size: 30px; color: #338382;">SERVIZIO FOTOGRAFICO PROFESSIONALE</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">Le immagini del tuo appartamento sono cruciali per la decisione dei potenziali ospiti. Offriamo un servizio fotografico professionale per assicurarti che le foto siano di alta qualità e rappresentino al meglio il tuo spazio, rendendolo irresistibile per i visitatori.</span></center>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td>  <center><img src="images/pubblicity.png" width="160" height="160"></center>
+                    <center><span style="font-size: 30px; color: #338382;">PUBBLICITA'</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">L'annuncio del tuo appartamento è fondamentale per attirare ospiti. Creiamo annunci completi e accattivanti sulle principali piattaforme di affitti con foto professionali e descrizioni dettagliate in italiano e inglese, garantendo la massima visibilità.</span></center>
+                    </td>
+                </tr>
+                <tr class="customdark-row">
+                    <td> <center><img src="images/guida.png" width="160" height="160"></center>
+                    <center><span style="font-size: 30px; color: #338382;">GUIDE TURISTICHE</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">Gli ospiti apprezzano sempre trovare informazioni utili sulla casa e sulla città. Creiamo guide dettagliate e personalizzate, con consigli pratici e informazioni sulla zona, per rendere il soggiorno dei tuoi ospiti ancora più piacevole e informativo.</span></center>
+                    </td>
+                </tr>
+                <tr class="custom-row">
+                    <td> <center><img src="images/sitipicco.png" width="160" height="160"></center>
+                    <center><span style="font-size: 30px; color: #338382;">CREAZIONE SITO WEB</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;">Se vuoi aumentare la tua visibilità, la creazione di un sito web è l’ideale! Ti aiuteremo nello sviluppo del sito e dei social ad esso collegati!</span></center>
+                    </td>
+                </tr>
+                <tr class="customdark-row">
+                    <td>
+                    <center><span style="font-size: 30px; color: #338382;">CONSULENZA GRATUITA</span></center>
+                    <center><span style="font-size: 20px; color: #0c2d2c;"><i>Ci occupiamo delle mansioni più impegnative, offrendo un pacchetto personalizzato per la gestione a lungo termine del tuo appartamento, dove l'host può scegliere quali compiti gestire personalmente e quali delegare al nostro team. Contattaci per una consulenza!</i></span></center>
                     <center>
-                        <h1 class="highlight-title">
-                            
-                            <button class="non-clickable-label">CONTROLLO COMPLETO
-                            </button>
-                        </h1>
-                        <p class="justified-text" style="font-size: 20px; line-height: 1.6;">
-                            Accedi a un sistema che ti consente di monitorare l'andamento delle prenotazioni in <b>tempo reale,</b> visualizzando lo stato attuale del tuo appartamento e le relative performance con facilità.
-                        </p>
+                        <div class="form-container">
+                            <center><h2>Contact Us</h2></center>
+                            <form action="https://api.web3forms.com/submit" method="POST">
+                                <input type="hidden" name="access_key" value="7433205f-e93a-46c1-a284-4a7839010a8a">
+                                <div class="form-group">
+                                    <input type="text" name="name" placeholder="Nome" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="Cognome" placeholder="Cognome" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="Telefono" placeholder="Telefono" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="email" placeholder="Email" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="numero.immobili" placeholder="Quanti immobili possiedi?" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="City" placeholder="In quale città?" required>
+                                </div>
+                                <div class="form-group">
+                                    <textarea name="message" placeholder="Messaggio" required></textarea>
+                                </div>
+                                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                                <button type="submit">Invia</button>
+                            </form>
+                        </div>
                     </center>
                 </td>
             </tr>
-            <tr>
-                <td style="text-align: right;">
-                    <center>
-                    <h1 class="highlight-title">
-                        <button class="non-clickable-label">GESTIONE INTUITIVA
-                    </button></center>
-                    <p class="justified-text" style="font-size: 20px; line-height: 1.6;">
-                        Utilizza un'interfaccia semplice e <b>user-friendly</b> per visualizzare rapidamente dati essenziali come il calendario delle prenotazioni e l'occupazione futura, ottimizzando la pianificazione delle disponibilità.
-                    </p> 
-                </td>
+            <tr class="custom-row">
                 <td>
-                    <center>
-                        <div><img src="images/kroos2.jpg" width="60%" height="60%"></div>
-                    </center>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <br>
-                    <center>
-                        <div><img src="images/kroos3.jpg" width="60%" height="60%"></div>
-                    </center>
-                </td>
-                <td style="text-align: left;">
-                <center><h1 class="highlight-title">
-                    <button class="non-clickable-label">REPORT DETTAGLIATI
-                    </button></center>
-                    <p class="justified-text" style="font-size: 20px; line-height: 1.6;">
-                        Ricevi report mensili con <b>informazioni dettagliate su ricavi,</b> tendenze di mercato e feedback degli ospiti, offrendoti uno strumento efficace per prendere decisioni strategiche a lungo termine.
-                    </p>
-                    <br>
+                    <center><span style="font-size: 30px; color: #338382;">CHI SIAMO</span></center>
+                    <div style="display: flex; justify-content: space-around;">
+                        <div class="profile-card">
+                            <h2>
+                                <img src="images/Aleph.png" alt="Foto di Alexandre" class="profile-photo">
+                                <center><span style="font-size: 20px; color: #173e3d;">Alexandre C. Pinto</span></center>
+                            </h2>
+                            <p class="reviews"><i>Founder</i></p>
+                            <h2>
+                                <img src="images/Fraph.png" alt="Foto di Alexandre" class="profile-photo">
+                                <center><span style="font-size: 25px; color: #173e3d;">Francesco G. Pinto</span></center>
+                            </h2>
+                            <p class="reviews"><i>Responsabile Operativo</i></p>
+                        </div>
+                    </div>
+                    <center><span style="font-size: 25px;">Deseo è una società di property management con la missione di massimizzare il valore dei vostri immobili. Ci dedichiamo a fornire una gestione impeccabile delle proprietà, assicurando che ogni dettaglio sia curato con la massima attenzione. Siamo consapevoli dell'importanza di mantenere i vostri immobili in condizioni eccellenti, ottimizzando al contempo i rendimenti economici. Il nostro team è sempre disponibile per rispondere a qualsiasi esigenza, garantendo una gestione senza preoccupazioni e la massima soddisfazione per i proprietari. La nostra dedizione alla cura del dettaglio e alla rapidità nell'assistenza ci distingue nel settore, rendendo Deseo il partner ideale per chi desidera affidare i propri immobili a mani esperte e fidate.</span></center>
                 </td>
             </tr>
         </table>
     </center>
-</div>
 
-
-    <center><h1 style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;margin-top:4vw;margin-bottom:2vw;" class="titles-text">VANTAGGI</h1></center>
-<center><div class="elegant-container">
-
-    <!-- First Dropdown -->
-    <div class="dropdown-item">
-        <button class="dropdown-title"><center>PROPERTY MANAGEMENT</center></button>
-        <div class="dropdown-content">
-            <table class="dropdown-table">
-                <tr><td style="padding-left: 150px;"><b>Pulizia professionale</b></td><td><img src="images/spunta.png" width="34" height="30"></td></tr>
-                <tr><td style="padding-left: 150px;"><b>Lavanderia</b></td><td><img src="images/spunta.png" width="34" height="30"></td></tr>
-                <tr><td style="padding-left: 150px;"><b>Attivazione Utenze</b></td><td><img src="images/spunta.png" width="34" height="30"></td></tr>
-                <tr><td style="padding-left: 150px;"><b>Manutenzione</b></td><td><img src="images/spunta.png" width="34" height="30"></td></tr>
-                <tr><td style="padding-left: 150px;"><b>Arredamento</b></td><td><img src="images/spunta.png" width="34" height="30"></td></tr>
-            </table>
+    <footer>
+        <div class="footer-background" style="background-image: url('images/herofoot.png');">
+            <center>
+                <section id="contact">
+                    <div><img src="images/toll.png" width="40" height="40"></div>
+                    <div><img src="images/logoa.png" width="80" height="47"></div>
+                    <div><img src="images/toll.png" width="20" height="20"></div>
+                    <span style="font-size: 30px; color: white;"><b>Contattaci</b></span>
+                    <div class="contact-info">
+                        <p><a href="tel:+393880599971" style="color: white;">+39 388 059 99 71</a> - <a href="tel:+393271975673" style="color: white;">+39 327 197 56 73</a></p>
+                        <p><a href="mailto:info@deseoapartments.com" style="color: white;">info@deseoapartments.com</a></p>
+                        <p><b style="color: white;">Sede legale: Via Ugo Bassi 10, Bologna 40121</b></p>
+                        <p><b style="color: white;">Lun - Ven</b></p>
+                        <p><b style="color: white;">09:00 - 18:00</b></p>
+                        <p style="color: white;">P.IVA: 04119991208</p>
+                    </div>
+                    <div class="social-media">
+                        <a href="https://www.instagram.com/deseoapartments/" target="_blank"><img src="images/insta.png" alt="Instagram" class="social-icon"></a>
+                        <a href="https://www.facebook.com/profile.php?id=61562461786178" target="_blank"><img src="images/face.png" alt="Facebook" class="social-icon"></a>
+                        <div><img src="images/tolleranza.png" alt="Tolleranza"></div>
+                    </div>
+                </section>
+            </center>
         </div>
-    </div>
-
-    <!-- Second Dropdown -->
-    <div class="dropdown-item">
-        <button class="dropdown-title1"><center>ASSISTENZA CLIENTI</center></button>
-        <div class="dropdown-content">
-            <table class="dropdown-table">
-                <tr><td style="padding-left: 150px;"><b>Gestione delle prenotazioni</b></td><td><img src="images/spunta.png" width="34" height="30"></td></tr>
-                <tr><td style="padding-left: 150px;"><b>Assicurazione Danni</b></td><td><img src="images/spunta.png" width="34" height="30"></td></tr>
-                <tr><td style="padding-left: 150px;"><b>Guide digitali di benvenuto</b></td><td><img src="images/spunta.png" width="34" height="30"></td></tr>
-                <tr><td style="padding-left: 150px;"><b>Assistenza 24/7</b></td><td><img src="images/spunta.png" width="34" height="30"></td></tr>
-                <tr><td style="padding-left: 150px;"><b>Registrazione ospiti da remoto</b></td><td><img src="images/spunta.png" width="34" height="30"></td></tr>
-            </table>
-        </div>
-    </div>
-
-    <!-- Third Dropdown -->
-    <div class="dropdown-item">
-        <button class="dropdown-title2"><center>GESTIONE DEGLI ANNUNCI</center></button>
-        <div class="dropdown-content">
-            <table class="dropdown-table">
-                <tr><td style="padding-left: 150px;"><b>Foto-shooting professionale</b></td><td><img src="images/spunta.png" width="34" height="30"></td></tr>
-                <tr><td style="padding-left: 150px;"><b>Inserimento annuncio nel nostro sito web</b></td><td><img src="images/spunta.png" width="34" height="30"></td></tr>
-                <tr><td style="padding-left: 150px;"><b>Inserimento annuncio su Airbnb, Booking etc...</b></td><td><img src="images/spunta.png" width="34" height="30"></td></tr>
-                <tr><td style="padding-left: 150px;"><b>Ottimizzazione dei prezzi</b></td><td><img src="images/spunta.png" width="34" height="30"></td></tr>
-                <tr><td style="padding-left: 150px;"><b>Account personale del proprietario</b></td><td><img src="images/spunta.png" width="34" height="30"></td></tr>
-            </table>
-        </div>
-    </div>
-
-</div></center>
-
-
-    <!-- Sezione Chi Siamo -->
-     <section id="chi-siamo"></section>
-    <center><h1 class="titles-text" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;margin-top:4vw;margin-bottom:0vw;"">ABOUT US</h1></center>
-    
-    <div class="about-us-container" style="border: 2px solid transparent; border-radius: 20px; padding: 20px; background-color: rgba(255, 255, 255, 0.0); max-width: 1200px; margin: 0 auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.0);">
-        <!-- Prima riga: Container unito per i profili -->
-       
-    
-        <!-- Seconda riga: Bio -->
-        <div class="bio-container" style="border: 2px solid transparent; border-radius: 20px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.); background-color: rgba(255, 255, 255, 0.8);">
-            <p style="font-size: 1vw; line-height: 1.6; text-align: justify;">
-                <b>Deseo</b>, con sede a <b>Bologna</b>, è il partner di fiducia nella <b>Gestione di Affitti Brevi</b> per proprietari di appartamenti in tutta Italia. Siamo specializzati nel valorizzare al meglio il tuo immobile, offrendoti una gestione completa e senza preoccupazioni. Dalla manutenzione alla gestione delle prenotazioni, il nostro obiettivo è garantire un'esperienza eccellente per i tuoi ospiti, mentre tu ottieni il massimo ritorno economico.
-            </p>
-            <br>
-            <p style="font-size: 1vw; line-height: 1.6; text-align: justify;">
-                Con <b>Deseo</b>, non dovrai più occuparti dei dettagli operativi: il nostro team è sempre pronto a gestire ogni aspetto, assicurandoti <b>serenità</b> e <b>ottimizzazione dei rendimenti</b>. Creiamo soluzioni su misura per ogni esigenza, con un'attenzione particolare alla qualità e all'efficienza.
-            </p>
-            <br>
-            <p style="font-size: 1vw; line-height: 1.6; text-align: justify;">
-                Affidandoti a noi, ti unisci a una rete di proprietari che ha scelto di elevare il proprio immobile a nuovi livelli di successo. Lascia che <b>Deseo</b> si occupi di tutto e scopri quanto può essere semplice trasformare il tuo appartamento in una fonte di reddito affidabile e ben gestita.
-            </p>
-        </div>
-    </div>
-    
-      <!-- Footer -->
-      <section id="contacts"></section>
-<footer style="
-font-family: 'Poly', serif;
-    background-image: url('images/footer.png');
-    width: 100vw;
-    background-position: relative;
-    color: #ecf0f1;
-    padding: 0px 0;
-    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.05);
-    opacity: 1;
-    margin-top: 90px;
-    padding-bottom: 40px;
-    font-size: 0.9vw;
-">
-    <div style="line-height: 1.6; background-color: transparent; padding: 20px;">
-        <table style="margin:0 auto;width:65vw;">
-            <tr>
-                <td style="padding-left: 0%;">
-                    <section id="contact">
-                        <p style="font-size: 1.6vw; color: rgb(0, 0, 0); text-align: left;"><b>Contattaci</b></p>
-                        <div style="text-align: left;">
-                            <p><a href="tel:+393880599971" style="color: #3f86b3;text-decoration: none;">+39 388 059 99 71</a> <a style="color:#c4d4db;"></a> </p>
-                                <p><a href="tel:+393271975673" style="color:#3f86b3;text-decoration: none;">+39 327 197 56 73</a></p>
-                            <p><a href="mailto:info@deseoapartments.com" style="color: #3f86b3;text-decoration: none;">info@deseoapartments.com</a></p>
-                            <p><b style="color: rgb(0, 0, 0);">Sede legale: Via Ugo Bassi 10</b></p>
-                            <p><b style="color: rgb(0, 0, 0);">Bologna 40121</b></p>
-                            <p><b style="color: rgb(31, 19, 19);">Lun - Ven</b></p>
-                            <p><b style="color: black;">09:00 - 18:00</b></p>
-                            <p style="color: black;">P.IVA: 04119991208</p>
-                        </div>
-                        <div style="text-align: left;">
-                            <a href="https://www.instagram.com/deseoapartments/" target="_blank"><img src="images/insta1.png" alt="Instagram" width="45px" height="45px" style="padding-right: 10px;"></a>
-                            
-                            <a href="https://www.facebook.com/profile.php?id=61562461786178" target="_blank"><img src="images/face1.png" alt="Facebook" width="45px" height="45px" style="padding-right: 10px;"></a>
-                            <a href="https://www.facebook.com/profile.php?id=61562461786178" target="_blank"><img src="images/whatsapp1.png" alt="WhatsApp" width="45px" height="45px"></a>
-                        </div>
-                    </section>
-                </td>
-                <td >
-                    <center><img src="images/loguo.png" width="250px" height="250px" style="padding-bottom: 5px;padding-left:33%;"></center>
-                    <center><img src="images/ghirigoro.png" width="50%" height="30%" style="padding-left:36%;"></center>
-                    <center>
-                        <div style="font-family: 'Poly', serif; font-size: 1.5vw; letter-spacing: 12px; color: #000000; padding-top: 10px;padding-left:36%;">DESEO APARTMENTS</div>
-                    </center>
-                </td>
-            </tr>
-        </table>
-        
-        <center><div style="color:black;margin-top:100px;"><a> &copy; 2024 Deseo Apartments v.1.2 | Tutti i diritti riservati | </a><a href="termini.html" style="color: #3f86b3; text-decoration: none;">Termini e Condizioni</a> | <a></a><a href="privacy.html" style="color: #3f86b3; text-decoration: none;">Informativa sulla Privacy</a></div></center>
-    
-    </div>
-</footer>
+    </footer>
 
     <script src="scripts.js"></script>
-    <script src="welcome.js"></script>
-
-    
-      
-
 </body>
-
 </html>
