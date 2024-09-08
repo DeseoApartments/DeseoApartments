@@ -13,9 +13,8 @@
   
 
   <style>
-    /* Limita il sito ai soli smartphone */
-    @media only screen and (max-width: 767px) {
-      html, body {
+ @media only screen and (max-width: 767px) {
+  html, body {
     height: 100%;
     width: 100%;
     margin: 0;
@@ -23,15 +22,16 @@
     overflow-x: visible;
     overflow-y: visible;
     font-family: 'Poly', serif;
-    
-    
+
     /* Aggiunta dell'immagine di sfondo */
     background-image: url('images/sfland2.png'); /* Sostituisci con il percorso della tua immagine */
     background-size: cover; /* Adatta l'immagine per coprire tutto lo schermo */
     background-position: center; /* Posiziona l'immagine al centro */
     background-repeat: no-repeat; /* Impedisce che l'immagine si ripeta */
-    background-attachment: fixed; /* Fissa l'immagine quando si scorre */
-}
+    /* background-attachment: fixed; <- Rimuovi per dispositivi mobili */
+  }
+
+
 html {
   scroll-behavior: smooth;
 }
