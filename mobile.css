@@ -1,13 +1,11 @@
 
-
-
 /* Contenitore principale */
 .container {
   display: flex;
   flex-direction: column;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-  border-radius: 12px;
+  border-radius: 0%;
   overflow: hidden;
   width: 90vw; /* Larghezza massima al 90% del viewport */
   max-width: 1200px; /* Massima larghezza */
@@ -39,9 +37,9 @@
 }
 
 #map {
-  height: 400px; /* Aumenta l'altezza della mappa */
+  height: 50vh; /* Aumenta l'altezza della mappa */
   width: 100%;
-  border-radius: 12px; /* Angoli arrotondati per la mappa */
+  border-radius: 0%; /* Angoli arrotondati per la mappa */
 }
 
 /* Centra il contenuto */
@@ -51,11 +49,11 @@ input[type="text"], select, button {
   border: none;
   border-radius: 4px;
   font-size: 16.6px;
-  width: 100%; /* Ridotto all'80% per centrare meglio */
+  width: 100%;
   max-width: 340px;
   box-sizing: border-box;
   border: 1px solid black;
- 
+  transition: font-size 0.3s ease, padding 0.3s ease; /* Transizione per la regolazione dinamica */
 }
 
 .slider-container {
@@ -66,7 +64,6 @@ input[type="text"], select, button {
   max-width: 80%; /* Imposta la larghezza per lo slider */
   margin-bottom: 17px;
   margin-left: 11%;
- 
 }
 
 input[type="range"] {
@@ -80,13 +77,12 @@ input[type="range"] {
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 80%;
+  width: 8vw;
   height: 12.75px;
   background: white;
   cursor: pointer;
   border-radius: 50%;
   border: none;
-  
 }
 
 #price-result {
@@ -98,17 +94,54 @@ input[type="range"]::-webkit-slider-thumb {
   margin-left: 11%;
 }
 
-/* Aggiunta di una media query per schermi più piccoli */
+/* Media Query per schermi più piccoli */
 @media only screen and (max-width: 767px) {
   .container {
-    width: 75vw;
-    max-width: 100%; /* Assicura che si adatti allo schermo del dispositivo */
+    width: 100vw;
+    max-width: 100vw; /* Assicura che si adatti allo schermo del dispositivo */
   }
 
   #map {
-    height: 150px; /* Riduce l'altezza della mappa sugli smartphone */
+    height: 50vh; /* Riduce l'altezza della mappa sugli smartphone */
+  }
+
+  input[type="text"], select, button {
+    font-size: 14px; /* Riduce la dimensione del testo sugli schermi piccoli */
+    padding: 6px; /* Riduce il padding sugli schermi piccoli */
+    max-width: 280px; /* Riduce la larghezza massima sugli smartphone */
+  }
+
+  #price-result {
+    font-size: 16px; /* Riduce la dimensione del testo per il risultato del prezzo sugli schermi piccoli */
+  }
+
+  input[type="range"] {
+    height: 5px; /* Riduce l'altezza del range slider sugli schermi piccoli */
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    height: 10px; /* Riduce la dimensione del pollice del range slider */
   }
 }
+
+/* Media Query per schermi ancora più piccoli (es. smartphone molto piccoli) */
+@media only screen and (max-width: 480px) {
+  input[type="text"], select, button {
+    font-size: 12px; /* Riduce ulteriormente la dimensione del testo */
+    padding: 5px; /* Riduce il padding */
+    max-width: 250px; /* Riduce la larghezza massima */
+  }
+
+  #map {
+    height: 120px; /* Riduce ulteriormente l'altezza della mappa */
+  }
+
+  #price-result {
+    font-size: 14px; /* Riduce ulteriormente la dimensione del testo */
+  }
+}
+
+
 
 .iframe-container {
   width: 100%;
@@ -190,49 +223,13 @@ iframe {
  
 }
 
-.offerta1 {
-  background-color: transparent;
-  border-radius: 12px; /* Bordi arrotondati */
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.0); /* Ombra per dare un effetto di profondità */
-  width: 100%; /* Larghezza del container */
-  max-width: 90vw; /* Larghezza massima per evitare di superare larghezze maggiori */
-  height: 80vh; /* Altezza dinamica pari all'altezza del viewport */
-  margin: 20px auto; /* Centrato rispetto alla pagina */
-  display: flex;
-  flex-direction: column; /* Dispone le righe in verticale */
-  overflow-y: scroll; /* Abilita lo scrolling verticale */
-  overflow-x: hidden; /* Evita lo scrolling orizzontale */
-  margin-top: 10%;
-}
 
 /* Nascondi la barra di scorrimento su WebKit (Chrome, Safari) */
 .offerta::-webkit-scrollbar {
   width: 0px; /* Nasconde la barra di scorrimento */
 }
 
-/* Nascondi la barra di scorrimento su Firefox */
-.offerta1 {
-  scrollbar-width: none; /* Nasconde la barra di scorrimento su Firefox */
-}
 
-/* Nascondi la barra di scorrimento su Internet Explorer e Edge */
-.offerta1 {
-  -ms-overflow-style: none; /* Nasconde la barra di scorrimento su IE e Edge */
-}
-
-.offerta1 .row {
-  background-color: #ffffff;
-  padding: 15px;
-  margin-bottom: 16px; /* Spazio tra le righe */
-  border-radius: 15px; /* Bordi arrotondati per le righe */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* Ombra leggera per le righe */
-  text-align: center; /* Testo centrato */
-}
-
-.offerta1 .row:last-child {
-  margin-bottom: 5%; /* Rimuove il margine inferiore per l'ultima riga */
-}
 
 .reservebutton {
   background-color: #4285f4; /* Colore blu in stile Google */
