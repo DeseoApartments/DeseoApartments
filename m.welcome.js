@@ -1704,7 +1704,7 @@ function calculatePrice() {
         const totalPrice = Math.floor(nights * priceRange * seasonalMultiplier * priceMultiplier);
         document.getElementById("price-result").innerHTML = `
             <div><span style="color: black;margin-top:20px;margin-bottom:35px;">INCOME</span></div>
-            <span style="color: rgba(44, 44, 44, 0.701);font-size: 2vh;margin-top:3vh;">${totalPrice} €</span>
+            <span style="color: rgba(44, 44, 44, 0.701);font-size: 5vh;margin-top:3vh;">${totalPrice} €</span>
             <div><a href="m.tariffe.html" style="color:blue;font-size:3vw">*Scopri come calcoliamo le tariffe</a></div>`
             ;
     } else {
