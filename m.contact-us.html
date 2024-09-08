@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Modulo di Contatto Mobile</title>
+  <title>Contattaci - Deseo Apartments - Gestiamo Affitti Brevi in Tutta Italia</title>
   <link href="https://fonts.googleapis.com/css2?family=Poly&display=swap" rel="stylesheet">
   
   <style>
@@ -36,44 +36,49 @@
       }
 
       .menu-toggle {
-        cursor: pointer;  
+        cursor: pointer;
         font-size: 24px;
-        line-height: 50px;
+        margin: 0; /* Assicurati che non ci sia margine */
+        line-height: 50px; /* Allinea verticalmente il testo all'interno del pulsante */
       }
 
       /* Menù a scomparsa */
-      .menu {
-        display: none;
-        background-color: #ffffff;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        z-index: 999;
-      }
+.menu {
+  display: none;
+  background-color: #ffffff;
+  position: fixed; /* Fisso al viewport */
+  top: 70px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1000; /* Assicurati che sia sopra tutto il resto */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aggiunta di ombra per visibilità */
+}
 
-      .menu ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
+.menu ul {
+  list-style: none;
+  padding: 0;
+  
+}
 
-      .menu ul li {
-        padding: 10px;
-        border-bottom: 1px solid #000000;
-      }
+.menu ul li {
+  padding: 10px;
+  border-bottom: 1px solid #ffffff;
+  
+}
 
-      .menu ul li a {
-        color: black;
-        text-decoration: none;
-        display: block;
-        font-size: 18px; /* Ridotto per adattarsi meglio agli smartphone */
-      }
+.menu ul li a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
+}
 
-      .menu.show {
-        display: block;
-      }
+.menu.show {
+  display: block; /* Mostra il menù quando attivo */
+  z-index: 1000; /* Assicurati che sia sopra il contenuto */
+  margin-top: -2.95vh;
+}
 
       /* Container del modulo */
       .form-container {
@@ -140,13 +145,16 @@
       <li><a href="m.index.html">Home</a></li>
       <li><a href="m.contact-us.html">Consulenza Gratuita</a></li>
       <li><a href="m.faq.html">Faq</a></li>
-      <li style="color:rgb(255, 0, 0);font-size: 20px;">TRADUCI</li>
-      <li><a href="m.contact-us.html">ITALIANO</a></li>
-      <li><a href="m.contact-usen.html">INGLESE</a></li>
-      <li><a href="m.contact-usfr.html">FRANCESE</a></li>
-      <li><a href="m.contact-uses.html">SPAGNOLO</a></li>
+      <li style="color:rgb(10, 29, 155);font-size: 20px;">TRADUCI</li>
+      <li style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+        <a href="m.contact-us.html" style="text-decoration: none;">IT</a>
+        <a href="m.contact-usen.html" style="text-decoration: none;">EN</a>
+        <a href="m.contact-usfr.html" style="text-decoration: none;">FR</a>
+        <a href="m.contact-uses.html" style="text-decoration: none;">ES</a>
+      </li>
     </ul>
   </div>
+
 
   <!-- Contenuto della pagina -->
   <div class="form-container">
