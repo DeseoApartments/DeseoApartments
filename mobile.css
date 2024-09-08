@@ -4,27 +4,28 @@
   display: flex;
   flex-direction: column;
   background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-  border-radius: 0%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7), /* Ombra esterna */
+              inset 0 4px 10px rgba(0, 0, 0, 0.19); /* Ombra interna dall'alto */
+  border-radius: 0%; /* Rimuove gli angoli arrotondati */
   overflow: hidden;
   width: 90vw; /* Larghezza massima al 90% del viewport */
   max-width: 1200px; /* Massima larghezza */
   height: auto;
-  min-height: 50vh;
+  min-height: 50vh; /* Altezza minima del container */
   margin: 20px 0;
   transition: height 0.3s ease; /* Transizione per adattare l'altezza in modo fluido */
 }
 
 
+
 /* Contenuto centrato nel container */
 .form-container {
- 
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
+  background-color: #ffffff52;
   color: #000000;
   width: 100%;
 }
@@ -34,6 +35,7 @@
   flex: 2;
   position: relative;
   width: 100%;
+ 
 }
 
 #map {
@@ -82,7 +84,8 @@ input[type="range"]::-webkit-slider-thumb {
   background: white;
   cursor: pointer;
   border-radius: 50%;
-  border: none;
+ 
+  
 }
 
 #price-result {
@@ -249,7 +252,3 @@ iframe {
 .reservebutton:hover {
   background-color: #357ae8; /* Colore più scuro al passaggio del mouse */
 }
-
-
-
-

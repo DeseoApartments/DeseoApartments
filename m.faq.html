@@ -52,38 +52,42 @@
       }
 
       /* Menù a scomparsa */
-      .menu {
-        display: none;
-        background-color: #ffffff;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        z-index: 999;
-      }
+.menu {
+  display: none;
+  background-color: #ffffff;
+  position: fixed; /* Fisso al viewport */
+  top: 70px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1000; /* Assicurati che sia sopra tutto il resto */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aggiunta di ombra per visibilità */
+}
 
-      .menu ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
+.menu ul {
+  list-style: none;
+  padding: 0;
+  
+}
 
-      .menu ul li {
-        padding: 10px;
-        border-bottom: 1px solid #000000;
-      }
+.menu ul li {
+  padding: 10px;
+  border-bottom: 1px solid #ffffff;
+  
+}
 
-      .menu ul li a {
-        color: black;
-        text-decoration: none;
-        display: block;
-        font-size: 20px;
-      }
+.menu ul li a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
+}
 
-      .menu.show {
-        display: block; /* Mostra il menù quando attivo */
-      }
+.menu.show {
+  display: block; /* Mostra il menù quando attivo */
+  z-index: 1000; /* Assicurati che sia sopra il contenuto */
+  margin-top: -2.95vh;
+}
 
       
 
@@ -158,15 +162,19 @@
     <div class="swiper-button-next-custom" id="swiper-button-next-custom"></div> <!-- Freccia destra -->
   </div>
 
-  <!-- Menù a scomparsa -->
-  <div class="menu" id="menu">
+   <!-- Menù a scomparsa -->
+<div class="menu" id="menu">
     <ul>
-      <li><a href="m.index.html">Home</a></li>
-      <li style="color:rgb(255, 0, 0);font-size: 20px;">TRADUCI</li>
-      <li><a href="m.faq.html">ITALIANO</a></li>
-      <li><a href="m.faqen.html">INGLESE</a></li>
-      <li><a href="m.faqfr.html">FRANCESE</a></li>
-      <li><a href="m.faqes.html">SPAGNOLO</a></li>
+      <li><a href="m.index.html" style="font-family: 'Roboto', sans-serif;">Home</a></li>
+      <li><a href="m.contact-us.html" style="font-family: 'Roboto', sans-serif;">Consulenza Gratuita</a></li>
+      <li><a href="m.faq.html" style="font-family: 'Roboto', sans-serif;">Faq</a></li>
+      <li style="color:rgb(10, 29, 155);font-size: 20px; font-family: 'Roboto', sans-serif;">TRADUCI</li>
+      <li style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+        <a href="m.faq.html" style="text-decoration: none; font-family: 'Roboto', sans-serif;">IT</a>
+        <a href="m.faqen.html" style="text-decoration: none; font-family: 'Roboto', sans-serif;">EN</a>
+        <a href="m.faqfr.html" style="text-decoration: none; font-family: 'Roboto', sans-serif;">FR</a>
+        <a href="m.faqes.html" style="text-decoration: none; font-family: 'Roboto', sans-serif;">ES</a>
+      </li>
     </ul>
   </div>
 
@@ -180,7 +188,7 @@
             max-width: auto;
             margin: 40px auto;
             padding: 30px;
-            margin-top: 100vh;
+            margin-top: 120vh;
             border: 1px solid #ddd;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             border-radius: 0px;
