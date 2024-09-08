@@ -183,9 +183,9 @@ html {
 
           <div style="padding-right: 15px;" id="price-form" class="hidden">
               <div class="slider-container">
-                  <p style="font-size: 3vw; font-style: bold;">Occupazione Media Mensile</p>
+                <span id="nights-label" style="margin-bottom:3vw">1 notte</span>
                   <input type="range" id="nights" min="1" max="30" value="1" oninput="updateNightsLabel(); calculatePrice();">
-                  <span id="nights-label">1 notte</span>
+                  <p style="font-size: 3vw; font-style: bold;">Occupazione Media Mensile</p>
               </div>
               
               <div style="padding-right: 5px;" id="price-result"></div>
@@ -423,7 +423,7 @@ html {
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  <script src="welcome.js"></script>
+  <script src="m.welcome.js"></script>
   <script src="mobile.js"></script>
 
   
