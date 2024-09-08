@@ -10,7 +10,7 @@
   width: 90vw; /* Larghezza massima al 90% del viewport */
   max-width: 1200px; /* Massima larghezza */
   height: auto;
-  min-height: 45vh;
+  min-height: 50vh;
   margin: 20px 0;
   transition: height 0.3s ease; /* Transizione per adattare l'altezza in modo fluido */
 }
@@ -109,6 +109,7 @@ input[type="range"]::-webkit-slider-thumb {
     font-size: 14px; /* Riduce la dimensione del testo sugli schermi piccoli */
     padding: 6px; /* Riduce il padding sugli schermi piccoli */
     max-width: 280px; /* Riduce la larghezza massima sugli smartphone */
+    background-color: transparent;
   }
 
   #price-result {
@@ -117,10 +118,13 @@ input[type="range"]::-webkit-slider-thumb {
 
   input[type="range"] {
     height: 5px; /* Riduce l'altezza del range slider sugli schermi piccoli */
+    width: 50vw;
+    background-color: transparent;
   }
 
   input[type="range"]::-webkit-slider-thumb {
     height: 10px; /* Riduce la dimensione del pollice del range slider */
+    background-color: transparent;
   }
 }
 

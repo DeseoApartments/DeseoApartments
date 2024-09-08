@@ -1,58 +1,3 @@
-// Inizializza lo Swiper senza autoplay
-const swiper = new Swiper('.swiper-container', {
-  loop: true, // Ripeti le slide all'infinito
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  slidesPerView: 1, // Visualizza una slide per volta
-  spaceBetween: 0,
-  centeredSlides: true, // Mantiene la slide corrente centrata
-  resistanceRatio: 0.85, // Imposta la resistenza durante lo swipe
-});
-
-// Collega le frecce custom nella barra di navigazione al comportamento di Swiper
-document.getElementById('swiper-button-next-custom').addEventListener('click', function() {
-  swiper.slideNext();
-});
-
-document.getElementById('swiper-button-prev-custom').addEventListener('click', function() {
-  swiper.slidePrev();
-});
-
-window.addEventListener('load', function() {
-  // Controlla se l'URL contiene un ancoraggio (hash)
-  const hasHash = window.location.hash;
-
-  if (hasHash) {
-    // Se c'è un ancoraggio nell'URL, controlla se si riferisce a una slide
-    const targetSlide = document.querySelector(hasHash);
-
-    if (targetSlide && targetSlide.classList.contains('swiper-slide')) {
-      // Se l'ID appartiene a una slide, scorri direttamente alla slide corrispondente
-      const targetIndex = Array.from(targetSlide.parentNode.children).indexOf(targetSlide);
-      swiper.slideTo(targetIndex);
-    } else {
-      // Se l'ID non appartiene a una slide, scorri direttamente alla sezione
-      const targetElement = document.querySelector(hasHash);
-      if (targetElement) {
-        targetElement.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  } else {
-    // Se non ci sono ancoraggi, esegui lo scorrimento automatico tra le slide
-    swiper.slideTo(1, 300); // Scorri velocemente alla slide 2
-    setTimeout(() => {
-      swiper.slideTo(2, 1900); // Scorri velocemente alla slide 3
-    }, 300);
-
-    setTimeout(() => {
-      swiper.slideTo(1, 1900, false); // Torna alla slide 1 senza passare dalla slide 5
-    }, 1000);
-  }
-});
-
-
 // Menù hamburger toggle
 const menuToggle = document.getElementById('menu-toggle');
 const menu = document.getElementById('menu');
@@ -70,15 +15,7 @@ document.querySelectorAll('.menu a').forEach(function(menuItem) {
     if (targetSlide) {
       e.preventDefault(); // Previene l'azione di default solo se è un link data-slide
       
-      // Recupera l'ID della slide
-      const targetElement = document.querySelector(targetSlide);
       
-      if (targetElement) {
-        const targetIndex = Array.from(targetElement.parentNode.children).indexOf(targetElement);
-        
-        // Vai alla slide corrispondente usando l'indice
-        swiper.slideTo(targetIndex);
-      }
 
       // Chiude il menu dopo lo scorrimento
       menu.classList.remove('show');
