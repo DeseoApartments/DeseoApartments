@@ -39,12 +39,13 @@
         left: 0;
         width: 100%;
         background-color: #ffffff;
+        opacity: 0.7;
         color: rgb(0, 0, 0);
         display: flex;
         justify-content: center; /* Centra il pulsante orizzontalmente */
         align-items: center; /* Centra il pulsante verticalmente */
         padding: 0; /* Elimina eventuali padding extra */
-        height: 5vh; /* Altezza fissa per la barra */
+        height: 7vh; /* Altezza fissa per la barra */
         z-index: 1000;
         box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
       }
@@ -79,7 +80,7 @@
 
 .menu ul li {
   padding: 10px;
-  border-bottom: 1px solid #000000;
+  border-bottom: 1px solid #ffffff;
   
 }
 
@@ -112,27 +113,30 @@
   </div>
 
   <!-- Menù a scomparsa -->
-  <div class="menu" id="menu">
-    <ul>
-      <li><a href="m.index.html">Home</a></li>
-      <li><a href="#" data-slide="#servizi-slide">Cosa Offriamo</a></li>
-      <li><a href="m.contact-us.html">Consulenza Gratuita</a></li>
-      <li><a href="#" data-slide="#contacts-slide">Contatti</a></li>
-      <li><a href="#" data-slide="#chi-siamo-slide">Chi Siamo</a></li>
-      <li><a href="m.faq.html">Faq</a></li>
-      <li style="color:rgb(255, 0, 0);font-size: 20px;">TRADUCI</li>
-      <li><a href="m.index.html">ITALIANO</a></li>
-      <li><a href="m.indexen.html">INGLESE</a></li>
-      <li><a href="m.indexfr.html">FRANCESE</a></li>
-      <li><a href="m.indexes.html">SPAGNOLO</a></li>
-    </ul>
-  </div>
+<div class="menu" id="menu">
+  <ul>
+    <li><a href="m.index.html" style="font-family: 'Roboto', sans-serif;">Home</a></li>
+    <li><a href="#servizi" style="font-family: 'Roboto', sans-serif;">Cosa Offriamo</a></li>
+    <li><a href="m.contact-us.html" style="font-family: 'Roboto', sans-serif;">Consulenza Gratuita</a></li>
+    <li><a href="#contacts" style="font-family: 'Roboto', sans-serif;">Contatti</a></li>
+    <li><a href="#chi-siamo" style="font-family: 'Roboto', sans-serif;">Chi Siamo</a></li>
+    <li><a href="m.faq.html" style="font-family: 'Roboto', sans-serif;">Faq</a></li>
+    <li style="color:rgb(10, 29, 155);font-size: 20px; font-family: 'Roboto', sans-serif;">TRADUCI</li>
+    <li style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+      <a href="m.index.html" style="text-decoration: none; font-family: 'Roboto', sans-serif;">IT</a>
+      <a href="m.indexen.html" style="text-decoration: none; font-family: 'Roboto', sans-serif;">EN</a>
+      <a href="m.indexfr.html" style="text-decoration: none; font-family: 'Roboto', sans-serif;">FR</a>
+      <a href="m.indexes.html" style="text-decoration: none; font-family: 'Roboto', sans-serif;">ES</a>
+    </li>
+  </ul>
+</div>
+
 
   <!-- Swiper container con 5 slide -->
   
       
         <!-- Immagine del logo -->
-        <center><img src="images/loguo.png" style="width: 18%; max-width: 200px; height: auto; margin-bottom: 0px;margin-top: 20%;">
+        <center><img src="images/loguo.png" style="width: 18%; max-width: 200px; height: auto; margin-bottom: 0px;margin-top: 10vh;">
         <!-- Titolo -->
         <div>
             <h1 style="font-size: 5.2vw; color: rgb(0, 0, 0); margin: 0;letter-spacing: 3px;">DESEO APARTMENTS</h1>
@@ -144,18 +148,18 @@
         <!-- Immagine decorativa -->
         <div>
             <img src="images/ghirigoro.png" style="width: 40%; max-width: 550px; height: auto; margin-top: 20px;padding-left: 10px;">
-            <p style="font-size: 3vw; color: rgb(0, 0, 0); margin-top: 3%;letter-spacing: 3px;">SCOPRI IL POTENZIALE DEL TUO APPARTAMENTO</p>
+            <p style="font-size: 4vw; color: rgb(0, 0, 0); margin-top: 3%;letter-spacing: 3px;">SCOPRI IL POTENZIALE DEL TUO APPARTAMENTO</p>
         </div></center>
 
         
         <!--Map-->
         <center><div>
           <!-- Main Container -->
-    <div class="container" style="margin-bottom: 0%;margin-top: 10%;">
+    <div class="container" style="margin-bottom: 0%;margin-top: 5%;">
       <div class="form-container" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
           <div><p style="font-family: 'Poly', serif;font-size:5vw;color:#10c9cf;text-align: center; margin-top: 6%;"><b>AFFIDATI A DESEO.</b></p></div>
           
-          <p style="font-size: 4vw;margin-bottom:20px;margin-top:0vh;">Inserisci la tua città</p>
+          <p style="font-size: 4vw;margin-bottom:20px;margin-top:-1.5vh;">Inserisci la tua città</p>
           <input style="padding:3vw;" type="text" id="address" placeholder="Inserisci l'indirizzo del tuo appartamento">
           <div id="result"></div>
 <section id="home"></section>
