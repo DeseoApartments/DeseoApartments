@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Ombra esterna */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
   border-radius: 0%; /* Rimuove gli angoli arrotondati */
   overflow: hidden;
   width: 90vw; /* Larghezza massima al 90% del viewport */
@@ -83,8 +83,8 @@ input[type="range"]::-webkit-slider-thumb {
   background: white;
   cursor: pointer;
   border-radius: 50%;
-  border: 100px solid #000; /* Bordo del pallino */
-  
+  border: 2px solid #000; /* Bordo del pallino */
+  border: none;
 }
 
 #price-result {
