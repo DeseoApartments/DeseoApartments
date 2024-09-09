@@ -119,8 +119,8 @@ body, html {
     }
 
     .navbar-menu a:hover {
-        color: #ffffff;
-        background-color: #000000;
+        color: black;
+        background-color: rgb(235, 200, 0);
         text-decoration: none;
     }
 
