@@ -23,11 +23,11 @@ body, html {
 
 .centered-iframe {
     width: 80%; /* Regola la larghezza come preferisci */
-    height: 60%; /* Regola l'altezza come preferisci */
+    height: 90%; /* Regola l'altezza come preferisci */
     border: none; /* Rimuove i bordi */
     background: transparent; /* Sfondo trasparente */
     position: absolute;
-    margin-top: -3vh;
+    margin-top: 5%;
     left: 73vw;
     transform: translate(-50%, -50%);
     overflow: hidden;
@@ -222,7 +222,7 @@ body, html {
     .button {
         margin-top: 1vw;
         padding: 12px 25px;
-        background-color: rgb(170, 145, 0);
+        background-color: rgb(170, 145, 0); 
         color: rgb(255, 255, 255);
         border-radius: 12px;
         text-decoration: none;
@@ -238,7 +238,7 @@ body, html {
     }
 
     .button:hover {
-        background-color: rgb(211, 180, 2);
+        background-color: rgb(235, 200, 0);
     }
 
     /* Sezione Chi Siamo */
@@ -349,7 +349,7 @@ body, html {
     }
 
     #cookie-banner button:hover {
-        background-color: rgb(211, 180, 2);
+        background-color: rgb(235, 200, 0);
     }
 
     /* Menù a tendina per la lingua */
@@ -586,7 +586,7 @@ body, html {
 
 .scroll-case #left-arrow:hover,
 .scroll-case #right-arrow:hover {
-    color: #005bb5;
+    color: rgb(235, 200, 0);
 }
 
 .scroll-case #left-arrow {
@@ -650,7 +650,7 @@ body, html {
 }
 
 .description-button:hover {
-    background-color: rgb(211, 180, 2);
+    background-color: rgb(235, 200, 0);
 }
 
 /* Elegant container */
@@ -682,17 +682,17 @@ body, html {
 }
 
 .dropdown-title { background-color: rgb(170, 145, 0); }
-.dropdown-title:hover { background-color: #ffffff; color: black; }
+.dropdown-title:hover { background-color: rgb(235, 200, 0); color: black; }
 
 .dropdown-title1 { background-color: rgb(170, 145, 0); }
-.dropdown-title1:hover { background-color: #ffffff; color: black; }
+.dropdown-title1:hover { background-color: rgb(235, 200, 0); color: black; }
 
 .dropdown-title2 { background-color: rgb(170, 145, 0); }
-.dropdown-title2:hover { background-color: #ffffff; color: black; }
+.dropdown-title2:hover { background-color: rgb(235, 200, 0); color: black; }
 
 /* Stile del titolo quando il dropdown è attivo (aperto) */
 .dropdown-title.active, .dropdown-title1.active, .dropdown-title2.active {
-    background-color: #ffffff;
+    background-color: rgb(235, 200, 0);
     color: black;
 }
 
@@ -844,7 +844,7 @@ body, html {
 }
 
 .form-container button:hover {
-    background-color: rgb(211, 180, 2);
+    background-color: rgb(235, 200, 0);
 }
 
 /*cover-flow servizi*/

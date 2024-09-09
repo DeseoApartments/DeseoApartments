@@ -74,7 +74,7 @@ body {
     max-width: 50vw;
     width: 50vw;
     height: auto; /* Altezza dinamica per adattarsi ai contenuti */
-    min-height: 75vh;
+    min-height: 40vh;
     margin: 20px 0;
     transition: height 0.3s ease; /* Transizione per adattare l'altezza in modo fluido */
 }
