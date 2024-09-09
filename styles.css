@@ -601,12 +601,12 @@ body, html {
     width: 60vw; /* Larghezza adattata a vw */
     overflow: hidden; /* Nasconde le immagini che sono fuori dal contenitore */
     box-shadow: 0 1vw 1vw rgba(0, 0, 0, 0.4);
-    border-radius: 25% ;
+    border-radius: 6vw ;
 }
 
 #image-wrapper {
     display: flex;
-    width: calc(60vw * 3); /* 3 immagini, ognuna larga 60vw */
+    width: calc(60vw * 4); /* 3 immagini, ognuna larga 60vw */
     transition: transform 1s ease; /* Transizione lenta per lo scorrimento */
 }
 
