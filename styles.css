@@ -27,7 +27,7 @@ body, html {
     border: none; /* Rimuove i bordi */
     background: transparent; /* Sfondo trasparente */
     position: absolute;
-    margin-top: -1vh;
+    margin-top: -3vh;
     left: 73vw;
     transform: translate(-50%, -50%);
     overflow: hidden;
