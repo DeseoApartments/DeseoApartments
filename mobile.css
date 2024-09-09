@@ -64,7 +64,7 @@ input[type="text"], select, button {
   width: 100%;
   max-width: 80%; /* Imposta la larghezza per lo slider */
   margin-bottom: 17px;
-  margin-left: 11%;
+  margin-left: 0%;
 }
 
 input[type="range"] {
@@ -250,4 +250,4 @@ iframe {
 
 .reservebutton:hover {
   background-color: rgb(170, 145, 0); /* Colore più scuro al passaggio del mouse */
-}
+}s
