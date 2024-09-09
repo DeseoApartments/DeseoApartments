@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deseo Apartments - Gestionamos Alquileres Temporales en Toda Italia</title>
+    <script>
+        (function() {
+          // Detecta el ancho de la pantalla
+          const screenWidth = window.innerWidth;
+  
+          // Verifica si el usuario está usando un dispositivo móvil
+          const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) || screenWidth <= 767;
+  
+          // Obtiene la URL actual
+          const currentUrl = window.location.href;
+  
+          if (isMobile && !currentUrl.includes('m.indexes.html')) {
+            // Redirige a la versión móvil si no está ya en ella
+            window.location.href = 'm.indexeshtml';
+          } else if (!isMobile && !currentUrl.includes('indexes.html')) {
+            // Redirige a la versión de escritorio si no está ya en ella
+            window.location.href = 'indexes.html';
+          }
+        })();
+      </script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOrxkYsKLOHKETgg8PPLG1sqk1VgTi5Oo&libraries=places,geometry"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poly&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+   
+
+    <style>.social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 10px; /* Espacio entre los íconos */
+        margin-top: 20px; /* Espacio encima de los íconos */
+    }
+    
+    .social-icons img {
+        width: 2vw;
+        height: 2vw;
+        padding: 6px;
+    }
+    
+    .arrow-down {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }</style>
+</head>
+
+<body>
+    <!-- Barra de navegación -->
+    <div class="navbar">
+        <div class="navbar-menu">
+            <a href="indexes.html" >Inicio</a>
+            <a href="#offerta">Nuestros Servicios</a>
+            <a href="contact-uses.html">Consulta Gratuita</a>
+            <a href="#chi-siamo">Quiénes Somos</a>
+            <a href="#contacts">Contacto</a>
+            <a href="faqes.html">FAQ</a>
+        </div>
+    </div>
+
+    <!-- Sección Hero -->
+    <div class="hero">
+        <div class="hero-section" style="background-image: url('images/herosinistra1.jpg');">
+            <div class="hero-content">
+                <img src="images/loguo.png" class="logo">
+                <div><h1 class="deseo-title">DESEO APARTMENTS</h1></div>
+                <div><p class="deseo-title1">GESTIÓN DE ALQUILERES TEMPORALES</p></div>
+                <div><img src="images/ghirigoro.png" class="ghirigoro"></div>
+            
+                <p class="deseo-title2"><b>Transforma tu propiedad en una oportunidad de ingresos</b></p>
+                
+                <a href="contact-us.html" class="button" id="open-modal-btn">Contáctanos para una consulta gratuita</a> 
+                
+                <!-- Íconos de redes sociales -->
+              
+                    <div class="social-icons">
+                        <center><a href="https://www.facebook.com/profile.php?id=61562461786178" target="_blank"><img src="images/face.png" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/deseoapartments/" target="_blank"><img src="images/insta.png" alt="Instagram"></a>
+                        <a href="https://wa.me/393880599971" target="_blank"><img src="images/whatsapp.png" alt="WhatsApp"></a></center>
+                    </div> 
+                    <center><div><a href="#case"><img style="margin-top: -10px;" src="images/arrow.png" width="60" height="45" class="social-icons"></a></div></center>
+               
+            </div>
+        </div>
+        <div class="hero-section" style="background-image: url('images/herodestra1.jpg'); background-size: cover; background-position: center;">
+            <!-- Menú desplegable de idiomas -->
+            <div class="language-menu">
+                <button class="language-btn">
+                    <span id="selected-lang">ESPAÑOL</span> &#9660;
+                </button>
+                <div class="language-content">
+                    <a href="index.html" onclick="changeLanguage('ITA')">ITALIANO</a>
+                    <a href="indexen.html" onclick="changeLanguage('ENG')">ENGLISH</a>
+                    <a href="indexes.html" onclick="changeLanguage('SPA')">ESPAÑOL</a>
+                    <a href="indexfr.html" onclick="changeLanguage('FRA')">FRANÇAIS</a>
+                </div>
+            </div>
+           
+            <div><iframe src="welcomeheroes.html" class="centered-iframe"></iframe></div>
+
+        
+    </div>
+        </div>
+    </div>
+
+    
+
+<section id="case"></section>
+<!-- Título de la sección de propiedades -->
+<center><h1 style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;margin-top:6vw;margin-bottom:2vw;" class="titles-text">NUESTRAS PROPIEDADES</h1></center>
+
+<div id="scroll-case" class="scroll-case">
+    <div id="left-arrow">&#9664;</div>
+    <div id="image-container">
+        <div id="image-wrapper">
+            <a href="battisti.html"><img src="images/casa1.jpg" alt="Propiedad 1"></a>
+            <a href="cavazza.html"><img src="images/casa2.jpg" alt="Propiedad 2"></a>
+            <a href="castelmerlo.html"><img src="images/casa3.jpg" alt="Propiedad 3"></a>
+            <a href="https://www.airbnb.it/rooms/1173767918171033040?source_impression_id=p3_1725895144_P3dFWxA4gCELbg9w"><img src="images/casa4.jpg" alt="Casa 4"></a>
+        </div>
+    </div>
+    <div id="right-arrow">&#9654;</div>
+</div>
+
+<div id="description-box" style="margin-top: 50px;">
+    <p id="description-text">
+        Apartamento elegante en el centro histórico de Bolonia. Rodeado de atracciones culturales e históricas.
+    </p>
+    <a href="battisti.html" target="_blank" class="description-button">RESERVA AHORA</a>
+</div>
+
+<section id="offerta"></section>
+<center>
+    <center><h1 style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;margin-top:4vw;margin-bottom:6vw;" class="titles-text">SERVICIOS</h1></center>
+<div class="flow-container">
+    <div class="cover-flow">
+        <div class="cover-flow-item">
+            <div class="img-container">
+                <img src="images/pulizia.jpg" alt="Servicio de Limpieza" style="width: 100%; height: auto; border-radius: 8px;">
+                <h2 style=" margin-top: 10px; text-align: left;" class="non-clickable-label1">LIMPIEZA</h2>
+                <p style="font-size: 0.8vw;padding:10px; margin-top: 10px; text-align: justify;">
+                    Garantizamos altos estándares de limpieza e higiene. Nos encargamos de todo, desde la limpieza hasta proporcionar ropa de cama de alta calidad.
+                </p>
+            </div>
+        </div>
+        <div class="cover-flow-item">
+            <div class="img-container">
+                <img src="images/assistenza.jpg" alt="Asistencia 24/7" style="width: 100%; height: auto; border-radius: 8px;">
+                <h2 style=" margin-top: 10px; text-align: left;" class="non-clickable-label1">ASISTENCIA 24/7</h2>
+                <p style="font-size: 0.8vw;padding:10px; margin-top: 10px; text-align: justify;">
+                    Nuestro equipo garantiza soporte continuo, 24 horas al día, 7 días a la semana. Respondemos rápidamente a las solicitudes de los huéspedes, asegurando respuestas rápidas y soluciones inmediatas para cualquier necesidad.
+                </p>
+            </div>
+        </div>
+        <div class="cover-flow-item active">
+            <div class="img-container">
+                <img src="images/portale.jpg" alt="Portal del Propietario" style="width: 100%; height: auto; border-radius: 8px;">
+                
+                <h2 style="margin-top: 15px; margin-top: 10px; text-align: left;" class="non-clickable-label1">PORTAL DEL PROPIETARIO</h2>
+                <p style="font-size: 0.8vw;padding:10px;margin-bottom: 10px; margin-top: 10px; text-align: justify;">
+                    Monitorea en tiempo real las reservas, ganancias y opiniones de los huéspedes para tu propiedad. Gestiona fácilmente cada aspecto de tu inversión con acceso inmediato a la información clave.
+                </p>
+            </div>
+        </div>
+        <div class="cover-flow-item">
+            <div class="img-container">
+                <img src="images/pubblicazione.jpg" alt="Anuncios Online" style="width: 100%; height: auto; border-radius: 8px;">
+                <h2 style=" margin-top: 10px; text-align: left;" class="non-clickable-label1">ANUNCIOS ONLINE</h2>
+                <p style="font-size: 0-8vw;padding:10px; margin-top: 10px; text-align: justify;">
+                    Publicitamos tu propiedad en las principales plataformas, como Airbnb y Booking. Optimizamos la visibilidad de tu anuncio para maximizar la ocupación de tu apartamento.
+                </p>
+            </div>
+        </div>
+        <div class="cover-flow-item">
+            <div class="img-container">
+                <img src="images/checkin.jpg" alt="Check-in/Check-out" style="width: 100%; height: auto; border-radius: 8px;">
+                <h2 style=" margin-top: 10px; text-align: left;" class="non-clickable-label1">CHECK-IN / CHECK-OUT</h2>
+                <p style="font-size: 0.8vw;padding:10px; margin-top: 10px; text-align: justify;">
+                    Gestionamos cada fase del proceso de check-in y check-out de los huéspedes, haciéndolo simple y agradable.
+                </p>
+            </div>
+        </div>
+        <div class="cover-flow-item">
+            <div class="img-container">
+                <img src="images/manutenzioni.png" alt="Mantenimiento" style="width: 100%; height: auto; border-radius: 8px;">
+                <h2 style=" margin-top: 10px; text-align: left;" class="non-clickable-label1">MANTENIMIENTO</h2>
+                <p style="font-size: 0.8vw;padding:10px; margin-top: 10px; text-align: justify;">
+                    Nos encargamos de todo el mantenimiento necesario, gestionando tanto las intervenciones regulares como las extraordinarias para asegurar que tu propiedad esté siempre en perfectas condiciones.
+                </p>
+            </div>
+        </div>
+        <!-- Agrega más imágenes aquí -->
+    </div>
+    <button class="cover-flow-button prev">⟨</button>
+    <button class="cover-flow-button next">⟩</button>
+</div>
+</center>
+
+ <!-- Título de la sección Área de Propietarios -->
+     <center><h1 style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;margin-top:6vw;margin-bottom:2vw;" class="titles-text">ÁREA DE PROPIETARIOS</h1></center>
+    
+     <!-- Servicio de Propietarios -->
+<div>
+    <center>
+        <table class="centered-table">
+            <tr>
+                <td>
+                    <center>
+                        <div><img src="images/kroos1.jpg" width="60%" height="60%"></div>
+                    </center>
+                </td>
+                <td style="text-align: left;">
+                    <center>
+                        <h1 class="highlight-title">
+                            
+                            <button class="non-clickable-label">CONTROL COMPLETO
+                            </button>
+                        </h1>
+                        <p class="justified-text" style="font-size: 20px; line-height: 1.6;">
+                            Accede a un sistema que te permite monitorear las tendencias de reservas en <b>tiempo real,</b> visualizando fácilmente el estado actual de tu apartamento y su rendimiento.
+                        </p>
+                    </center>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;">
+                    <center>
+                    <h1 class="highlight-title">
+                        <button class="non-clickable-label">GESTIÓN INTUITIVA
+                    </button></center>
+                    <p class="justified-text" style="font-size: 20px; line-height: 1.6;">
+                        Utiliza una interfaz simple y <b>fácil de usar</b> para acceder rápidamente a datos esenciales como el calendario de reservas y la disponibilidad futura.
+                    </p> 
+                </td>
+                <td>
+                    <center>
+                        <div><img src="images/kroos2.jpg" width="60%" height="60%"></div>
+                    </center>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <br>
+                    <center>
+                        <div><img src="images/kroos3.jpg" width="60%" height="60%"></div>
+                    </center>
+                </td>
+                <td style="text-align: left;">
+                <center><h1 class="highlight-title">
+                    <button class="non-clickable-label">INFORMES DETALLADOS
+                    </button></center>
+                    <p class="justified-text" style="font-size: 20px; line-height: 1.6;">
+                        Recibe informes mensuales con <b>información detallada sobre ingresos,</b> tendencias de mercado y comentarios de los huéspedes, ofreciéndote una herramienta eficaz para tomar decisiones estratégicas a largo plazo.
+                    </p>
+                    <br>
+                </td>
+            </tr>
+        </table>
+    </center>
+</div>
+
+
+    <center><h1 style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;margin-top:4vw;margin-bottom:2vw;" class="titles-text">BENEFICIOS</h1></center>
+<center><div class="elegant-container">
+
+    <!-- Primer Dropdown -->
+    <div class="dropdown-item">
+        <button class="dropdown-title"><center>GESTIÓN DE PROPIEDADES</center></button>
+        <div class="dropdown-content">
+            <table class="dropdown-table">
+                <tr><td style="padding-left: 150px;"><b>Limpieza Profesional</b></td><td><img src="images/spunta.png" width="34" height="30"></td></tr>
+                <tr><td style="padding-left: 150px;"><b>Lavandería</b></td><td><img src="images/spunta.png" width="34" height="30"></td></tr>
+                <tr><td style="padding-left: 150px;"><b>Activación de Servicios</b></td><td><img src="images/spunta.png" width="34" height="30"></td></tr>
+                <tr><td style="padding-left: 150px;"><b>Mantenimiento</b></td><td><img src="images/spunta.png" width="34" height="30"></td></tr>
+                <tr><td style="padding-left: 150px;"><b>Amueblado</b></td><td><img src="images/spunta.png" width="34" height="30"></td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Segundo Dropdown -->
+    <div class="dropdown-item">
+        <button class="dropdown-title1"><center>ATENCIÓN AL CLIENTE</center></button>
+        <div class="dropdown-content">
+            <table class="dropdown-table">
+                <tr><td style="padding-left: 150px;"><b>Gestión de Reservas</b></td><td><img src="images/spunta.png" width="34" height="30"></td></tr>
+                <tr><td style="padding-left: 150px;"><b>Seguro de Daños</b></td><td><img src="images/spunta.png" width="34" height="30"></td></tr>
+                <tr><td style="padding-left: 150px;"><b>Guías Digitales de Bienvenida</b></td><td><img src="images/spunta.png" width="34" height="30"></td></tr>
+                <tr><td style="padding-left: 150px;"><b>Asistencia 24/7</b></td><td><img src="images/spunta.png" width="34" height="30"></td></tr>
+                <tr><td style="padding-left: 150px;"><b>Registro de Huéspedes Remoto</b></td><td><img src="images/spunta.png" width="34" height="30"></td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Tercer Dropdown -->
+    <div class="dropdown-item">
+        <button class="dropdown-title2"><center>GESTIÓN DE ANUNCIOS</center></button>
+        <div class="dropdown-content">
+            <table class="dropdown-table">
+                <tr><td style="padding-left: 150px;"><b>Sesión Fotográfica Profesional</b></td><td><img src="images/spunta.png" width="34" height="30"></td></tr>
+                <tr><td style="padding-left: 150px;"><b>Listado en Nuestro Sitio Web</b></td><td><img src="images/spunta.png" width="34" height="30"></td></tr>
+                <tr><td style="padding-left: 150px;"><b>Listado en Airbnb, Booking, etc.</b></td><td><img src="images/spunta.png" width="34" height="30"></td></tr>
+                <tr><td style="padding-left: 150px;"><b>Optimización de Precios</b></td><td><img src="images/spunta.png" width="34" height="30"></td></tr>
+                <tr><td style="padding-left: 150px;"><b>Cuenta Personal del Propietario</b></td><td><img src="images/spunta.png" width="34" height="30"></td></tr>
+            </table>
+        </div>
+    </div>
+
+</div></center>
+
+
+    <!-- Sección Quiénes Somos -->
+     <section id="chi-siamo"></section>
+    <center><h1 class="titles-text" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;margin-top:4vw;margin-bottom:0vw;">QUIÉNES SOMOS</h1></center>
+    
+    <div class="about-us-container" style="border: 2px solid transparent; border-radius: 20px; padding: 20px; background-color: rgba(255, 255, 255, 0.0); max-width: 1200px; margin: 0 auto; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.0);">
+        <!-- Primera fila: Contenedor unificado de perfiles -->
+       
+    
+        <!-- Segunda fila: Biografía -->
+        <div class="bio-container" style="border: 2px solid transparent; border-radius: 20px; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.); background-color: rgba(255, 255, 255, 0.8);">
+            <p style="font-size: 1vw; line-height: 1.6; text-align: justify;">
+                <b>Deseo</b>, con sede en <b>Bolonia</b>, es el socio de confianza en <b>Gestión de Alquileres Temporales</b> para propietarios de apartamentos en toda Italia. Nos especializamos en maximizar el valor de tu propiedad, ofreciéndote una gestión integral y sin preocupaciones. Desde el mantenimiento hasta la gestión de reservas, nuestro objetivo es garantizar una excelente experiencia para tus huéspedes, mientras obtienes el máximo retorno económico.
+            </p>
+            <br>
+            <p style="font-size: 1vw; line-height: 1.6; text-align: justify;">
+                Con <b>Deseo</b>, no tendrás que preocuparte más por los detalles operativos: nuestro equipo está siempre listo para gestionar cada aspecto, asegurando <b>tranquilidad</b> y <b>rendimientos optimizados</b>. Creamos soluciones personalizadas para cada necesidad, con un enfoque particular en la calidad y la eficiencia.
+            </p>
+            <br>
+            <p style="font-size: 1vw; line-height: 1.6; text-align: justify;">
+                Al asociarte con nosotros, te unes a una red de propietarios que ha decidido elevar sus propiedades a nuevos niveles de éxito. Deja que <b>Deseo</b> se encargue de todo y descubre lo fácil que puede ser convertir tu apartamento en una fuente de ingresos confiable y bien gestionada.
+            </p>
+        </div>
+    </div>
+    
+      <!-- Pie de página -->
+      <section id="contacts"></section>
+<footer style="
+font-family: 'Poly', serif;
+    background-image: url('images/footer.png');
+    width: 100vw;
+    background-position: relative;
+    color: #ecf0f1;
+    padding: 0px 0;
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.05);
+    opacity: 1;
+    margin-top: 90px;
+    padding-bottom: 40px;
+    font-size: 0.9vw;
+">
+    <div style="line-height: 1.6; background-color: transparent; padding: 20px;">
+        <table style="margin:0 auto;width:65vw;">
+            <tr>
+                <td style="padding-left: 0%;">
+                    <section id="contact">
+                        <p style="font-size: 1.6vw; color: rgb(0, 0, 0); text-align: left;"><b>Contáctanos</b></p>
+                        <div style="text-align: left;">
+                            <p><a href="tel:+393880599971" style="color: #3f86b3;text-decoration: none;">+39 388 059 99 71</a></p>
+                            <p><a href="tel:+393271975673" style="color:#3f86b3;text-decoration: none;">+39 327 197 56 73</a></p>
+                            <p><a href="mailto:info@deseoapartments.com" style="color: #3f86b3;text-decoration: none;">info@deseoapartments.com</a></p>
+                            <p><b style="color: rgb(0, 0, 0);">Oficina registrada: Via Ugo Bassi 10</b></p>
+                            <p><b style="color: rgb(0, 0, 0);">Bolonia 40121</b></p>
+                            <p><b style="color: rgb(31, 19, 19);">Lunes - Viernes</b></p>
+                            <p><b style="color: black;">09:00 - 18:00</b></p>
+                            <p style="color: black;">CIF: 04119991208</p>
+                        </div>
+                        <div style="text-align: left;">
+                            <a href="https://www.instagram.com/deseoapartments/" target="_blank"><img src="images/insta1.png" alt="Instagram" width="45px" height="45px" style="padding-right: 10px;"></a>
+                            
+                            <a href="https://www.facebook.com/profile.php?id=61562461786178" target="_blank"><img src="images/face1.png" alt="Facebook" width="45px" height="45px" style="padding-right: 10px;"></a>
+                            <a href="https://www.facebook.com/profile.php?id=61562461786178" target="_blank"><img src="images/whatsapp1.png" alt="WhatsApp" width="45px" height="45px"></a>
+                        </div>
+                    </section>
+                </td>
+                <td >
+                    <center><img src="images/loguo.png" width="250px" height="250px" style="padding-bottom: 5px;padding-left:33%;"></center>
+                    <center><img src="images/ghirigoro.png" width="50%" height="30%" style="padding-left:36%;"></center>
+                    <center>
+                        <div style="font-family: 'Poly', serif; font-size: 1.5vw; letter-spacing: 12px; color: #000000; padding-top: 10px;padding-left:36%;">DESEO APARTMENTS</div>
+                    </center>
+                </td>
+            </tr>
+        </table>
+        
+        <center><div style="color:black;margin-top:100px;"><a> &copy; 2024 Deseo Apartments v.1.2 | Todos los derechos reservados | </a><a href="termses.html" style="color: #3f86b3; text-decoration: none;">Términos y Condiciones</a> | <a href="privacyes.html" style="color: #3f86b3; text-decoration: none;">Política de Privacidad</a></div></center>
+    
+    </div>
+</footer>
+
+    <script src="scripts.js"></script>
+    <script src="welcomees.js"></script>
+
+</body>
+
+</html>
