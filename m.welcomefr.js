@@ -1631,12 +1631,12 @@ function updateResult(latLng, addressComponents) {
         if (bounds.contains(latLng)) {
             pricePerNight = historicalCenters[city].priceInside;
             document.getElementById("result").innerHTML = `
-                <span style="color: black;font-size:15px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Tariffa media a notte nella zona:</span>
+                <span style="color: black;font-size:15px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Tarif moyen par nuit dans la région:</span>
                 <span style="color: red;font-size:20px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-style: bold;"><b>${pricePerNight} €</b></span> <b>*</b> <br><br>`;
         } else {
             pricePerNight = historicalCenters[city].priceOutside;
             document.getElementById("result").innerHTML = `
-                <span style="color: black;font-size:15px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Tariffa media a notte nella zona:</span>
+                <span style="color: black;font-size:15px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Tarif moyen par nuit dans la région:</span>
                 <span style="color: red;font-size:20px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-style: bold;"><b>${pricePerNight} €</b></span> <b>*</b><br><br>`;
         }
         document.getElementById("price-form").classList.remove("hidden");
@@ -1649,7 +1649,7 @@ function updateResult(latLng, addressComponents) {
             pricePerNight = discountedPricePerNight;
 
             document.getElementById("result").innerHTML = `
-                <span style="color: black;font-size:15px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Tariffa media a notte nella zona:</span>
+                <span style="color: black;font-size:15px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Tarif moyen par nuit dans la région:</span>
                 <span style="color: red;font-size:20px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-style: bold;"><b>${pricePerNight.toFixed(2)} €</b></span> <b>*</b><br><br>`;
             document.getElementById("price-form").classList.remove("hidden");
         } else {
@@ -1705,7 +1705,7 @@ function calculatePrice() {
         document.getElementById("price-result").innerHTML = `
             <div><span style="color: black;margin-top:20px;margin-bottom:35px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">MONTHLY INCOME</span></div>
             <span style="color: rgba(44, 44, 44, 0.701);font-size: 5vh;margin-top:3vh;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">${totalPrice} €</span>
-            <div><a href="m.tariffe.html" style="color:blue;font-size:3vw;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">* Formula</a></div><br>`
+            <div><a href="m.tariffefr.html" style="color:blue;font-size:3vw;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">* Formula</a></div><br>`
             ;
     } else {
         const nearestCity = findNearestCity(marker.getPosition());
@@ -1721,7 +1721,7 @@ function calculatePrice() {
             document.getElementById("price-result").innerHTML = `
                 <center><div><span style="color: black;margin-top:20px;margin-bottom:35px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">MONTHLY INCOME</span></div>
             <span style="color: rgba(44, 44, 44, 0.701);font-size: 5vh;margin-top:3vh;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">${totalPrice} €</span>
-            <div><a href="m.tariffe.html" style="color:blue;font-size:3vw;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">* Formula</a></div></center><br>`;
+            <div><a href="m.tariffefr.html" style="color:blue;font-size:3vw;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">* Formula</a></div></center><br>`;
         } else {
             console.error("Non è stato possibile trovare una città vicina valida o la città non è riconosciuta.");
         }

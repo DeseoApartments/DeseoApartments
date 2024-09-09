@@ -1631,13 +1631,13 @@ function updateResult(latLng, addressComponents) {
         if (bounds.contains(latLng)) {
             pricePerNight = historicalCenters[city].priceInside;
             document.getElementById("result").innerHTML = `
-                <span style="color: black;font-size:15px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Tariffa media a notte nella zona:</span>
-                <span style="color: red;font-size:20px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-style: bold;"><b>${pricePerNight} €</b></span> <b>*</b> <br><br>`;
+                <span style="color: black;font-size:15px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Average nightly rate in the area:</span>
+                <span style="color: red;font-size:20px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-style: bold;"><b>${pricePerNight} €</b></span><br><br>`;
         } else {
             pricePerNight = historicalCenters[city].priceOutside;
             document.getElementById("result").innerHTML = `
-                <span style="color: black;font-size:15px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Tariffa media a notte nella zona:</span>
-                <span style="color: red;font-size:20px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-style: bold;"><b>${pricePerNight} €</b></span> <b>*</b><br><br>`;
+                <span style="color: black;font-size:15px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Average nightly rate in the area:</span>
+                <span style="color: red;font-size:20px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-style: bold;"><b>${pricePerNight} €</b></span><br><br>`;
         }
         document.getElementById("price-form").classList.remove("hidden");
     } else {
@@ -1645,12 +1645,12 @@ function updateResult(latLng, addressComponents) {
         if (nearestCity) {
             const discountRate = 0.80;
             const nearestCityPriceRange = historicalCenters[nearestCity].priceInside;
-            const discountedPricePerNight = Math.floor(nearestCityPriceRange * discountRate);
+            const discountedPricePerNight = nearestCityPriceRange * discountRate;
             pricePerNight = discountedPricePerNight;
 
             document.getElementById("result").innerHTML = `
-                <span style="color: black;font-size:15px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Tariffa media a notte nella zona:</span>
-                <span style="color: red;font-size:20px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-style: bold;"><b>${pricePerNight.toFixed(2)} €</b></span> <b>*</b><br><br>`;
+                <span style="color: black;font-size:15px;">Average nightly rate in the area:</span>
+                <span style="color: green;font-size:20px;">${pricePerNight.toFixed(2)} €</span> *`;
             document.getElementById("price-form").classList.remove("hidden");
         } else {
             document.getElementById("result").textContent = "Contattaci per saperne di più su questa località!";
@@ -1703,9 +1703,10 @@ function calculatePrice() {
 
         const totalPrice = Math.floor(nights * priceRange * seasonalMultiplier * priceMultiplier);
         document.getElementById("price-result").innerHTML = `
-            <div><span style="color: black;margin-top:20px;margin-bottom:35px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">MONTHLY INCOME</span></div>
+            <center><div><span style="color: black;margin-top:20px;margin-bottom:35px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:1.5vw;">MONTHLY INCOME</span></div>
             <span style="color: rgba(44, 44, 44, 0.701);font-size: 5vh;margin-top:3vh;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">${totalPrice} €</span>
-            <div><a href="m.tariffe.html" style="color:blue;font-size:3vw;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">* Formula</a></div><br>`
+            <div><a href="tariffeen.html" style="color:blue;font-size:0.7vw;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Formula</a></div></center><br>
+            `
             ;
     } else {
         const nearestCity = findNearestCity(marker.getPosition());
@@ -1719,9 +1720,9 @@ function calculatePrice() {
 
             const totalPrice = Math.floor(nights * discountedPricePerNight * seasonalMultiplier * priceMultiplier);
             document.getElementById("price-result").innerHTML = `
-                <center><div><span style="color: black;margin-top:20px;margin-bottom:35px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">MONTHLY INCOME</span></div>
+                <center><div><span style="color: black;margin-top:20px;margin-bottom:35px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:1.5vw;">MONTHLY INCOME</span></div>
             <span style="color: rgba(44, 44, 44, 0.701);font-size: 5vh;margin-top:3vh;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">${totalPrice} €</span>
-            <div><a href="m.tariffe.html" style="color:blue;font-size:3vw;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">* Formula</a></div></center><br>`;
+            <div><a href="tariffeen.html" style="color:blue;font-size:0.7vw;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Formula</a></div></center><br>`;
         } else {
             console.error("Non è stato possibile trovare una città vicina valida o la città non è riconosciuta.");
         }

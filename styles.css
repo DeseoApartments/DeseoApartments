@@ -222,7 +222,7 @@ body, html {
     .button {
         margin-top: 1vw;
         padding: 12px 25px;
-        background-color: #005bb5; 
+        background-color: rgb(170, 145, 0);
         color: rgb(255, 255, 255);
         border-radius: 12px;
         text-decoration: none;
@@ -238,7 +238,7 @@ body, html {
     }
 
     .button:hover {
-        background-color: #63aefa;
+        background-color: rgb(211, 180, 2);
     }
 
     /* Sezione Chi Siamo */
@@ -339,7 +339,7 @@ body, html {
     }
 
     #cookie-banner button {
-        background-color: #005bb5;
+        background-color: rgb(170, 145, 0);
         color: white;
         border: none;
         padding: 10px 20px;
@@ -349,7 +349,7 @@ body, html {
     }
 
     #cookie-banner button:hover {
-        background-color: #007aff;
+        background-color: rgb(211, 180, 2);
     }
 
     /* Menù a tendina per la lingua */
@@ -519,7 +519,7 @@ body, html {
 
 /* Stile per l'etichetta non cliccabile */
 .non-clickable-label {
-    background-color: #10c9cf; /* Colore di sfondo modificabile */
+    background-color: rgb(170, 145, 0); /* Colore di sfondo modificabile */
     color: #ffffff; /* Colore del testo modificabile */
     border: transparent; /* Colore e spessore del bordo modificabile */
     position: center;
@@ -639,7 +639,7 @@ body, html {
     display: inline-block;
     margin-top: 15px;
     padding: 12px 25px;
-    background-color: #005bb5;
+    background-color: rgb(170, 145, 0);
     color: white;
     border-radius: 12px;
     text-decoration: none;
@@ -650,7 +650,7 @@ body, html {
 }
 
 .description-button:hover {
-    background-color: #63aefa;
+    background-color: rgb(211, 180, 2);
 }
 
 /* Elegant container */
@@ -681,13 +681,13 @@ body, html {
     letter-spacing: 10px;
 }
 
-.dropdown-title { background-color: #10c9cf; }
+.dropdown-title { background-color: rgb(170, 145, 0); }
 .dropdown-title:hover { background-color: #ffffff; color: black; }
 
-.dropdown-title1 { background-color: #10c9cf; }
+.dropdown-title1 { background-color: rgb(170, 145, 0); }
 .dropdown-title1:hover { background-color: #ffffff; color: black; }
 
-.dropdown-title2 { background-color: #10c9cf; }
+.dropdown-title2 { background-color: rgb(170, 145, 0); }
 .dropdown-title2:hover { background-color: #ffffff; color: black; }
 
 /* Stile del titolo quando il dropdown è attivo (aperto) */
@@ -835,7 +835,7 @@ body, html {
 .form-container button {
     width: 90%;
     padding: 10px;
-    background-color: #4285f4;
+    background-color: rgb(170, 145, 0);
     border: none;
     color: white;
     font-size: 16px;
@@ -844,7 +844,7 @@ body, html {
 }
 
 .form-container button:hover {
-    background-color: #357ae8;
+    background-color: rgb(211, 180, 2);
 }
 
 /*cover-flow servizi*/

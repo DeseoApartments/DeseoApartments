@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deseo Apartments - Calculateur de Prix</title>
+    <title>Deseo Apartments - Calcul des Tarifs</title>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOrxkYsKLOHKETgg8PPLG1sqk1VgTi5Oo&libraries=places,geometry"></script>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poly&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="welcomeindex.css">
+   
 </head>
 <body>
-    <!-- Logo et section de bouton -->
+    <!-- Section Logo et Bouton -->
     <div class="header">
       
+    
     </div>
-    <h2 style=" margin-top: 10px; text-align: left;" class="non-clickable-label">DÉCOUVREZ LE POTENTIEL DE VOTRE APPARTEMENT</h2>
+    <h2 style=" margin-top: 10px; text-align: left;" class="non-clickable-label">Découvrez le potentiel de votre appartement</h2>
     
     <!-- Conteneur principal -->
     <div class="container">
         <div class="form-container">
-            <div><p style="font-family: 'Poly', serif;font-size:20px;color:#ca2a2a;text-align: center; margin-top: 0%;"><b>FAITES CONFIANCE À DESEO.</b></p></div>
-            <p style="font-size: 15px;margin-bottom:20px;margin-top:-20px">Entrez votre ville</p>
+            <div><p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:20px;color:rgb(170, 145, 0);text-align: center; margin-top: 0%;"><b>Combien pourriez-vous gagner ?</b></p></div>
+            <p style="font-size: 15px;margin-bottom:20px;margin-top:-20px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Entrez votre ville</p>
             <input type="text" id="address" placeholder="Entrez l'adresse de votre appartement">
             <div id="result"></div>
 
@@ -37,7 +39,7 @@
 
             <div id="price-form" class="hidden">
                 <div class="slider-container">
-                    <p style="font-size: 10px; font-style: bold;text-align: center;">Occupation Mensuelle Moyenne</p>
+                    <p style="font-size: 10px; font-style: bold;text-align: center;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Occupation Mensuelle Moyenne</p>
                     <input type="range" id="nights" min="1" max="30" value="1" oninput="updateNightsLabel(); calculatePrice();">
                     <span id="nights-label">1 nuit</span>
                 </div>
@@ -48,8 +50,10 @@
         <div id="map-container">
             <div id="map"></div>
         </div>
+        
     </div>
+    
 
-    <script src="welcome.js"></script>
+    <script src="welcomefr.js"></script>
 </body>
 </html>

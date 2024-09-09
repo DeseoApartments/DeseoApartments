@@ -1631,13 +1631,13 @@ function updateResult(latLng, addressComponents) {
         if (bounds.contains(latLng)) {
             pricePerNight = historicalCenters[city].priceInside;
             document.getElementById("result").innerHTML = `
-                <span style="color: black;font-size:15px;">Tariffa media a notte nella zona:</span>
-                <span style="color: green;font-size:20px;">${pricePerNight} €</span> *`;
+                <span style="color: black;font-size:15px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Tariffa media a notte nella zona:</span>
+                <span style="color: red;font-size:20px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-style: bold;"><b>${pricePerNight} €</b></span><br><br>`;
         } else {
             pricePerNight = historicalCenters[city].priceOutside;
             document.getElementById("result").innerHTML = `
-                <span style="color: black;font-size:15px;">Tariffa media a notte nella zona:</span>
-                <span style="color: green;font-size:20px;">${pricePerNight} €</span> *`;
+                <span style="color: black;font-size:15px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Tariffa media a notte nella zona:</span>
+                <span style="color: red;font-size:20px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-style: bold;"><b>${pricePerNight} €</b></span><br><br>`;
         }
         document.getElementById("price-form").classList.remove("hidden");
     } else {
@@ -1703,8 +1703,9 @@ function calculatePrice() {
 
         const totalPrice = Math.floor(nights * priceRange * seasonalMultiplier * priceMultiplier);
         document.getElementById("price-result").innerHTML = `
-            <div><span style="color: black;margin-top:20px;margin-bottom:35px;">INCOME</span></div>
-            <span style="color: rgba(44, 44, 44, 0.701);font-size: 5vh;margin-top:3vh;">${totalPrice} €</span>
+            <center><div><span style="color: black;margin-top:20px;margin-bottom:35px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:1.5vw;">MONTHLY INCOME</span></div>
+            <span style="color: rgba(44, 44, 44, 0.701);font-size: 5vh;margin-top:3vh;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">${totalPrice} €</span>
+            <div><a href="tariffe.html" style="color:blue;font-size:0.7vw;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Formula</a></div></center><br>
             `
             ;
     } else {
@@ -1719,8 +1720,9 @@ function calculatePrice() {
 
             const totalPrice = Math.floor(nights * discountedPricePerNight * seasonalMultiplier * priceMultiplier);
             document.getElementById("price-result").innerHTML = `
-                <div><span style="color: black;margin-top:20px;margin-bottom:35px;">INCOME</span></div>
-                <span style="color: rgba(44, 44, 44, 0.701);font-size: 60px;margin-top:20px;">${totalPrice} €</span>`;
+                <center><div><span style="color: black;margin-top:20px;margin-bottom:35px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:1.5vw;">MONTHLY INCOME</span></div>
+            <span style="color: rgba(44, 44, 44, 0.701);font-size: 5vh;margin-top:3vh;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">${totalPrice} €</span>
+            <div><a href="tariffe.html" style="color:blue;font-size:0.7vw;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Formula</a></div></center><br>`;
         } else {
             console.error("Non è stato possibile trovare una città vicina valida o la città non è riconosciuta.");
         }

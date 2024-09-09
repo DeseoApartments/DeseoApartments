@@ -6,22 +6,24 @@
   <title>Deseo Apartments - We Manage Short-Term Rentals Across Italy</title>
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=API_KEY&libraries=places,geometry"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places,geometry"></script>
   
   <link href="https://fonts.googleapis.com/css2?family=Poly&display=swap" rel="stylesheet">
   <link href="mobile.css" rel="stylesheet">
+  
 
   <style>
     /* Limit the site to smartphones only */
     @media only screen and (max-width: 767px) {
       html, body {
-        height: 100%;
-        width: 100%;
-        overflow-x: hidden;
-        margin: 0;
-        padding: 0;
-        font-family: 'Poly', serif;
-      }
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poly', serif;
+}
+
 
       /* Fixed top bar */
       .navbar {
@@ -32,187 +34,167 @@
         background-color: #ffffff;
         color: rgb(0, 0, 0);
         display: flex;
-        justify-content: center; 
-        align-items: center; 
+        justify-content: center;
+        align-items: center;
         padding: 0;
         height: 70px;
         z-index: 1000;
         box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
       }
 
-      /* Style for the arrows */
-      .swiper-button-prev-custom, .swiper-button-next-custom {
-        color: rgb(0, 0, 0);
-        font-size: 24px;
-        cursor: pointer;
-        margin: 0 100px; 
-      }
-
       .menu-toggle {
         cursor: pointer;
         font-size: 24px;
-        margin: 0; 
-        line-height: 50px; 
+        margin: 0;
+        line-height: 50px;
       }
 
       /* Dropdown menu */
-      .menu {
-        display: none;
-        background-color: #ffffff;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        z-index: 999;
-      }
+.menu {
+  display: none;
+  background-color: #ffffff;
+  position: fixed;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-      .menu ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
+.menu ul {
+  list-style: none;
+  padding: 0;
+  
+}
 
-      .menu ul li {
-        padding: 10px;
-        border-bottom: 1px solid #000000;
-      }
+.menu ul li {
+  padding: 10px;
+  border-bottom: 1px solid #ffffff;
+  
+}
 
-      .menu ul li a {
-        color: black;
-        text-decoration: none;
-        display: block;
-        font-size: 20px;
-      }
+.menu ul li a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
+}
 
-      .menu.show {
-        display: block; 
-      }
-    }
+.menu.show {
+  display: block;
+  z-index: 1000;
+  margin-top: -2.95vh;
+}
+}
+
   </style>
 </head>
 <body>
 
+  <!-- Fixed top bar with centered hamburger button -->
   <div class="navbar">
-    <div class="swiper-button-prev-custom" id="swiper-button-prev-custom"></div> 
-    <div class="menu-toggle" id="menu-toggle">☰</div> 
-    <div class="swiper-button-next-custom" id="swiper-button-next-custom"></div> 
+    <div class="swiper-button-prev-custom" id="swiper-button-prev-custom"></div> <!-- Left arrow -->
+    <div class="menu-toggle" id="menu-toggle">☰</div> <!-- Hamburger button -->
+    <div class="swiper-button-next-custom" id="swiper-button-next-custom"></div> <!-- Right arrow -->
   </div>
 
-  <div class="menu" id="menu">
-    <ul>
-      <li><a href="m.indexen.html">Home</a></li>
-      <li><a href="m.faqen.html">FAQ</a></li>
-      <li style="color:rgb(0, 17, 255);font-size: 20px;">TRANSLATE</li>
-      <li><a href="m.privacy.html">ITALIAN</a></li>
-      <li><a href="m.privacyen.html">ENGLISH</a></li>
-      <li><a href="m.privacyfr.html">FRENCH</a></li>
-      <li><a href="m.privacyes.html">SPANISH</a></li>
-    </ul>
-  </div>
+   <!-- Dropdown menu -->
+<div class="menu" id="menu">
+  <ul>
+    <li><a href="m.indexen.html" style="font-family: 'Roboto', sans-serif;">Home</a></li>
+    <li><a href="m.contact-usen.html" style="font-family: 'Roboto', sans-serif;">Free Consultation</a></li>
+    <li><a href="m.faqenß.html" style="font-family: 'Roboto', sans-serif;">FAQ</a></li>
+    <li style="color:rgb(10, 29, 155);font-size: 20px; font-family: 'Roboto', sans-serif;">TRANSLATE</li>
+    <li style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+      <a href="m.privacy.html" style="text-decoration: none; font-family: 'Roboto', sans-serif;">IT</a>
+      <a href="m.privacyen.html" style="text-decoration: none; font-family: 'Roboto', sans-serif;">EN</a>
+      <a href="m.privacyfr.html" style="text-decoration: none; font-family: 'Roboto', sans-serif;">FR</a>
+      <a href="m.privacyes.html" style="text-decoration: none; font-family: 'Roboto', sans-serif;">ES</a>
+    </li>
+  </ul>
+</div>
 
-  <div class="swiper-container" style="margin-top: -2%;">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide" style="background-image: url('images/heromobile1.jpg'); display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; text-align: center; background-size: cover; background-position: center;">
-        
-        <div style="
+  <!-- Swiper container with 5 slides -->
+  <div class="container-privacy" style="margin-top: 10vh;">
+    <div class="privacy-content" style="
         width: 80vw;
+        max-width: 1200px;
         margin: 40px auto;
         padding: 30px;
-        margin-top: 100vh;
-        border: 1px solid #ddd;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        border-radius: 0px;
+        border-top: 2px solid #ffffff;
+        border-bottom: 2px solid #ffffff;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.0);
         background-color: #fff;
-        opacity: 0.9;">
+        opacity: 0.95;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    ">
+        <!-- Logo -->
         <div><center><img class="deseo-title" src="images/loguo.png" width="25%" style="padding-right:10px;"></center></div>
-        <div class="deseo-title" style="margin-top:15px;margin-bottom:-40px;font-size: 5vw;">PRIVACY POLICY</div></center>
-<br>
-<br>
-<div class="deseo-privacy">
-    <p style="font-size: 22px; line-height: 1.6; color: #555;padding-left:50px;padding-right:50px;">
-        Your privacy is important to us. This privacy policy explains what personal data we collect, how we use it, and what your rights are regarding your data.
-    </p>
+        
+        <!-- Main Title -->
+        <div class="deseo-title" style="margin-top: 15px; font-size: 5vw; text-align: center;">PRIVACY POLICY</div>
+        
+        <!-- Privacy content -->
+        <div class="deseo-privacy" style="width: 100%; text-align: justify; padding: 30px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+            <p style="font-size: 22px; line-height: 1.6; color: #555;">
+                Your privacy is important to us. This privacy policy explains what personal data we collect, how we use it, and your rights regarding it.
+            </p>
 
-    <h3 style="color: #333;padding-left:50px;padding-right:50px;">1. Personal Data Collected</h3>
-    <p style="font-size: 22px; line-height: 1.6; color: #555;padding-left:50px;padding-right:50px;">
-        We collect various types of personal data to provide and improve our services. The data we collect includes:
-    </p>
-    <ul style="font-size: 22px; line-height: 1.6; color: #555;padding-left:50px;padding-right:50px;">
-        <li>Contact information, such as name, email address, and phone number.</li>
-        <li>Usage data, such as how you interact with our site.</li>
-        <li>Payment information, where applicable.</li>
-    </ul>
+            <h3 style="color: #333;">1. Personal Data Collected</h3>
+            <p style="font-size: 22px; line-height: 1.6; color: #555;">
+                We collect various types of personal data to provide and improve our services. The data we collect includes:
+            </p>
+            <ul style="font-size: 22px; line-height: 1.6; color: #555;">
+                <li>Contact information, such as name, email address, and phone number.</li>
+                <li>Usage data, such as how you interact with our site.</li>
+                <li>Payment information, where applicable.</li>
+            </ul>
 
-    <h3 style="color: #333;padding-left:50px;padding-right:50px;">2. How We Use Data</h3>
-    <p style="font-size: 22px; line-height: 1.6; color: #555;padding-left:50px;padding-right:50px;">
-        We use your personal data for various purposes, including:
-    </p>
-    <ul style="font-size: 22px; line-height: 1.6; color: #555; padding-left:50px;padding-right:50px;">
-        <li>To provide the requested services.</li>
-        <li>To improve user experience on our site.</li>
-        <li>To communicate with you about our services and promotions.</li>
-    </ul>
+            <h3 style="color: #333;">2. How We Use the Data</h3>
+            <p style="font-size: 22px; line-height: 1.6; color: #555;">
+                We use your personal data for various purposes, including:
+            </p>
+            <ul style="font-size: 22px; line-height: 1.6; color: #555;">
+                <li>Providing the requested services.</li>
+                <li>Improving the user experience on our site.</li>
+                <li>Communicating with you about our services and promotions.</li>
+            </ul>
 
-    <h3 style="color: #333;padding-left:50px;padding-right:50px;">3. Data Sharing</h3>
-    <p style="font-size: 22px; line-height: 1.6; color: #555;padding-left:50px;padding-right:50px;">
-        We do not share your personal data with third parties unless strictly necessary to provide the requested services or required by law.
-    </p>
+            <h3 style="color: #333;">3. Data Sharing</h3>
+            <p style="font-size: 22px; line-height: 1.6; color: #555;">
+                We do not share your personal data with third parties unless it is strictly necessary to provide the requested services or required by law.
+            </p>
 
-    <h3 style="color: #333;padding-left:50px;padding-right:50px;">4. Data Security</h3>
-    <p style="font-size: 22px; line-height: 1.6; color: #555;padding-left:50px;padding-right:50px;">
-        We are committed to protecting your personal data with appropriate security measures to prevent unauthorized access, disclosure, or alteration.
-    </p>
+            <h3 style="color: #333;">4. Data Security</h3>
+            <p style="font-size: 22px; line-height: 1.6; color: #555;">
+                We are committed to protecting your personal data with appropriate security measures to prevent unauthorized access, disclosure, or alteration.
+            </p>
 
-    <h3 style="color: #333;padding-left:50px;padding-right:50px;">5. User Rights</h3>
-    <p style="font-size: 22px; line-height: 1.6; color: #555;padding-left:50px;padding-right:50px;">
-        You have the right to access, rectify, delete your personal data, or limit its processing. You can also object to the processing of your data for specific purposes and request data portability.
-    </p>
+            <h3 style="color: #333;">5. User Rights</h3>
+            <p style="font-size: 22px; line-height: 1.6; color: #555;">
+                You have the right to access, correct, delete your personal data, or restrict its processing. You can also object to the processing of your data for certain purposes and request data portability.
+            </p>
 
-    <h3 style="color: #333;padding-left:50px;padding-right:50px;">6. Changes to This Policy</h3>
-    <p style="font-size: 22px; line-height: 1.6; color: #555;padding-left:50px;padding-right:50px;">
-        We reserve the right to modify this privacy policy at any time. Any changes will be posted on this page.
-    </p>
+            <h3 style="color: #333;">6. Changes to This Policy</h3>
+            <p style="font-size: 22px; line-height: 1.6; color: #555;">
+                We reserve the right to modify this privacy policy at any time. Any changes will be posted on this page.
+            </p>
 
-    <p style="font-size: 22px; line-height: 1.6; color: #555;padding-left:50px;padding-right:50px;">
-        If you have any questions about our privacy policy, feel free to contact us at: <a href="mailto:info@deseoapartments.com" style="color: #3498db;">info@deseoapartments.com</a>.
-    </p>
+            <p style="font-size: 21px; line-height: 1.6; color: #555;">
+                If you have any questions regarding our privacy policy, do not hesitate to contact us at: <a href="mailto:info@deseoapartments.com" style="color: #3498db;">info@deseoapartments.com</a>.
+            </p>
+        </div>
+    </div>
 </div>
-</div>
-</div>
-</div>
 
-<script>
-    function toggleAnswer(id) {
-        var answers = document.querySelectorAll('.faq-answer');
-        var questions = document.querySelectorAll('.faq-question');
-
-        answers.forEach(function(answer) {
-            if (answer.id !== id) {
-                answer.style.display = 'none';
-            }
-        });
-
-        questions.forEach(function(question) {
-            if (question.getAttribute("onclick").includes(id)) {
-                question.classList.toggle('active');
-            } else {
-                question.classList.remove('active');
-            }
-        });
-
-        var answer = document.getElementById(id);
-        if (answer.style.display === "block") {
-            answer.style.display = "none";
-        } else {
-            answer.style.display = "block";
-        }
-    }
-</script>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-<script src="welcome.js"></script>
-<script src="mobile.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="welcome.js"></script>
+  <script src="mobile.js"></script>
 
 </body>
 </html>

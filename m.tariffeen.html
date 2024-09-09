@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Deseo Apartments - We Manage Short-Term Rentals Across Italy</title>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places,geometry"></script>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poly&display=swap" rel="stylesheet">
+  <link href="mobile.css" rel="stylesheet">
+  
+
+  <style>
+      /* Fixed top bar */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        opacity: 0.7;
+        color: rgb(0, 0, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        height: 7vh;
+        z-index: 1000;
+        box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
+      }
+
+      .menu-toggle {
+        cursor: pointer;
+        font-size: 24px;
+        margin: 0;
+        line-height: 50px;
+      }
+
+      /* Dropdown menu */
+      .menu {
+        display: none;
+        background-color: #ffffff;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 1000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .menu ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .menu ul li {
+        padding: 10px;
+        border-bottom: 1px solid #ffffff;
+      }
+
+      .menu ul li a {
+        color: black;
+        text-decoration: none;
+        display: block;
+        font-size: 20px;
+      }
+
+      .menu.show {
+        display: block;
+        z-index: 1000;
+        margin-top: -2.95vh;
+      }
+
+      /* Fixed top bar */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        height: 70px;
+        z-index: 1000;
+        box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
+      }
+
+      /* Arrow styles */
+      .swiper-button-prev-custom, .swiper-button-next-custom {
+        color: rgb(0, 0, 0);
+        font-size: 24px;
+        cursor: pointer;
+        margin: 0 100px;
+      }
+
+      /* Dropdown menu */
+      .menu {
+        display: none;
+        background-color: #ffffff;
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 999;
+      }
+
+      .menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .menu ul li {
+        padding: 10px;
+        border-bottom: 1px solid #ffffff;
+      }
+
+      .menu ul li a {
+        color: black;
+        text-decoration: none;
+        display: block;
+        font-size: 20px;
+      }
+
+      .menu.show {
+        display: block;
+      }
+  </style>
+</head>
+<body>
+
+  <!-- Fixed top bar with centered hamburger button -->
+  <div class="navbar">
+    <div class="swiper-button-prev-custom" id="swiper-button-prev-custom"></div> <!-- Left arrow -->
+    <div class="menu-toggle" id="menu-toggle">☰</div> <!-- Hamburger button -->
+    <div class="swiper-button-next-custom" id="swiper-button-next-custom"></div> <!-- Right arrow -->
+  </div>
+
+  <!-- Dropdown menu -->
+<div class="menu" id="menu">
+  <ul>
+    <li><a href="m.indexen.html" style="font-family: 'Roboto', sans-serif;">Home</a></li>
+    <li><a href="m.contact-usen.html" style="font-family: 'Roboto', sans-serif;">Free Consultation</a></li>
+    <li><a href="m.faqen.html" style="font-family: 'Roboto', sans-serif;">FAQ</a></li>
+    <li style="color:rgb(10, 29, 155);font-size: 20px; font-family: 'Roboto', sans-serif;">TRANSLATE</li>
+    <li style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+      <a href="m.tariffe.html" style="text-decoration: none; font-family: 'Roboto', sans-serif;">IT</a>
+      <a href="m.tariffeen.html" style="text-decoration: none; font-family: 'Roboto', sans-serif;">EN</a>
+      <a href="m.tariffefr.html" style="text-decoration: none; font-family: 'Roboto', sans-serif;">FR</a>
+      <a href="m.tariffees.html" style="text-decoration: none; font-family: 'Roboto', sans-serif;">ES</a>
+    </li>
+  </ul>
+</div>
+
+  
+<div style="
+  width: 75vw;
+  margin-left: -10%;
+  overflow: hidden;
+  max-width: auto;
+  margin: 0px auto;
+  padding: 30px;
+  margin-top: 10vh;
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0px;
+  background-color: #ffffff91;
+  opacity: 1;">
+  
+  <div><center><img class="deseo-title" src="images/loguo.png" width="25%" style="padding-right:10px;"></center></div>
+  <center><div style="margin-top:2vh;font-size: 5vw;margin-bottom:-5%;">HOW DO WE CALCULATE THE RATES?</div></center>
+  
+  <br><br>
+  <div class="deseo-privacy">
+    <p style="font-size: 20px;text-align: justify; line-height: 1; padding-left:0.3vh;padding-right:0.3vh;">The monthly income of your apartment is calculated by multiplying the average nightly rate by the number of nights available in the month. This calculation takes into account several key factors: the demand in your area, the location of the apartment, and the number of beds you can offer.</p>
+    <p style="font-size: 20px;text-align: justify; line-height: 1; padding-left:0.3vh;padding-right:0.3vh;">However, it's important to remember that seasonality plays a crucial role in determining prices. During high season months, such as summer or holidays, the nightly rates may increase significantly due to increased tourist demand. Likewise, during low season periods, prices may be lower.</p>
+    <p style="font-size: 20px;text-align: justify; line-height: 1; padding-left:1vh;padding-right:0.3vh;">The estimate we provide is indicative, although highly reliable, because it is based on in-depth market research specific to the Italian tourism sector. We have analyzed a wide range of data, from seasonal trends to local competition, to offer you a realistic and useful framework for planning the management of your apartment.</p>
+    <p style="font-size: 20px;text-align: justify; line-height: 1; padding-left:0.3vh;padding-right:0.3vh;">We also consider your apartment's ability to attract tourists based on criteria such as proximity to points of interest, quality of reviews, and travelers' preferences for certain types of accommodations. Thanks to this information, the estimate you receive not only reflects the economic potential of your property but also helps you make strategic decisions on how to maximize your income.</p>
+  </div>
+</div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="welcome.js"></script>
+  <script src="mobile.js"></script>
+
+</body>
+</html>

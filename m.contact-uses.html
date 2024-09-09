@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Contáctanos - Deseo Apartments - Gestionamos Alquileres a Corto Plazo en Toda Italia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poly&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Limitar el sitio solo a smartphones */
+    @media only screen and (max-width: 767px) {
+      html, body {
+        height: 100%;
+        width: 100%;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        font-family: 'Poly', serif;
+      }
+
+      /* Barra fija en la parte superior */
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        height: 70px;
+        z-index: 1000;
+        box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
+      }
+
+      .menu-toggle {
+        cursor: pointer;
+        font-size: 24px;
+        margin: 0; /* Asegúrate de que no haya margen */
+        line-height: 50px; /* Alinear verticalmente el texto dentro del botón */
+      }
+
+      /* Menú desplegable */
+.menu {
+  display: none;
+  background-color: #ffffff;
+  position: fixed; /* Fijo al viewport */
+  top: 70px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1000; /* Asegúrate de que esté por encima de todo lo demás */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añadir sombra para visibilidad */
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  
+}
+
+.menu ul li {
+  padding: 10px;
+  border-bottom: 1px solid #ffffff;
+  
+}
+
+.menu ul li a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  font-size: 20px;
+}
+
+.menu.show {
+  display: block; /* Muestra el menú cuando está activo */
+  z-index: 1000; /* Asegúrate de que esté por encima del contenido */
+  margin-top: -2.95vh;
+}
+
+      /* Contenedor del formulario */
+      .form-container {
+        background: #fff;
+        padding: 20px; /* Reducido para ajustarse mejor a los smartphones */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        width: 90%; /* Adaptado para smartphones */
+        max-width: 460px; /* Adaptado para smartphones */
+        margin: 20px auto; /* Espacio superior e inferior */
+        border-radius: 0px; /* Bordes ligeramente redondeados */
+        text-align: center;
+        font-size: 16px; /* Reducido para mejorar la legibilidad */
+        margin-top: 8vh;
+      }
+
+      .form-container h2 {
+        margin-bottom: 15px; /* Espacio inferior reducido */
+      }
+
+      .form-container input,
+      .form-container textarea {
+        width: calc(100% - 20px); /* Adaptado para el padding */
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 0px;
+        font-size: 16px; /* Reducido para mejorar la legibilidad */
+      }
+
+      .form-container button {
+        width: calc(100% - 20px); /* Adaptado para el padding */
+        padding: 12px; /* Adaptado para smartphones */
+        background-color: #4285f4;
+        border: none;
+        color: white;
+        font-size: 16px; /* Reducido para mejorar la legibilidad */
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      .form-container button:hover {
+        background-color: #357ae8;
+      }
+
+     .logo  {
+      width: 26vw;
+      height: auto;
+    }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra fija en la parte superior con botón hamburguesa centrado -->
+  <div class="navbar">
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+  </div>
+
+  <!-- Menú desplegable -->
+  <div class="menu" id="menu">
+    <ul>
+      <li><a href="m.indexes.html">Inicio</a></li>
+      <li><a href="m.contact-uses.html">Consulta Gratuita</a></li>
+      <li><a href="m.faqes.html">Preguntas Frecuentes</a></li>
+      <li style="color:rgb(10, 29, 155);font-size: 20px;">TRADUCIR</li>
+      <li style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+        <a href="m.contact-us.html" style="text-decoration: none;">IT</a>
+        <a href="m.contact-usen.html" style="text-decoration: none;">EN</a>
+        <a href="m.contact-usfr.html" style="text-decoration: none;">FR</a>
+        <a href="m.contact-uses.html" style="text-decoration: none;">ES</a>
+      </li>
+    </ul>
+  </div>
+
+
+  <!-- Contenido de la página -->
+  <div class="form-container">
+    <center><div><img src="images/loguo.png" class="logo"></div></center>
+    <h2>RELLENA EL FORMULARIO PARA CONTACTARNOS</h2>
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="7433205f-e93a-46c1-a284-4a7839010a8a">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Nombre" required>
+      </div>
+      <div class="form-group">
+        <input type="text" name="surname" placeholder="Apellido" required>
+      </div>
+      <div class="form-group">
+        <input type="text" name="phone" placeholder="Teléfono" required>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+      </div>
+      <div class="form-group">
+        <input type="text" name="property_count" placeholder="¿Cuántas propiedades posees?" required>
+      </div>
+      <div class="form-group">
+        <input type="text" name="city" placeholder="¿En qué ciudad?" required>
+      </div>
+      <div class="form-group">
+        <textarea name="message" placeholder="Mensaje" required></textarea>
+      </div>
+      <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+</body>
+</html>
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script src="welcome.js"></script>
+  <script src="mobile.js"></script>
+
+</body>
+</html>
