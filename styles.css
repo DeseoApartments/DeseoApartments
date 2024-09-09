@@ -23,11 +23,11 @@ body, html {
 
 .centered-iframe {
     width: 80%; /* Regola la larghezza come preferisci */
-    height: 90%; /* Regola l'altezza come preferisci */
+    height: 60%; /* Regola l'altezza come preferisci */
     border: none; /* Rimuove i bordi */
     background: transparent; /* Sfondo trasparente */
     position: absolute;
-    margin-top: -3vh;
+    margin-top: -1vh;
     left: 73vw;
     transform: translate(-50%, -50%);
     overflow: hidden;

@@ -1703,9 +1703,10 @@ function calculatePrice() {
 
         const totalPrice = Math.floor(nights * priceRange * seasonalMultiplier * priceMultiplier);
         document.getElementById("price-result").innerHTML = `
-            <center><div><span style="color: black;margin-top:20px;margin-bottom:35px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:1.5vw;">MONTHLY INCOME</span></div>
-            <span style="color: rgba(44, 44, 44, 0.701);font-size: 5vh;margin-top:3vh;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">${totalPrice} €</span>
-            <div><a href="tariffe.html" style="color:blue;font-size:0.7vw;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Formula</a></div></center><br>
+            <center><div><span style="color: black;margin-top:20px;margin-bottom:35px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:1.2vw;">MONTHLY INCOME</span></div>
+            <span style="color: rgba(44, 44, 44, 0.701);font-size: 6vh;margin-top:3vh;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">${totalPrice} €</span>
+           <br>
+            <div><a href="tariffe.html" style="color:blue;font-size:0.5vw;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Come calcoliamo le tariffe?</a></div></center><br>
             `
             ;
     } else {
@@ -1720,9 +1721,10 @@ function calculatePrice() {
 
             const totalPrice = Math.floor(nights * discountedPricePerNight * seasonalMultiplier * priceMultiplier);
             document.getElementById("price-result").innerHTML = `
-                <center><div><span style="color: black;margin-top:20px;margin-bottom:35px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:1.5vw;">MONTHLY INCOME</span></div>
-            <span style="color: rgba(44, 44, 44, 0.701);font-size: 5vh;margin-top:3vh;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">${totalPrice} €</span>
-            <div><a href="tariffe.html" style="color:blue;font-size:0.7vw;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Formula</a></div></center><br>`;
+                <center><div><span style="color: black;margin-top:20px;margin-bottom:35px;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;font-size:1.2vw;">MONTHLY INCOME</span></div>
+            <span style="color: rgba(44, 44, 44, 0.701);font-size: 6vh;margin-top:3vh;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">${totalPrice} €</span>
+            <br>
+            <div><a href="tariffe.html" style="color:blue;font-size:0.5vw;font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Come calcoliamo le tariffe?</a></div></center><br>`;
         } else {
             console.error("Non è stato possibile trovare una città vicina valida o la città non è riconosciuta.");
         }
