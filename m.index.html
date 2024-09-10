@@ -213,54 +213,91 @@ html {
               </h1>
             </center>
           </div>
-          
-          <!-- Prima proprietà -->
-          <div class="casebox" style="border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; border-left: none; border-right: none; border-radius: 0px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);background-color: rgba(255, 255, 255, 0.7);">
+
+          <!-- BOLOGNA PM -->
+<div class="casebox" style="border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; border-left: none; border-right: none; border-radius: 0px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); background-color: rgba(255, 255, 255, 0.7);">
   <div class="row">
     <a href="battisti.html">
-    <center><img src="images/casa1.jpg" alt="Item 1 Image" style="width: 95%; height: auto; border-radius: 8px;  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);">
+      <center>
+        <img src="images/bologna.png" alt="Item 1 Image" style="width: 95%; height: auto; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);">
+      </center>
     </a>
-    <h2 style="padding:10px;margin-top: 15px; text-align: center; font-size: 5vw;">BOLOGNA, CENTRO STORICO</h2>
-    <p style="font-size: 3.7vw;padding:10px;margin-bottom: 10px; margin-top: -7%; text-align: center;">
-      Elegante appartamento nel centro storico di Bologna. Circondato da luoghi di interesse storico-culturale.
-    </p>
+    <h2 style="padding:10px; margin-top: 15px; text-align: center; font-size: 7vw;">BOLOGNA</h2>
     <center>
-      <button class="reservebutton" onclick="window.location.href='battisti.html'">Prenota ora</button>
+      <button class="reservebutton" onclick="showApartments()">VISUALIZZA GLI APPARTAMENTI A BOLOGNA</button>
     </center>
   </div>
 </div>
 
-<!-- Seconda proprietà -->
-<div class="casebox" style="border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; border-left: none; border-right: none; border-radius: 0px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);background-color: rgba(255, 255, 255, 0.7);">
-  <div class="row">
-    <a href="cavazza.html">
-      <center><img src="images/casa2.jpg" alt="Item 2 Image" style="width: 95%; height: auto; border-radius: 8px;"></center>
-    </a>
-    <h2 style="padding:10px;margin-top: 15px; text-align: center; font-size: 5vw;">BOLOGNA, ZONA MURRI</h2>
-    <p style="font-size: 3.7vw;padding:10px;margin-bottom: 10px; margin-top: -7%; text-align: center;">
-      Luminoso appartamento con terrazza, vicino al centro di Bologna e ai Giardini Margherita. Ideale per famiglie, coppie o amici.
-    </p>
-    <center>
-      <button class="reservebutton" onclick="window.location.href='cavazza.html'">Prenota ora</button>
-    </center>
+<!-- Altri appartamenti, inizialmente nascosti -->
+<div id="apartments" style="display:none;">
+
+  <!-- Prima proprietà -->
+  <div class="casebox" style="border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); background-color: rgba(255, 255, 255, 0.7);">
+    <div class="row">
+      <a href="battisti.html">
+        <center><img src="images/casa1.jpg" alt="Item 1 Image" style="width: 95%; height: auto; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);"></center>
+      </a>
+      <h2 style="padding:10px; margin-top: 15px; text-align: center; font-size: 5vw;">BOLOGNA, CENTRO STORICO</h2>
+      <p style="font-size: 3.7vw; padding:10px; margin-bottom: 10px; margin-top: -7%; text-align: center;">
+        Elegante appartamento nel centro storico di Bologna. Circondato da luoghi di interesse storico-culturale.
+      </p>
+      <center>
+        <button class="reservebutton" onclick="window.location.href='battisti.html'">Prenota ora</button>
+      </center>
+    </div>
   </div>
+
+  <!-- Seconda proprietà -->
+  <div class="casebox" style="border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); background-color: rgba(255, 255, 255, 0.7);">
+    <div class="row">
+      <a href="cavazza.html">
+        <center><img src="images/casa2.jpg" alt="Item 2 Image" style="width: 95%; height: auto; border-radius: 8px;"></center>
+      </a>
+      <h2 style="padding:10px; margin-top: 15px; text-align: center; font-size: 5vw;">BOLOGNA, ZONA MURRI</h2>
+      <p style="font-size: 3.7vw; padding:10px; margin-bottom: 10px; margin-top: -7%; text-align: center;">
+        Luminoso appartamento con terrazza, vicino al centro di Bologna e ai Giardini Margherita. Ideale per famiglie, coppie o amici.
+      </p>
+      <center>
+        <button class="reservebutton" onclick="window.location.href='cavazza.html'">Prenota ora</button>
+      </center>
+    </div>
+  </div>
+
+  <!-- Terza proprietà -->
+  <div class="casebox" style="border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); background-color: rgba(255, 255, 255, 0.7);">
+    <div class="row">
+      <a href="castelmerlo.html">
+        <center><img src="images/casa3.jpg" alt="Item 3 Image" style="width: 95%; height: auto; border-radius: 8px;"></center>
+      </a>
+      <h2 style="padding:10px; margin-top: 15px; text-align: center; font-size: 5vw;">BOLOGNA, ZONA NAVILE</h2>
+      <p style="font-size: 3.7vw; padding:10px; margin-bottom: 10px; margin-top: -7%; text-align: center;">
+        Accogliente monolocale a Bologna al piano terra, ideale per single o coppie e professionisti.
+      </p>
+      <center>
+        <button class="reservebutton" onclick="window.location.href='castelmerlo.html'">Prenota ora</button>
+      </center>
+    </div>
+  </div>
+
+  <!-- Quarta proprietà -->
+  <div class="casebox" style="border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); background-color: rgba(255, 255, 255, 0.7);">
+    <div class="row">
+      <a href="https://www.airbnb.it/rooms/1173767918171033040?source_impression_id=p3_1725895144_P3dFWxA4gCELbg9w">
+        <center><img src="images/casa4.jpg" alt="Item 4 Image" style="width: 95%; height: auto; border-radius: 8px;"></center>
+      </a>
+      <h2 style="padding:10px; margin-top: 15px; text-align: center; font-size: 5vw;">BOLOGNA, SANT'ORSOLA</h2>
+      <p style="font-size: 3.7vw; padding:10px; margin-bottom: 10px; margin-top: -7%; text-align: center;">
+        Tranquillo trilocale a Bologna distante 50 metri dall'ospedale Sant'Orsola.
+      </p>
+      <center>
+        <button class="reservebutton" onclick="window.location.href='https://www.airbnb.it/rooms/1173767918171033040?source_impression_id=p3_1725895144_P3dFWxA4gCELbg9w'">Prenota ora</button>
+      </center>
+    </div>
+  </div>
+
 </div>
 
-<!-- Terza proprietà -->
-<div class="casebox" style="border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; border-left: none; border-right: none; border-radius: 0px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);background-color: rgba(255, 255, 255, 0.7);">
-  <div class="row">
-    <a href="castelmerlo.html">
-      <center><img src="images/casa3.jpg" alt="Item 3 Image" style="width: 95%; height: auto; border-radius: 8px;"></center>
-    </a>
-    <h2 style="padding:10px;margin-top: 15px; text-align: center; font-size: 5vw;">BOLOGNA, ZONA NAVILE</h2>
-    <p style="font-size: 3.7vw;padding:10px;margin-bottom: 10px; margin-top: -7%; text-align: center;">
-      Accogliente monolocale a Bologna al piano terra, ideale per single o coppie e professionisti.
-    </p>
-    <center>
-      <button class="reservebutton" onclick="window.location.href='castelmerlo.html'">Prenota ora</button>
-    </center>
-  </div>
-</div>
           
           
        
@@ -382,16 +419,13 @@ html {
         </center>
         
         <p style="font-size: 4.3vw; line-height: 1.6; text-align: justify; padding: 7%;">
-          <b>Deseo</b> è il partner di fiducia nella <b>Gestione di Affitti Brevi</b> per proprietari di appartamenti in tutta Italia. Siamo specializzati nel valorizzare al meglio il tuo immobile, offrendoti una gestione completa e senza preoccupazioni. Dalla manutenzione alla gestione delle prenotazioni, il nostro obiettivo è garantire un'esperienza eccellente per i tuoi ospiti, mentre tu ottieni il massimo ritorno economico.
+          <b>Deseo</b> offre una gestione immobiliare completa per affitti a breve, medio e a lungo termine. Ci occupiamo di tutti gli aspetti: dalla manutenzione alla gestione delle prenotazioni, dalle pratiche contrattuali alle visite con potenziali inquilini.
         </p>
         
         <p style="font-size: 4.3vw; line-height: 1.6; text-align: justify; padding: 7%; margin-top: -10%;">
-          Con <b>Deseo</b>, non dovrai più occuparti dei dettagli operativi: il nostro team è sempre pronto a gestire ogni aspetto, assicurandoti <b>serenità</b> e <b>ottimizzazione dei rendimenti</b>. Creiamo soluzioni su misura per ogni esigenza, con un'attenzione particolare alla qualità e all'efficienza.
+          In caso di recesso, ci occupiamo prontamente della ricerca di nuovi inquilini, garantendo una gestione senza interruzioni. Il nostro obiettivo è semplificare la vita dei proprietari, prendendoci cura di ogni dettaglio operativo in modo efficiente e professionale.
         </p>
-        
-        <p style="font-size: 4.3vw; line-height: 1.6; text-align: justify; padding: 7%; margin-top: -10%;">
-          Affidandoti a noi, ti unisci a una rete di proprietari che ha scelto di elevare il proprio immobile a nuovi livelli di successo. Lascia che <b>Deseo</b> si occupi di tutto e scopri quanto può essere semplice trasformare il tuo appartamento in una fonte di reddito affidabile e ben gestita.
-        </p>
+       
       </div>
       
       
@@ -430,10 +464,30 @@ html {
     <div class="swiper-pagination"></div>
   </div>
 
-  <!-- Swiper JS -->
+
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script src="m.welcome.js"></script>
   <script src="mobile.js"></script>
+    <!-- NASCONDI APPARTAMENTI JS -->
+  <script>function showApartments() {
+    var apartments = document.getElementById("apartments");
+    
+    // Se gli appartamenti sono nascosti, li mostriamo e scorriamo verso l'elemento
+    if (apartments.style.display === "none" || apartments.style.display === "") {
+        apartments.style.display = "block";
+
+        // Usa un offset per aggiungere margine durante lo scroll
+        window.scrollTo({
+            top: apartments.getBoundingClientRect().top + window.pageYOffset - 100, // 100px di margine dall'alto
+            behavior: 'smooth'
+        });
+    } else {
+        apartments.style.display = "none";
+    }
+}
+
+
+</script>
 
   
 </body>
