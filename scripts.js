@@ -35,10 +35,10 @@ const images = [
     {
         src: "images/casa4.jpg",
         descriptions: {
-            it: "Tranquillo trilocale a 50 metri dall'ospedale Sant'Orsola.",
-            en: "Quiet three-room apartment 50 meters from Sant'Orsola hospital.",
-            fr: "Tranquille appartement de trois pièces à 50 mètres de l'hôpital Sant'Orsola.",
-            es: "Tranquilo apartamento de tres habitaciones a 50 metros del hospital Sant'Orsola."
+            it: "Tranquillo trilocale a Bologna distante 50 metri dall'ospedale Sant'Orsola.",
+            en: "Bologna. Quiet three-room apartment 50 meters from Sant'Orsola hospital.",
+            fr: "Bologne. Tranquille appartement de trois pièces à 50 mètres de l'hôpital Sant'Orsola.",
+            es: "Bolonia. Tranquilo apartamento de tres habitaciones a 50 metros del hospital Sant'Orsola."
         },
         buttonText: { it: "PRENOTA ORA", en: "BOOK NOW", fr: "RÉSERVEZ MAINTENANT", es: "RESERVA AHORA" },
         link: "https://www.airbnb.it/rooms/1173767918171033040?source_impression_id=p3_1725895144_P3dFWxA4gCELbg9w"
