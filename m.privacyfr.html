@@ -184,10 +184,18 @@
                 Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment. Les modifications éventuelles seront publiées sur cette page.
             </p>
 
-            <h3 style="color: #333;">7. Utilisation de cookies</h3>
-            <p style="font-size: 22px; line-height: 1.6; color: #555;">
-              Notre site utilise des cookies pour améliorer l'expérience de navigation et collecter des informations pour améliorer les services. Vous pouvez gérer les cookies via les paramètres de votre navigateur. En utilisant notre site, vous acceptez l'utilisation des cookies conformément à la loi.
-            </p>
+            <h3 style="color: #333;">7. Utilisation des cookies</h3>
+<p style="font-size: 22px; line-height: 1.6; color: #555;">
+    Notre site utilise des cookies pour améliorer l'expérience de navigation et collecter des informations utiles afin d'améliorer les services. Vous pouvez gérer les cookies via les paramètres de votre navigateur. En utilisant notre site, vous acceptez l'utilisation des cookies conformément à la loi.
+    <center><button style="background-color: red; color: white; border: 0px;" id="revoke-cookies">Révoquer le consentement aux cookies</button></center>
+    <div id="cookieModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Le consentement aux cookies a été révoqué. Veuillez actualiser la page pour appliquer les modifications.</p>
+        </div>
+    </div>
+</p>
+
 
             <p style="font-size: 21px; line-height: 1.6; color: #555;">
                 Si vous avez des questions concernant notre politique de confidentialité, n'hésitez pas à nous contacter à l'adresse email suivante : <a href="mailto:info@deseoapartments.com" style="color: #3498db;">info@deseoapartments.com</a>.
@@ -196,10 +204,104 @@
     </div>
 </div>
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-  <script src="welcome.js"></script>
-  <script src="mobile.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+      // Funzione per cancellare tutti i cookies
+      function deleteAllCookies() {
+          const cookies = document.cookie.split(";");
+          for (let i = 0; i < cookies.length; i++) {
+              const cookie = cookies[i];
+              const eqPos = cookie.indexOf("=");
+              const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+              document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/";
+          }
+      }
+
+      // Funzione per revocare il consenso
+      function revokeConsent() {
+          localStorage.removeItem('cookiesAccepted'); // Rimuovi il consenso dai localStorage
+          deleteAllCookies(); // Cancella tutti i cookies
+          // Mostra il modal
+          document.getElementById('cookieModal').style.display = 'flex';
+      }
+
+      // Evento per il pulsante di revoca
+      document.getElementById('revoke-cookies').addEventListener('click', revokeConsent);
+
+      // Logica per chiudere il modal
+      const modal = document.getElementById('cookieModal');
+      const span = document.getElementsByClassName('close')[0];
+
+      // Quando l'utente clicca sulla "X", il modal si chiude
+      span.onclick = function () {
+          modal.style.display = 'none';
+          location.reload(); // Ricarica la pagina per applicare le modifiche
+      };
+
+      // Chiudi il modal se l'utente clicca fuori dal contenuto del modal
+      window.onclick = function (event) {
+          if (event.target == modal) {
+              modal.style.display = 'none';
+              location.reload(); // Ricarica la pagina
+          }
+      };
+  });
+</script>
+
+<style>
+  /* Stile per il modal */
+  .modal {
+      display: none; /* Nascondi il modal di default */
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+  }
+
+  /* Contenuto del modal */
+  .modal-content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 400px;
+      margin: auto;
+  }
+
+  /* Bottone di chiusura */
+  .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+  }
+</style>
+
+</div>
+</div>
+</div>
+
+
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="welcome.js"></script>
+<script src="mobile.js"></script>
+
 
 </body>
 </html>

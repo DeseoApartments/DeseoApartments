@@ -958,6 +958,19 @@ body, html {
     background-color: #45a049;
 }
 
+#revoke-cookies {
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  #revoke-cookies:hover {
+    background-color: #d43f3f;
+  }
+  
   
 
 }
