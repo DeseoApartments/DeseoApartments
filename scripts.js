@@ -173,10 +173,22 @@ function updateCoverFlow() {
         item.style.zIndex = totalItems - Math.abs(offset);
     });
 
+    //cookies
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Verifica se l'utente ha già accettato i cookies
+    if (!localStorage.getItem('cookiesAccepted')) {
+        document.getElementById('cookie-banner').style.display = 'block';
+    }
+
+    // Funzione per accettare i cookies
+    document.getElementById('accept-cookies').addEventListener('click', function () {
+        localStorage.setItem('cookiesAccepted', 'true');
+        document.getElementById('cookie-banner').style.display = 'none';
+    });
+});
+
 
 
 }
-
-
-
 

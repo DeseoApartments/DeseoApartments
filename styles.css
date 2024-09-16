@@ -921,10 +921,43 @@ body, html {
     height: 400px; /* The height is 400 pixels */
     width: 30%; /* The width is the width of the web page */
   }
+
+  
   html, body {
     height: 100%;
     margin: 0;
     padding: 0;
   }
+#cookie-banner {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+#cookie-banner p {
+    display: inline;
+    margin-right: 10px;
+}
+
+#accept-cookies {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#accept-cookies:hover {
+    background-color: #45a049;
+}
+
+  
 
 }

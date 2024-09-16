@@ -271,3 +271,58 @@ iframe {
 .reservebutton:hover {
   background-color: rgb(170, 145, 0); /* Colore più scuro al passaggio del mouse */
 }
+
+#cookie-banner {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  z-index: 1000;
+  
+  /* Flexbox per il centro orizzontale e verticale */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#cookie-banner p {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 1rem; /* Dimensione del testo */
+}
+
+#accept-cookies {
+  background-color: rgb(170, 145, 0);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem; /* Dimensione del testo del pulsante */
+}
+
+#accept-cookies:hover {
+  background-color: rgb(170, 145, 0);
+}
+
+/* Media Query per smartphone */
+@media (max-width: 768px) {
+  #cookie-banner {
+    padding: 15px; /* Riduci il padding per schermi piccoli */
+  }
+
+  #cookie-banner p {
+    font-size: 0.9rem; /* Riduci la dimensione del testo */
+    margin-bottom: 8px;
+  }
+
+  #accept-cookies {
+    padding: 8px 16px; /* Riduci il padding del pulsante */
+    font-size: 0.9rem; /* Riduci la dimensione del testo del pulsante */
+  }
+}
