@@ -6,44 +6,378 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deseo Apartments</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #f8f9fa;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        .message-box {
-            text-align: center;
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .message-box h1 {
-            font-size: 2.5rem;
-            color: #426954;
-        }
-
-        .message-box p {
-            font-size: 1.2rem;
-            color: #6c757d;
-        }
-    </style>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="message-box">
-        <h1>Sito in Aggiornamento</h1>
-        <p>Stiamo lavorando per migliorare la tua esperienza. Torna a trovarci presto!</p>
+
+    <!-- Banner dei Cookie -->
+    <!-- Banner dei Cookie -->
+    <div id="cookie-banner" class="cookie-container" style="display: none;">
+        <p>
+            Questo sito utilizza cookie per migliorare l'esperienza utente.
+            <a href="privacy.html" target="_blank" style="color: #003500;">Leggi la nostra Privacy Policy</a>.
+        </p>
+        <div>
+            <button id="accept-cookies">Accetta</button>
+            <button id="reject-cookies">Rifiuta</button>
+        </div>
     </div>
+
+
+
+    <!-- Navbar -->
+    <nav class="navbar"
+        style="background-color: #ffffff; background-image: url('images/navback1.png'); background-size: cover; background-repeat: no-repeat; background-position: center; height: auto;">
+
+        <!-- Logo -->
+        <div class="container d-flex flex-column align-items-center">
+            <a class="navbar-brand" href="#">
+                <img src="images/nero.png" alt="Deseo Apartments" class="img-fluid" style="max-height: 280px;">
+            </a>
+            <!-- Menu -->
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="servizi.html">Servizi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contatti.html">Contatti</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="consulenza.html">Consulenza</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gestioni.html">Gestioni</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenuto -->
+    <div class="container my-5">
+        <!-- Prima riga: container 1 e container 2 -->
+        <div class="row g-4">
+            <!-- Container 1 -->
+            <div class="col-md-6">
+                <div class="border rounded shadow-sm p-4 h-100 position-relative">
+                    <!-- Testo e immagine -->
+                    <div class="text-center w-100">
+                        <h1 style="font-size: 35px; color: #426954;"><b>BENVENUTI</b></h1>
+                        <br>
+                    </div>
+                    <div class="d-flex flex-wrap align-items-center">
+                        <!-- Testo a sinistra -->
+                        <div class="col-12 col-sm-8 custom-justify">
+                            <center>
+                                <h5>
+
+                                    <p><span class="keyword">DESEO</span> offre una gestione immobiliare completa per
+                                        affitti a <span class="keyword">breve</span>, <span class="keyword">medio</span>
+                                        e
+                                        <span class="keyword">lungo termine</span>.
+                                    </p>
+                                </h5>
+                                <h5>
+                                    <p><span class="keyword">Ci occupiamo di tutti gli aspetti:</span> dalla
+                                        manutenzione
+                                        alla gestione delle prenotazioni, dalle pratiche contrattuali alle visite con
+                                        potenziali
+                                        inquilini.</p>
+
+                                </h5>
+                            </center>
+                        </div>
+                        <!-- Immagine a destra -->
+                        <div class="col-12 col-sm-4 text-center">
+                            <img src="images/house.png" alt="Mascotte 0" width="50%" class="img-fluid rounded"
+                                style="max-width: auto; height: auto;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Container 2 -->
+            <div class="col-md-6">
+                <div class="border rounded shadow-sm p-4 h-100 text-center">
+                    <h1 style="font-size: 35px;color: #426954;"><b>I NOSTRI SERVIZI</b></h1>
+                    <br>
+                    <div class="d-flex flex-wrap align-items-center">
+                        <!-- Testo a sinistra -->
+                        <div class="custom-justify">
+                            <!-- Bottone Gestione Completa -->
+                            <center>
+                                <h5>
+                                    <br>
+                                    <p><span class="keyword">DESEO</span> garantisce la <span class="keyword">GESTIONE
+                                            COMPLETA</span>
+                                        del
+                                        tuo
+                                        appartamento senza il minimo sforzo per te! </p>
+                                    <a href="servizi.html" class="pacchetto-button">Scopri di più</a>
+                                </h5>
+                            </center>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Seconda riga: container 3 -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div
+                    class="border rounded shadow-sm p-4 text-center d-flex align-items-center justify-content-center flex-wrap">
+                    <!-- Immagine a sinistra -->
+                    <img src="images/mascotte.png" alt="Mascotte" class="img-fluid rounded me-3 mb-3"
+                        style="max-width: 150px;">
+                    <!-- Testo e bottone -->
+                    <div class="custom-justify">
+                        <center>
+                            <h3><span class="keyword">Sei un proprietario?</span>
+                                <center>Calcola il potenziale </center>
+                                <center>del tuo
+                                    appartamento!</center>
+                            </h3>
+                        </center>
+                        <center><a href="calcolatore.html" class="pacchetto-button" role="button">Clicca Qui</a>
+                        </center>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--Gestioni-->
+            <div class="container my-5">
+                <h2 class="text-center mb-4" style="color: #426954;"><b>DOVE SIAMO</b></h2>
+                <div class="row justify-content-center">
+                    <div class="row justify-content-center">
+                        <!-- Emilia Romagna -->
+                        <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center mb-3">
+                            <div class="border rounded shadow-sm p-4 text-center">
+                                <h4 style="color: #426954;"><b>Emilia Romagna</b></h4>
+                                <br>
+                                <img src="images/emilia.jpg" alt="Emilia Romagna" class="img-fluid rounded mb-3">
+                                <button class="pacchetto-button"
+                                    onclick="window.location.href='emilia-romagna.html'">Scopri
+                                    tutti gli appartamenti</button>
+                            </div>
+                        </div>
+
+                        <!-- Toscana -->
+                        <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center mb-3">
+                            <div class="border rounded shadow-sm p-4 text-center">
+                                <h4 style="color: #426954;"><b>Toscana</b></h4>
+                                <br>
+                                <img src="images/toscana.jpg" alt="Toscana" class="img-fluid rounded mb-3">
+                                <button class="pacchetto-button" onclick="window.location.href='toscana.html'">Scopri
+                                    tutti gli appartamenti</button>
+                            </div>
+                        </div>
+
+
+                        <!-- Bottone Vedi tutto -->
+                        <div class="text-center mt-5">
+                            <button style="margin-bottom: -20px;" class="pacchetto-button"
+                                onclick="window.location.href='gestioni.html'">VEDI TUTTO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- MONDO DESEO -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4" style="color: #426954;"><b>BRAND PARTNER</b></h2>
+        <div class="border rounded shadow-sm p-4">
+            <!-- Nolobolo Section -->
+            <div class="text-center mb-4">
+                <img src="images/nolo.png" alt="Nolobolo" class="img-fluid mb-3"
+                    style="max-width: 150px;margin-top: 10px;">
+                <h5 style="font-size: 35px; color: #426954;"><b>NoloBolo</b></h5>
+                <br>
+                <h5>
+                    <p>
+                        <span style="color:#426954;font-weight: bold;">NoloBolo</span> ti permette di noleggiare
+                        la <span style="color:#426954;font-weight: bold;">lenzuola e asciugamani puliti</span>
+
+                        per il tuo appartamento.
+                    </p> Semplifica la gestione garantendo la massima <span
+                        style="color:#426954;font-weight: bold;">qualità</span>.
+                    </p>
+                    <br>
+                    <button class="pacchetto-button" onclick="window.location.href='nolobolo.html'">
+                        SCOPRI DI PIÙ
+                    </button>
+                </h5>
+            </div>
+
+            <hr class="my-4">
+
+            <!-- Put It On Menu Section -->
+            <div class="text-center">
+                <img src="images/qrcode.png" alt="Put It On Menu" class="img-fluid mb-3"
+                    style="max-width: 150px;margin-top: 20px;">
+                <h5 style="font-size: 35px; color: #426954;"><b>Put It On Menu</b></h5>
+                <br>
+                <h5>
+                    <p>
+                        <span style="color:#426954;font-weight: bold;">Put It On Menu</span> offre soluzioni
+                        personalizzate per il
+                        <span style="color:#426954;font-weight: bold;">menù</span>
+                        del tuo locale.
+                    </p>
+                    <p></p> Se sei il proprietario di un <span
+                        style="color:#426954;font-weight: bold;">ristorante</span> o di un
+                    <span style="color:#426954;font-weight: bold;">bar</span>
+                    e hai bisogno di un menù con QR code, ci pensiamo noi!
+                    </p>
+                    <br>
+                    <button class="pacchetto-button" onclick="window.location.href='putitonmenu.html'">
+                        SCOPRI DI PIÙ
+                    </button>
+                </h5>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Footer -->
+    <div
+        style="background-image: url('images/navback1.png'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100%;">
+        <footer style="padding: 40px 0; color: #333;">
+            <div class="container">
+                <div class="row">
+                    <!-- Contatti -->
+                    <div class="col-md-6">
+                        <center>
+                            <h4 style="color: #333;"><b>Contattaci</b></h4>
+                            <ul class="list-unstyled">
+                                <li><a href="tel:+393880599971" style="text-decoration: none; color: #426954;">+39 388
+                                        059
+                                        99 71</a></li>
+                                <li><a href="tel:+393271975673" style="text-decoration: none; color: #426954;">+39 327
+                                        197
+                                        56 73</a></li>
+                                <li><a href="mailto:info@deseoapartments.com"
+                                        style="text-decoration: none; color: #426954;">info@deseoapartments.com</a></li>
+                            </ul>
+                            <p style="margin: 0;color: #426954;"><b>Sede legale: Via Ugo Bassi 10, Bologna 40121</b></p>
+                            <p style="margin: 0;color: #426954;"><b>Lun - Ven: 09:00 - 18:00</b></p>
+                            <p style="margin: 0;color: #426954;"><b>P.IVA: 04119991208</b></p>
+                            <!-- Icone social -->
+                            <br>
+                            <div>
+                                <a href="https://www.facebook.com/profile.php?id=61562461786178"
+                                    style="margin-right: 10px;"><img src="images/insta.png" alt="Instagram"
+                                        width="30"></a>
+                                <a href="https://www.instagram.com/deseoapartments/" style="margin-right: 10px;"><img
+                                        src="images/face.png" alt="Facebook" width="30"></a>
+                                <a href="https://wa.me/393880599971"><img src="images/whatsapp.png" alt="WhatsApp"
+                                        width="30"></a>
+                                <br>
+                                <br>
+
+                            </div>
+                    </div>
+                    <!-- Logo e marchio -->
+                    <div class="col-md-6 text-center">
+                        <img src="images/nero.png" alt="Deseo Apartments" class="img-fluid mb-3"
+                            style="max-width: 200px;">
+                        <p style="font-size: 14px;"><b>© 2024 Deseo Apartments v.1.3 | Tutti i diritti riservati</b></p>
+                        <p style="font-size: 14px;">
+                            <a href="termini.html" style="text-decoration: none; color: #426954;"><b>Termini e
+                                    Condizioni</b></a> |
+                            <a href="privacy.html" style="text-decoration: none; color: #426954;"><b>Privacy e
+                                    Cookies Policy</b></a>
+                            <center>
+                                <div><button class="pacchetto-button"
+                                        onclick="document.getElementById('cookie-banner').style.display = 'block';">Gestisci
+                                        i cookie</button></div>
+                            </center>
+                    </div>
+                </div>
+                </p>
+                </center>
+            </div>
+    </div>
+    </div>
+    </footer>
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const banner = document.getElementById("cookie-banner");
+            const acceptButton = document.getElementById("accept-cookies");
+            const rejectButton = document.getElementById("reject-cookies");
+
+            // Mostra il banner se il consenso non è già stato dato
+            if (!localStorage.getItem("cookiesAccepted")) {
+                banner.style.display = "flex"; // Usa "flex" per mantenere l'allineamento del contenuto
+            }
+
+            // Funzione per accettare i cookie
+            acceptButton.addEventListener("click", () => {
+                localStorage.setItem("cookiesAccepted", "true");
+                banner.style.display = "none";
+                loadGoogleServices();
+            });
+
+            // Funzione per rifiutare i cookie
+            rejectButton.addEventListener("click", () => {
+                localStorage.setItem("cookiesAccepted", "false");
+                banner.style.display = "none";
+            });
+
+            // Carica Google Analytics e altre API solo se i cookie sono accettati
+            function loadGoogleServices() {
+                if (localStorage.getItem("cookiesAccepted") === "true") {
+                    // Aggiungi script di Google Analytics
+                    const script = document.createElement("script");
+                    script.src = "https://www.googletagmanager.com/gtag/js?id=G-9BSJYDJ59V";
+                    script.async = true;
+                    document.head.appendChild(script);
+
+                    script.onload = () => {
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag() {
+                            dataLayer.push(arguments);
+                        }
+                        gtag("js", new Date());
+                        gtag("config", "G-9BSJYDJ59V");
+                    };
+
+                    // Aggiungi altre API di Google se necessarie
+                }
+            }
+
+            // Se i cookie sono già stati accettati, carica i servizi
+            if (localStorage.getItem("cookiesAccepted") === "true") {
+                loadGoogleServices();
+            }
+        });
+
+    </script>
+
+
+
+
 </body>
 
 </html>

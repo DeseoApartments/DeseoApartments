@@ -1,0 +1,158 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.nav-link {
+  color: black;
+  font-size: 20px;
+}
+
+.nav-link:hover {
+  color: #00470e;
+}
+
+
+/* Font più snello per il testo del Container 1 */
+.custom-justify {
+  text-align: justify;
+  font-family: "Roboto", sans-serif;
+  /* Puoi scegliere un altro font se preferisci */
+  font-size: 16px;
+  /* Regola le dimensioni come desiderato */
+  line-height: 1.6;
+  /* Migliora la leggibilità */
+}
+
+/* Stile per le parole chiave */
+.custom-justify .keyword {
+  font-weight: bold;
+  color: #426954;
+}
+
+.pacchetto-button {
+  display: block;
+  /* Rende il bottone un blocco per centrarlo facilmente */
+  width: 80%;
+  /* Larghezza del bottone */
+  margin: 10px auto;
+  /* Centra il bottone orizzontalmente e aggiunge spazio verticale */
+  padding: 12px 20px;
+  /* Spaziatura interna */
+  font-family: 'Roboto', sans-serif;
+  /* Font coerente con il resto del sito */
+  font-size: 16px;
+  /* Dimensione del testo */
+  font-weight: bold;
+  /* Testo in grassetto */
+  color: black;
+  /* Colore del testo bianco */
+  background-color: #f8f6c8;
+  /* Sfondo rosa scuro */
+  border: none;
+  /* Nessun bordo */
+  border-radius: 8px;
+  /* Angoli arrotondati */
+  text-align: center;
+  /* Testo centrato */
+  cursor: pointer;
+  /* Puntatore per indicare un bottone cliccabile */
+  transition: all 0.3s ease;
+  /* Animazione per hover */
+  text-decoration: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.pacchetto-button:hover {
+  background-color: #fffcad;
+  /* Colore di sfondo più scuro al passaggio del mouse */
+  color: black;
+  /* Colore del testo resta bianco */
+  transform: scale(1.05);
+  /* Leggero ingrandimento */
+}
+
+footer {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  width: 100%;
+  height: 100%;
+}
+
+footer ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #cc0662;
+}
+
+footer hr {
+  border-color: #426954;
+  width: 80px;
+  margin: 10px auto;
+}
+
+/* Per rendere lo sfondo del footer a larghezza piena */
+.footer-container {
+  width: 100%;
+  height: 100%;
+  background-color: #f9f9f9;
+  /* backup color se l'immagine non viene caricata */
+}
+
+.cookie-container {
+  position: fixed;
+  /* Posiziona il banner in modo fisso nella finestra */
+  bottom: 0;
+  /* Fissalo al fondo */
+  left: 0;
+  /* Assicurati che inizi dal bordo sinistro */
+  right: 0;
+  /* Assicurati che si estenda fino al bordo destro */
+  display: flex;
+  flex-direction: column;
+  /* Imposta il contenuto in una colonna */
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  /* Colore di sfondo */
+  padding: 15px;
+  /* Padding interno */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  /* Aggiunge un'ombra per evidenziare */
+  z-index: 1000;
+  /* Porta il banner in primo piano */
+  border: 1px solid;
+  text-align: center;
+}
+
+.cookie-container p {
+  margin: 0;
+  margin-bottom: 10px;
+  padding-right: 0;
+  text-align: center;
+}
+
+.cookie-container button {
+  background-color: #f8f6c8;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cookie-container button:hover {
+  background-color: #f8f6c8;
+}
+
+.cookie-container a {
+  color: #f8f6c8;
+  text-decoration: underline;
+}

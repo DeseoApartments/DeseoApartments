@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9BSJYDJ59V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-9BSJYDJ59V');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Deseo Apartments - Calcola la possibile rendita del tuo appartamento" />
+    <meta property="og:description" content="GDeseo Apartments - Calcola la possibile rendita del tuo appartamento" />
+    <meta property="og:url" content="https://deseoapartments.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://deseoapartments.com/images/nero.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="fb:app_id" content="3897995937114259">
+    <title>Deseo Apartments - Calcola la possibile rendita del tuo appartamento</title>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOrxkYsKLOHKETgg8PPLG1sqk1VgTi5Oo&libraries=places,geometry"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <style>
+        body {
+
+
+            /* Percorso immagine */
+            background-repeat: repeat;
+            /* Ripeti l'immagine */
+            background-size: cover;
+
+            background-color: white;
+            font-family: 'Open Sans', sans-serif;
+            /* Dimensione del singolo pattern */
+
+        }
+
+        .non-clickable-label {
+            background-color: rgb(170, 145, 0);
+            /* Colore di sfondo modificabile */
+            color: #ffffff;
+            /* Colore del testo modificabile */
+            border: transparent;
+            /* Colore e spessore del bordo modificabile */
+            position: center;
+            padding-top: 0.5vw;
+            /* Padding dall'alto */
+            padding-bottom: 0.5vw;
+            /* Padding dal basso */
+            padding-left: 40px;
+            /* Padding da sinistra */
+            padding-right: 40px;
+            /* Padding da destra */
+            border-radius: 10px;
+            /* Bordo arrotondato */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* Ombra modificabile */
+            font-size: 24px;
+            margin-left: 0px;
+            /* Spazio tra titolo e etichetta */
+            display: inline-block;
+            margin-bottom: 2vw;
+            margin-top: 2.2vw;
+            border: none;
+            /* Rimuove eventuali bordi del bottone */
+            text-decoration: none;
+        }
+
+        .hero-section {
+            background-color: transparent;
+            color: #426954;
+            padding: 20px;
+            border-radius: 8px;
+
+        }
+
+        .form-container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #map {
+            border-radius: 8px;
+        }
+
+        .price-result {
+            border-top: 1px solid #dee2e6;
+            margin-top: 20px;
+            padding-top: 20px;
+        }
+
+        .custom-btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: none;
+            background-color: #f8f6c8;
+            color: black;
+            text-decoration: none;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+
+
+        .social-icons a {
+            text-decoration: none;
+        }
+
+        .social-icons img {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.1);
+        }
+
+
+
+        .content-section {
+            margin: 40px 0;
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-section img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .content-section h3 {
+            color: #222;
+            font-weight: bold;
+        }
+
+        .content-section p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 1.2rem;
+            /* Aumento del 20% rispetto al font standard */
+        }
+
+        .content-section .bold {
+            font-weight: bold;
+            color: #426954;
+            /* Colore nero per enfatizzare */
+        }
+
+        #cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .cookie-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cookie-container p {
+            flex: 1;
+            margin: 0;
+            padding-right: 10px;
+        }
+
+        .cookie-container button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-left: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .cookie-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="cookie-banner" style="display: none;">
+        <div class="cookie-container">
+            <p>
+                Utilizziamo cookie per migliorare l'esperienza utente, inclusi Google Analytics e l'API di Google.
+                Per saperne di più, consulta la nostra <a href="/m.privacy.html" target="_blank"
+                    style="color: #007bff;">Cookie Policy</a>.
+            </p>
+            <button id="accept-cookies">Accetta</button>
+            <button id="decline-cookies">Rifiuta</button>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar"
+        style="background-color: #ffffff; background-image: url('images/navback1.png'); background-size: cover; background-repeat: no-repeat; background-position: center; height: auto;">
+
+        <!-- Logo -->
+        <div class="container d-flex flex-column align-items-center">
+            <a class="navbar-brand" href="#">
+                <img src="images/nero.png" alt="Deseo Apartments" class="img-fluid" style="max-height: 280px;">
+            </a>
+            <!-- Menu -->
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="servizi.html">Servizi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contatti.html">Contatti</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="consulenza.html">Consulenza</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gestioni.html">Gestioni</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <!-- Hero Section -->
+
+        <div class="hero-section text-center mb-4 ">
+            <h1><b>SCOPRI IL POTENZIALE DEL TUO APPARTAMENTO</b></h1>
+            <p style="font-size: 3vh;">Compila il form!</p>
+        </div>
+
+        <!-- Main Content -->
+        <div class="row">
+            <!-- Form Section -->
+            <div class="col-lg-6 mb-4">
+                <div class="form-container">
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Inserisci l'indirizzo del tuo appartamento</label>
+                        <input type="text" class="form-control" id="address" placeholder="Es. Roma, Milano"
+                            onblur="showBasePrice()">
+                    </div>
+
+                    <div id="result" class="mb-3">
+                        <p class="text-dark fw-bold">Prezzo medio per notte: <span id="base-price"
+                                class="text-danger">-</span> €</p>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="beds" class="form-label">Numero di posti letto</label>
+                        <select id="beds" class="form-select" onchange="calculatePrice();">
+                            <option value="1">1 Posto letto</option>
+                            <option value="2">2 Posti letto</option>
+                            <option value="3">3 Posti letto</option>
+                            <option value="4">4 Posti letto</option>
+                            <option value="5">5 Posti letto</option>
+                            <option value="6">6 Posti letto</option>
+                            <option value="7">7 Posti letto</option>
+                            <option value="8">8+ Posti letto</option>
+                        </select>
+                    </div>
+
+                    <div id="price-form">
+                        <label class="form-label">Occupazione Media Mensile</label>
+                        <input type="range" class="form-range" id="nights" min="1" max="30" value="1"
+                            oninput="updateNightsLabel(); calculatePrice();">
+                        <div class="d-flex justify-content-between">
+                            <small>1 notte</small>
+                            <small>30 notti</small>
+                        </div>
+                        <p id="nights-label" class="text-center mt-2">1 notte</p>
+                    </div>
+
+                    <!-- Price Result -->
+                    <div class="price-result text-center">
+                        <p id="price-result" class="text-danger fw-bold fs-4">-</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="col-lg-6">
+                <div id="map" class="w-100" style="height: 400px; background-color: #e9ecef;"></div>
+            </div>
+        </div>
+
+        <!-- Content Section -->
+        <div class="content-section">
+            <div class="row align-items-center">
+
+                <div class="col-md-6 order-md-1">
+                    <center>
+                        <h3 class="custom-btn" style="color:black;">*Come calcoliamo la possibile rendita?
+                        </h3>
+                        <br>
+
+                    </center>
+                    <p class="text-center"><span class="bold">La rendita mensile</span> del tuo appartamento è
+                        calcolata
+                        moltiplicando la <span class="bold">tariffa media per notte</span> per il numero di notti
+                        disponibili nel mese.</p>
+                    <p class="text-center">Il calcolo della tariffa tiene conto della <span class="bold">posizone
+                            del
+                            tuo
+                            appartamento</span> all'interno della città.</p>
+                    <p class="text-center">Durante i mesi di <span class="bold">alta stagione</span>, come
+                        l'estate o le festività, i prezzi per notte possono aumentare significativamente.</p>
+                    <p class="text-center">La stima che ti forniamo è <span class="bold">indicativa</span>, seppur
+                        molto
+                        affidabile.</p>
+                    <p class="text-center">Grazie a queste informazioni, la stima riflette il <span
+                            class="bold">potenziale economico</span> del tuo immobile.</p>
+                    <center>
+                        <br>
+                        <h3 class="custom-btn" style="color:black;">Massimizza il tuo rendimento!</h3>
+                        <br>
+
+                    </center>
+                    <p class="text-center">
+                        <span class="bold">Deseo</span> offre una gestione immobiliare completa per affitti a
+                        <span class="bold">breve</span>, <span class="bold">medio</span> e
+                        <span class="bold">lungo termine</span>. Ci occupiamo di tutti gli aspetti: dalla
+                        manutenzione alla gestione
+                        delle prenotazioni, dalle pratiche contrattuali alle visite con potenziali inquilini.
+                        <a href="https://www.deseoapartments.com" target="_blank"
+                            style="text-decoration: none;color:#324e41;"><b>Clicca qui per
+                                scoprire di più!</b></a>
+
+                    </p>
+                </div>
+
+                <div class="col-md-6 order-md-2">
+                    <center><img src="images/mascotte.png" width="500vw" alt="Aumenta il tuo rendimento"></center>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- Modulo di contatto -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4" style="color: #426954;"><b>Contattaci per una consulenza gratuita</b></h2>
+        <br>
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="7433205f-e93a-46c1-a284-4a7839010a8a">
+            <div class="row g-3">
+                <!-- Nome -->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" name="name" class="form-control" placeholder="Nome" required>
+                    </div>
+                </div>
+                <!-- Cognome -->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" name="Cognome" class="form-control" placeholder="Cognome" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-3 mt-3">
+                <!-- Telefono -->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" name="Telefono" class="form-control" placeholder="Telefono" required>
+                    </div>
+                </div>
+                <!-- Email -->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-control" placeholder="Email" required>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-3 mt-3">
+                <!-- Numero immobili -->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" name="numero.immobili" class="form-control"
+                            placeholder="Quanti immobili possiedi?" required>
+                    </div>
+                </div>
+                <!-- Città -->
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <input type="text" name="City" class="form-control" placeholder="In quale città?" required>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group mt-3">
+                <!-- Messaggio -->
+                <textarea name="message" class="form-control" placeholder="Messaggio" rows="4" required></textarea>
+            </div>
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            <!-- Bottone -->
+            <div class="text-center mt-4">
+                <button type="submit" class="pacchetto-button">Invia</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <div>
+        <div
+            style="background-image: url('images/navback1.png'); background-size: cover; background-position: center; background-repeat: no-repeat; width: auto;">
+            <footer style="padding: 40px 0; color: #333;">
+                <div class="container">
+                    <div class="row">
+                        <!-- Contatti -->
+                        <div class="col-md-6">
+                            <center>
+                                <h4 style="color: #333;"><b>Contattaci</b></h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="tel:+393880599971" style="text-decoration: none; color: #426954;">+39
+                                            388
+                                            059
+                                            99 71</a></li>
+                                    <li><a href="tel:+393271975673" style="text-decoration: none; color: #426954;">+39
+                                            327
+                                            197
+                                            56 73</a></li>
+                                    <li><a href="mailto:info@deseoapartments.com"
+                                            style="text-decoration: none; color: #426954;">info@deseoapartments.com</a>
+                                    </li>
+                                </ul>
+                                <p style="margin: 0;color: #426954;"><b>Sede legale: Via Ugo Bassi 10, Bologna
+                                        40121</b>
+                                </p>
+                                <p style="margin: 0;color: #426954;"><b>Lun - Ven: 09:00 - 18:00</b></p>
+                                <p style="margin: 0;color: #426954;"><b>P.IVA: 04119991208</b></p>
+                                <!-- Icone social -->
+                                <br>
+                                <div>
+                                    <a href="https://www.facebook.com/profile.php?id=61562461786178"
+                                        style="margin-right: 10px;"><img src="images/insta.png" alt="Instagram"
+                                            width="30"></a>
+                                    <a href="https://www.instagram.com/deseoapartments/"
+                                        style="margin-right: 10px;"><img src="images/face.png" alt="Facebook"
+                                            width="30"></a>
+                                    <a href="https://wa.me/393880599971"><img src="images/whatsapp.png" alt="WhatsApp"
+                                            width="30"></a>
+                                    <br>
+                                    <br>
+
+                                </div>
+                        </div>
+                        <!-- Logo e marchio -->
+                        <div class="col-md-6 text-center">
+                            <img src="images/nero.png" alt="Deseo Apartments" class="img-fluid mb-3"
+                                style="max-width: 200px;">
+                            <p style="font-size: 14px;"><b>© 2024 Deseo Apartments v.1.3 | Tutti i diritti
+                                    riservati</b>
+                            </p>
+                            <p style="font-size: 14px;">
+                                <a href="termini.html" style="text-decoration: none; color: #426954;"><b>Termini e
+                                        Condizioni</b></a> |
+                                <a href="privacy.html" style="text-decoration: none; color: #426954;"><b>Privacy
+                                        e
+                                        Cookies Policy</b></a>
+                            </p>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="welcome.js"></script>
+        <script>
+            function showBasePrice() {
+                const address = document.getElementById("address").value;
+                if (address) {
+                    const basePrice = calculateAveragePriceForCity(address); // Funzione dal file welcome.js
+                    if (basePrice) {
+                        document.getElementById("base-price").textContent = basePrice;
+                    } else {
+                        document.getElementById("base-price").textContent = "Non disponibile";
+                    }
+                }
+            }
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const banner = document.getElementById("cookie-banner");
+                const acceptButton = document.getElementById("accept-cookies");
+                const declineButton = document.getElementById("decline-cookies");
+
+                // Mostra il banner se il consenso non è già stato dato
+                if (!localStorage.getItem("cookiesAccepted")) {
+                    banner.style.display = "block";
+                }
+
+                // Funzione per accettare i cookie
+                acceptButton.addEventListener("click", () => {
+                    localStorage.setItem("cookiesAccepted", "true");
+                    banner.style.display = "none";
+                    loadGoogleServices();
+                });
+
+                // Funzione per rifiutare i cookie
+                declineButton.addEventListener("click", () => {
+                    localStorage.setItem("cookiesAccepted", "false");
+                    banner.style.display = "none";
+                });
+
+                // Carica Google Analytics e altre API solo se i cookie sono accettati
+                function loadGoogleServices() {
+                    if (localStorage.getItem("cookiesAccepted") === "true") {
+                        // Aggiungi script di Google Analytics
+                        const script = document.createElement("script");
+                        script.src = "https://www.googletagmanager.com/gtag/js?id=G-9BSJYDJ59V";
+                        script.async = true;
+                        document.head.appendChild(script);
+
+                        script.onload = () => {
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag() {
+                                dataLayer.push(arguments);
+                            }
+                            gtag("js", new Date());
+                            gtag("config", "G-9BSJYDJ59V");
+                        };
+
+                        // Aggiungi altre API di Google se necessarie
+                    }
+                }
+
+                // Se i cookie sono già stati accettati, carica i servizi
+                if (localStorage.getItem("cookiesAccepted") === "true") {
+                    loadGoogleServices();
+                }
+            });
+        </script>
+
+
+</body>
+
+</html>

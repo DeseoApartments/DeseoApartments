@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deseo Apartments - Servizi</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        .dropdown-title,
+        .dropdown-title1,
+        .dropdown-title2 {
+            background-color: #f8f6c8;
+            color: black;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            text-align: center;
+            width: 100%;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .dropdown-content {
+            display: none;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            text-align: center;
+            font-weight: bold;
+            color: #426954;
+        }
+
+        .dropdown-item {
+            margin-bottom: 20px;
+        }
+
+        .dropdown-table {
+            width: 100%;
+        }
+
+        .dropdown-table td {
+            padding: 8px;
+            font-size: 1rem;
+        }
+
+        .elegant-container {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .service-container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .service-container img {
+            max-height: 200px;
+            object-fit: cover;
+        }
+
+        .service-container h5 {
+            font-size: 1.2rem;
+            color: #426954;
+            margin-top: 10px;
+        }
+
+        .service-container p {
+            font-size: 1rem;
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        /* Uniform height for all cards */
+        .equal-height {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .equal-height>.col-md-4 {
+            display: flex;
+        }
+
+        .equal-height>.col-md-4 .border {
+            flex: 1;
+        }
+    </style>
+
+    <script>
+        // Funzione per aprire/chiudere le sottosezioni al click
+        document.addEventListener("DOMContentLoaded", () => {
+            const dropdownTitles = document.querySelectorAll(".dropdown-title, .dropdown-title1, .dropdown-title2");
+            dropdownTitles.forEach((title) => {
+                title.addEventListener("click", () => {
+                    const content = title.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar"
+        style="background-color: #ffffff; background-image: url('images/navback1.png'); background-size: cover; background-repeat: no-repeat; background-position: center; height: auto;">
+        <div class="container d-flex flex-column align-items-center">
+            <a class="navbar-brand" href="#">
+                <img src="images/nero.png" alt="Deseo Apartments" class="img-fluid" style="max-height: 280px;">
+            </a>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="servizi.html">Servizi</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contatti.html">Contatti</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="consulenza.html">Consulenza</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="gestioni.html">Gestioni</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sezione Servizi -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4" style="color: #426954;"><b>I NOSTRI SERVIZI</b></h2>
+
+        <!-- Servizi -->
+        <div class="row g-4 equal-height">
+            <!-- Pulizie -->
+            <div class="col-md-4">
+                <div class="border rounded shadow-sm p-4 text-center service-container">
+                    <img src="images/pulizia.jpg" alt="Pulizie" class="img-fluid rounded mb-3">
+                    <h5><b>Pulizie</b></h5>
+                    <p class="text-center" style="font-size: 1.2rem;">
+                        Garantiamo elevati standard di pulizia e igiene, occupandoci di tutto, dalla pulizia alla
+                        fornitura di biancheria di alta qualità.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Assistenza 24/7 -->
+            <div class="col-md-4">
+                <div class="border rounded shadow-sm p-4 text-center service-container">
+                    <img src="images/assistenza.jpg" alt="Assistenza 24/7" class="img-fluid rounded mb-3">
+                    <h5><b>Assistenza 24/7</b></h5>
+                    <p class="text-center" style="font-size: 1.2rem;">
+                        Il nostro team garantisce supporto continuo, rispondendo prontamente a ogni richiesta degli
+                        ospiti.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Portale Proprietari -->
+            <div class="col-md-4">
+                <div class="border rounded shadow-sm p-4 text-center service-container">
+                    <img src="images/portale.jpg" alt="Portale Proprietari" class="img-fluid rounded mb-3">
+                    <h5><b>Portale Proprietari</b></h5>
+                    <p class="text-center" style="font-size: 1.2rem;">
+                        Monitora prenotazioni, guadagni e recensioni in tempo reale e gestisci facilmente ogni aspetto
+                        della tua proprietà.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seconda riga di servizi -->
+        <div class="row g-4 equal-height mt-4">
+            <!-- Annunci Online -->
+            <div class="col-md-4">
+                <div class="border rounded shadow-sm p-4 text-center service-container">
+                    <img src="images/pubblicazione.jpg" alt="Annunci Online" class="img-fluid rounded mb-3">
+                    <h5><b>Annunci Online</b></h5>
+                    <p class="text-center" style="font-size: 1.2rem;">
+                        Pubblicizziamo la tua proprietà sui principali portali, ottimizzando la visibilità per
+                        massimizzare
+                        la percentuale di occupazione.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Check-In/Out -->
+            <div class="col-md-4">
+                <div class="border rounded shadow-sm p-4 text-center service-container">
+                    <img src="images/checkin.jpg" alt="Check-In/Out" class="img-fluid rounded mb-3">
+                    <h5><b>Check-In/Out</b></h5>
+                    <p class="text-center" style="font-size: 1.2rem;">
+                        Gestiamo ogni fase del check-in e check-out degli ospiti, rendendo il processo semplice e
+                        piacevole.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Manutenzioni -->
+            <div class="col-md-4">
+                <div class="border rounded shadow-sm p-4 text-center service-container">
+                    <img src="images/manutenzioni.png" alt="Manutenzioni" class="img-fluid rounded mb-3">
+                    <h5><b>Manutenzioni</b></h5>
+                    <p class="text-center" style="font-size: 1.2rem;">
+                        Gestiamo interventi ordinari e straordinari, garantendo che la tua proprietà sia sempre in
+                        perfette condizioni.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Area Proprietari -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4" style="color: #426954;"><b>AREA PROPRIETARI</b></h2>
+        <div class="row g-4">
+            <!-- Controllo Completo -->
+            <div class="col-md-6 d-flex">
+                <div class="border rounded shadow-sm p-4 d-flex flex-column align-items-center">
+                    <img src="images/kroos1.jpg" class="img-fluid mb-3" style="max-height: 200px; object-fit: cover;"
+                        alt="Controllo Completo">
+                    <h5 class="text-center" style="color: #426954;"><b>CONTROLLO COMPLETO</b></h5>
+                    <p class="text-center" style="font-size: 1.2rem; line-height: 1.6;">
+                        Accedi a un sistema che ti consente di monitorare l'andamento delle prenotazioni in
+                        <b style="color:#426954;">tempo reale,</b> visualizzando lo stato attuale del tuo appartamento e
+                        le relative
+                        performance con facilità.
+                    </p>
+                </div>
+            </div>
+            <!-- Gestione Intuitiva -->
+            <div class="col-md-6 d-flex">
+                <div class="border rounded shadow-sm p-4 d-flex flex-column align-items-center">
+                    <img src="images/kroos2.jpg" class="img-fluid mb-3" style="max-height: 200px; object-fit: cover;"
+                        alt="Gestione Intuitiva">
+                    <h5 class="text-center" style="color: #426954;"><b>GESTIONE INTUITIVA</b></h5>
+                    <p class="text-center" style="font-size: 1.2rem; line-height: 1.6;">
+                        Utilizza un'interfaccia semplice e <b style="color:#426954;">user-friendly</b> per visualizzare
+                        rapidamente dati
+                        essenziali come il calendario delle prenotazioni e l'occupazione futura, ottimizzando la
+                        pianificazione delle disponibilità.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row g-4 mt-4">
+            <!-- Report Dettagliati -->
+            <div class="col-md-6 offset-md-3 d-flex">
+                <div class="border rounded shadow-sm p-4 d-flex flex-column align-items-center">
+                    <img src="images/kroos3.jpg" class="img-fluid mb-3" style="max-height: 200px; object-fit: cover;"
+                        alt="Report Dettagliati">
+                    <h5 class="text-center" style="color: #426954;"><b>REPORT DETTAGLIATI</b></h5>
+                    <p class="text-center" style="font-size: 1.2rem; line-height: 1.6;">
+                        Ricevi report mensili con <b style="color:#426954;">informazioni dettagliate su ricavi,</b>
+                        tendenze di mercato e
+                        feedback degli ospiti, offrendoti uno strumento efficace per prendere decisioni strategiche a
+                        lungo termine.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- VANTAGGI -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4" style="color: #426954;"><b>VANTAGGI</b></h2>
+        <div class="elegant-container mx-auto">
+            <!-- Property Management -->
+            <div class="dropdown-item">
+                <button class="dropdown-title">PROPERTY MANAGEMENT</button>
+                <div class="dropdown-content">
+                    <table class="dropdown-table">
+                        <tr>
+                            <td>Pulizia professionale</td>
+                        </tr>
+                        <tr>
+                            <td>Lavanderia</td>
+                        </tr>
+                        <tr>
+                            <td>Attivazione Utenze</td>
+                        </tr>
+                        <tr>
+                            <td>Manutenzione</td>
+                        </tr>
+                        <tr>
+                            <td>Arredamento</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Assistenza Clienti -->
+            <div class="dropdown-item">
+                <button class="dropdown-title1">ASSISTENZA CLIENTI</button>
+                <div class="dropdown-content">
+                    <table class="dropdown-table">
+                        <tr>
+                            <td>Gestione delle prenotazioni</td>
+                        </tr>
+                        <tr>
+                            <td>Assicurazione Danni</td>
+                        </tr>
+                        <tr>
+                            <td>Guide digitali di benvenuto</td>
+                        </tr>
+                        <tr>
+                            <td>Assistenza 24/7</td>
+                        </tr>
+                        <tr>
+                            <td>Registrazione ospiti da remoto</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Gestione degli Annunci -->
+            <div class="dropdown-item">
+                <button class="dropdown-title2">GESTIONE DEGLI ANNUNCI</button>
+                <div class="dropdown-content">
+                    <table class="dropdown-table">
+                        <tr>
+                            <td>Foto-shooting professionale</td>
+                        </tr>
+                        <tr>
+                            <td>Inserimento annuncio nel nostro sito web</td>
+                        </tr>
+                        <tr>
+                            <td>Inserimento annuncio su Airbnb, Booking etc...</td>
+                        </tr>
+                        <tr>
+                            <td>Ottimizzazione dei prezzi</td>
+                        </tr>
+                        <tr>
+                            <td>Account personale del proprietario</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modulo di contatto -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4" style="color: #426954;"><b>Contattaci per una consulenza gratuita</b></h2>
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="7433205f-e93a-46c1-a284-4a7839010a8a">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <input type="text" name="name" class="form-control" placeholder="Nome" required>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="Cognome" class="form-control" placeholder="Cognome" required>
+                </div>
+            </div>
+            <div class="row g-3 mt-3">
+                <div class="col-md-6">
+                    <input type="text" name="Telefono" class="form-control" placeholder="Telefono" required>
+                </div>
+                <div class="col-md-6">
+                    <input type="email" name="email" class="form-control" placeholder="Email" required>
+                </div>
+            </div>
+            <div class="row g-3 mt-3">
+                <div class="col-md-6">
+                    <input type="text" name="numero.immobili" class="form-control"
+                        placeholder="Quanti immobili possiedi?" required>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" name="City" class="form-control" placeholder="In quale città?" required>
+                </div>
+            </div>
+            <div class="form-group mt-3">
+                <textarea name="message" class="form-control" placeholder="Messaggio" rows="4" required></textarea>
+            </div>
+            <div class="text-center mt-4">
+                <button type="submit" class="pacchetto-button">Invia</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <div
+        style="background-image: url('images/navback1.png'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100%;">
+        <footer style="padding: 40px 0; color: #333;">
+            <div class="container">
+                <div class="row">
+                    <!-- Contatti -->
+                    <div class="col-md-6">
+                        <center>
+                            <h4 style="color: #333;"><b>Contattaci</b></h4>
+                            <ul class="list-unstyled">
+                                <li><a href="tel:+393880599971" style="text-decoration: none; color: #426954;">+39
+                                        388
+                                        059
+                                        99 71</a></li>
+                                <li><a href="tel:+393271975673" style="text-decoration: none; color: #426954;">+39
+                                        327
+                                        197
+                                        56 73</a></li>
+                                <li><a href="mailto:info@deseoapartments.com"
+                                        style="text-decoration: none; color: #426954;">info@deseoapartments.com</a>
+                                </li>
+                            </ul>
+                            <p style="margin: 0;color: #426954;"><b>Sede legale: Via Ugo Bassi 10, Bologna 40121</b>
+                            </p>
+                            <p style="margin: 0;color: #426954;"><b>Lun - Ven: 09:00 - 18:00</b></p>
+                            <p style="margin: 0;color: #426954;"><b>P.IVA: 04119991208</b></p>
+                            <!-- Icone social -->
+                            <br>
+                            <div>
+                                <a href="https://www.facebook.com/profile.php?id=61562461786178"
+                                    style="margin-right: 10px;"><img src="images/insta.png" alt="Instagram"
+                                        width="30"></a>
+                                <a href="https://www.instagram.com/deseoapartments/" style="margin-right: 10px;"><img
+                                        src="images/face.png" alt="Facebook" width="30"></a>
+                                <a href="https://wa.me/393880599971"><img src="images/whatsapp.png" alt="WhatsApp"
+                                        width="30"></a>
+                                <br>
+                                <br>
+                            </div>
+                    </div>
+                    <!-- Logo e marchio -->
+                    <div class="col-md-6 text-center">
+                        <img src="images/nero.png" alt="Deseo Apartments" class="img-fluid mb-3"
+                            style="max-width: 200px;">
+                        <p style="font-size: 14px;"><b>© 2024 Deseo Apartments v.1.3 | Tutti i diritti riservati</b>
+                        </p>
+                        <p style="font-size: 14px;">
+                            <a href="termini.html" style="text-decoration: none; color: #426954;"><b>Termini e
+                                    Condizioni</b></a> |
+                            <a href="privacy.html" style="text-decoration: none; color: #426954;"><b>Privacy
+                                    e
+                                    Cookies Policy</b></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
