@@ -9,87 +9,124 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/custom.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/tagliato.png">
+
 
     <style>
+        :root {
+            --navbar-height: 100px;
+            /* Altezza personalizzabile della navbar */
+        }
+
         body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .navbar {
+            background-color: #ffffff;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            height: var(--navbar-height);
+            /* Usa la variabile per impostare l'altezza */
             display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            align-items: center;
+            /* Centra verticalmente il contenuto */
         }
 
-        main {
-            flex: 1;
+        .navbar a.nav-link {
+            color: #212529;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 1rem;
         }
 
-        footer {
-            background-image: url('images/navback1.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+        .navbar a.nav-link:hover {
+            color: #ca0f0f;
+        }
+
+        .navbar-collapse {
+            background-color: #ffffff;
+            /* Sfondo visibile quando il menu si apre */
+        }
+
+        .navbar-collapse.show {
+            background-color: #ffffff;
+            /* Forza il colore di sfondo */
+            position: absolute;
+            /* Rende il menu assoluto per coprire l'area */
+            top: var(--navbar-height);
+            /* Posiziona il menu subito sotto la navbar */
+            left: 0;
+            padding: 10px;
             width: 100%;
-            color: #333;
-        }
-
-        footer p,
-        footer a {
-            font-size: 14px;
+            z-index: 10;
+            /* Garantisce che il menu sia sopra gli altri elementi */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            /* Aggiunge un'ombra per separare il menu */
         }
     </style>
 </head>
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar"
-        style="background-color: #ffffff; background-image: url('images/navback1.png'); background-size: cover; background-repeat: no-repeat; background-position: center; height: auto;">
-        <div class="container d-flex flex-column align-items-center">
-            <a class="navbar-brand" href="#">
-                <img src="images/nero.png" alt="Deseo Apartments" class="img-fluid" style="max-height: 280px;">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/tagliato.png" alt="Deseo Apartments" class="img-fluid" style="max-height: 60px;">
             </a>
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="servizi.html">Servizi</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contatti.html">Contatti</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="consulenza.html">Consulenza</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="gestioni.html">Gestioni</a>
-                </li>
-            </ul>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servizi.html">Servizi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contatti.html">Contatti</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="consulenza.html">Consulenza</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gestioni.html">Gestioni</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calcolatore.html">Calcolatore</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <!-- Contatti -->
     <main class="container my-5">
-        <h2 class="text-center mb-4" style="color: #426954;"><b>Contattaci</b></h2>
+        <h2 class="text-center mb-4" style="color: #212529;margin-top: 150px;"><b>Contattaci</b></h2>
         <div class="border rounded shadow-sm p-4 text-center">
-            <h5 style="color: #426954;"><b>Informazioni di Contatto</b></h5>
-            <ul style="font-size: 1.1rem; color: #555; line-height: 1.6; list-style: none; padding: 0;">
-                <li>📞 <a href="tel:+393880599971" style="text-decoration: none; color: #426954;">+39 388 059 99 71</a>
+            <h5 style="color: #ca0f0f;"><b>Informazioni di Contatto</b></h5>
+            <ul style="font-size: 1.1rem; color: #212529; line-height: 1.6; list-style: none; padding: 0;">
+                <li>📞 <a href="tel:+393880599971" style="text-decoration: none; color: #212529;">+39 388 059 99 71</a>
                 </li>
-                <li>📞 <a href="tel:+393271975673" style="text-decoration: none; color: #426954;">+39 327 197 56 73</a>
+                <li>📞 <a href="tel:+393271975673" style="text-decoration: none; color: #212529;">+39 327 197 56 73</a>
                 </li>
                 <li>📧 <a href="mailto:info@deseoapartments.com"
-                        style="text-decoration: none; color: #426954;">info@deseoapartments.com</a></li>
+                        style="text-decoration: none; color: #212529;">info@deseoapartments.com</a></li>
             </ul>
 
-            <h5 style="color: #426954;"><b>Indirizzo</b></h5>
-            <p style="font-size: 1.1rem; color: #555; line-height: 1.6;">
+            <h5 style="color: #ca0f0f;"><b>Indirizzo</b></h5>
+            <p style="font-size: 1.1rem; color: #212529; line-height: 1.6;">
                 Sede legale: <b>Via Ugo Bassi 10, Bologna 40121</b>
             </p>
 
-            <h5 style="color: #426954;"><b>Orari di Apertura</b></h5>
-            <p style="font-size: 1.1rem; color: #555; line-height: 1.6;">
+            <h5 style="color: #ca0f0f;"><b>Orari di Apertura</b></h5>
+            <p style="font-size: 1.1rem; color: #212529; line-height: 1.6;">
                 Lun - Ven: <b>09:00 - 18:00</b>
             </p>
 
-            <h5 style="color: #426954;"><b>Seguici sui Social</b></h5>
+            <h5 style="color: #ca0f0f;"><b>Seguici sui Social</b></h5>
             <div class="d-flex justify-content-center">
                 <a href="https://www.facebook.com/profile.php?id=61562461786178" class="me-3">
                     <img src="images/insta.png" alt="Instagram" width="30">
@@ -104,22 +141,28 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="py-3">
-        <div class="container text-center">
-            <img src="images/nero.png" alt="Deseo Apartments" class="img-fluid mb-3" style="max-width: 200px;">
-            <p><b>© 2024 Deseo Apartments v.1.3 | Tutti i diritti riservati</b></p>
-            <p>
-                <a href="termini.html" style="text-decoration: none; color: #426954;"><b>Termini e
-                        Condizioni</b></a> |
-                <a href="privacy.html" style="text-decoration: none; color: #426954;"><b>Privacy e
-                        Cookies Policy</b></a>
-            </p>
-        </div>
-    </footer>
+    <center><img src="images/nero.png" width="190vw">
+
+        <p style="font-size: 14px;"><b>© 2024 Deseo Apartments v.1.3 | Tutti i diritti riservati</b></p>
+        <p style="font-size: 14px;">
+            <a href="termini.html" style="text-decoration: none; color: #ca0f0f;"><b>Termini e
+                    Condizioni</b></a> |
+            <a href="privacy.html" style="text-decoration: none; color: #ca0f0f;"><b>Privacy e
+                    Cookies Policy</b></a>
+        <h5 style="margin-top: 20px; color: #333;"><b>Brand Partners</b></h5>
+        <ul class="list-unstyled">
+            <li>
+                <a href="https://www.nolobolo.com" target="_blank"
+                    style="text-decoration: none; color: #ca0f0f;"><b>NoloBolo</b></a> | <a
+                    href="https://putitonmenu.altervista.org" target="_blank"
+                    style="text-decoration: none; color: #ca0f0f;"><b>Put It On Menu</b></a>
+            </li>
+        </ul>
+    </center>
+
 
     <!-- Bootstrap JS -->
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src=" js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

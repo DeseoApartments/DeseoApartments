@@ -12,74 +12,25 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/tagliato.png">
     <!-- AOS CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
     <style>
         :root {
             --navbar-height: 100px;
+            /* Altezza personalizzabile della navbar */
         }
 
         body {
             font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            overflow-x: hidden;
-            /* Previene lo scorrimento laterale */
         }
-
-        html,
-
-        body {
-            width: 100%;
-            overflow-x: hidden;
-            /* Previene lo scorrimento laterale */
-        }
-
-        .container {
-
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-
-        .navbar {
-            width: 100%;
-            padding: 0;
-            /* Rimuove padding extra */
-            margin: 0;
-            /* Rimuove margini */
-        }
-
-        .navbar-toggler {
-            margin-left: auto;
-            /* Assicura che sia posizionato correttamente a destra */
-        }
-
-        .navbar-collapse {
-            margin: 0 auto;
-            /* Centralizza il contenuto della navbar */
-            overflow: hidden;
-            /* Evita overflow */
-            width: 100%;
-        }
-
-        .navbar-nav {
-            flex-wrap: nowrap;
-            /* Impedisce di andare fuori dallo schermo */
-        }
-
-        .nav-item {
-            white-space: nowrap;
-            /* Evita che i link si spezzino su più righe */
-        }
-
 
         .navbar {
             background-color: #ffffff;
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
             height: var(--navbar-height);
+            /* Usa la variabile per impostare l'altezza */
             display: flex;
             align-items: center;
-            z-index: 1000;
-            /* Assicura che la navbar sia sempre in primo piano */
+            /* Centra verticalmente il contenuto */
         }
 
         .navbar a.nav-link {
@@ -93,29 +44,25 @@
             color: #ca0f0f;
         }
 
-        .navbar-toggler {
-            border: none;
-            outline: none;
-        }
-
-        .navbar-toggler:focus {
-            outline: none;
-            box-shadow: none;
-        }
-
         .navbar-collapse {
             background-color: #ffffff;
-            /* Sfondo visibile per il menu mobile */
-            z-index: 999;
-            padding: 15px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.0);
-            border-radius: 5px;
-            width: 80%;
+            /* Sfondo visibile quando il menu si apre */
         }
 
         .navbar-collapse.show {
-            display: block !important;
-            /* Forza la visibilità del menu */
+            background-color: #ffffff;
+            /* Forza il colore di sfondo */
+            position: absolute;
+            /* Rende il menu assoluto per coprire l'area */
+            top: var(--navbar-height);
+            /* Posiziona il menu subito sotto la navbar */
+            left: 0;
+            padding: 10px;
+            width: 100%;
+            z-index: 10;
+            /* Garantisce che il menu sia sopra gli altri elementi */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            /* Aggiunge un'ombra per separare il menu */
         }
 
         .hero {
@@ -133,6 +80,7 @@
             font-weight: 100;
             margin-bottom: 1rem;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+            /* Ombra per il testo */
         }
 
         .hero .btn {
@@ -144,6 +92,7 @@
             border: none;
             font-size: 1rem;
             transition: background-color 0.3s ease;
+            border-radius: 0%;
         }
 
         .hero .btn:hover {
@@ -157,10 +106,28 @@
         }
     </style>
 
+
 </head>
+
+
 
 <body>
 
+    <!-- Banner dei Cookie -->
+    <div id="cookie-banner" class="cookie-container" style="display: none;">
+        <p>
+            Questo sito utilizza cookie per migliorare l'esperienza utente.
+            <a href="privacy.html" target="_blank" style="color: #ca0f0f;">Leggi la nostra Privacy Policy</a>.
+        </p>
+        <div>
+            <button id="accept-cookies">Accetta</button>
+            <button id="reject-cookies">Rifiuta</button>
+        </div>
+    </div>
+
+
+
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
@@ -197,80 +164,97 @@
 
     <!-- Hero Section -->
     <div class="hero">
-        <div data-aos="fade-up">
+        <div>
             <img src="images/bianco.png" width="300vw">
             <div><a href="contatti.html" class="btn">Contattaci ora</a></div>
-            <h1
-                style="font-style: italic; font-family: Arial, sans-serif; font-size: 2rem; text-align: center;margin-top: 20px;">
+            <br>
+            <h1 style="font-style: italic; font-family: Arial, sans-serif; font-size: 2rem; text-align: center;">
                 ...dai più valore al tuo appartamento!</h1>
+
+
         </div>
     </div>
 
     <!-- Prima sezione -->
-    <div class="container my-5" data-aos="fade-up">
+    <div class="container my-5">
         <div class="border rounded shadow-sm p-4 text-center d-flex flex-column align-items-center">
-            <h1 style="font-size: 35px;"><b>CHI SIAMO</b></h1>
-            <img src="images/relax.png" alt="Gestione immobiliare" class="img-fluid mt-3" width="500vw"
-                style="border-radius: 5%;margin-bottom: 27px;">
-            <p style="font-size: 1.3rem;">
-                <span class="keyword">DESEO</span> è un'agenzia di gestione immobiliare con sede a <span
-                    class="keyword">Bologna</span>, attiva
-                nel settore da <span class="keyword">due anni</span>.
-            </p>
-            <p style="font-size: 1.3rem;">Offriamo una gestione completa di immobili per affitti a
-                <span class="keyword">breve</span>, <span class="keyword">medio</span> e <span class="keyword">lungo
-                    termine</span>.
-            </p>
-            <a href="consulenza.html" class="pacchetto-button" style="width: 200px;">Contattaci</a>
+            <!-- Testo -->
+            <div class="hero-section text-center mb-4">
+                <h1 style=" font-size: 35px;"><b>CHI SIAMO</b></h1>
+                <!-- Immagine -->
+                <img src="images/relax.png" alt="Gestione immobiliare" class="img-fluid mt-3" width="500vw"
+                    style="border-radius: 5%;margin-bottom: 27px;">
+                <p style="font-size: 1.3rem;">
+                    <span class="keyword">DESEO</span> è un'agenzia di gestione immobiliare con sede a <span
+                        class="keyword">Bologna</span>, attiva
+                    nel settore da <span class="keyword">due anni</span>.
+                </p>
+                <p style="font-size: 1.3rem;">Offriamo una gestione completa di
+                    immobili per affitti a <span class="keyword">breve</span>,
+                    <span class="keyword">medio</span> e <span class="keyword">lungo termine</span>.
+                </p>
+                <!-- Pulsante -->
+                <a href="consulenza.html" class="pacchetto-button" style="width: 200px;">Contattaci</a>
+            </div>
         </div>
     </div>
 
     <!-- Seconda sezione -->
-    <div class="container my-5" data-aos="fade-down">
+    <div class="container my-5">
         <div class="border rounded shadow-sm p-4 text-center d-flex flex-column align-items-center">
-            <h1 style="font-size: 35px;"><b>I NOSTRI SERVIZI</b></h1>
-            <img src="images/services.png" alt="Gestione immobiliare" class="img-fluid mt-3" width="500vw"
-                style="border-radius: 5%;margin-bottom: 27px;">
-            <p style="font-size: 1.3rem;">
-                Garantiamo la <span class="keyword">GESTIONE COMPLETA</span> del tuo appartamento senza il minimo
-                sforzo per te!
-            </p>
-            <p style="font-size: 1.3rem;"> Goditi al massimo il tuo tempo libero!
-            </p>
-            <a href="servizi.html" class="pacchetto-button" style="margin-top: -10px;">Scopri di più</a>
+            <!-- Testo -->
+            <div class="hero-section text-center mb-4">
+                <h1 style="font-size: 35px;"><b>I NOSTRI SERVIZI</b></h1>
+                <!-- Immagine -->
+                <img src="images/services.png" alt="Gestione immobiliare" class="img-fluid mt-3" width="500vw"
+                    style="border-radius: 5%;margin-bottom: 27px;">
+                <p style="font-size: 1.3rem;">
+                    Garantiamo la <span class="keyword">GESTIONE COMPLETA</span> del
+                    tuo
+                    appartamento senza il minimo sforzo per te!</p>
+                <p style="font-size: 1.3rem;"> Goditi al massimo il tuo tempo libero!
+                </p>
+            </div>
+            <!-- Pulsante -->
+            <a href="servizi.html" class="pacchetto-button" style="margin-top: -10px;">Scopri di
+                più</a>
         </div>
     </div>
 
     <!-- Terza sezione -->
-    <div class="container my-5" data-aos="fade-up">
+    <div class=" container my-5">
         <div class="border rounded shadow-sm p-4 d-flex align-items-center justify-content-center">
             <!-- Immagine a sinistra -->
             <img src="images/mascotte.png" alt="Mascotte" class="img-fluid me-4" style="max-width: 150px;">
             <!-- Testo e bottone -->
             <div class="text-start">
+
                 <h3>
                     <center><span style="color:#ca0f0f ;"><b>Sei un proprietario?</b></span></center>
                     <center>Calcola il potenziale </center>
-                    <center>del tuo appartamento!</center>
+                    <center>del tuo
+                        appartamento!</center>
                 </h3>
-                <center><a href="calcolatore.html" class="pacchetto-button" text-decoration: none;">Clicca Qui</a>
-                </center>
+                </h3>
+                <center><a href="calcolatore.html" class="pacchetto-button" text-decoration: none;">Clicca
+                        Qui</a></center>
             </div>
         </div>
     </div>
 
+
+
     <!-- Divisore -->
-    <div class="container-fluid" data-aos="fade-right">
+    <div class="container-fluid">
         <hr style="border: 0; height: 2px; background: #000000; margin: 0;">
     </div>
-
-    <!-- Gestioni -->
-    <div class="container my-5" data-aos="fade-up">
+    <!--Gestioni-->
+    <div class="container my-5">
         <h2 class="hero-section text-center mb-4"><b>LE NOSTRE GESTIONI</b></h2>
         <div class="row justify-content-center">
             <div class="row justify-content-center">
                 <!-- Emilia Romagna -->
-                <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center mb-3" data-aos="fade-right">
+                <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center mb-3">
                     <div class="border rounded shadow-sm p-4 text-center">
                         <h4 style="color: #212529;"><b>Emilia Romagna</b></h4>
                         <br>
@@ -281,7 +265,7 @@
                 </div>
 
                 <!-- Toscana -->
-                <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center mb-3" data-aos="fade-left">
+                <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center mb-3">
                     <div class="border rounded shadow-sm p-4 text-center">
                         <h4 style="color: #212529;"><b>Toscana</b></h4>
                         <br>
@@ -291,22 +275,26 @@
                     </div>
                 </div>
 
+
                 <!-- Bottone Vedi tutto -->
-                <div class="text-center mt-5" data-aos="fade-up">
+                <div class="text-center mt-5">
                     <button style="margin-bottom: 0px;margin-top: -10px;" class="pacchetto-button"
                         onclick="window.location.href='gestioni.html'">VEDI TUTTO</button>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Divisore -->
-    <div class="container-fluid" data-aos="fade-left">
-        <hr style="border: 0; height: 2px; background: #000000; margin: 0;">
+    </div>
+    </div>
     </div>
 
+    <!-- Divisore -->
+    <div class="container-fluid">
+        <hr style="border: 0; height: 2px; background: #000000; margin: 0;">
+    </div>
     <!-- Modulo di contatto -->
-    <div class="container my-5" data-aos="fade-up">
+    <div class="container my-5">
+
         <h2 class="hero-section text-center mb-4"><b>Contattaci per una consulenza gratuita</b></h2>
         <center>
             <p style="font-size: 1.4rem; color: #212529;">
@@ -354,21 +342,27 @@
         </form>
     </div>
 
+
+
+
+
     <!-- Footer -->
-    <div style="background-image: url('images/navback.png'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100%;"
-        data-aos="fade-up">
+    <div
+        style="background-image: url('images/navback.png'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100%;">
         <footer style="padding: 40px 0; color: #333;">
             <div class="container">
                 <div class="row">
                     <!-- Contatti -->
-                    <div class="col-md-6" data-aos="fade-right">
+                    <div class="col-md-6">
                         <center>
                             <h4 style="color: #333;"><b>Contattaci</b></h4>
                             <ul class="list-unstyled">
                                 <li><a href="tel:+393880599971" style="text-decoration: none; color: #ca0f0f;">+39 388
-                                        059 99 71</a></li>
+                                        059
+                                        99 71</a></li>
                                 <li><a href="tel:+393271975673" style="text-decoration: none; color: #ca0f0f;">+39 327
-                                        197 56 73</a></li>
+                                        197
+                                        56 73</a></li>
                                 <li><a href="mailto:info@deseoapartments.com"
                                         style="text-decoration: none; color: #ca0f0f;">info@deseoapartments.com</a></li>
                             </ul>
@@ -393,17 +387,19 @@
                                     <ul class="list-unstyled">
                                         <li>
                                             <a href="https://www.nolobolo.com" target="_blank"
-                                                style="text-decoration: none; color: #ca0f0f;"><b>NoloBolo</b></a> |
-                                            <a href="https://putitonmenu.altervista.org" target="_blank"
+                                                style="text-decoration: none; color: #ca0f0f;"><b>NoloBolo</b></a> | <a
+                                                href="https://putitonmenu.altervista.org" target="_blank"
                                                 style="text-decoration: none; color: #ca0f0f;"><b>Put It On Menu</b></a>
                                         </li>
                                     </ul>
                                 </div>
+
+
+
                             </div>
-                        </center>
                     </div>
                     <!-- Logo e marchio -->
-                    <div class="col-md-6 text-center" data-aos="fade-left">
+                    <div class="col-md-6 text-center">
                         <img src="images/nero.png" alt="Deseo Apartments" class="img-fluid mb-3"
                             style="max-width: 200px;">
                         <p style="font-size: 14px;"><b>© 2024 Deseo Apartments v.1.3 | Tutti i diritti riservati</b></p>
@@ -412,23 +408,25 @@
                                     Condizioni</b></a> |
                             <a href="privacy.html" style="text-decoration: none; color: #ca0f0f;"><b>Privacy e
                                     Cookies Policy</b></a>
-                        </p>
-                        <div><button class="pacchetto-button"
-                                onclick="document.getElementById('cookie-banner').style.display = 'block';">Gestisci
-                                i cookie</button></div>
+                            <center>
+                                <div><button class="pacchetto-button"
+                                        onclick="document.getElementById('cookie-banner').style.display = 'block';">Gestisci
+                                        i cookie</button></div>
+
+                            </center>
                     </div>
                 </div>
+                </p>
+                </center>
             </div>
-        </footer>
     </div>
+    </div>
+    </footer>
+    </div>
+
 
     <!-- Bootstrap JS -->
     <script src="js/bootstrap.bundle.min.js"></script>
-    <!-- AOS JS -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {

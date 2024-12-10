@@ -28,6 +28,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/tagliato.png">
+
 
     <style>
         body {
@@ -45,7 +47,7 @@
         }
 
         .non-clickable-label {
-            background-color: rgb(170, 145, 0);
+            background-color: #ca0f0faf;
             /* Colore di sfondo modificabile */
             color: #ffffff;
             /* Colore del testo modificabile */
@@ -60,7 +62,7 @@
             /* Padding da sinistra */
             padding-right: 40px;
             /* Padding da destra */
-            border-radius: 10px;
+            border-radius: 0px;
             /* Bordo arrotondato */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             /* Ombra modificabile */
@@ -68,20 +70,11 @@
             margin-left: 0px;
             /* Spazio tra titolo e etichetta */
             display: inline-block;
-            margin-bottom: 2vw;
-            margin-top: 2.2vw;
             border: none;
             /* Rimuove eventuali bordi del bottone */
             text-decoration: none;
         }
 
-        .hero-section {
-            background-color: transparent;
-            color: #426954;
-            padding: 20px;
-            border-radius: 8px;
-
-        }
 
         .form-container {
             background-color: white;
@@ -105,8 +98,8 @@
             border-radius: 5px;
             font-weight: bold;
             transition: none;
-            background-color: #f8f6c8;
-            color: black;
+            background-color: #ca0f0f;
+            color: rgb(255, 255, 255);
             text-decoration: none;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
@@ -157,7 +150,7 @@
 
         .content-section .bold {
             font-weight: bold;
-            color: #426954;
+            color: #212529;
             /* Colore nero per enfatizzare */
         }
 
@@ -188,7 +181,7 @@
         }
 
         .cookie-container button {
-            background-color: #007bff;
+            background-color: #ca0f0f;
             color: white;
             border: none;
             padding: 10px 20px;
@@ -198,7 +191,58 @@
         }
 
         .cookie-container button:hover {
-            background-color: #0056b3;
+            background-color: #ca0f0f;
+        }
+
+        :root {
+            --navbar-height: 100px;
+            /* Altezza personalizzabile della navbar */
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .navbar {
+            background-color: #ffffff;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            height: var(--navbar-height);
+            /* Usa la variabile per impostare l'altezza */
+            display: flex;
+            align-items: center;
+            /* Centra verticalmente il contenuto */
+        }
+
+        .navbar a.nav-link {
+            color: #212529;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 1rem;
+        }
+
+        .navbar a.nav-link:hover {
+            color: #ca0f0f;
+        }
+
+        .navbar-collapse {
+            background-color: #ffffff;
+            /* Sfondo visibile quando il menu si apre */
+        }
+
+        .navbar-collapse.show {
+            background-color: #ffffff;
+            /* Forza il colore di sfondo */
+            position: absolute;
+            /* Rende il menu assoluto per coprire l'area */
+            top: var(--navbar-height);
+            /* Posiziona il menu subito sotto la navbar */
+            left: 0;
+            padding: 10px;
+            width: 100%;
+            z-index: 10;
+            /* Garantisce che il menu sia sopra gli altri elementi */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            /* Aggiunge un'ombra per separare il menu */
         }
     </style>
 </head>
@@ -209,8 +253,8 @@
         <div class="cookie-container">
             <p>
                 Utilizziamo cookie per migliorare l'esperienza utente, inclusi Google Analytics e l'API di Google.
-                Per saperne di più, consulta la nostra <a href="/m.privacy.html" target="_blank"
-                    style="color: #007bff;">Cookie Policy</a>.
+                Per saperne di più, consulta la nostra <a href="privacy.html" target="_blank"
+                    style="color: #ca0f0f;">Cookie Policy</a>.
             </p>
             <button id="accept-cookies">Accetta</button>
             <button id="decline-cookies">Rifiuta</button>
@@ -218,41 +262,47 @@
     </div>
 
     <!-- Navbar -->
-    <nav class="navbar"
-        style="background-color: #ffffff; background-image: url('images/navback1.png'); background-size: cover; background-repeat: no-repeat; background-position: center; height: auto;">
-
-        <!-- Logo -->
-        <div class="container d-flex flex-column align-items-center">
-            <a class="navbar-brand" href="#">
-                <img src="images/nero.png" alt="Deseo Apartments" class="img-fluid" style="max-height: 280px;">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/tagliato.png" alt="Deseo Apartments" class="img-fluid" style="max-height: 60px;">
             </a>
-            <!-- Menu -->
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="servizi.html">Servizi</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contatti.html">Contatti</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="consulenza.html">Consulenza</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="gestioni.html">Gestioni</a>
-                </li>
-            </ul>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servizi.html">Servizi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contatti.html">Contatti</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="consulenza.html">Consulenza</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gestioni.html">Gestioni</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="calcolatore.html">Calcolatore</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
+
 
     <div class="container my-5">
         <!-- Hero Section -->
 
-        <div class="hero-section text-center mb-4 ">
+        <div class="hero-section text-center mb-4" style="margin-top: 150px;">
             <h1><b>SCOPRI IL POTENZIALE DEL TUO APPARTAMENTO</b></h1>
-            <p style="font-size: 3vh;">Compila il form!</p>
+            <p style="font-size: 3vh; color: #ca0f0f;">Compila il form!</p>
         </div>
 
         <!-- Main Content -->
@@ -315,10 +365,10 @@
 
                 <div class="col-md-6 order-md-1">
                     <center>
-                        <h3 class="custom-btn" style="color:black;">*Come calcoliamo la possibile rendita?
+                        <h3 class="non-clickable-label" style="color:white;">*Come calcoliamo la possibile rendita?
                         </h3>
                         <br>
-
+                        <br>
                     </center>
                     <p class="text-center"><span class="bold">La rendita mensile</span> del tuo appartamento è
                         calcolata
@@ -337,7 +387,8 @@
                             class="bold">potenziale economico</span> del tuo immobile.</p>
                     <center>
                         <br>
-                        <h3 class="custom-btn" style="color:black;">Massimizza il tuo rendimento!</h3>
+                        <h3 class="non-clickable-label" style="color:white;">Massimizza il tuo rendimento!</h3>
+                        <br>
                         <br>
 
                     </center>
@@ -348,7 +399,7 @@
                         manutenzione alla gestione
                         delle prenotazioni, dalle pratiche contrattuali alle visite con potenziali inquilini.
                         <a href="https://www.deseoapartments.com" target="_blank"
-                            style="text-decoration: none;color:#324e41;"><b>Clicca qui per
+                            style="text-decoration: none;color:#ca0f0f;"><b>Clicca qui per
                                 scoprire di più!</b></a>
 
                     </p>
@@ -364,9 +415,14 @@
     </div>
     </div>
 
+    <!-- Divisore -->
+    <div class="container-fluid">
+        <hr style="border: 0; height: 2px; background: #000000; margin: 0;">
+    </div>
+
     <!-- Modulo di contatto -->
     <div class="container my-5">
-        <h2 class="text-center mb-4" style="color: #426954;"><b>Contattaci per una consulenza gratuita</b></h2>
+        <h2 class="text-center mb-4" style="color: #212529;"><b>Contattaci per una consulenza gratuita</b></h2>
         <br>
         <form action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="7433205f-e93a-46c1-a284-4a7839010a8a">
@@ -426,139 +482,150 @@
     </div>
 
     <!-- Footer -->
-    <div>
-        <div
-            style="background-image: url('images/navback1.png'); background-size: cover; background-position: center; background-repeat: no-repeat; width: auto;">
-            <footer style="padding: 40px 0; color: #333;">
-                <div class="container">
-                    <div class="row">
-                        <!-- Contatti -->
-                        <div class="col-md-6">
-                            <center>
-                                <h4 style="color: #333;"><b>Contattaci</b></h4>
-                                <ul class="list-unstyled">
-                                    <li><a href="tel:+393880599971" style="text-decoration: none; color: #426954;">+39
-                                            388
-                                            059
-                                            99 71</a></li>
-                                    <li><a href="tel:+393271975673" style="text-decoration: none; color: #426954;">+39
-                                            327
-                                            197
-                                            56 73</a></li>
-                                    <li><a href="mailto:info@deseoapartments.com"
-                                            style="text-decoration: none; color: #426954;">info@deseoapartments.com</a>
-                                    </li>
-                                </ul>
-                                <p style="margin: 0;color: #426954;"><b>Sede legale: Via Ugo Bassi 10, Bologna
-                                        40121</b>
-                                </p>
-                                <p style="margin: 0;color: #426954;"><b>Lun - Ven: 09:00 - 18:00</b></p>
-                                <p style="margin: 0;color: #426954;"><b>P.IVA: 04119991208</b></p>
-                                <!-- Icone social -->
+    <div
+        style="background-image: url('images/navback.png'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100%;">
+        <footer style="padding: 40px 0; color: #333;">
+            <div class="container">
+                <div class="row">
+                    <!-- Contatti -->
+                    <div class="col-md-6">
+                        <center>
+                            <h4 style="color: #333;"><b>Contattaci</b></h4>
+                            <ul class="list-unstyled">
+                                <li><a href="tel:+393880599971" style="text-decoration: none; color: #ca0f0f;">+39 388
+                                        059
+                                        99 71</a></li>
+                                <li><a href="tel:+393271975673" style="text-decoration: none; color: #ca0f0f;">+39 327
+                                        197
+                                        56 73</a></li>
+                                <li><a href="mailto:info@deseoapartments.com"
+                                        style="text-decoration: none; color: #ca0f0f;">info@deseoapartments.com</a></li>
+                            </ul>
+                            <p style="margin: 0;color: #ca0f0f;"><b>Sede legale: Via Ugo Bassi 10, Bologna 40121</b></p>
+                            <p style="margin: 0;color: #ca0f0f;"><b>Lun - Ven: 09:00 - 18:00</b></p>
+                            <p style="margin: 0;color: #ca0f0f;"><b>P.IVA: 04119991208</b></p>
+                            <!-- Icone social -->
+                            <br>
+                            <div>
+                                <a href="https://www.facebook.com/profile.php?id=61562461786178"
+                                    style="margin-right: 10px;"><img src="images/insta.png" alt="Instagram"
+                                        width="30"></a>
+                                <a href="https://www.instagram.com/deseoapartments/" style="margin-right: 10px;"><img
+                                        src="images/face.png" alt="Facebook" width="30"></a>
+                                <a href="https://wa.me/393880599971"><img src="images/whatsapp.png" alt="WhatsApp"
+                                        width="30"></a>
                                 <br>
+                                <br>
+                                <!-- Brand Partners -->
                                 <div>
-                                    <a href="https://www.facebook.com/profile.php?id=61562461786178"
-                                        style="margin-right: 10px;"><img src="images/insta.png" alt="Instagram"
-                                            width="30"></a>
-                                    <a href="https://www.instagram.com/deseoapartments/"
-                                        style="margin-right: 10px;"><img src="images/face.png" alt="Facebook"
-                                            width="30"></a>
-                                    <a href="https://wa.me/393880599971"><img src="images/whatsapp.png" alt="WhatsApp"
-                                            width="30"></a>
-                                    <br>
-                                    <br>
-
+                                    <h5 style="margin-top: 20px; color: #333;"><b>Brand Partners</b></h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="https://www.nolobolo.com" target="_blank"
+                                                style="text-decoration: none; color: #ca0f0f;"><b>NoloBolo</b></a> | <a
+                                                href="https://putitonmenu.altervista.org" target="_blank"
+                                                style="text-decoration: none; color: #ca0f0f;"><b>Put It On Menu</b></a>
+                                        </li>
+                                    </ul>
                                 </div>
-                        </div>
-                        <!-- Logo e marchio -->
-                        <div class="col-md-6 text-center">
-                            <img src="images/nero.png" alt="Deseo Apartments" class="img-fluid mb-3"
-                                style="max-width: 200px;">
-                            <p style="font-size: 14px;"><b>© 2024 Deseo Apartments v.1.3 | Tutti i diritti
-                                    riservati</b>
-                            </p>
-                            <p style="font-size: 14px;">
-                                <a href="termini.html" style="text-decoration: none; color: #426954;"><b>Termini e
-                                        Condizioni</b></a> |
-                                <a href="privacy.html" style="text-decoration: none; color: #426954;"><b>Privacy
-                                        e
-                                        Cookies Policy</b></a>
-                            </p>
+
+
+
+                            </div>
+                    </div>
+                    <!-- Logo e marchio -->
+                    <div class="col-md-6 text-center">
+                        <img src="images/nero.png" alt="Deseo Apartments" class="img-fluid mb-3"
+                            style="max-width: 200px;">
+                        <p style="font-size: 14px;"><b>© 2024 Deseo Apartments v.1.3 | Tutti i diritti riservati</b></p>
+                        <p style="font-size: 14px;">
+                            <a href="termini.html" style="text-decoration: none; color: #ca0f0f;"><b>Termini e
+                                    Condizioni</b></a> |
+                            <a href="privacy.html" style="text-decoration: none; color: #ca0f0f;"><b>Privacy e
+                                    Cookies Policy</b></a>
+                            <center>
+                                <div><button class="pacchetto-button"
+                                        onclick="document.getElementById('cookie-banner').style.display = 'block';">Gestisci
+                                        i cookie</button></div>
                             </center>
-                        </div>
                     </div>
                 </div>
-            </footer>
-        </div>
+                </p>
+                </center>
+            </div>
+    </div>
+    </div>
+    </footer>
+    </div>
 
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="welcome.js"></script>
-        <script>
-            function showBasePrice() {
-                const address = document.getElementById("address").value;
-                if (address) {
-                    const basePrice = calculateAveragePriceForCity(address); // Funzione dal file welcome.js
-                    if (basePrice) {
-                        document.getElementById("base-price").textContent = basePrice;
-                    } else {
-                        document.getElementById("base-price").textContent = "Non disponibile";
-                    }
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="welcome.js"></script>
+    <script>
+        function showBasePrice() {
+            const address = document.getElementById("address").value;
+            if (address) {
+                const basePrice = calculateAveragePriceForCity(address); // Funzione dal file welcome.js
+                if (basePrice) {
+                    document.getElementById("base-price").textContent = basePrice;
+                } else {
+                    document.getElementById("base-price").textContent = "Non disponibile";
                 }
             }
-        </script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const banner = document.getElementById("cookie-banner");
-                const acceptButton = document.getElementById("accept-cookies");
-                const declineButton = document.getElementById("decline-cookies");
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const banner = document.getElementById("cookie-banner");
+            const acceptButton = document.getElementById("accept-cookies");
+            const declineButton = document.getElementById("decline-cookies");
 
-                // Mostra il banner se il consenso non è già stato dato
-                if (!localStorage.getItem("cookiesAccepted")) {
-                    banner.style.display = "block";
-                }
+            // Mostra il banner se il consenso non è già stato dato
+            if (!localStorage.getItem("cookiesAccepted")) {
+                banner.style.display = "block";
+            }
 
-                // Funzione per accettare i cookie
-                acceptButton.addEventListener("click", () => {
-                    localStorage.setItem("cookiesAccepted", "true");
-                    banner.style.display = "none";
-                    loadGoogleServices();
-                });
-
-                // Funzione per rifiutare i cookie
-                declineButton.addEventListener("click", () => {
-                    localStorage.setItem("cookiesAccepted", "false");
-                    banner.style.display = "none";
-                });
-
-                // Carica Google Analytics e altre API solo se i cookie sono accettati
-                function loadGoogleServices() {
-                    if (localStorage.getItem("cookiesAccepted") === "true") {
-                        // Aggiungi script di Google Analytics
-                        const script = document.createElement("script");
-                        script.src = "https://www.googletagmanager.com/gtag/js?id=G-9BSJYDJ59V";
-                        script.async = true;
-                        document.head.appendChild(script);
-
-                        script.onload = () => {
-                            window.dataLayer = window.dataLayer || [];
-                            function gtag() {
-                                dataLayer.push(arguments);
-                            }
-                            gtag("js", new Date());
-                            gtag("config", "G-9BSJYDJ59V");
-                        };
-
-                        // Aggiungi altre API di Google se necessarie
-                    }
-                }
-
-                // Se i cookie sono già stati accettati, carica i servizi
-                if (localStorage.getItem("cookiesAccepted") === "true") {
-                    loadGoogleServices();
-                }
+            // Funzione per accettare i cookie
+            acceptButton.addEventListener("click", () => {
+                localStorage.setItem("cookiesAccepted", "true");
+                banner.style.display = "none";
+                loadGoogleServices();
             });
-        </script>
+
+            // Funzione per rifiutare i cookie
+            declineButton.addEventListener("click", () => {
+                localStorage.setItem("cookiesAccepted", "false");
+                banner.style.display = "none";
+            });
+
+            // Carica Google Analytics e altre API solo se i cookie sono accettati
+            function loadGoogleServices() {
+                if (localStorage.getItem("cookiesAccepted") === "true") {
+                    // Aggiungi script di Google Analytics
+                    const script = document.createElement("script");
+                    script.src = "https://www.googletagmanager.com/gtag/js?id=G-9BSJYDJ59V";
+                    script.async = true;
+                    document.head.appendChild(script);
+
+                    script.onload = () => {
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag() {
+                            dataLayer.push(arguments);
+                        }
+                        gtag("js", new Date());
+                        gtag("config", "G-9BSJYDJ59V");
+                    };
+
+                    // Aggiungi altre API di Google se necessarie
+                }
+            }
+
+            // Se i cookie sono già stati accettati, carica i servizi
+            if (localStorage.getItem("cookiesAccepted") === "true") {
+                loadGoogleServices();
+            }
+        });
+    </script>
 
 
 </body>
