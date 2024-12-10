@@ -1,15 +1,9 @@
 body {
   font-family: 'Roboto', sans-serif;
+  background-color: #ffffff42;
 }
 
-.nav-link {
-  color: black;
-  font-size: 20px;
-}
 
-.nav-link:hover {
-  color: #00470e;
-}
 
 
 /* Font più snello per il testo del Container 1 */
@@ -26,13 +20,13 @@ body {
 /* Stile per le parole chiave */
 .custom-justify .keyword {
   font-weight: bold;
-  color: #426954;
+  color: #ca0f0f;
 }
 
 .pacchetto-button {
   display: block;
   /* Rende il bottone un blocco per centrarlo facilmente */
-  width: 80%;
+  width: auto;
   /* Larghezza del bottone */
   margin: 10px auto;
   /* Centra il bottone orizzontalmente e aggiunge spazio verticale */
@@ -44,13 +38,13 @@ body {
   /* Dimensione del testo */
   font-weight: bold;
   /* Testo in grassetto */
-  color: black;
+  color: rgb(255, 255, 255);
   /* Colore del testo bianco */
-  background-color: #f8f6c8;
+  background-color: #ca0f0f;
   /* Sfondo rosa scuro */
   border: none;
   /* Nessun bordo */
-  border-radius: 8px;
+  border-radius: 0%;
   /* Angoli arrotondati */
   text-align: center;
   /* Testo centrato */
@@ -61,14 +55,14 @@ body {
   text-decoration: none;
   margin-top: 20px;
   margin-bottom: 20px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
 
 }
 
 .pacchetto-button:hover {
-  background-color: #fffcad;
+  background-color: #ffffff;
   /* Colore di sfondo più scuro al passaggio del mouse */
-  color: black;
+  color: #ca0f0f;
   /* Colore del testo resta bianco */
   transform: scale(1.05);
   /* Leggero ingrandimento */
@@ -92,7 +86,7 @@ footer a:hover {
 }
 
 footer hr {
-  border-color: #426954;
+  border-color: #ca0f0f;
   width: 80px;
   margin: 10px auto;
 }
@@ -101,7 +95,7 @@ footer hr {
 .footer-container {
   width: 100%;
   height: 100%;
-  background-color: #f9f9f9;
+  background-color: white;
   /* backup color se l'immagine non viene caricata */
 }
 
@@ -139,8 +133,8 @@ footer hr {
 }
 
 .cookie-container button {
-  background-color: #f8f6c8;
-  color: black;
+  background-color: #ca0f0f;
+  color: rgb(255, 255, 255);
   border: none;
   padding: 10px 20px;
   margin: 5px;
@@ -149,10 +143,102 @@ footer hr {
 }
 
 .cookie-container button:hover {
-  background-color: #f8f6c8;
+  background-color: #ffffff;
+  color: #ca0f0f;
 }
 
 .cookie-container a {
-  color: #f8f6c8;
+  color: white;
   text-decoration: underline;
+}
+
+:root {
+  --navbar-height: 100px;
+  /* Altezza personalizzabile della navbar */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  height: var(--navbar-height);
+  /* Usa la variabile per impostare l'altezza */
+  display: flex;
+  align-items: center;
+  /* Centra verticalmente il contenuto */
+}
+
+.navbar a.nav-link {
+  color: #ca0f0f;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.navbar a.nav-link:hover {
+  color: black;
+}
+
+.navbar-collapse {
+  background-color: #ffffff;
+  /* Sfondo visibile quando il menu si apre */
+}
+
+.navbar-collapse.show {
+  background-color: #ffffff;
+  /* Forza il colore di sfondo */
+  position: absolute;
+  /* Rende il menu assoluto per coprire l'area */
+  top: var(--navbar-height);
+  /* Posiziona il menu subito sotto la navbar */
+  left: 0;
+  padding: 10px;
+  width: 100%;
+  z-index: 10;
+  /* Garantisce che il menu sia sopra gli altri elementi */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  /* Aggiunge un'ombra per separare il menu */
+}
+
+.hero {
+  background: url('images/hero.png') center center / cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  font-weight: 100;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+  /* Ombra per il testo */
+}
+
+.hero .btn {
+  background-color: #ca0f0f;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  border-radius: 0%;
+}
+
+.hero .btn:hover {
+  background-color: #ffffff;
+  color: #ca0f0f;
+}
+
+.keyword {
+  font-weight: bold;
+  color: #ca0f0f;
 }
