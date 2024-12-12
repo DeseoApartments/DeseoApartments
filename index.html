@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deseo Apartments - Gestioni Immobiliari in tutta Italia</title>
+    <title>Deseo Apartments</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/custom.css">
@@ -17,25 +17,21 @@
             --navbar-height: 100px;
         }
 
+        html,
         body {
-            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            width: 100%;
             overflow-x: hidden;
-            /* Previene lo scorrimento laterale */
+            /* Prevent horizontal scroll */
+            overflow-y: auto;
+            /* Ensure smooth vertical scroll */
         }
 
-        html,
-
         body {
-            width: 100%;
-            overflow-x: hidden;
-            /* Previene lo scorrimento laterale */
+            font-family: 'Roboto', sans-serif;
         }
 
         .container {
-
             padding-left: 15px;
             padding-right: 15px;
         }
@@ -43,43 +39,13 @@
         .navbar {
             width: 100%;
             padding: 0;
-            /* Rimuove padding extra */
             margin: 0;
-            /* Rimuove margini */
-        }
-
-        .navbar-toggler {
-            margin-left: auto;
-            /* Assicura che sia posizionato correttamente a destra */
-        }
-
-        .navbar-collapse {
-            margin: 0 auto;
-            /* Centralizza il contenuto della navbar */
-            overflow: hidden;
-            /* Evita overflow */
-            width: 100%;
-        }
-
-        .navbar-nav {
-            flex-wrap: nowrap;
-            /* Impedisce di andare fuori dallo schermo */
-        }
-
-        .nav-item {
-            white-space: nowrap;
-            /* Evita che i link si spezzino su più righe */
-        }
-
-
-        .navbar {
             background-color: #ffffff;
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
             height: var(--navbar-height);
             display: flex;
             align-items: center;
             z-index: 1000;
-            /* Assicura che la navbar sia sempre in primo piano */
         }
 
         .navbar a.nav-link {
@@ -95,27 +61,6 @@
 
         .navbar-toggler {
             border: none;
-            outline: none;
-        }
-
-        .navbar-toggler:focus {
-            outline: none;
-            box-shadow: none;
-        }
-
-        .navbar-collapse {
-            background-color: #ffffff;
-            /* Sfondo visibile per il menu mobile */
-            z-index: 999;
-            padding: 15px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.0);
-            border-radius: 5px;
-            width: 80%;
-        }
-
-        .navbar-collapse.show {
-            display: block !important;
-            /* Forza la visibilità del menu */
         }
 
         .hero {
@@ -154,6 +99,16 @@
         .keyword {
             font-weight: bold;
             color: #ca0f0f;
+        }
+
+        /* Ensure AOS elements do not overflow */
+        [data-aos] {
+            overflow: visible !important;
+        }
+
+        /* Fix for elements triggering extra scrollbar */
+        .container-fluid {
+            overflow-x: hidden;
         }
     </style>
 
@@ -202,7 +157,7 @@
             <div><a href="contatti.html" class="btn">Contattaci ora</a></div>
             <h1
                 style="font-style: italic; font-family: Arial, sans-serif; font-size: 2rem; text-align: center;margin-top: 20px;">
-                ...dai più valore al tuo immobile!</h1>
+                ...dai più valore al tuo appartamento!</h1>
         </div>
     </div>
 
@@ -210,7 +165,7 @@
     <div class="container my-5" data-aos="fade-up">
         <div class="border rounded shadow-sm p-4 text-center d-flex flex-column align-items-center">
             <h1 style="font-size: 35px;"><b>CHI SIAMO</b></h1>
-            <img src="images/services.png" alt="Gestione immobiliare" class="img-fluid mt-3" width="500vw"
+            <img src="images/relax.png" alt="Gestione immobiliare" class="img-fluid mt-3" width="500vw"
                 style="border-radius: 5%;margin-bottom: 27px;">
             <p style="font-size: 1.3rem;">
                 <span class="keyword">DESEO</span> è un'agenzia di gestione immobiliare con sede a <span
@@ -229,7 +184,7 @@
     <div class="container my-5" data-aos="fade-down">
         <div class="border rounded shadow-sm p-4 text-center d-flex flex-column align-items-center">
             <h1 style="font-size: 35px;"><b>I NOSTRI SERVIZI</b></h1>
-            <img src="images/relax.png" alt="Gestione immobiliare" class="img-fluid mt-3" width="500vw"
+            <img src="images/services.png" alt="Gestione immobiliare" class="img-fluid mt-3" width="500vw"
                 style="border-radius: 5%;margin-bottom: 27px;">
             <p style="font-size: 1.3rem;">
                 Garantiamo la <span class="keyword">GESTIONE COMPLETA</span> del tuo appartamento senza il minimo
@@ -237,7 +192,7 @@
             </p>
             <p style="font-size: 1.3rem;"> Goditi al massimo il tuo tempo libero!
             </p>
-            <a href="servizi.html" class="pacchetto-button" style="margin-top: 0px;">Scopri di più</a>
+            <a href="servizi.html" class="pacchetto-button" style="margin-top: -10px;">Scopri di più</a>
         </div>
     </div>
 
@@ -427,7 +382,11 @@
     <!-- AOS JS -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({
+            duration: 1200,
+            offset: 120,
+            once: true
+        });
     </script>
 
     <script>
