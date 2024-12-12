@@ -19,19 +19,37 @@
             /* Altezza personalizzabile della navbar */
         }
 
+        /* Aggiunta di un reset globale */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Roboto', sans-serif;
+            overflow-x: hidden;
+            /* Rimuove lo scrolling orizzontale */
+            width: 100vw;
+            /* Assicura che il body si adatti al viewport */
         }
+
+
 
         .navbar {
             background-color: #ffffff;
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
             height: var(--navbar-height);
-            /* Usa la variabile per impostare l'altezza */
             display: flex;
             align-items: center;
-            /* Centra verticalmente il contenuto */
+            width: 100vw;
+            /* Assicurati che la larghezza non superi quella del contenitore */
+            max-width: 100vw;
+            /* Rimuovi larghezza in eccesso */
+            box-sizing: border-box;
+            /* Include padding e bordi nella larghezza totale */
         }
+
 
         .navbar a.nav-link {
             color: #212529;
@@ -58,7 +76,7 @@
             /* Posiziona il menu subito sotto la navbar */
             left: 0;
             padding: 10px;
-            width: 100%;
+            width: 100vw;
             z-index: 10;
             /* Garantisce che il menu sia sopra gli altri elementi */
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -79,7 +97,7 @@
             font-size: 2rem;
             font-weight: 100;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 2);
             /* Ombra per il testo */
         }
 
@@ -132,38 +150,62 @@
             color: #555;
         }
 
+        /* Stile per le icone */
         .services-icon {
-            font-size: 2rem;
-            color: #ca0f0f;
+            width: 70px;
+            /* Dimensione uniforme */
+            height: auto;
+            /* Mantiene le proporzioni */
+            margin-bottom: 15px;
+            /* Spaziatura dal titolo */
         }
 
+        /* Contenitori dei servizi */
+        .service-box {
+            display: flex;
+            flex-direction: column;
+            /* Disposizione verticale */
+            align-items: center;
+            /* Allinea al centro */
+            justify-content: space-between;
+            /* Spaziatura uniforme tra gli elementi */
+            height: 100%;
+            /* Rende tutte le box della stessa altezza */
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        /* Assicura che le colonne siano uniformi */
+        .row .col-md-4 {
+            display: flex;
+            flex-direction: column;
+            /* Disposizione verticale */
+            justify-content: stretch;
+            /* Allineamento uniforme */
+        }
+
+        /* Titoli dei servizi */
         .service-title {
             font-size: 1.5rem;
             font-weight: bold;
-            margin-top: 1rem;
-            color: #333;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            text-align: center;
         }
 
+        /* Testo dei servizi */
         .service-text {
-            font-size: 1.4rem;
-            color: #555;
-            margin-top: 0.5rem;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            text-align: center;
+            margin-bottom: 10px;
         }
 
         /* Media query per schermi piccoli */
         @media (max-width: 576px) {
-            .section-container {
-                padding-left: 15px;
-                padding-right: 15px;
-            }
-
-            .section-text {
-                text-align: justify;
-            }
-
-            .section-title {
-                text-align: center;
-                font-size: 1.5rem;
+            .service-box {
+                padding: 10px;
+                /* Riduce il padding per schermi piccoli */
             }
         }
     </style>
@@ -244,7 +286,8 @@
             <div class="col-md-6">
                 <h2 class="section-title" style="text-align: center;">Chi Siamo</h2>
                 <p class="section-text" style="text-align: justify;">
-                    Per noi, la "Gestione Immobiliare" non significa solo amministrare e supervisionare gli immobili, ma
+                    Per noi, la <b>Gestione Immobiliare</b> non significa solo amministrare e supervisionare gli
+                    immobili, ma
                     anche sviluppare strategie e intraprendere azioni concrete per valorizzare le proprietà dei nostri
                     clienti e massimizzare i rendimenti dei loro investimenti.
                 </p>
@@ -270,23 +313,23 @@
         <h2 class="section-title text-center" data-aos="fade-down">PERCHÉ SCEGLIERE DESEO</h2>
         <div class="row text-center">
             <div class="col-md-4 mb-4" data-aos="fade-right">
-                <div>
-                    <span class="services-icon">🏠</span>
+                <div class="service-box">
+                    <img src="images/cura.png" alt="Cura dell'immobile" class="services-icon">
                     <h3 class="service-title">Cura dell'immobile</h3>
                     <p class="service-text">Gestione attenta e puntuale per mantenere il tuo immobile in perfette
                         condizioni.</p>
                 </div>
             </div>
             <div class="col-md-4 mb-4" data-aos="fade-up">
-                <div>
-                    <span class="services-icon">📞</span>
+                <div class="service-box">
+                    <img src="images/tel.png" alt="Comunicazione Costante" class="services-icon">
                     <h3 class="service-title">Comunicazione Costante</h3>
                     <p class="service-text">Un dialogo aperto e continuo per garantire il massimo supporto.</p>
                 </div>
             </div>
             <div class="col-md-4 mb-4" data-aos="fade-left">
-                <div>
-                    <span class="services-icon">💼</span>
+                <div class="service-box">
+                    <img src="images/prof.png" alt="Professionalità" class="services-icon">
                     <h3 class="service-title">Professionalità</h3>
                     <p class="service-text">Un team di esperti dedicato a offrirti un servizio impeccabile.</p>
                 </div>
@@ -294,22 +337,22 @@
         </div>
         <div class="row text-center">
             <div class="col-md-4 mb-4" data-aos="fade-right">
-                <div>
-                    <span class="services-icon">🔍</span>
+                <div class="service-box">
+                    <img src="images/tras.png" alt="Trasparenza" class="services-icon">
                     <h3 class="service-title">Trasparenza</h3>
                     <p class="service-text">Ogni azione è chiara e condivisa per costruire un rapporto di fiducia.</p>
                 </div>
             </div>
             <div class="col-md-4 mb-4" data-aos="fade-up">
-                <div>
-                    <span class="services-icon">🤝</span>
+                <div class="service-box">
+                    <img src="images/mutua.png" alt="Mutua Soddisfazione" class="services-icon">
                     <h3 class="service-title">Mutua Soddisfazione</h3>
                     <p class="service-text">Il nostro obiettivo è far felici sia i proprietari che gli inquilini.</p>
                 </div>
             </div>
             <div class="col-md-4 mb-4" data-aos="fade-left">
-                <div>
-                    <span class="services-icon">🌟</span>
+                <div class="service-box">
+                    <img src="images/valorizza.png" alt="Valorizzazione" class="services-icon">
                     <h3 class="service-title">Valorizzazione</h3>
                     <p class="service-text">Strategie su misura per aumentare il valore del tuo immobile.</p>
                 </div>
@@ -319,6 +362,8 @@
             <a href="servizi.html" class="pacchetto-button" style="width: 250px;">I NOSTRI SERVIZI</a>
         </div>
     </div>
+
+
 
 
 
@@ -589,7 +634,7 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init({
-            duration: 800, // Durata delle animazioni in millisecondi
+            duration: 900, // Durata delle animazioni in millisecondi
             easing: 'ease-in-out', // Effetto di transizione
             once: true, // Esegue l'animazione solo una volta
         });
