@@ -67,6 +67,17 @@
 </head>
 
 <body>
+    <!-- Banner dei Cookie -->
+    <div id="cookie-banner" class="cookie-container" style="display: none;">
+        <p>
+            Questo sito utilizza cookie per migliorare l'esperienza utente.
+            <a href="privacy.html" target="_blank" style="color: #ca0f0f;">Leggi la nostra Privacy Policy</a>.
+        </p>
+        <div>
+            <button id="accept-cookies">Accetta</button>
+            <button id="reject-cookies">Rifiuta</button>
+        </div>
+    </div>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
@@ -163,6 +174,60 @@
 
     <!-- Bootstrap JS -->
     <script src=" js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const banner = document.getElementById("cookie-banner");
+            const acceptButton = document.getElementById("accept-cookies");
+            const rejectButton = document.getElementById("reject-cookies");
+
+            // Mostra il banner se il consenso non è già stato dato
+            if (!localStorage.getItem("cookiesAccepted")) {
+                banner.style.display = "flex"; // Usa "flex" per mantenere l'allineamento del contenuto
+            }
+
+            // Funzione per accettare i cookie
+            acceptButton.addEventListener("click", () => {
+                localStorage.setItem("cookiesAccepted", "true");
+                banner.style.display = "none";
+                loadGoogleServices();
+            });
+
+            // Funzione per rifiutare i cookie
+            rejectButton.addEventListener("click", () => {
+                localStorage.setItem("cookiesAccepted", "false");
+                banner.style.display = "none";
+            });
+
+            // Carica Google Analytics e altre API solo se i cookie sono accettati
+            function loadGoogleServices() {
+                if (localStorage.getItem("cookiesAccepted") === "true") {
+                    // Aggiungi script di Google Analytics
+                    const script = document.createElement("script");
+                    script.src = "https://www.googletagmanager.com/gtag/js?id=G-9BSJYDJ59V";
+                    script.async = true;
+                    document.head.appendChild(script);
+
+                    script.onload = () => {
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag() {
+                            dataLayer.push(arguments);
+                        }
+                        gtag("js", new Date());
+                        gtag("config", "G-9BSJYDJ59V");
+                    };
+
+                    // Aggiungi altre API di Google se necessarie
+                }
+            }
+
+            // Se i cookie sono già stati accettati, carica i servizi
+            if (localStorage.getItem("cookiesAccepted") === "true") {
+                loadGoogleServices();
+            }
+        });
+
+    </script>
 </body>
 
 </html>

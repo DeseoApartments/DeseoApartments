@@ -10,26 +10,42 @@
     <link rel="stylesheet" href="css/custom.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="images/tagliato.png">
-
-
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
     <style>
         :root {
             --navbar-height: 100px;
-            /* Altezza personalizzabile della navbar */
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            /* Prevent horizontal scroll */
+            overflow-y: auto;
+            /* Ensure smooth vertical scroll */
         }
 
         body {
             font-family: 'Roboto', sans-serif;
         }
 
+        .container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
         .navbar {
+            width: 100%;
+            padding: 0;
+            margin: 0;
             background-color: #ffffff;
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
             height: var(--navbar-height);
-            /* Usa la variabile per impostare l'altezza */
             display: flex;
             align-items: center;
-            /* Centra verticalmente il contenuto */
+            z-index: 1000;
         }
 
         .navbar a.nav-link {
@@ -43,43 +59,63 @@
             color: #ca0f0f;
         }
 
-        .navbar-collapse {
-            background-color: #ffffff;
-            /* Sfondo visibile quando il menu si apre */
+        .navbar-toggler {
+            border: none;
         }
 
-        .navbar-collapse.show {
+        .hero {
+            background: url('images/hero1.png') center center / cover no-repeat;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            font-weight: 100;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+        }
+
+        .hero .btn {
+            background-color: #ca0f0f;
+            color: #ffffff;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero .btn:hover {
             background-color: #ffffff;
-            /* Forza il colore di sfondo */
-            position: absolute;
-            /* Rende il menu assoluto per coprire l'area */
-            top: var(--navbar-height);
-            /* Posiziona il menu subito sotto la navbar */
-            left: 0;
-            padding: 10px;
-            width: 100%;
-            z-index: 10;
-            /* Garantisce che il menu sia sopra gli altri elementi */
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            /* Aggiunge un'ombra per separare il menu */
+            color: #ca0f0f;
+        }
+
+        .keyword {
+            font-weight: bold;
+            color: #ca0f0f;
+        }
+
+        /* Ensure AOS elements do not overflow */
+        [data-aos] {
+            overflow: visible !important;
+        }
+
+        /* Fix for elements triggering extra scrollbar */
+        .container-fluid {
+            overflow-x: hidden;
         }
     </style>
 
 </head>
 
 <body>
-    <!-- Banner dei Cookie -->
-    <div id="cookie-banner" class="cookie-container" style="display: none;">
-        <p>
-            Questo sito utilizza cookie per migliorare l'esperienza utente.
-            <a href="privacy.html" target="_blank" style="color: #ca0f0f;">Leggi la nostra Privacy Policy</a>.
-        </p>
-        <div>
-            <button id="accept-cookies">Accetta</button>
-            <button id="reject-cookies">Rifiuta</button>
-        </div>
-    </div>
-    <!-- Navbar -->
+
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
@@ -114,12 +150,119 @@
         </div>
     </nav>
 
+    <!-- Hero Section -->
+    <div class="hero">
+        <div data-aos="fade-up">
+            <img src="images/bianco.png" width="300vw">
+            <div><a href="consulenza.html" class="hero-button">Contattaci ora</a></div>
+            <h1
+                style="font-style: italic; font-family: Arial, sans-serif; font-size: 2rem; text-align: center;margin-top: 20px;">
+                ...dai più valore al tuo immobile!</h1>
+        </div>
+    </div>
+
+    <!-- Prima sezione -->
+    <div class="container my-5" data-aos="fade-up">
+        <div class="border rounded shadow-sm p-4 text-center d-flex flex-column align-items-center">
+            <h1 style="font-size: 35px;"><b>CHI SIAMO</b></h1>
+            <img src="images/relax.png" alt="Gestione immobiliare" class="img-fluid mt-3" width="500vw"
+                style="border-radius: 5%;margin-bottom: 27px;">
+            <p style="font-size: 1.3rem;">
+                <span class="keyword">DESEO</span> è un'agenzia di gestione immobiliare con sede a <span
+                    class="keyword">Bologna</span>, attiva
+                nel settore da <span class="keyword">due anni</span>.
+            </p>
+            <p style="font-size: 1.3rem;">Offriamo una gestione completa di immobili per affitti a
+                <span class="keyword">breve</span>, <span class="keyword">medio</span> e <span class="keyword">lungo
+                    termine</span>.
+            </p>
+            <a href="consulenza.html" class="pacchetto-button" style="width: 200px;">Contattaci</a>
+        </div>
+    </div>
+
+    <!-- Seconda sezione -->
+    <div class="container my-5" data-aos="fade-down">
+        <div class="border rounded shadow-sm p-4 text-center d-flex flex-column align-items-center">
+            <h1 style="font-size: 35px;"><b>I NOSTRI SERVIZI</b></h1>
+            <img src="images/services.png" alt="Gestione immobiliare" class="img-fluid mt-3" width="500vw"
+                style="border-radius: 5%;margin-bottom: 27px;">
+            <p style="font-size: 1.3rem;">
+                Garantiamo la <span class="keyword">GESTIONE COMPLETA</span> del tuo appartamento senza il minimo
+                sforzo per te!
+            </p>
+            <p style="font-size: 1.3rem;"> Goditi al massimo il tuo tempo libero!
+            </p>
+            <a href="servizi.html" class="pacchetto-button" style="margin-top: -10px;">Scopri di più</a>
+        </div>
+    </div>
+
+    <!-- Terza sezione -->
+    <div class="container my-5" data-aos="fade-up">
+        <div class="border rounded shadow-sm p-4 d-flex align-items-center justify-content-center">
+            <!-- Immagine a sinistra -->
+            <img src="images/mascotte.png" alt="Mascotte" class="img-fluid me-4" style="max-width: 150px;">
+            <!-- Testo e bottone -->
+            <div class="text-start">
+                <h3>
+                    <center><span style="color:#ca0f0f ;"><b>Sei un proprietario?</b></span></center>
+                    <center>Calcola il potenziale </center>
+                    <center>del tuo appartamento!</center>
+                </h3>
+                <center><a href="calcolatore.html" class="pacchetto-button" text-decoration: none;">Clicca Qui</a>
+                </center>
+            </div>
+        </div>
+    </div>
+
+    <!-- Divisore -->
+    <div class="container-fluid" data-aos="fade-right">
+        <hr style="border: 0; height: 2px; background: #000000; margin: 0;">
+    </div>
+
+    <!-- Gestioni -->
+    <div class="container my-5" data-aos="fade-up">
+        <h2 class="hero-section text-center mb-4"><b>LE NOSTRE GESTIONI</b></h2>
+        <div class="row justify-content-center">
+            <div class="row justify-content-center">
+                <!-- Emilia Romagna -->
+                <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center mb-3" data-aos="fade-right">
+                    <div class="border rounded shadow-sm p-4 text-center">
+                        <h4 style="color: #212529;"><b>Emilia Romagna</b></h4>
+                        <br>
+                        <img src="images/emilia.jpg" alt="Emilia Romagna" class="img-fluid rounded mb-3">
+                        <button class="pacchetto-button" onclick="window.location.href='emilia-romagna.html'">Scopri
+                            tutti gli appartamenti</button>
+                    </div>
+                </div>
+
+                <!-- Toscana -->
+                <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center mb-3" data-aos="fade-left">
+                    <div class="border rounded shadow-sm p-4 text-center">
+                        <h4 style="color: #212529;"><b>Toscana</b></h4>
+                        <br>
+                        <img src="images/toscana.jpg" alt="Toscana" class="img-fluid rounded mb-3">
+                        <button class="pacchetto-button" onclick="window.location.href='toscana.html'">Scopri
+                            tutti gli appartamenti</button>
+                    </div>
+                </div>
+
+                <!-- Bottone Vedi tutto -->
+                <div class="text-center mt-5" data-aos="fade-up">
+                    <button style="margin-bottom: 0px;margin-top: -10px;" class="pacchetto-button"
+                        onclick="window.location.href='gestioni.html'">VEDI TUTTO</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Divisore -->
+    <div class="container-fluid" data-aos="fade-left">
+        <hr style="border: 0; height: 2px; background: #000000; margin: 0;">
+    </div>
 
     <!-- Modulo di contatto -->
-    <div class="container my-5">
-        <center style="margin-top: 140px;"><img src="images/nero.png" width="220vw"></center>
-        <h2 class="text-center mb-4" style="color: #212529;"><b>Contattaci per una consulenza
-                gratuita</b></h2>
+    <div class="container my-5" data-aos="fade-up">
+        <h2 class="hero-section text-center mb-4"><b>Contattaci per una consulenza gratuita</b></h2>
         <center>
             <p style="font-size: 1.4rem; color: #212529;">
                 Hai bisogno di supporto per la gestione del tuo appartamento? Compila il modulo sottostante
@@ -130,89 +273,57 @@
             </p>
         </center>
         <br>
-
-        <p style="font-size: 1.4rem; color: #ca0f0f;">
-            <b>Compila il form</b>
-        </p>
         <form action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="7433205f-e93a-46c1-a284-4a7839010a8a">
             <div class="row g-3">
-                <!-- Nome -->
                 <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="text" name="name" class="form-control" placeholder="Nome" required>
-                    </div>
+                    <input type="text" name="name" class="form-control" placeholder="Nome" required>
                 </div>
-                <!-- Cognome -->
                 <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="text" name="Cognome" class="form-control" placeholder="Cognome" required>
-                    </div>
+                    <input type="text" name="Cognome" class="form-control" placeholder="Cognome" required>
                 </div>
             </div>
             <div class="row g-3 mt-3">
-                <!-- Telefono -->
                 <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="text" name="Telefono" class="form-control" placeholder="Telefono" required>
-                    </div>
+                    <input type="text" name="Telefono" class="form-control" placeholder="Telefono" required>
                 </div>
-                <!-- Email -->
                 <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="email" name="email" class="form-control" placeholder="Email" required>
-                    </div>
+                    <input type="email" name="email" class="form-control" placeholder="Email" required>
                 </div>
             </div>
             <div class="row g-3 mt-3">
-                <!-- Numero immobili -->
                 <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="text" name="numero.immobili" class="form-control"
-                            placeholder="Quanti immobili possiedi?" required>
-                    </div>
+                    <input type="text" name="numero.immobili" class="form-control"
+                        placeholder="Quanti immobili possiedi?" required>
                 </div>
-                <!-- Città -->
                 <div class="col-md-6">
-                    <div class="form-group">
-                        <input type="text" name="City" class="form-control" placeholder="In quale città?" required>
-                    </div>
+                    <input type="text" name="City" class="form-control" placeholder="In quale città?" required>
                 </div>
             </div>
             <div class="form-group mt-3">
-                <!-- Messaggio -->
                 <textarea name="message" class="form-control" placeholder="Messaggio" rows="4" required></textarea>
             </div>
-            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-            <!-- Bottone -->
             <div class="text-center mt-4">
                 <button type="submit" class="pacchetto-button">Invia</button>
             </div>
         </form>
     </div>
-    <br>
-
-
-
-
 
     <!-- Footer -->
-    <div
-        style="background-image: url('images/navback.png'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100%;">
+    <div style="background-image: url('images/navback.png'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100%;"
+        data-aos="fade-up">
         <footer style="padding: 40px 0; color: #333;">
             <div class="container">
                 <div class="row">
                     <!-- Contatti -->
-                    <div class="col-md-6">
+                    <div class="col-md-6" data-aos="fade-right">
                         <center>
                             <h4 style="color: #333;"><b>Contattaci</b></h4>
                             <ul class="list-unstyled">
                                 <li><a href="tel:+393880599971" style="text-decoration: none; color: #ca0f0f;">+39 388
-                                        059
-                                        99 71</a></li>
+                                        059 99 71</a></li>
                                 <li><a href="tel:+393271975673" style="text-decoration: none; color: #ca0f0f;">+39 327
-                                        197
-                                        56 73</a></li>
+                                        197 56 73</a></li>
                                 <li><a href="mailto:info@deseoapartments.com"
                                         style="text-decoration: none; color: #ca0f0f;">info@deseoapartments.com</a></li>
                             </ul>
@@ -237,19 +348,17 @@
                                     <ul class="list-unstyled">
                                         <li>
                                             <a href="https://www.nolobolo.com" target="_blank"
-                                                style="text-decoration: none; color: #ca0f0f;"><b>NoloBolo</b></a> | <a
-                                                href="https://putitonmenu.altervista.org" target="_blank"
+                                                style="text-decoration: none; color: #ca0f0f;"><b>NoloBolo</b></a> |
+                                            <a href="https://putitonmenu.altervista.org" target="_blank"
                                                 style="text-decoration: none; color: #ca0f0f;"><b>Put It On Menu</b></a>
                                         </li>
                                     </ul>
                                 </div>
-
-
-
                             </div>
+                        </center>
                     </div>
                     <!-- Logo e marchio -->
-                    <div class="col-md-6 text-center">
+                    <div class="col-md-6 text-center" data-aos="fade-left">
                         <img src="images/nero.png" alt="Deseo Apartments" class="img-fluid mb-3"
                             style="max-width: 200px;">
                         <p style="font-size: 14px;"><b>© 2024 Deseo Apartments v.1.3 | Tutti i diritti riservati</b></p>
@@ -258,24 +367,28 @@
                                     Condizioni</b></a> |
                             <a href="privacy.html" style="text-decoration: none; color: #ca0f0f;"><b>Privacy e
                                     Cookies Policy</b></a>
-                            <center>
-                                <div><button class="pacchetto-button"
-                                        onclick="document.getElementById('cookie-banner').style.display = 'block';">Gestisci
-                                        i cookie</button></div>
-                            </center>
+                        </p>
+                        <div><button class="pacchetto-button"
+                                onclick="document.getElementById('cookie-banner').style.display = 'block';">Gestisci
+                                i cookie</button></div>
                     </div>
                 </div>
-                </p>
-                </center>
             </div>
+        </footer>
     </div>
-    </div>
-    </footer>
-    </div>
-
 
     <!-- Bootstrap JS -->
     <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+            offset: 120,
+            once: true
+        });
+    </script>
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const banner = document.getElementById("cookie-banner");
@@ -329,6 +442,10 @@
         });
 
     </script>
+
+
+
+
 </body>
 
 </html>
