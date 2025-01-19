@@ -59,6 +59,51 @@ body {
 
 }
 
+.pacchetto-whatsapp {
+  display: block;
+  /* Rende il bottone un blocco per centrarlo facilmente */
+  width: auto;
+  /* Larghezza del bottone */
+  margin: 10px auto;
+  /* Centra il bottone orizzontalmente e aggiunge spazio verticale */
+  padding: 12px 20px;
+  /* Spaziatura interna */
+  font-family: 'Roboto', sans-serif;
+  /* Font coerente con il resto del sito */
+  font-size: 16px;
+  /* Dimensione del testo */
+  font-weight: bold;
+  /* Testo in grassetto */
+  color: rgb(255, 255, 255);
+  /* Colore del testo bianco */
+  background-color: #188416;
+  /* Sfondo rosa scuro */
+  border: none;
+  /* Nessun bordo */
+  border-radius: 0%;
+  /* Angoli arrotondati */
+  text-align: center;
+  /* Testo centrato */
+  cursor: pointer;
+  /* Puntatore per indicare un bottone cliccabile */
+  transition: all 0.3s ease;
+  /* Animazione per hover */
+  text-decoration: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+
+}
+
+.pacchetto-whatsapp:hover {
+  background-color: #ffffff;
+  /* Colore di sfondo più scuro al passaggio del mouse */
+  color: #188416;
+  /* Colore del testo resta bianco */
+  transform: scale(1.05);
+  /* Leggero ingrandimento */
+}
+
 .pacchetto-button:hover {
   background-color: #ffffff;
   /* Colore di sfondo più scuro al passaggio del mouse */
