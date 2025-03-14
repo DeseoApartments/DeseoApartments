@@ -111,179 +111,298 @@
         </div>
     </nav>
 
-    <!-- Contenuto -->
-    <div class="container my-5">
-        <h2 class="text-center mb-4" style="color: #212529;margin-top: 150px;"><b>📍 MONTESPERTOLI (FIRENZE)</b></h2>
-        <div class="row g-4">
-            <!-- Abitazione 1 -->
-            <div class="col-12">
-                <div class="border rounded shadow-sm p-3 d-flex flex-column flex-md-row align-items-center">
-                    <!-- Immagine a sinistra -->
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <img src="images/montespertoli.jpg" alt="Abitazione 1" class="img-fluid rounded">
-                    </div>
-                    <!-- Titolo e descrizione a destra -->
-                    <div class="col-md-8 ps-md-4">
-                        <h4 style="color: #212529;" class="text-center text-md-start"><b>The House of Bacchus | Bilocale
-                                nel
-                                Cuore del Chianti</b></h4>
-                        <p style="text-align: justify;">Accogliente bilocale situato tra le suggestive colline del
-                            Chianti, perfetto per un soggiorno all'insegna del relax e
-                            della scoperta. L'appartamento offre una cucina attrezzata, un bagno moderno e una
-                            confortevole camera matrimoniale, immersi in un complesso caratteristico. Questo rifugio è
-                            la base ideale per esplorare il patrimonio culturale della Toscana, con città come Firenze,
-                            Siena e San Gimignano a breve distanza. Nei dintorni, rinomate cantine e ristoranti vi
-                            aspettano per degustare i migliori vini del Chianti e i sapori autentici della cucina
-                            locale.</p>
-                        <button class="pacchetto-button"
-                            onclick="window.location.href='https://it.airbnb.ch/rooms/1331674402970087847?source_impression_id=p3_1737299346_P3_1HRZ-1e-e213p'">PRENOTA
-                            ORA</button>
-                        <button class="pacchetto-whatsapp"
-                            onclick="window.location.href='https://wa.me/393880599971'">WHATSAPP</button>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- Torna a gestioni -->
-            <div class="text-center mt-5">
-                <button class="pacchetto-button" onclick="window.location.href='gestioni.html'">TORNA A
-                    GESTIONI</button>
+    <body>
+        <!-- Banner dei Cookie -->
+        <div id="cookie-banner" class="cookie-container" style="display: none;">
+            <p>
+                Questo sito utilizza cookie per migliorare l'esperienza utente.
+                <a href="privacy.html" target="_blank" style="color: #ca0f0f;">Leggi la nostra Privacy Policy</a>.
+            </p>
+            <div>
+                <button id="accept-cookies">Accetta</button>
+                <button id="reject-cookies">Rifiuta</button>
             </div>
         </div>
-    </div>
-
-    <!-- Footer -->
-    <div
-        style="background-image: url('images/navback.png'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100%;">
-        <footer style="padding: 40px 0; color: #333;">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
             <div class="container">
-                <div class="row">
-                    <!-- Contatti -->
-                    <div class="col-md-6">
-                        <center>
-                            <h4 style="color: #333;"><b>Contattaci</b></h4>
-                            <ul class="list-unstyled">
-                                <li><a href="tel:+393880599971" style="text-decoration: none; color: #ca0f0f;">+39 388
-                                        059
-                                        99 71</a></li>
-                                <li><a href="tel:+393271975673" style="text-decoration: none; color: #ca0f0f;">+39 327
-                                        197
-                                        56 73</a></li>
-                                <li><a href="mailto:info@deseoapartments.com"
-                                        style="text-decoration: none; color: #ca0f0f;">info@deseoapartments.com</a></li>
-                            </ul>
-                            <p style="margin: 0;color: #ca0f0f;"><b>Sede legale: Via Ugo Bassi 10, Bologna 40121</b></p>
-                            <p style="margin: 0;color: #ca0f0f;"><b>Lun - Ven: 09:00 - 18:00</b></p>
-                            <p style="margin: 0;color: #ca0f0f;"><b>P.IVA: 04119991208</b></p>
-                            <!-- Icone social -->
-                            <br>
-                            <div>
-                                <a href="https://www.facebook.com/profile.php?id=61562461786178"
-                                    style="margin-right: 10px;"><img src="images/face.png" alt="Instagram"
-                                        width="30"></a>
-                                <a href="https://www.instagram.com/deseoapartments/" style="margin-right: 10px;"><img
-                                        src="images/insta.png" alt="Facebook" width="30"></a>
-                                <a href="https://wa.me/393880599971"><img src="images/whatsapp.png" alt="WhatsApp"
-                                        width="30"></a>
-                                <br>
-                                <br>
-                                <!-- Brand Partners -->
-                                <div>
-                                    <h5 style="margin-top: 20px; color: #333;"><b>Brand Partners</b></h5>
-                                    <ul class="list-unstyled">
-                                        <li>
-                                            <a href="https://www.nolobolo.com" target="_blank"
-                                                style="text-decoration: none; color: #ca0f0f;"><b>NoloBolo</b></a> | <a
-                                                href="https://putitonmenu.altervista.org" target="_blank"
-                                                style="text-decoration: none; color: #ca0f0f;"><b>Put It On Menu</b></a>
-                                        </li>
-                                    </ul>
-                                </div>
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/tagliato.png" alt="Deseo Apartments" class="img-fluid" style="max-height: 60px;">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="servizi.html">Servizi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contatti.html">Contatti</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="consulenza.html">Consulenza</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gestioni.html">Gestioni</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="calcolatore.html">Calcolatore</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-
-
-                            </div>
-                    </div>
-                    <!-- Logo e marchio -->
-                    <div class="col-md-6 text-center">
-                        <img src="images/nero.png" alt="Deseo Apartments" class="img-fluid mb-3"
-                            style="max-width: 200px;">
-                        <p style="font-size: 14px;"><b>© 2024 Deseo Apartments v.1.3 | Tutti i diritti riservati</b></p>
-                        <p style="font-size: 14px;">
-                            <a href="termini.html" style="text-decoration: none; color: #ca0f0f;"><b>Termini e
-                                    Condizioni</b></a> |
-                            <a href="privacy.html" style="text-decoration: none; color: #ca0f0f;"><b>Privacy e
-                                    Cookies Policy</b></a>
-                            <center>
-                                <div><button class="pacchetto-button"
-                                        onclick="document.getElementById('cookie-banner').style.display = 'block';">Gestisci
-                                        i cookie</button></div>
-                            </center>
+        <!-- Contenuto -->
+        <div class="container my-5">
+            <!-- Modal per la Galleria Immagini -->
+            <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="imageModalLabel">Galleria Fotografica</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Chiudi"></button>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img id="modalImage" src="" class="img-fluid rounded">
+                        </div>
+                        <div class="modal-footer justify-content-between">
+                            <button class="btn btn-primary" id="prevImage">← Precedente</button>
+                            <button class="btn btn-primary" id="nextImage">Successiva →</button>
+                        </div>
                     </div>
                 </div>
-                </p>
-                </center>
             </div>
-    </div>
-    </div>
-    </footer>
-    </div>
-    <!-- Bootstrap JS -->
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const banner = document.getElementById("cookie-banner");
-            const acceptButton = document.getElementById("accept-cookies");
-            const rejectButton = document.getElementById("reject-cookies");
 
-            // Mostra il banner se il consenso non è già stato dato
-            if (!localStorage.getItem("cookiesAccepted")) {
-                banner.style.display = "flex"; // Usa "flex" per mantenere l'allineamento del contenuto
-            }
 
-            // Funzione per accettare i cookie
-            acceptButton.addEventListener("click", () => {
-                localStorage.setItem("cookiesAccepted", "true");
-                banner.style.display = "none";
-                loadGoogleServices();
-            });
+            <h2 class="text-center mb-4" style="color: #212529; margin-top: 150px;"><b>📍 FIRENZE</b></h2>
+            <div class="row g-4">
 
-            // Funzione per rifiutare i cookie
-            rejectButton.addEventListener("click", () => {
-                localStorage.setItem("cookiesAccepted", "false");
-                banner.style.display = "none";
-            });
 
-            // Carica Google Analytics e altre API solo se i cookie sono accettati
-            function loadGoogleServices() {
-                if (localStorage.getItem("cookiesAccepted") === "true") {
-                    // Aggiungi script di Google Analytics
-                    const script = document.createElement("script");
-                    script.src = "https://www.googletagmanager.com/gtag/js?id=G-9BSJYDJ59V";
-                    script.async = true;
-                    document.head.appendChild(script);
+                <!-- Abitazione 1 - Montespertoli -->
+                <div class="col-12">
+                    <div class="border rounded shadow-sm p-3 d-flex flex-column flex-md-row align-items-center">
+                        <div class="col-md-4 mb-3 mb-md-0">
+                            <img src="images/monte6.jpeg" alt="Abitazione Ozzano" class="img-fluid rounded">
+                        </div>
+                        <div class="col-md-8 ps-md-4">
+                            <h4 style="color: #212529;"><b>Le Rose | Chianti | Parcheggio Privato</b>
+                            </h4>
+                            <p style="text-align: justify;">Accogliente bilocale situato tra le suggestive colline del
+                                Chianti, perfetto per un soggiorno all'insegna del relax e della scoperta.
+                                L'appartamento offre una cucina attrezzata, un bagno moderno e una confortevole camera
+                                matrimoniale, immersi in un complesso caratteristico. Questo rifugio è la base ideale
+                                per esplorare il patrimonio culturale della Toscana, con città come Firenze, Siena e San
+                                Gimignano a breve distanza. Nei dintorni, rinomate cantine e ristoranti vi aspettano per
+                                degustare i migliori vini del Chianti e i sapori autentici della cucina locale.
 
-                    script.onload = () => {
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag() {
-                            dataLayer.push(arguments);
-                        }
-                        gtag("js", new Date());
-                        gtag("config", "G-9BSJYDJ59V");
-                    };
+                            </p>
+                            <button class="pacchetto-button"
+                                onclick="window.location.href='https://it.airbnb.ch/rooms/1331674402970087847?source_impression_id=p3_1737299346_P3_1HRZ-1e-e213p'">PRENOTA
+                                ORA</button>
+                            <button class="pacchetto-whatsapp"
+                                onclick="window.location.href='https://wa.me/393880599971'">WHATSAPP</button>
+                            <button class="pacchetto-more" onclick="openGallery('oasi')">
+                                Vedi Foto
+                            </button>
 
-                    // Aggiungi altre API di Google se necessarie
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <!-- Footer -->
+        <div
+            style="background-image: url('images/navback.png'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100%;">
+            <footer style="padding: 40px 0; color: #333;">
+                <div class="container">
+                    <div class="row">
+                        <!-- Contatti -->
+                        <div class="col-md-6">
+                            <center>
+                                <h4 style="color: #333;"><b>Contattaci</b></h4>
+                                <ul class="list-unstyled">
+                                    <li><a href="tel:+393880599971" style="text-decoration: none; color: #ca0f0f;">+39
+                                            388
+                                            059
+                                            99 71</a></li>
+                                    <li><a href="tel:+393271975673" style="text-decoration: none; color: #ca0f0f;">+39
+                                            327
+                                            197
+                                            56 73</a></li>
+                                    <li><a href="mailto:info@deseoapartments.com"
+                                            style="text-decoration: none; color: #ca0f0f;">info@deseoapartments.com</a>
+                                    </li>
+                                </ul>
+                                <p style="margin: 0;color: #ca0f0f;"><b>Sede legale: Via Ugo Bassi 10, Bologna
+                                        40121</b></p>
+                                <p style="margin: 0;color: #ca0f0f;"><b>Lun - Ven: 09:00 - 18:00</b></p>
+                                <p style="margin: 0;color: #ca0f0f;"><b>P.IVA: 04119991208</b></p>
+                                <!-- Icone social -->
+                                <br>
+                                <div>
+                                    <a href="https://www.facebook.com/profile.php?id=61562461786178"
+                                        style="margin-right: 10px;"><img src="images/face.png" alt="Instagram"
+                                            width="30"></a>
+                                    <a href="https://www.instagram.com/deseoapartments/"
+                                        style="margin-right: 10px;"><img src="images/insta.png" alt="Facebook"
+                                            width="30"></a>
+                                    <a href="https://wa.me/393880599971"><img src="images/whatsapp.png" alt="WhatsApp"
+                                            width="30"></a>
+                                    <br>
+                                    <br>
+                                    <!-- Brand Partners -->
+                                    <div>
+                                        <h5 style="margin-top: 20px; color: #333;"><b>Brand Partners</b></h5>
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <a href="https://www.nolobolo.com" target="_blank"
+                                                    style="text-decoration: none; color: #ca0f0f;"><b>NoloBolo</b></a>
+                                                | <a href="https://putitonmenu.altervista.org" target="_blank"
+                                                    style="text-decoration: none; color: #ca0f0f;"><b>Put It On
+                                                        Menu</b></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+
+
+                                </div>
+                        </div>
+                        <!-- Logo e marchio -->
+                        <div class="col-md-6 text-center">
+                            <img src="images/nero.png" alt="Deseo Apartments" class="img-fluid mb-3"
+                                style="max-width: 200px;">
+                            <p style="font-size: 14px;"><b>© 2024 Deseo Apartments v.1.3 | Tutti i diritti
+                                    riservati</b></p>
+                            <p style="font-size: 14px;">
+                                <a href="termini.html" style="text-decoration: none; color: #ca0f0f;"><b>Termini
+                                        e
+                                        Condizioni</b></a> |
+                                <a href="privacy.html" style="text-decoration: none; color: #ca0f0f;"><b>Privacy
+                                        e
+                                        Cookies Policy</b></a>
+                                <center>
+                                    <div><button class="pacchetto-button"
+                                            onclick="document.getElementById('cookie-banner').style.display = 'block';">Gestisci
+                                            i cookie</button></div>
+                                </center>
+                        </div>
+                    </div>
+                    </p>
+                    </center>
+                </div>
+        </div>
+        </div>
+        </footer>
+        </div>
+
+
+        <!-- Bootstrap JS -->
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const banner = document.getElementById("cookie-banner");
+                const acceptButton = document.getElementById("accept-cookies");
+                const rejectButton = document.getElementById("reject-cookies");
+
+                // Mostra il banner se il consenso non è già stato dato
+                if (!localStorage.getItem("cookiesAccepted")) {
+                    banner.style.display = "flex"; // Usa "flex" per mantenere l'allineamento del contenuto
                 }
-            }
 
-            // Se i cookie sono già stati accettati, carica i servizi
-            if (localStorage.getItem("cookiesAccepted") === "true") {
-                loadGoogleServices();
-            }
-        });
+                // Funzione per accettare i cookie
+                acceptButton.addEventListener("click", () => {
+                    localStorage.setItem("cookiesAccepted", "true");
+                    banner.style.display = "none";
+                    loadGoogleServices();
+                });
 
-    </script>
-</body>
+                // Funzione per rifiutare i cookie
+                rejectButton.addEventListener("click", () => {
+                    localStorage.setItem("cookiesAccepted", "false");
+                    banner.style.display = "none";
+                });
+
+                // Carica Google Analytics e altre API solo se i cookie sono accettati
+                function loadGoogleServices() {
+                    if (localStorage.getItem("cookiesAccepted") === "true") {
+                        // Aggiungi script di Google Analytics
+                        const script = document.createElement("script");
+                        script.src = "https://www.googletagmanager.com/gtag/js?id=G-9BSJYDJ59V";
+                        script.async = true;
+                        document.head.appendChild(script);
+
+                        script.onload = () => {
+                            window.dataLayer = window.dataLayer || [];
+                            function gtag() {
+                                dataLayer.push(arguments);
+                            }
+                            gtag("js", new Date());
+                            gtag("config", "G-9BSJYDJ59V");
+                        };
+
+                        // Aggiungi altre API di Google se necessarie
+                    }
+                }
+
+                // Se i cookie sono già stati accettati, carica i servizi
+                if (localStorage.getItem("cookiesAccepted") === "true") {
+                    loadGoogleServices();
+                }
+            });
+
+            document.addEventListener("DOMContentLoaded", function () {
+                // Ogni appartamento ha il suo set di immagini
+                const imageGalleries = {
+                    "monte": ["images/monte1.jpeg", "images/monte2.jpeg", "images/monte3.jpeg", "images/monte4.jpeg", "images/monte5.jpeg", "images/monte6.jpeg", "images/monte7.jpeg", "images/monte8.jpeg",],
+
+
+                };
+
+                let currentGallery = [];
+                let currentIndex = 0;
+                const modalImage = document.getElementById("modalImage");
+                const prevButton = document.getElementById("prevImage");
+                const nextButton = document.getElementById("nextImage");
+
+                // Funzione per aprire la galleria di un appartamento
+                window.openGallery = function (apartment) {
+                    currentGallery = imageGalleries[apartment] || [];
+                    currentIndex = 0;
+                    updateImage();
+                    new bootstrap.Modal(document.getElementById("imageModal")).show();
+                };
+
+                function updateImage() {
+                    if (currentGallery.length > 0) {
+                        modalImage.src = currentGallery[currentIndex];
+                    }
+                }
+
+                prevButton.addEventListener("click", function () {
+                    currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+                    updateImage();
+                });
+
+                nextButton.addEventListener("click", function () {
+                    currentIndex = (currentIndex + 1) % currentGallery.length;
+                    updateImage();
+                });
+            });
+
+
+        </script>
+    </body>
 
 </html>
