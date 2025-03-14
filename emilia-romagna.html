@@ -115,72 +115,207 @@
 
     <!-- Contenuto -->
     <div class="container my-5">
-        <h2 class="text-center mb-4" style="color: #212529;margin-top: 150px;"><b>📍 BOLOGNA</b></h2>
+        <!-- Modal per la Galleria Immagini -->
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="imageModalLabel">Galleria Fotografica</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img id="modalImage" src="" class="img-fluid rounded">
+                    </div>
+                    <div class="modal-footer justify-content-between">
+                        <button class="btn btn-primary" id="prevImage">← Precedente</button>
+                        <button class="btn btn-primary" id="nextImage">Successiva →</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <h2 class="text-center mb-4" style="color: #212529; margin-top: 150px;"><b>📍 BOLOGNA</b></h2>
         <div class="row g-4">
 
-            <!-- Abitazione 1 -->
+
+            <!-- Abitazione 1 - Oasi -->
             <div class="col-12">
                 <div class="border rounded shadow-sm p-3 d-flex flex-column flex-md-row align-items-center">
-                    <!-- Immagine a sinistra -->
                     <div class="col-md-4 mb-3 mb-md-0">
-                        <img src="images/ozzano.jpg" alt="Abitazione 1" class="img-fluid rounded">
+                        <img src="images/ozzano.jpg" alt="Abitazione Ozzano" class="img-fluid rounded">
                     </div>
-                    <!-- Titolo e descrizione a destra -->
                     <div class="col-md-8 ps-md-4">
-                        <h4 style="color: #212529;" class="text-center text-md-start"><b>L'Oasi nei Prati | Piscina |
-                                Parcheggio Privato</b></h4>
+                        <h4 style="color: #212529;"><b>L'Oasi nei Prati | Piscina | Parcheggio
+                                Privato</b></h4>
                         <p style="text-align: justify;">Situata a Ozzano dell’Emilia, a soli 15 minuti dal cuore
-                            pulsante di Bologna, questa villa di 250 mq con piscina offre spazi ideati per vivere
-                            momenti autentici, combinando relax, convivialità e il piacere di sentirsi a casa. La villa
-                            si sviluppa su tre piani, offrendo ampi spazi perfetti per famiglie o gruppi di amici.
+                            pulsante di Bologna, questa villa di
+                            250 mq con piscina offre spazi ideati per vivere momenti autentici, combinando relax,
+                            convivialità e il piacere di sentirsi a casa. La villa si sviluppa su tre piani, offrendo
+                            ampi spazi perfetti per famiglie o gruppi di amici.
+
                         </p>
                         <button class="pacchetto-button"
                             onclick="window.location.href='https://it.airbnb.ch/rooms/1144831683745626620?source_impression_id=p3_1737299184_P3xhTqHKMdEKfT3_'">PRENOTA
                             ORA</button>
-
                         <button class="pacchetto-whatsapp"
                             onclick="window.location.href='https://wa.me/393880599971'">WHATSAPP</button>
+                        <button class="pacchetto-more" onclick="openGallery('oasi')">
+                            Vedi Foto
+                        </button>
+
                     </div>
                 </div>
             </div>
 
-            <!-- Abitazione 1 -->
+
+            <!-- Abitazione 2 - Battisti -->
             <div class="col-12">
                 <div class="border rounded shadow-sm p-3 d-flex flex-column flex-md-row align-items-center">
-                    <!-- Immagine a sinistra -->
                     <div class="col-md-4 mb-3 mb-md-0">
-                        <img src="images/battisti.png" alt="Abitazione 1" class="img-fluid rounded">
+                        <img src="images/battisti.png" alt="Abitazione Battisti" class="img-fluid rounded">
                     </div>
-                    <!-- Titolo e descrizione a destra -->
                     <div class="col-md-8 ps-md-4">
-                        <h4 style="color: #212529;" class="text-center text-md-start"><b>Corte Battisti | Terrazza |
-                                Centro
-                                Storico</b></h4>
+                        <h4 style="color: #212529;"><b>Corte Battisti | Terrazza | Centro Storico</b></h4>
                         <p style="text-align: justify;">Raffinato appartamento da 120 mq con terrazza, situato nel pieno
-                            centro storico di Bologna, a
-                            soli 5 minuti a piedi dalle famose Due Torri, Piazza Maggiore e da tutte le altre attrazioni
-                            principali. L'appartamento si trova al terzo piano con ascensore e vanta pavimenti in
-                            parquet originali degli anni '20, aggiungendo un tocco di storia e fascino all'ambiente.
-                            Sarete circondati da una variegata scelta di bar, ristoranti, tabaccherie, supermercati,
-                            negozi e locali notturni.</p>
+                            centro storico di Bologna, a soli 5 minuti a piedi dalle famose Due Torri, Piazza Maggiore e
+                            da tutte le altre attrazioni principali. L'appartamento si trova al terzo piano con
+                            ascensore e vanta pavimenti in parquet originali degli anni '20, aggiungendo un tocco di
+                            storia e fascino all'ambiente. Sarete circondati da una variegata scelta di bar, ristoranti,
+                            tabaccherie, supermercati, negozi e locali notturni.
+
+
+
+                        </p>
                         <button class="pacchetto-button"
                             onclick="window.location.href='https://deseoapartments.kross.travel/deseo-corte-battisti-terrazza-centro-storico'">PRENOTA
                             ORA</button>
                         <button class="pacchetto-whatsapp"
                             onclick="window.location.href='https://wa.me/393880599971'">WHATSAPP</button>
+                        <button class="pacchetto-more" onclick="openGallery('battisti')">
+                            Vedi Foto
+                        </button>
+
                     </div>
                 </div>
             </div>
 
-            <!-- Abitazione 2 -->
+            <!-- Abitazione 3 - Santo Stefano -->
             <div class="col-12">
                 <div class="border rounded shadow-sm p-3 d-flex flex-column flex-md-row align-items-center">
                     <div class="col-md-4 mb-3 mb-md-0">
-                        <img src="images/cavazza.jpg" alt="Abitazione 2" class="img-fluid rounded">
+                        <img src="images/stefano.webp" alt="Abitazione Steefano" class="img-fluid rounded">
                     </div>
                     <div class="col-md-8 ps-md-4">
-                        <h4 style="color: #212529;" class="text-center text-md-start"><b>La terrazza di Franz | Giardini
-                                Margherita</b></h4>
+                        <h4 style="color: #212529;"><b>Piazza Santo Stefano | Centro Storico</b></h4>
+                        <p style="text-align: justify;">Situato nel cuore del centro storico di Bologna, questo elegante
+                            appartamento di 65 mq offre una vista esclusiva sulle Sette Chiese e sulle Due Torri,
+                            regalando un'esperienza autentica e raffinata. Si trova al terzo piano di un edificio
+                            storico senza ascensore. Perfetto per chi desidera soggiornare in una posizione
+                            privilegiata, immerso nella storia e nell’atmosfera unica di Bologna.</p>
+                        <button class="pacchetto-button"
+                            onclick="window.location.href='https://it.airbnb.ch/rooms/1368239968892403899?source_impression_id=p3_1741972683_P3i-vUETLCU4fstY'">PRENOTA
+                            ORA</button>
+                        <button class="pacchetto-whatsapp"
+                            onclick="window.location.href='https://wa.me/393880599971'">WHATSAPP</button>
+                        <button class="pacchetto-more" onclick="openGallery('stefano')">
+                            Vedi Foto
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Abitazione 4 - Petronio Vecchia -->
+            <div class="col-12">
+                <div class="border rounded shadow-sm p-3 d-flex flex-column flex-md-row align-items-center">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <img src="images/petronio.webp" alt="Abitazione Petronio Vecchia" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-8 ps-md-4">
+                        <h4 style="color: #212529;"><b>Ampio Appartamento | Cortile Privato | Centro Storico</b></h4>
+                        <p style="text-align: justify;">Nel cuore di Bologna, in Via San Petronio Vecchio, questo
+                            appartamento di 100mq + 40mq di cortile privato offre spazi ampi e funzionali, ideali per
+                            soggiorni di lungo periodo. Situato al primo piano con ascensore, garantisce comfort,
+                            privacy e una posizione strategica a pochi passi dalle principali attrazioni della città.
+                        </p>
+                        <button class="pacchetto-button"
+                            onclick="window.location.href='https://it.airbnb.ch/rooms/1372505860646694871?source_impression_id=p3_1741975676_P3pTxAgjsNKdcN-r'">PRENOTA
+                            ORA</button>
+                        <button class="pacchetto-whatsapp"
+                            onclick="window.location.href='https://wa.me/393880599971'">WHATSAPP</button>
+                        <button class="pacchetto-more" onclick="openGallery('petronio')">
+                            Vedi Foto
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Abitazione 5 - Torelli -->
+            <div class="col-12">
+                <div class="border rounded shadow-sm p-3 d-flex flex-column flex-md-row align-items-center">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <img src="images/torelli.webp" alt="Abitazione Torelli" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-8 ps-md-4">
+                        <h4 style="color: #212529;"><b>Appartamento Confortevole | Toniolo</b></h4>
+                        <p style="text-align: justify;">L’appartamento, situato in una zona tranquilla e immersa nel
+                            verde, è l’ideale per chi
+                            cerca comfort e praticità. La posizione strategica permette di raggiungere facilmente il
+                            centro storico e i principali punti di interesse della città.
+
+                        </p>
+                        <button class="pacchetto-button"
+                            onclick="window.location.href='https://it.airbnb.ch/rooms/1223063556778198024?source_impression_id=p3_1741976069_P3JNYvfDpV9SPICr'">PRENOTA
+                            ORA</button>
+                        <button class="pacchetto-whatsapp"
+                            onclick="window.location.href='https://wa.me/393880599971'">WHATSAPP</button>
+                        <button class="pacchetto-more" onclick="openGallery('torelli')">
+                            Vedi Foto
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Abitazione 6 - Storico -->
+            <div class="col-12">
+                <div class="border rounded shadow-sm p-3 d-flex flex-column flex-md-row align-items-center">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <img src="images/storico.webp" alt="Abitazione Storico" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-8 ps-md-4">
+                        <h4 style="color: #212529;"><b>Monolocale | Centro Storico</b></h4>
+                        <p style="text-align: justify;">Accogliente monolocale situato al piano seminterrato (senza
+                            ascensore) nel cuore di Bologna, a pochi passi da Porta Saragozza. L’appartamento dispone di
+                            due letti singoli, che possono essere uniti per formare un matrimoniale, garantendo massima
+                            flessibilità e comfort. La cucina attrezzata offre tutto il necessario per cucinare in
+                            autonomia, mentre il bagno moderno con box doccia assicura praticità e relax.
+
+                        </p>
+                        <button class="pacchetto-button"
+                            onclick="window.location.href='https://it.airbnb.ch/rooms/1372460794641209965?source_impression_id=p3_1741976167_P3dmo0B_2N5jZ2bh'">PRENOTA
+                            ORA</button>
+                        <button class="pacchetto-whatsapp"
+                            onclick="window.location.href='https://wa.me/393880599971'">WHATSAPP</button>
+                        <button class="pacchetto-more" onclick="openGallery('storico')">
+                            Vedi Foto
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Abitazione 7 - Cavazza -->
+            <div class="col-12">
+                <div class="border rounded shadow-sm p-3 d-flex flex-column flex-md-row align-items-center">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <img src="images/cavazza.jpg" alt="Abitazione Cavazza" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-8 ps-md-4">
+                        <h4 style="color: #212529;"><b>La terrazza di Franz | Giardini Margherita
+                            </b></h4>
                         <p style="text-align: justify;">Luminosissimo appartamento di 80 mq con terrazza, situato a soli
                             10 minuti di autobus dal centro storico e distante 10 minuti a piedi dai pittoreschi e
                             incantevoli Giardini Margherita. Perfetto per chi desidera abbinare la tranquillità della
@@ -192,90 +327,108 @@
                             ORA</button>
                         <button class="pacchetto-whatsapp"
                             onclick="window.location.href='https://wa.me/393880599971'">WHATSAPP</button>
+                        <button class="pacchetto-more" onclick="openGallery('cavazza')">
+                            Vedi Foto
+                        </button>
+
                     </div>
                 </div>
             </div>
 
-            <!-- Abitazione 3 -->
+            <!-- Abitazione 8 - Merlo -->
             <div class="col-12">
                 <div class="border rounded shadow-sm p-3 d-flex flex-column flex-md-row align-items-center">
                     <div class="col-md-4 mb-3 mb-md-0">
-                        <img src="images/castelmerlo.jpg" alt="Abitazione 3" class="img-fluid rounded">
+                        <img src="images/castelmerlo.jpg" alt="Abitazione Merlo" class="img-fluid rounded">
                     </div>
                     <div class="col-md-8 ps-md-4">
-                        <h4 style="color: #212529;" class="text-center text-md-start"><b>Merlo's Studio Flat | S.
-                                Orsola</b></h4>
+                        <h4 style="color: #212529;"><b>Merlo's Studio Flat | S. Orsola
+                            </b></h4>
                         <p style="text-align: justify;">Accogliente monolocale di 40 mq situato al piano terra,
                             perfettamente progettato per accogliere ospiti singoli o coppie alla ricerca di un soggiorno
                             confortevole a Bologna. A soli 200 metri dalla fermata del bus "PARCO" , dove potrete
                             prendere il bus n. 14 e raggiungere il cuore del centro storico in soli 5 minuti. Per coloro
                             che si trovano in città per motivi di salute o per visitare amici e familiari, l'Ospedale
-                            Sant'Orsola è facilmente accessibile, trovandosi a soli 1 km di distanza.</p>
+                            Sant'Orsola è facilmente accessibile, trovandosi a soli 1 km di distanza.
+                        </p>
                         <button class="pacchetto-button"
                             onclick="window.location.href='https://deseoapartments.kross.travel/deseo-merlo-s-studio-flat-ospedale-s-orsola'">PRENOTA
                             ORA</button>
                         <button class="pacchetto-whatsapp"
                             onclick="window.location.href='https://wa.me/393880599971'">WHATSAPP</button>
+                        <button class="pacchetto-more" onclick="openGallery('merlo')">
+                            Vedi Foto
+                        </button>
+
                     </div>
                 </div>
             </div>
 
-            <!-- Abitazione 4 -->
+            <!-- Abitazione 9 - Bondi -->
             <div class="col-12">
                 <div class="border rounded shadow-sm p-3 d-flex flex-column flex-md-row align-items-center">
                     <div class="col-md-4 mb-3 mb-md-0">
-                        <img src="images/bondi.jpg" alt="Abitazione 4" class="img-fluid rounded">
+                        <img src="images/bondi.jpg" alt="Abitazione Bondi" class="img-fluid rounded">
                     </div>
                     <div class="col-md-8 ps-md-4">
-                        <h4 style="color: #212529;" class="text-center text-md-start"><b>Bondi's Studio Flat |
-                                S. Orsola</b></h4>
+                        <h4 style="color: #212529;"><b>Bondi's Studio Flat | S. Orsola
+                            </b></h4>
                         <p style="text-align: justify;">Accogliente monolocale di 45 mq situato al piano terra,
                             perfettamente progettato per accogliere ospiti singoli o coppie alla ricerca di un soggiorno
                             confortevole a Bologna. A soli 100 metri dalla fermata del bus "TRIACHINI", dove potrete
                             prendere il bus n. 14 e raggiungere il cuore del centro storico in soli 5 minuti. Per coloro
                             che si trovano in città per motivi di salute o per visitare amici e familiari, l'Ospedale
-                            Sant'Orsola è facilmente accessibile, trovandosi a soli 500 metri di distanza.</p>
+                            Sant'Orsola è facilmente accessibile, trovandosi a soli 500 metri di distanza.
+                        </p>
                         <button class="pacchetto-button"
                             onclick="window.location.href='https://www.airbnb.it/rooms/1294770217909858831?source_impression_id=p3_1732634532_P3o5TN9bO1UF8PbI'">PRENOTA
                             ORA</button>
                         <button class="pacchetto-whatsapp"
                             onclick="window.location.href='https://wa.me/393880599971'">WHATSAPP</button>
+                        <button class="pacchetto-more" onclick="openGallery('bondi')">
+                            Vedi Foto
+                        </button>
+
                     </div>
                 </div>
             </div>
 
-            <!-- Abitazione 5 -->
+            <!-- Abitazione 10 - Schiassi -->
             <div class="col-12">
                 <div class="border rounded shadow-sm p-3 d-flex flex-column flex-md-row align-items-center">
                     <div class="col-md-4 mb-3 mb-md-0">
-                        <img src="images/schiassi.jpg" alt="Abitazione 5" class="img-fluid rounded">
+                        <img src="images/schiassi.jpg" alt="Abitazione Schiassi" class="img-fluid rounded">
                     </div>
                     <div class="col-md-8 ps-md-4">
-                        <h4 style="color: #212529;" class="text-center text-md-start"><b>Trilocale con Terrazzo |
-                                S. Orsola </b></h4>
+                        <h4 style="color: #212529;"><b>Trilocale con Terrazzo | S. Orsola
+                            </b></h4>
                         <p style="text-align: justify;">Vivi la tranquillità di un trilocale accogliente e silenzioso a
                             pochi passi dall'Ospedale Sant'Orsola. Con ampi spazi e aria condizionata, l'appartamento
                             può ospitare fino a 6 persone, garantendo comfort in ogni stagione. La posizione strategica
                             permette di raggiungere facilmente il centro storico grazie ai numerosi collegamenti, unendo
-                            praticità e relax per un soggiorno ideale.</p>
+                            praticità e relax per un soggiorno ideale. </p>
                         <button class="pacchetto-button"
-                            onclick="window.location.href='https://www.airbnb.it/rooms/1173767918171033040?source_impression_id=p3_1725895144_P3dFWxA4gCELbg9w'">PRENOTA
+                            onclick="window.location.href='https://it.airbnb.ch/rooms/1237675041103952439?source_impression_id=p3_1741976648_P3LRjoqMKYkD0R21'">PRENOTA
                             ORA</button>
                         <button class="pacchetto-whatsapp"
                             onclick="window.location.href='https://wa.me/393880599971'">WHATSAPP</button>
+                        <button class="pacchetto-more" onclick="openGallery('schiassi')">
+                            Vedi Foto
+                        </button>
+
                     </div>
                 </div>
             </div>
 
-            <!-- Abitazione 6 -->
+            <!-- Abitazione 11 - Lavoro -->
             <div class="col-12">
                 <div class="border rounded shadow-sm p-3 d-flex flex-column flex-md-row align-items-center">
                     <div class="col-md-4 mb-3 mb-md-0">
-                        <img src="images/lavoro.jpg" alt="Abitazione 6" class="img-fluid rounded">
+                        <img src="images/lavoro.jpg" alt="Abitazione Schiassi" class="img-fluid rounded">
                     </div>
                     <div class="col-md-8 ps-md-4">
-                        <h4 style="color: #212529;" class="text-center text-md-start"><b>Monolocale con Soppalco |
-                                Via del Lavoro </b></h4>
+                        <h4 style="color: #212529;"><b>Monolocale con Soppalco | Via del Lavoro
+                            </b></h4>
                         <p style="text-align: justify;">Accogliente monolocale di 52mq appena ristrutturato, situato al
                             piano terra e progettato per offrire comfort e praticità. Perfetto per singoli viaggiatori o
                             coppie, il monolocale può ospitare fino a 4 persone grazie al letto matrimoniale soppalcato
@@ -285,16 +438,17 @@
                             ORA</button>
                         <button class="pacchetto-whatsapp"
                             onclick="window.location.href='https://wa.me/393880599971'">WHATSAPP</button>
+                        <button class="pacchetto-more" onclick="openGallery('lavoro')">
+                            Vedi Foto
+                        </button>
+
                     </div>
                 </div>
             </div>
-            <!-- Torna a gestioni -->
-            <div class="text-center mt-5">
-                <button class="pacchetto-button" onclick="window.location.href='gestioni.html'">TORNA A
-                    GESTIONI</button>
-            </div>
+
         </div>
     </div>
+
 
     <!-- Footer -->
     <div
@@ -314,9 +468,11 @@
                                         197
                                         56 73</a></li>
                                 <li><a href="mailto:info@deseoapartments.com"
-                                        style="text-decoration: none; color: #ca0f0f;">info@deseoapartments.com</a></li>
+                                        style="text-decoration: none; color: #ca0f0f;">info@deseoapartments.com</a>
+                                </li>
                             </ul>
-                            <p style="margin: 0;color: #ca0f0f;"><b>Sede legale: Via Ugo Bassi 10, Bologna 40121</b></p>
+                            <p style="margin: 0;color: #ca0f0f;"><b>Sede legale: Via Ugo Bassi 10, Bologna
+                                    40121</b></p>
                             <p style="margin: 0;color: #ca0f0f;"><b>Lun - Ven: 09:00 - 18:00</b></p>
                             <p style="margin: 0;color: #ca0f0f;"><b>P.IVA: 04119991208</b></p>
                             <!-- Icone social -->
@@ -337,9 +493,10 @@
                                     <ul class="list-unstyled">
                                         <li>
                                             <a href="https://www.nolobolo.com" target="_blank"
-                                                style="text-decoration: none; color: #ca0f0f;"><b>NoloBolo</b></a> | <a
-                                                href="https://putitonmenu.altervista.org" target="_blank"
-                                                style="text-decoration: none; color: #ca0f0f;"><b>Put It On Menu</b></a>
+                                                style="text-decoration: none; color: #ca0f0f;"><b>NoloBolo</b></a>
+                                            | <a href="https://putitonmenu.altervista.org" target="_blank"
+                                                style="text-decoration: none; color: #ca0f0f;"><b>Put It On
+                                                    Menu</b></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -352,11 +509,14 @@
                     <div class="col-md-6 text-center">
                         <img src="images/nero.png" alt="Deseo Apartments" class="img-fluid mb-3"
                             style="max-width: 200px;">
-                        <p style="font-size: 14px;"><b>© 2024 Deseo Apartments v.1.3 | Tutti i diritti riservati</b></p>
+                        <p style="font-size: 14px;"><b>© 2024 Deseo Apartments v.1.3 | Tutti i diritti
+                                riservati</b></p>
                         <p style="font-size: 14px;">
-                            <a href="termini.html" style="text-decoration: none; color: #ca0f0f;"><b>Termini e
+                            <a href="termini.html" style="text-decoration: none; color: #ca0f0f;"><b>Termini
+                                    e
                                     Condizioni</b></a> |
-                            <a href="privacy.html" style="text-decoration: none; color: #ca0f0f;"><b>Privacy e
+                            <a href="privacy.html" style="text-decoration: none; color: #ca0f0f;"><b>Privacy
+                                    e
                                     Cookies Policy</b></a>
                             <center>
                                 <div><button class="pacchetto-button"
@@ -427,6 +587,56 @@
                 loadGoogleServices();
             }
         });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Ogni appartamento ha il suo set di immagini
+            const imageGalleries = {
+                "oasi": ["images/oasi1.avif", "images/oasi2.avif", "images/oasi3.avif", "images/oasi4.avif", "images/oasi5.jpeg", "images/oasi6.avif", "images/oasi7.avif", "images/oasi8.avif", "images/oasi9.avif", "images/oasi10.avif", "images/oasi11.avif", "images/oasi12.avif", "images/oasi13.avif", "images/oasi14.avif", "images/oasi15.avif", "images/oasi16.avif", "images/oasi17.avif", "images/oasi18.avif", "images/oasi19.avif", "images/oasi20.avif", "images/oasi21.avif", "images/oasi22.jpeg", "images/oasi23.avif", "images/oasi24.avif", "images/oasi25.jpeg", "images/oasi26.avif", "images/oasi27.avif", "images/oasi28.webp", "images/oasi29.avif", "images/oasi31.avif", "images/oasi32.jpeg", "images/oasi33.avif", "images/oasi34.jpeg", "images/oasi35.jpeg", "images/oasi36.jpeg", "images/oasi37.jpeg", "images/oasi38.jpeg",],
+                "battisti": ["images/battisti1.avif", "images/battisti2.jpeg", "images/battisti3.jpeg", "images/battisti4.jpeg", "images/battisti5.jpeg", "images/battisti6.jpeg", "images/battisti7.jpeg", "images/battisti8.jpeg", "images/battisti9.jpeg", "images/battisti10.jpeg", "images/battisti11.jpeg", "images/battisti12.jpeg", "images/battisti13.jpeg", "images/battisti14.jpeg", "images/battisti15.jpeg", "images/battisti16.jpeg", "images/battisti17.jpeg", "images/battisti18.jpeg", "images/battisti19.jpeg", "images/battisti20.jpeg", "images/battisti21.jpeg", "images/battisti23.jpeg",],
+                "stefano": ["images/stefano1.avif", "images/stefano2.jpeg", "images/stefano3.avif", "images/stefano4.avif", "images/stefano5.avif", "images/stefano6.jpeg", "images/stefano7.avif", "images/stefano8.avif", "images/stefano9.avif", "images/stefano10.avif", "images/stefano11.avif", "images/stefano12.avif", "images/stefano13.avif", "images/stefano14.avif", "images/stefano15.avif", "images/stefano16.avif",],
+                "petronio": ["images/petronio1.jpeg", "images/petronio2.avif", "images/petronio3.avif", "images/petronio4.avif", "images/petronio5.avif", "images/petronio6.jpeg", "images/petronio7.avif", "images/petronio8.avif", "images/petronio9.jpeg", "images/petronio10.avif", "images/petronio11.avif", "images/petronio12.avif", "images/petronio13.webp", "images/petronio14.jpeg", "images/petronio15.avif", "images/petronio16.jpeg", "images/petronio17.webp", "images/petronio18.webp", "images/petronio19.avif",],
+                "torelli": ["images/torelli1.avif", "images/torelli2.avif", "images/torelli3.avif", "images/torelli4.avif", "images/torelli5.avif", "images/torelli6.avif", "images/torelli7.avif", "images/torelli8.jpeg", "images/torelli9.avif", "images/torelli10.avif", "images/torelli11.avif", "images/torelli12.avif", "images/torelli13.avif", "images/torelli14.avif", "images/torelli15.avif", "images/torelli16.jpeg",],
+                "storico": ["images/storico1.avif", "images/storico2.avif", "images/storico3.avif", "images/storico4.avif", "images/storico5.avif", "images/storico6.avif", "images/storico7.avif", "images/storico8.avif", "images/storico9.avif", "images/storico10.avif",],
+                "cavazza": ["images/cavazza1.jpeg", "images/cavazza2.jpeg", "images/cavazza3.jpeg", "images/cavazza4.jpeg", "images/cavazza5.jpeg", "images/cavazza6.jpeg", "images/cavazza7.jpeg", "images/cavazza8.jpeg", "images/cavazza9.jpeg", "images/cavazza10.jpeg", "images/cavazza11.jpeg", "images/cavazza12.jpeg", "images/cavazza13.jpeg", "images/cavazza14.jpeg", "images/cavazza15.jpeg", "images/cavazza16.jpeg", "images/cavazza17.jpeg",],
+                "merlo": ["images/merlo1.avif", "images/merlo2.jpeg", "images/merlo3.jpeg", "images/merlo4.jpeg", "images/merlo5.jpeg", "images/merlo6.jpeg", "images/merlo7.jpeg", "images/merlo8.jpeg", "images/merlo9.jpeg", "images/merlo10.jpeg",],
+                "bondi": ["images/bondi1.jpeg", "images/bondi2.jpeg", "images/bondi3.jpeg", "images/bondi4.jpeg", "images/bondi5.jpeg", "images/bondi6.jpeg", "images/bondi7.jpeg", "images/bondi8.jpeg", "images/bondi9.jpeg", "images/bondi10.jpeg", "images/bondi11.jpeg", "images/bondi12.jpeg", "images/bondi13.jpeg",],
+                "schiassi": ["images/schiassi1.jpeg", "images/schiassi2.jpeg", "images/schiassi3.jpeg", "images/schiassi4.jpeg", "images/schiassi5.jpeg", "images/schiassi6.jpeg", "images/schiassi7.jpeg", "images/schiassi8.jpeg", "images/schiassi9.jpeg", "images/schiassi10.jpeg", "images/schiassi11.jpeg", "images/schiassi12.jpeg", "images/schiassi13.jpeg", "images/schiassi14.jpeg", "images/schiassi15.jpeg", "images/schiassi16.jpeg", "images/schiassi17.jpeg", "images/schiassi18.jpeg", "images/schiassi19.jpeg", "images/schiassi20.jpeg", "images/schiassi21.jpeg", "images/schiassi22.jpeg", "images/schiassi23.jpeg",],
+                "lavoro": ["images/lavoro1.avif", "images/lavoro2.avif", "images/lavoro3.avif", "images/lavoro4.avif", "images/lavoro5.avif", "images/lavoro6.avif", "images/lavoro7.avif", "images/lavoro8.avif", "images/lavoro9.avif",],
+
+
+            };
+
+            let currentGallery = [];
+            let currentIndex = 0;
+            const modalImage = document.getElementById("modalImage");
+            const prevButton = document.getElementById("prevImage");
+            const nextButton = document.getElementById("nextImage");
+
+            // Funzione per aprire la galleria di un appartamento
+            window.openGallery = function (apartment) {
+                currentGallery = imageGalleries[apartment] || [];
+                currentIndex = 0;
+                updateImage();
+                new bootstrap.Modal(document.getElementById("imageModal")).show();
+            };
+
+            function updateImage() {
+                if (currentGallery.length > 0) {
+                    modalImage.src = currentGallery[currentIndex];
+                }
+            }
+
+            prevButton.addEventListener("click", function () {
+                currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+                updateImage();
+            });
+
+            nextButton.addEventListener("click", function () {
+                currentIndex = (currentIndex + 1) % currentGallery.length;
+                updateImage();
+            });
+        });
+
 
     </script>
 </body>
