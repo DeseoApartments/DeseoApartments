@@ -2,18 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Deseo Apartments</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/custom.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/tagliato.png" />
 
     <style>
         :root {
             --navbar-height: 100px;
-            /* Altezza personalizzabile della navbar */
         }
 
         body {
@@ -24,10 +24,8 @@
             background-color: #ffffff;
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
             height: var(--navbar-height);
-            /* Usa la variabile per impostare l'altezza */
             display: flex;
             align-items: center;
-            /* Centra verticalmente il contenuto */
         }
 
         .navbar a.nav-link {
@@ -43,23 +41,121 @@
 
         .navbar-collapse {
             background-color: #ffffff;
-            /* Sfondo visibile quando il menu si apre */
         }
 
         .navbar-collapse.show {
-            background-color: #ffffff;
-            /* Forza il colore di sfondo */
+            background: #ffffff;
             position: absolute;
-            /* Rende il menu assoluto per coprire l'area */
             top: var(--navbar-height);
-            /* Posiziona il menu subito sotto la navbar */
             left: 0;
             padding: 10px;
             width: 100%;
             z-index: 10;
-            /* Garantisce che il menu sia sopra gli altri elementi */
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            /* Aggiunge un'ombra per separare il menu */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* --- Accordion spacing & look --- */
+        .accordion {
+            margin-top: 2rem;
+        }
+
+        .accordion-item {
+            border-radius: 0.75rem;
+            overflow: hidden;
+        }
+
+        .accordion-button {
+            font-weight: 700;
+        }
+
+        .accordion-item+.accordion-item {
+            margin-top: 1rem;
+        }
+
+        /* spazio tra sezioni */
+        .accordion-button:not(.collapsed) {
+            background: #f8f9fa;
+        }
+
+        .section-note {
+            color: #6b7280;
+            font-size: .9rem;
+        }
+
+        /* Cards dentro le sezioni */
+        .stay-card {
+            border-radius: 0.75rem;
+        }
+
+        .stay-badges .badge {
+            font-weight: 600;
+        }
+
+        .icon-wifi {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+            vertical-align: -4px;
+        }
+
+        .pacchetto-more,
+        .pacchetto-whatsapp,
+        .pacchetto-button {
+            border: none;
+            border-radius: .5rem;
+            padding: .6rem .9rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .pacchetto-whatsapp {
+            background: #25D366;
+            color: #fff;
+        }
+
+        .pacchetto-more {
+            background: #ca0f0f;
+            color: #fff;
+        }
+
+        .pacchetto-button {
+            background: #ca0f0f;
+            color: #fff;
+        }
+
+        /* Cookie banner quick style */
+        .cookie-container {
+            position: fixed;
+            left: 1rem;
+            right: 1rem;
+            bottom: 1rem;
+            z-index: 2000;
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: .75rem;
+            padding: .8rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: .75rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+        }
+
+        .cookie-container button {
+            border: none;
+            border-radius: .5rem;
+            padding: .4rem .7rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        #accept-cookies {
+            background: #ca0f0f;
+            color: #fff;
+        }
+
+        #reject-cookies {
+            background: #e5e7eb;
         }
     </style>
 </head>
@@ -76,11 +172,12 @@
             <button id="reject-cookies">Rifiuta</button>
         </div>
     </div>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="images/tagliato.png" alt="Deseo Apartments" class="img-fluid" style="max-height: 60px;">
+                <img src="images/tagliato.png" alt="Deseo Apartments" class="img-fluid" style="max-height: 60px;" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -88,348 +185,528 @@
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="servizi.html">Servizi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contatti.html">Contatti</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="consulenza.html">Consulenza</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="gestioni.html">Gestioni</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="calcolatore.html">Calcolatore</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servizi.html">Servizi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contatti.html">Contatti</a></li>
+                    <li class="nav-item"><a class="nav-link" href="consulenza.html">Consulenza</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gestioni.html">Gestioni</a></li>
+                    <li class="nav-item"><a class="nav-link" href="calcolatore.html">Calcolatore</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <body>
-        <!-- Banner dei Cookie -->
-        <div id="cookie-banner" class="cookie-container" style="display: none;">
-            <p>
-                Questo sito utilizza cookie per migliorare l'esperienza utente.
-                <a href="privacy.html" target="_blank" style="color: #ca0f0f;">Leggi la nostra Privacy Policy</a>.
-            </p>
-            <div>
-                <button id="accept-cookies">Accetta</button>
-                <button id="reject-cookies">Rifiuta</button>
-            </div>
-        </div>
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img src="images/tagliato.png" alt="Deseo Apartments" class="img-fluid" style="max-height: 60px;">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="servizi.html">Servizi</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contatti.html">Contatti</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="consulenza.html">Consulenza</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="gestioni.html">Gestioni</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="calcolatore.html">Calcolatore</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <!-- Contenuto -->
+    <div class="container my-5">
+        <h2 class="text-center mb-2" style="color:#212529; margin-top:150px;"><b>ALLOGGIA IN TOSCANA!</b></h2>
 
-        <!-- Contenuto -->
-        <div class="container my-5">
-            <!-- Modal per la Galleria Immagini -->
-            <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-xl">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="imageModalLabel">Galleria Fotografica</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                aria-label="Chiudi"></button>
-                        </div>
-                        <div class="modal-body text-center">
-                            <img id="modalImage" src="" class="img-fluid rounded">
-                        </div>
-                        <div class="modal-footer justify-content-between">
-                            <button class="btn btn-primary" id="prevImage">← Precedente</button>
-                            <button class="btn btn-primary" id="nextImage">Successiva →</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <p class="text-center mt-2 section-note">Scegli la tua zona e prenota subito il tuo soggiorno!</p>
 
-
-            <h2 class="text-center mb-4" style="color: #212529; margin-top: 150px;"><b>📍 FIRENZE</b></h2>
-            <div class="row g-4">
-
-                <!-- Abitazione 1 - Firenze -->
-                <div class="col-12">
-                    <div class="border rounded shadow-sm p-3 d-flex flex-column flex-md-row align-items-center">
-                        <div class="col-md-4 mb-3 mb-md-0">
-                            <img src="images/Firenze1.avif" alt="montespertoli" class="img-fluid rounded">
-                        </div>
-                        <div class="col-md-8 ps-md-4">
-                            <h4 style="color: #212529;"><b>Firenze | Appartamento comfortevole al Polimoda</b>
-                            </h4>
-                            <p style="text-align: justify;">Elegante appartamento di 70 mq in Via delle Cascine, vicino
-                                all’area riqualificata della Manifattura Tabacchi. A due passi dal Parco delle Cascine,
-                                grande area verde cittadina con maneggio, piscina Le Pavoniere, parco giochi per
-                                bambini, Scuola di Polizia a cavallo e il mercato più grande di Firenze ogni martedì.
-                                Ideale per chi ama il relax, lo sport e la natura, senza rinunciare alla vicinanza dal
-                                centro. Ben collegato e servito, perfetto per famiglie, amici o professionisti in
-                                trasferta.
-
-                            </p>
-
-                            <button class="pacchetto-whatsapp"
-                                onclick="window.location.href='https://wa.me/393880599971'">WHATSAPP</button>
-                            <button class="pacchetto-more" onclick="openGallery('firenze1')">
-                                Vedi Foto
-                            </button>
-
-                        </div>
-                    </div>
-                </div>
-
-
-                <!-- Abitazione 2 - Montespertoli -->
-                <div class="col-12">
-                    <div class="border rounded shadow-sm p-3 d-flex flex-column flex-md-row align-items-center">
-                        <div class="col-md-4 mb-3 mb-md-0">
-                            <img src="images/monte6.jpeg" alt="montespertoli" class="img-fluid rounded">
-                        </div>
-                        <div class="col-md-8 ps-md-4">
-                            <h4 style="color: #212529;"><b>Le Rose | Chianti | Parcheggio Privato</b>
-                            </h4>
-                            <p style="text-align: justify;">Accogliente bilocale situato tra le suggestive colline del
-                                Chianti, perfetto per un soggiorno all'insegna del relax e della scoperta.
-                                L'appartamento offre una cucina attrezzata, un bagno moderno e una confortevole camera
-                                matrimoniale, immersi in un complesso caratteristico. Questo rifugio è la base ideale
-                                per esplorare il patrimonio culturale della Toscana, con città come Firenze, Siena e San
-                                Gimignano a breve distanza. Nei dintorni, rinomate cantine e ristoranti vi aspettano per
-                                degustare i migliori vini del Chianti e i sapori autentici della cucina locale.
-
-                            </p>
-
-                            <button class="pacchetto-whatsapp"
-                                onclick="window.location.href='https://wa.me/393880599971'">WHATSAPP</button>
-                            <button class="pacchetto-more" onclick="openGallery('monte')">
-                                Vedi Foto
-                            </button>
-
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
-
-
-        <!-- Footer -->
-        <div
-            style="background-image: url('images/navback.png'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100%;">
-            <footer style="padding: 40px 0; color: #333;">
-                <div class="container">
-                    <div class="row">
-                        <!-- Contatti -->
-                        <div class="col-md-6">
-                            <center>
-                                <h4 style="color: #333;"><b>Contattaci</b></h4>
-                                <ul class="list-unstyled">
-                                    <li><a href="tel:+393880599971" style="text-decoration: none; color: #ca0f0f;">+39
-                                            388
-                                            059
-                                            99 71</a></li>
-                                    <li><a href="tel:+393271975673" style="text-decoration: none; color: #ca0f0f;">+39
-                                            327
-                                            197
-                                            56 73</a></li>
-                                    <li><a href="mailto:info@deseoapartments.com"
-                                            style="text-decoration: none; color: #ca0f0f;">info@deseoapartments.com</a>
-                                    </li>
-                                </ul>
-                                <p style="margin: 0;color: #ca0f0f;"><b>Sede legale: Via Ugo Bassi 10, Bologna
-                                        40121</b></p>
-                                <p style="margin: 0;color: #ca0f0f;"><b>Lun - Ven: 09:00 - 18:00</b></p>
-                                <p style="margin: 0;color: #ca0f0f;"><b>P.IVA: 04119991208</b></p>
-                                <!-- Icone social -->
-                                <br>
-                                <div>
-                                    <a href="https://www.facebook.com/profile.php?id=61562461786178"
-                                        style="margin-right: 10px;"><img src="images/face.png" alt="Instagram"
-                                            width="30"></a>
-                                    <a href="https://www.instagram.com/deseoapartments/"
-                                        style="margin-right: 10px;"><img src="images/insta.png" alt="Facebook"
-                                            width="30"></a>
-                                    <a href="https://wa.me/393880599971"><img src="images/whatsapp.png" alt="WhatsApp"
-                                            width="30"></a>
-                                    <br>
-                                    <br>
-                                    <!-- Brand Partners -->
-                                    <div>
-                                        <h5 style="margin-top: 20px; color: #333;"><b>Brand Partners</b></h5>
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <a href="https://www.nolobolo.com" target="_blank"
-                                                    style="text-decoration: none; color: #ca0f0f;"><b>NoloBolo</b></a>
-                                                | <a href="https://putitonmenu.altervista.org" target="_blank"
-                                                    style="text-decoration: none; color: #ca0f0f;"><b>Put It On
-                                                        Menu</b></a>
-                                            </li>
-                                        </ul>
+        <!-- ACCORDION ZONE -->
+        <div class="accordion" id="accordionZone">
+            <!-- Centro storico -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="head-centro">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#sec-centro" aria-expanded="false" aria-controls="sec-centro">
+                        📍 Montespertoli, città del Chianti (Firenze)
+                    </button>
+                </h2>
+                <div id="sec-centro" class="accordion-collapse collapse" aria-labelledby="head-centro"
+                    data-bs-parent="#accordionZone">
+                    <div class="accordion-body">
+                        <div class="row g-4">
+                            <!-- Esempio alloggio -->
+                            <div class="col-12">
+                                <div
+                                    class="border rounded shadow-sm p-3 d-flex flex-column flex-md-row align-items-center stay-card">
+                                    <div class="col-md-4 mb-3 mb-md-0">
+                                        <img src="images/rose.jpg" alt="Corte Battisti" class="img-fluid rounded">
                                     </div>
-
-
-
+                                    <div class="col-md-8 ps-md-4">
+                                        <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+                                            <h4 class="mb-0" style="color:#212529;"><b>Le Rose | Montespertoli</b>
+                                            </h4>
+                                            <div class="stay-badges d-flex gap-2">
+                                                <span class="badge bg-light text-dark">50 m²</span>
+                                                <span class="badge bg-light text-dark">fino a 2 ospiti</span>
+                                                <span class="badge bg-light text-dark">
+                                                    <img src="images/wifi.svg" onerror="this.style.display='none'"
+                                                        class="icon-wifi" alt="Wi-Fi"> Wi-Fi
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <p class="mt-2" style="text-align:justify;">Accogliente bilocale situato tra le
+                                            suggestive colline del Chianti, perfetto per un soggiorno all'insegna del
+                                            relax e della scoperta. L'appartamento offre una cucina attrezzata, un bagno
+                                            moderno e una confortevole camera matrimoniale, immersi in un complesso
+                                            caratteristico. Questo rifugio è la base ideale per esplorare il patrimonio
+                                            culturale della Toscana, con città come Firenze, Siena e San Gimignano a
+                                            breve distanza. Nei dintorni, rinomate cantine e ristoranti vi aspettano per
+                                            degustare i migliori vini del Chianti e i sapori autentici della cucina
+                                            locale.</p>
+                                        <div class="d-flex gap-2">
+                                            <button class="pacchetto-whatsapp"
+                                                onclick="window.location.href='https://wa.me/393880599971'">WHATSAPP</button>
+                                            <button class="pacchetto-more" onclick="openGallery('rose')">Vedi
+                                                Foto</button>
+                                        </div>
+                                    </div>
                                 </div>
-                        </div>
-                        <!-- Logo e marchio -->
-                        <div class="col-md-6 text-center">
-                            <img src="images/nero.png" alt="Deseo Apartments" class="img-fluid mb-3"
-                                style="max-width: 200px;">
-                            <p style="font-size: 14px;"><b>© 2025 Deseo Apartments v.1.3 | Tutti i diritti
-                                    riservati</b></p>
-                            <p style="font-size: 14px;">
-                                <a href="termini.html" style="text-decoration: none; color: #ca0f0f;"><b>Termini
-                                        e
-                                        Condizioni</b></a> |
-                                <a href="privacy.html" style="text-decoration: none; color: #ca0f0f;"><b>Privacy
-                                        e
-                                        Cookies Policy</b></a>
-                                <center>
-                                    <div><button class="pacchetto-button"
-                                            onclick="document.getElementById('cookie-banner').style.display = 'block';">Gestisci
-                                            i cookie</button></div>
-                                </center>
+                            </div>
+
+
+
+
+
+
+
+
                         </div>
                     </div>
-                    </p>
-                    </center>
                 </div>
+            </div>
+
+
+            <!-- altre ville/appartamenti qui -->
         </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- /ACCORDION ZONE -->
+
+    <!-- PRENOTA / RICHIESTA DISPONIBILITÀ -->
+    <section id="prenota" class="container my-5" style="border-top:4px solid #ca0f0f9d; padding-top:1.25rem;">
+
+        <center><img src="images/nero.png" width="125rem"></center>
+        <h3 class="text-center mb-3" style="color:#ca0f0f;"><b>Richiesta disponibilità</b></h3>
+        <p class="text-center section-note">Scegli la struttura, le date e inviaci i dettagli: risponderemo il prima
+            possibile!</p>
+
+        <div class="card shadow-sm border-0 rounded-3">
+            <div class="card-body p-4">
+                <form id="booking-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+                    <!-- Chiave Web3Forms -->
+                    <input type="hidden" name="access_key" value="7433205f-e93a-46c1-a284-4a7839010a8a" />
+                    <!-- Soggetto email -->
+                    <input type="hidden" name="subject" value="Nuova richiesta prenotazione — Deseo Apartments" />
+                    <!-- Anti-bot (honeypot) -->
+                    <input type="checkbox" name="botcheck" id="botcheck" style="display:none;" tabindex="-1"
+                        autocomplete="off" />
+
+                    <div class="row g-3">
+                        <!-- Struttura -->
+                        <div class="col-12 col-md-6">
+                            <label for="structure" class="form-label fw-bold">Struttura</label>
+                            <select id="structure" name="Struttura" class="form-select" required>
+                                <option value="" selected disabled>Seleziona la struttura</option>
+                                <option value="Le Rose | Montespertoli">Le Rose | Montespertoli (max 2)
+                                </option>
+
+                            </select>
+                            <div class="form-text" id="guests-hint">Capienza massima: —</div>
+                        </div>
+
+                        <!-- Check-in -->
+                        <div class="col-12 col-md-3">
+                            <label for="checkin" class="form-label fw-bold">Check-in</label>
+                            <input type="date" id="checkin" name="Check-in" class="form-control" required>
+                        </div>
+
+                        <!-- Check-out -->
+                        <div class="col-12 col-md-3">
+                            <label for="checkout" class="form-label fw-bold">Check-out</label>
+                            <input type="date" id="checkout" name="Check-out" class="form-control" required>
+                        </div>
+
+                        <!-- Ospiti -->
+                        <div class="col-12 col-md-3">
+                            <label for="guests" class="form-label fw-bold">N. Ospiti</label>
+                            <input type="number" id="guests" name="Ospiti" class="form-control" min="1" value="1"
+                                required>
+                        </div>
+
+                        <!-- Notti (solo display) -->
+                        <div class="col-12 col-md-3 d-flex align-items-end">
+                            <div class="w-100">
+                                <span class="badge bg-light text-dark w-100 py-2" id="nights-badge">Notti: —</span>
+                            </div>
+                        </div>
+
+                        <!-- Contatti -->
+                        <div class="col-12 col-md-4">
+                            <label for="name" class="form-label fw-bold">Nome e Cognome</label>
+                            <input type="text" id="name" name="Nome" class="form-control" placeholder="Mario Rossi"
+                                required>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <label for="email" class="form-label fw-bold">Email</label>
+                            <input type="email" id="email" name="Email" class="form-control"
+                                placeholder="nome@email.com" required>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <label for="phone" class="form-label fw-bold">Telefono</label>
+                            <input type="tel" id="phone" name="Telefono" class="form-control" placeholder="+39 ...">
+                        </div>
+
+                        <!-- Messaggio -->
+                        <div class="col-12">
+                            <label for="message" class="form-label fw-bold">Messaggio</label>
+                            <textarea id="message" name="Messaggio" class="form-control" rows="3"
+                                placeholder="Es. richiesta culla, orari di arrivo, note..."></textarea>
+                        </div>
+
+                        <!-- Privacy -->
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="accepted" id="privacy" required>
+                                <label class="form-check-label" for="privacy">
+                                    Ho letto e accetto la <a href="privacy.html" target="_blank"
+                                        style="color:#ca0f0f;"><b>Privacy Policy</b></a>.
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Pulsante -->
+                        <div class="col-12 d-flex align-items-center gap-3">
+                            <button type="submit" id="sendBtn" class="pacchetto-button">Richiedi
+                                disponibilità</button>
+                            <div id="form-status" class="section-note"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-        </footer>
-        </div>
+    </section>
+    </div>
+
+    <!-- Footer -->
+    <div
+        style="background-image: url('images/navback.png'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100%;">
+        <footer style="padding: 40px 0; color: #333;" data-aos="fade-up">
+            <div class="container">
+                <div class="row">
+                    <!-- Contatti -->
+                    <div class="col-md-6">
+                        <center>
+                            <h4 style="color: #333;"><b>Contattaci</b></h4>
+                            <ul class="list-unstyled">
+                                <li><a href="tel:+393880599971" style="text-decoration: none; color: #ca0f0f;">+39 388
+                                        059
+                                        99 71</a></li>
+                                <li><a href="tel:+393271975673" style="text-decoration: none; color: #ca0f0f;">+39 327
+                                        197
+                                        56 73</a></li>
+                                <li><a href="mailto:info@deseoapartments.com"
+                                        style="text-decoration: none; color: #ca0f0f;">info@deseoapartments.com</a></li>
+                            </ul>
+                            <p style="margin: 0;color: #ca0f0f;"><b>Sede legale: Via Ugo Bassi 10, Bologna 40121</b></p>
+                            <p style="margin: 0;color: #ca0f0f;"><b>Lun - Ven: 09:00 - 18:00</b></p>
+                            <p style="margin: 0;color: #ca0f0f;"><b>P.IVA: 04119991208</b></p>
+                            <!-- Icone social -->
+                            <br>
+                            <div>
+                                <a href="https://www.facebook.com/profile.php?id=61562461786178"
+                                    style="margin-right: 10px;"><img src="images/face.png" alt="Instagram"
+                                        width="30"></a>
+                                <a href="https://www.instagram.com/deseoapartments/" style="margin-right: 10px;"><img
+                                        src="images/insta.png" alt="Facebook" width="30"></a>
+                                <a href="https://wa.me/393880599971"><img src="images/whatsapp.png" alt="WhatsApp"
+                                        width="30"></a>
+                                <br>
+                                <br>
+                                <!-- Brand Partners -->
+                                <div>
+                                    <h5 style="margin-top: 20px; color: #333;"><b>Brand Partners</b></h5>
+                                    <ul class="list-unstyled">
+                                        <li>
+                                            <a href="https://www.nolobolo.com" target="_blank"
+                                                style="text-decoration: none; color: #ca0f0f;"><b>NoloBolo</b></a> | <a
+                                                href="https://putitonmenu.altervista.org" target="_blank"
+                                                style="text-decoration: none; color: #ca0f0f;"><b>Put It On Menu</b></a>
+                                        </li>
+                                    </ul>
+                                </div>
 
 
-        <!-- Bootstrap JS -->
-        <script src="js/bootstrap.bundle.min.js"></script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const banner = document.getElementById("cookie-banner");
-                const acceptButton = document.getElementById("accept-cookies");
-                const rejectButton = document.getElementById("reject-cookies");
 
-                // Mostra il banner se il consenso non è già stato dato
-                if (!localStorage.getItem("cookiesAccepted")) {
-                    banner.style.display = "flex"; // Usa "flex" per mantenere l'allineamento del contenuto
-                }
+                            </div>
+                    </div>
+                    <!-- Logo e marchio -->
+                    <div class="col-md-6 text-center">
+                        <img src="images/nero.png" alt="Deseo Apartments" class="img-fluid mb-3"
+                            style="max-width: 200px;">
+                        <p style="font-size: 14px;"><b>© 2025 Deseo Apartments v.1.3 | Tutti i diritti riservati</b></p>
+                        <p style="font-size: 14px;">
+                            <a href="termini.html" style="text-decoration: none; color: #ca0f0f;"><b>Termini e
+                                    Condizioni</b></a> |
+                            <a href="privacy.html" style="text-decoration: none; color: #ca0f0f;"><b>Privacy e
+                                    Cookies Policy</b></a>
+                            <center>
+                                <div><button class="pacchetto-button"
+                                        onclick="document.getElementById('cookie-banner').style.display = 'block';">Gestisci
+                                        i cookie</button></div>
 
-                // Funzione per accettare i cookie
-                acceptButton.addEventListener("click", () => {
-                    localStorage.setItem("cookiesAccepted", "true");
-                    banner.style.display = "none";
-                    loadGoogleServices();
-                });
+                            </center>
+                    </div>
+                </div>
+                </p>
+                </center>
+            </div>
+    </div>
+    </div>
+    </footer>
+    </div>
 
-                // Funzione per rifiutare i cookie
-                rejectButton.addEventListener("click", () => {
-                    localStorage.setItem("cookiesAccepted", "false");
-                    banner.style.display = "none";
-                });
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
 
-                // Carica Google Analytics e altre API solo se i cookie sono accettati
-                function loadGoogleServices() {
-                    if (localStorage.getItem("cookiesAccepted") === "true") {
-                        // Aggiungi script di Google Analytics
-                        const script = document.createElement("script");
-                        script.src = "https://www.googletagmanager.com/gtag/js?id=G-9BSJYDJ59V";
-                        script.async = true;
-                        document.head.appendChild(script);
+    <!-- Cookie consent logic -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const banner = document.getElementById("cookie-banner");
+            const acceptButton = document.getElementById("accept-cookies");
+            const rejectButton = document.getElementById("reject-cookies");
 
-                        script.onload = () => {
-                            window.dataLayer = window.dataLayer || [];
-                            function gtag() {
-                                dataLayer.push(arguments);
-                            }
-                            gtag("js", new Date());
-                            gtag("config", "G-9BSJYDJ59V");
-                        };
+            if (!localStorage.getItem("cookiesAccepted")) {
+                banner.style.display = "flex";
+            }
 
-                        // Aggiungi altre API di Google se necessarie
-                    }
-                }
+            acceptButton.addEventListener("click", () => {
+                localStorage.setItem("cookiesAccepted", "true");
+                banner.style.display = "none";
+                loadGoogleServices();
+            });
 
-                // Se i cookie sono già stati accettati, carica i servizi
+            rejectButton.addEventListener("click", () => {
+                localStorage.setItem("cookiesAccepted", "false");
+                banner.style.display = "none";
+            });
+
+            function loadGoogleServices() {
                 if (localStorage.getItem("cookiesAccepted") === "true") {
-                    loadGoogleServices();
+                    const script = document.createElement("script");
+                    script.src = "https://www.googletagmanager.com/gtag/js?id=G-9BSJYDJ59V";
+                    script.async = true;
+                    document.head.appendChild(script);
+
+                    script.onload = () => {
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag() { dataLayer.push(arguments); }
+                        gtag("js", new Date());
+                        gtag("config", "G-9BSJYDJ59V");
+                    };
                 }
+            }
+
+            if (localStorage.getItem("cookiesAccepted") === "true") {
+                loadGoogleServices();
+            }
+        });
+    </script>
+
+    <!-- Galleria fotografica (modal riutilizzabile) -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="imageModalLabel">Galleria Fotografica</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="modalImage" src="" class="img-fluid rounded" style="max-height:70vh;">
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button class="btn btn-secondary" id="prevImage">← Precedente</button>
+                    <button class="btn btn-primary" id="nextImage">Successiva →</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Gallerie immagini per ciascun alloggio (aggiungi/aggiorna a piacere)
+        const imageGalleries = {
+
+
+            rose: [
+                "images/rose1.jpeg",
+                "images/rose2.jpeg",
+                "images/rose3.jpeg",
+                "images/rose4.avif",
+                "images/rose5.avif",
+                "images/rose6.jpeg",
+                "images/rose7.jpeg",
+                "images/rose8.jpeg",
+            ],
+
+        };
+
+        let currentGallery = [];
+        let currentIndex = 0;
+        const modalImage = document.getElementById("modalImage");
+        const prevButton = document.getElementById("prevImage");
+        const nextButton = document.getElementById("nextImage");
+
+        window.openGallery = function (key) {
+            currentGallery = imageGalleries[key] || [];
+            currentIndex = 0;
+            updateImage();
+            new bootstrap.Modal(document.getElementById("imageModal")).show();
+        };
+
+        function updateImage() {
+            if (currentGallery.length > 0) {
+                modalImage.src = currentGallery[currentIndex];
+            } else {
+                modalImage.src = "";
+            }
+        }
+
+        prevButton.addEventListener("click", function () {
+            if (!currentGallery.length) return;
+            currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+            updateImage();
+        });
+        nextButton.addEventListener("click", function () {
+            if (!currentGallery.length) return;
+            currentIndex = (currentIndex + 1) % currentGallery.length;
+            updateImage();
+        });
+    </script>
+
+    <script>
+        (function () {
+            // Mappa capienza massima per struttura
+            const capacityByStructure = {
+                "Le Rose | Montespertoli": 2,
+            };
+
+            const structure = document.getElementById('structure');
+            const guests = document.getElementById('guests');
+            const guestsHint = document.getElementById('guests-hint');
+            const checkin = document.getElementById('checkin');
+            const checkout = document.getElementById('checkout');
+            const nightsBadge = document.getElementById('nights-badge');
+            const form = document.getElementById('booking-form');
+            const sendBtn = document.getElementById('sendBtn');
+            const statusEl = document.getElementById('form-status');
+
+            // ---- Helper date
+            const todayStr = new Date().toISOString().split('T')[0];
+            checkin.min = todayStr;
+            checkout.min = todayStr;
+
+            structure.addEventListener('change', () => {
+                const max = capacityByStructure[structure.value] || 10;
+                guests.max = String(max);
+                if (parseInt(guests.value || '1', 10) > max) guests.value = max;
+                guestsHint.textContent = `Capienza massima: ${max}`;
             });
 
-            document.addEventListener("DOMContentLoaded", function () {
-                // Ogni appartamento ha il suo set di immagini
-                const imageGalleries = {
-                    "monte": ["images/monte1.jpeg", "images/monte2.jpeg", "images/monte3.jpeg", "images/monte4.jpeg", "images/monte5.jpeg", "images/monte6.jpeg", "images/monte7.jpeg", "images/monte8.jpeg",],
-                    "firenze1": ["images/Firenze1.avif", "images/Firenze2.avif", "images/firenze3.avif", "images/firenze4.avif", "images/firenze5.avif", "images/firenze6.avif", "images/firenze7.avif", "images/firenze8.avif", "images/firenze9.avif", "images/firenze10.avif", "images/firenze11.avif", "images/firenze12.avif", "images/firenze13.avif", "images/firenze14.avif", "images/firenze15.avif", "images/firenze16.avif", "images/firenze17.avif", "images/firenze18.avif", "images/firenze19.avif",],
+            function updateNights() {
+                const ci = checkin.value ? new Date(checkin.value) : null;
+                const co = checkout.value ? new Date(checkout.value) : null;
+                if (!ci || !co) { nightsBadge.textContent = 'Notti: —'; return; }
+                const diff = (co - ci) / (1000 * 60 * 60 * 24);
+                nightsBadge.textContent = diff > 0 ? `Notti: ${diff}` : 'Notti: —';
+            }
 
-                };
+            checkin.addEventListener('change', () => {
+                checkout.min = checkin.value || todayStr;
+                // Se checkout <= checkin, spostalo al giorno dopo
+                if (checkout.value && checkout.value <= checkin.value) {
+                    const d = new Date(checkin.value);
+                    d.setDate(d.getDate() + 1);
+                    checkout.value = d.toISOString().split('T')[0];
+                }
+                updateNights();
+            });
+            checkout.addEventListener('change', updateNights);
 
-                let currentGallery = [];
-                let currentIndex = 0;
-                const modalImage = document.getElementById("modalImage");
-                const prevButton = document.getElementById("prevImage");
-                const nextButton = document.getElementById("nextImage");
+            // ---- Invio AJAX a Web3Forms
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                statusEl.textContent = '';
+                // Validazioni base
+                if (!structure.value) { statusEl.textContent = 'Seleziona la struttura.'; return; }
+                if (!checkin.value || !checkout.value || checkout.value <= checkin.value) {
+                    statusEl.textContent = 'Controlla le date: il check-out deve essere dopo il check-in.'; return;
+                }
+                if (!form.checkValidity()) {
+                    statusEl.textContent = 'Completa i campi obbligatori.'; return;
+                }
 
-                // Funzione per aprire la galleria di un appartamento
-                window.openGallery = function (apartment) {
-                    currentGallery = imageGalleries[apartment] || [];
-                    currentIndex = 0;
-                    updateImage();
-                    new bootstrap.Modal(document.getElementById("imageModal")).show();
-                };
+                // Componi un riepilogo leggibile che arriverà nella mail
+                const details =
+                    `Richiesta per: ${structure.value}\n` +
+                    `Date: ${checkin.value} → ${checkout.value}\n` +
+                    `Ospiti: ${guests.value}\n` +
+                    `Nome: ${document.getElementById('name').value}\n` +
+                    `Email: ${document.getElementById('email').value}\n` +
+                    (document.getElementById('phone').value ? `Telefono: ${document.getElementById('phone').value}\n` : '') +
+                    (document.getElementById('message').value ? `Messaggio: ${document.getElementById('message').value}\n` : '');
 
-                function updateImage() {
-                    if (currentGallery.length > 0) {
-                        modalImage.src = currentGallery[currentIndex];
+                const fd = new FormData(form);
+                // Campi extra utili nella mail
+                fd.append('Dettagli', details);
+                fd.append('replyto', document.getElementById('email').value); // per Reply-To
+
+                // UI: disabilita mentre invia
+                sendBtn.disabled = true;
+                const oldBtnText = sendBtn.textContent;
+                sendBtn.textContent = 'Invio in corso…';
+
+                try {
+                    const resp = await fetch(form.action, { method: 'POST', body: fd, headers: { 'Accept': 'application/json' } });
+                    const data = await resp.json();
+                    if (resp.ok && data?.success) {
+                        statusEl.textContent = 'Richiesta inviata! Ti risponderemo il prima possibile.';
+                        statusEl.style.color = '#198754';
+                        form.reset();
+                        nightsBadge.textContent = 'Notti: —';
+                        guestsHint.textContent = 'Capienza massima: —';
+                    } else {
+                        throw new Error(data?.message || 'Errore sconosciuto.');
                     }
+                } catch (err) {
+                    statusEl.textContent = 'Errore durante l’invio. Puoi anche scriverci su WhatsApp o via email.';
+                    statusEl.style.color = '#ca0f0f';
+                    console.warn('Web3Forms error:', err);
+                } finally {
+                    sendBtn.disabled = false;
+                    sendBtn.textContent = oldBtnText;
                 }
+            });
+        })();
+    </script>
 
-                prevButton.addEventListener("click", function () {
-                    currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
-                    updateImage();
-                });
+    <script>
+        (function () {
+            const acc = document.getElementById('accordionZone');
+            if (!acc) return;
 
-                nextButton.addEventListener("click", function () {
-                    currentIndex = (currentIndex + 1) % currentGallery.length;
-                    updateImage();
-                });
+            let headerToPin = null;
+
+            acc.addEventListener('show.bs.collapse', (e) => {
+                headerToPin = e.target.previousElementSibling; // .accordion-header
             });
 
+            acc.addEventListener('shown.bs.collapse', () => {
+                if (!headerToPin) return;
+                // Attendi che il layout si stabilizzi davvero, poi scroll morbido
+                requestAnimationFrame(() => requestAnimationFrame(() => {
+                    headerToPin.scrollIntoView({ block: 'start', behavior: 'smooth' });
+                    headerToPin = null;
+                }));
+            });
 
-        </script>
-    </body>
+            // Importante: NIENTE listener su hide/hidden (creavano lo “scatto”)
+        })();
+    </script>
+
+
+</body>
 
 </html>
