@@ -359,3 +359,70 @@ body {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 2);
 
 }
+
+/* Niente hover quando la sezione è aperta */
+.accordion-button:not(.collapsed),
+.accordion-button:not(.collapsed):hover,
+.accordion-button:focus {
+  background-color: #fff;
+  /* o transparent */
+  box-shadow: none;
+}
+
+/* (Opzionale) mantieni l'hover solo per le sezioni chiuse */
+.accordion-button.collapsed:hover {
+  background-color: #f8f9fa;
+  /* come preferisci */
+}
+
+/* Ripristina il bordo superiore per gli item successivi al primo */
+#accordionZone .accordion-item:not(:first-of-type) {
+  border-top: 1px solid var(--bs-accordion-border-color);
+}
+
+/* (Consigliato) Mantieni i bordi e gli angoli arrotondati per ogni card */
+#accordionZone .accordion-item {
+  border: 1px solid var(--bs-accordion-border-color);
+  border-radius: .75rem;
+}
+
+/* Spazio tra le sezioni */
+#accordionZone .accordion-item+.accordion-item {
+  margin-top: 1rem;
+}
+
+/* Evita lo "scroll jump" quando si aprono i collapse/accordion */
+html {
+  overflow-y: scroll;
+  /* riserva sempre spazio per la scrollbar */
+}
+
+body {
+  padding-right: 0 !important;
+  /* disattiva la compensazione automatica di Bootstrap */
+}
+
+.navbar {
+  transition: none !important;
+  /* evita micro-shift della navbar */
+}
+
+/* Scorrimento morbido + offset globale per navbar fissa */
+html {
+  scroll-behavior: smooth;
+  /* verrà aggiornato via JS alla reale altezza della navbar */
+  --safe-navbar-offset: 112px;
+  /* fallback */
+  scroll-padding-top: var(--safe-navbar-offset);
+}
+
+/* Quando un header/button è il target dello scroll, lascia spazio */
+.accordion-header,
+.accordion-button {
+  scroll-margin-top: var(--safe-navbar-offset);
+}
+
+/* (opzionale) evita micro-saltelli mentre i pannelli cambiano altezza */
+#accordionZone {
+  overflow-anchor: none;
+}
