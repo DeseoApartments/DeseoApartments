@@ -319,6 +319,23 @@ body {
   color: #ca0f0f;
 }
 
+.hero .btn1 {
+  background-color: white;
+  color: #ca0f0f;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  border-radius: 0%;
+}
+
+.hero .btn1:hover {
+  background-color: #ca0f0f;
+  color: #fff;
+}
+
 .keyword {
   font-weight: bold;
   color: #ca0f0f;
